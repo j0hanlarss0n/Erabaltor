@@ -3226,10 +3226,36 @@
                       <td>
                         <button
                           type="roll"
-                          name="roll_vapen"
-                          value="&{template:DoDSummaEllerMotstandVapen} {{name=@{vapenNamn5}}} {{parrering=?{Attack/Parrering|Attack, [[ 1d1-1|Parrering, [[ 1d1}]]}} {{slag=@{vapenNamn5} ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{vapenFv5}+@{vapenMod5}]]}} {{skada=[[@{vapenSkada5}+@{vapenSkadaBonus5}]]}} {{var=?{Vilken träfftabell?|Standard, [[ 1t[standard]|Högt, [[1t[hitHigh]|Lågt, [[ 1t[hitLow]|Standard - Avstånd, [[ 1t[standardRanged]|Högt - Avstånd, [[ 1t[hitHighRanged]|Lågt - Avstånd, [[ 1t[hitLowRanged]}]]}}"
+                          name="roll_vapenMain"
+                          value="&{template:dropdownTest} {{name=@{vapenNamn5}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}}"
                           class="sheet-tarningstabell"
                         ></button>
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="attr_vapenRollAttack"
+                          value="{{typ=Attack&#125;&#125; {{skada=10&#125;&#125; {{slag=10"
+                          class="sheet-fardighetstabell"
+
+                          
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="attr_vapenRollSikta"
+                          value="{{typ=Sikta&#125;&#125; {{skada=10&#125;&#125; {{var=huvudet&#125;&#125; {{slag=15"
+                          class="sheet-fardighetstabell"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="attr_vapenRollParrera"
+                          value="{{typ=Parrera&#125;&#125; {{slag=20"
+                          class="sheet-fardighetstabell"
+                        />
                       </td>
                     </tr>
                   </table>
@@ -3472,7 +3498,9 @@
   <rolltemplate class="sheet-rolltemplate-dropdownTest">
     <div class="container">
       <div><h1>Test</h1></div>
-
+      {{#typ}}
+      <div class="rowcolor"><span class="tcat">typ: </span>{{ typ }}</div>
+      {{/typ}}
       {{#name}}
         <div class="rowcolor"><span class="tcat">Namn: </span>{{ name }}</div>
       {{/name}}
