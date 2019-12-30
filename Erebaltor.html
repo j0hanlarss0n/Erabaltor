@@ -3227,7 +3227,7 @@
                         <button
                           type="roll"
                           name="roll_vapenMain"
-                          value="&{template:dropdownTest} {{name=@{vapenNamn5}}} ?{Handling|Attack, {{typ=Attack&amp;#125;&amp;#125; {{skada=10&amp;#125;&amp;#125; {{slag=10|Sikta, {{typ=Sikta&amp;#125;&amp;#125; {{skada=10&amp;#125;&amp;#125; {{var=huvudet&amp;#125;&amp;#125; {{slag=15|Parrera, {{typ=Parrera&amp;#125;&amp;#125; {{slag=20}}}"
+                          value="&{template:dropdownTest} {{name=@{vapenNamn5}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -3237,8 +3237,6 @@
                           name="attr_vapenRollAttack"
                           value="{{typ=Attack&amp;#125;&amp;#125; {{skada=10&amp;#125;&amp;#125; {{slag=10"
                           class="sheet-fardighetstabell"
-
-                          
                         />
                       </td>
                       <td>
