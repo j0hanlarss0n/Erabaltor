@@ -3227,7 +3227,7 @@
                         <button
                           type="roll"
                           name="roll_vapenMain"
-                          value="&{template:dropdownTest} {{name=@{vapenNamn5}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}}"
+                          value="&{template:dropdownTest} {{name=@{vapenNamn5}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -3235,7 +3235,7 @@
                         <input
                           type="text"
                           name="attr_vapenRollAttack"
-                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=10&amp;#125;&amp;#125; {{slag=10"
+                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada5}+@{vapenSkadaBonus5}]]&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv5}+@{vapenMod5}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -3243,7 +3243,7 @@
                         <input
                           type="text"
                           name="attr_vapenRollSikta"
-                          value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=10&amp;#125;&amp;#125; {{var=huvudet&amp;#125;&amp;#125; {{slag=15"
+                          value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=10&amp;#125;&amp;#125; {{var=huvudet&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv5}+@{vapenMod5}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -3251,7 +3251,15 @@
                         <input
                           type="text"
                           name="attr_vapenRollParrera"
-                          value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=20"
+                          value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv5}+@{vapenMod5}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          class="sheet-fardighetstabell"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="attr_vapenSlag"
+                          value="[[ 1d20 + @{vapenFv5} + @{vapenMod5} + ?{Modifikation|0} ]]"
                           class="sheet-fardighetstabell"
                         />
                       </td>
