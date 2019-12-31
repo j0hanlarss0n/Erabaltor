@@ -1,7 +1,7 @@
 <div class="sheet-wrapper">
   <div>
     <ul>
-      <li>
+      <li name="Karaktär">
         <input
           type="checkbox"
           class="sheet-testing sheet-firstLevelTab"
@@ -520,7 +520,7 @@
                   </tr>
                 </table>
 
-                <fieldset class="repeating_yrkes">
+                <fieldset class="repeating_sarskild">
                   <table>
                     <tr>
                       <td>
@@ -600,7 +600,7 @@
           </li>
         </ul>
       </li>
-      <li>
+      <li name="Färdigheter">
         <input
           type="checkbox"
           class="sheet-testing sheet-firstLevelTab"
@@ -1595,6 +1595,7 @@
                         type="number"
                         name="attr_yrkesMod_display"
                         class="sheet-fardighetstabell"
+                        value="0"
                       />
                     </td>
                     <td>
@@ -1644,6 +1645,7 @@
                           type="number"
                           name="attr_yrkesMod"
                           class="sheet-fardighetstabell"
+                          value="0"
                         />
                       </td>
                       <td>
@@ -1711,6 +1713,7 @@
                         type="number"
                         name="attr_sekundarMod_display"
                         class="sheet-fardighetstabell"
+                        value="0"
                       />
                     </td>
                     <td>
@@ -1723,7 +1726,7 @@
                     <td>
                       <input
                         type="number"
-                        name="attr_sekundarsfv_display"
+                        name="attr_sekundarfv_display"
                         class="sheet-fardighetstabell"
                       />
                     </td>
@@ -1760,6 +1763,7 @@
                           type="number"
                           name="attr_sekundarMod"
                           class="sheet-fardighetstabell"
+                          value="0"
                         />
                       </td>
                       <td>
@@ -1827,6 +1831,7 @@
                         type="number"
                         name="attr_sprakMod_display"
                         class="sheet-fardighetstabell"
+                        value="0"
                       />
                     </td>
                     <td>
@@ -1876,6 +1881,7 @@
                           type="number"
                           name="attr_sprakMod"
                           class="sheet-fardighetstabell"
+                          value="0"
                         />
                       </td>
                       <td>
@@ -1908,7 +1914,7 @@
           </li>
         </ul>
       </li>
-      <li>
+      <li name="Magi">
         <input
           type="checkbox"
           class="sheet-testing sheet-firstLevelTab"
@@ -1928,9 +1934,7 @@
                 <table>
                   <tr>
                     <td class="sheet-box_alternate"><span>Namn</span></td>
-                    <td class="sheet-box_alternate">
-                      <span>Beskrivning</span>
-                    </td>
+                    <td class="sheet-box_alternate"><span>Beskrivning</span></td>
                     <td class="sheet-box_alternate"><span>Kost.</span></td>
                     <td class="sheet-box_alternate"><span>Mod.</span></td>
                     <td class="sheet-box_alternate"><span>K</span></td>
@@ -1966,6 +1970,7 @@
                         type="number"
                         name="attr_magimod_display"
                         class="sheet-fardighetstabell"
+                        value="0"
                       />
                     </td>
                     <td>
@@ -2065,6 +2070,7 @@
                           type="number"
                           name="attr_magimod"
                           class="sheet-fardighetstabell"
+                          
                         />
                       </td>
                       <td>
@@ -2196,7 +2202,7 @@
           </li>
         </ul>
       </li>
-      <li>
+      <li name="Strid">
         <input
           type="checkbox"
           class="sheet-testing sheet-firstLevelTab"
@@ -2895,7 +2901,6 @@
                       <input
                         type="number"
                         name="attr_vapenBv_display"
-                        value="0"
                         class="sheet-fardighetstabell"
                       />
                     </td>
@@ -2931,10 +2936,50 @@
                       </select>
                     </td>
                     <td>
+                      <input
+                        type="hidden"
+                        name="attr_vapenRollAttack_display"
+                        value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada_display}+@{vapenSkadaBonus_display3}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa_display}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv_display}+@{vapenMod_display}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                        class="sheet-fardighetstabell"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="attr_vapenRollTraffa_display"
+                        value="?{Träfftabell&amp;#124;Standard&amp;#44; [[ 1t[standard]]]&amp;#124;Högt&amp;#44; [[1t[hitHigh]]]&amp;#124;Lågt&amp;#44; [[ 1t[hitLow]]]&amp;#124;Standard - Avstånd&amp;#44; [[ 1t[standardRanged]]]&amp;#124;Högt - Avstånd&amp;#44; [[ 1t[hitHighRanged]]]&amp;#124;Lågt - Avstånd&amp;#44; [[ 1t[hitLowRanged]]]&amp;#125;"
+                        class="sheet-fardighetstabell"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="attr_vapenRollSikta_display"
+                        value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=10&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser_display}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv_display}+@{vapenMod_display}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125"
+                        class="sheet-fardighetstabell"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="attr_vapenRollSiktaPlatser_display"
+                        value="?{Sikta på&amp;#124;Huvudet&amp;#44; huvudet&amp;#124;Vänster arm&amp;#44; Vänster arm&amp;#124;Höger arm&amp;#44; Höger arm&amp;#124;Bröstkorg&amp;#44; Bröstkorg&amp;#124;Mage&amp;#44; Mage&amp;#124;Vänster ben&amp;#44; Vänster ben&amp;#124;Höger ben&amp;#44; Höger ben&amp;#125;"
+                        class="sheet-fardighetstabell"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="attr_vapenRollParrera_display"
+                        value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv_display}+@{vapenMod_display}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                        class="sheet-fardighetstabell"
+                      />
+                    </td>
+                    <td>
                       <button
                         type="roll"
                         name="roll_vapen_display"
-                        value="&{template:DoDSummaEllerMotstandVapen} {{name=@{vapenNamn_display}}} {{parrering=?{Attack/Parrering|Attack, [[ 1d1-1|Parrering, [[ 1d1}]]}} {{slag=@{vapenNamn_display} ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{vapenFv_display}+@{vapenMod_display}]]}} {{skada=[[@{vapenSkada_display}+@{vapenSkadaBonus_display3}]]}} {{var=?{Vilken träfftabell?|Standard, [[ 1t[standard]|Högt, [[1t[hitHigh]|Lågt, [[ 1t[hitLow]|Standard - Avstånd, [[ 1t[standardRanged]|Högt - Avstånd, [[ 1t[hitHighRanged]|Lågt - Avstånd, [[ 1t[hitLowRanged]}]]}}"
+                        value="&{template:dropdownTest} {{name=@{vapenNamn_display}}} ?{Handling|Attack, @{vapenRollAttack_display}|Sikta, @{vapenRollSikta_display}|Parrera, @{vapenRollParrera_display}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -2971,7 +3016,6 @@
                         <input
                           type="number"
                           name="attr_vapenBv"
-                          value="0"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -3007,235 +3051,10 @@
                         </select>
                       </td>
                       <td>
-                        <button
-                          type="roll"
-                          name="roll_vapen"
-                          value="&{template:DoDSummaEllerMotstandVapen} {{name=@{vapenNamn}}} {{parrering=?{Attack/Parrering|Attack, [[ 1d1-1|Parrering, [[ 1d1}]]}} {{slag=@{vapenNamn} ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{vapenFv}+@{vapenMod}]]}} {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]}} {{var=?{Vilken träfftabell?|Standard, [[ 1t[standard]|Högt, [[1t[hitHigh]|Lågt, [[ 1t[hitLow]|Standard - Avstånd, [[ 1t[standardRanged]|Högt - Avstånd, [[ 1t[hitHighRanged]|Lågt - Avstånd, [[ 1t[hitLowRanged]}]]}}"
-                          class="sheet-tarningstabell"
-                        ></button>
-                      </td>
-                    </tr>
-                  </table>
-                </fieldset>
-              </div>
-            </div>
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
-              checked
-            />
-            <h3>TEST</h3>
-            <div class="sheet-body sheet-testtab">
-              <div class="sheet-colrow">
-                <table>
-                  <tr>
-                    <td class="sheet-box_alternate"><span>Vapen</span></td>
-                    <td class="sheet-box_alternate"><span>FV</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_testNamn_displayasdfg"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_testFv_display"
-                        value="0"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_testMain"
-                        value="&{template:DoDSummaEllerMotstandMagi} {{effekt=@{testNamn_displayasdfg}}} {{slag=?{Slag|asdfsadf, [[1d20+@{testFv_display}]]|adfsadfsfdsf, 15}}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
-                  </tr>
-                </table>
-
-                <fieldset class="repeating_test">
-                  <table>
-                    <tr>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_testNamn"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_testFv"
-                          value="0"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <button
-                          type="roll"
-                          name="roll_testMain"
-                          value="&{template:dropdownTest} {{name=test}} ?{Slag|asdfsadf, @{testFv2}|adfsadfsfdsf, @{testNamn2}}}}"
-                          class="sheet-tarningstabell"
-                        ></button>
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_testNamn2"
-                          value="{{skada=10&#125;&#125; {{slag=10"
-                          class="sheet-fardighetstabell"
-
-                          
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_testFv2"
-                          value="{{var=huvudet"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                    </tr>
-                  </table>
-                </fieldset>
-              </div>
-            </div>
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
-              checked
-            />
-            <h3>TEST2</h3>
-            <div class="sheet-body sheet-testtab">
-              <div class="sheet-colrow">
-                <table>
-                  <tr>
-                    <td class="sheet-box_alternate"><span>Vapen</span></td>
-                    <td class="sheet-box_alternate"><span>FV</span></td>
-                    <td class="sheet-box_alternate"><span>Mod.</span></td>
-                    <td class="sheet-box_alternate"><span>Skada</span></td>
-                    <td class="sheet-box_alternate"><span>Bonus</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_vapenNamn_display5"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_vapenFv_display5"
-                        value="0"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_vapenMod_display5"
-                        value="0"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_vapenSkada_display5"
-                        class="sheet-fardighetstabell_text_narrow"
-                      />
-                    </td>
-                    <td>
-                      <select
-                        name="attr_vapenSkadaBonus_display5"
-                        class="sheet-fardighetstabell_text_narrow"
-                      >
-                        <option value="@{skadeBonus}">Normal</option>
-                        <option value="@{skadeBonusBage}">Båge</option>
-                        <option value="@{skadeBonusTvaHand}">2-hands</option>
-                      </select>
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_vapen_display"
-                        value="&{template:DoDSummaEllerMotstandVapen} {{name=@{vapenNamn_display5}}} {{parrering=?{Attack/Parrering|Attack, [[ 1d1-1|Parrering, [[ 1d1}]]}} {{slag=@{vapenNamn_display5} ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{vapenFv_display5}+@{vapenMod_display5}]]}} {{skada=[[@{vapenSkada_display5}+@{vapenSkadaBonus_display5}]]}} {{var=?{Vilken träfftabell?|Standard, [[ 1t[standard]|Högt, [[1t[hitHigh]|Lågt, [[ 1t[hitLow]|Standard - Avstånd, [[ 1t[standardRanged]|Högt - Avstånd, [[ 1t[hitHighRanged]|Lågt - Avstånd, [[ 1t[hitLowRanged]}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
-                  </tr>
-                </table>
-    
-                <fieldset class="repeating_vapen">
-                  <table>
-                    <tr>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_vapenNamn5"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_vapenFv5"
-                          value="0"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_vapenMod5"
-                          value="0"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_vapenSkada5"
-                          class="sheet-fardighetstabell_text_narrow"
-                        />
-                      </td>
-                      <td>
-                        <select
-                          name="attr_vapenSkadaBonus5"
-                          class="sheet-fardighetstabell_text_narrow"
-                        >
-                          <option value="@{skadeBonus}">Normal</option>
-                          <option value="@{skadeBonusBage}">Båge</option>
-                          <option value="@{skadeBonusTvaHand}">2-hands</option>
-                        </select>
-                      </td>
-                      <td>
-                        <button
-                          type="roll"
-                          name="roll_vapenMain"
-                          value="&{template:dropdownTest} {{name=@{vapenNamn5}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"
-                          class="sheet-tarningstabell"
-                        ></button>
-                      </td>
-                      <td>
                         <input
                           type="hidden"
                           name="attr_vapenRollAttack"
-                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada5}+@{vapenSkadaBonus5}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv5}+@{vapenMod5}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -3251,7 +3070,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollSikta"
-                          value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=10&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv5}+@{vapenMod5}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -3267,9 +3086,17 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollParrera"
-                          value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv5}+@{vapenMod5}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
+                      </td>
+                      <td>
+                        <button
+                          type="roll"
+                          name="roll_vapen"
+                          value="&{template:dropdownTest} {{name=@{vapenNamn}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"
+                          class="sheet-tarningstabell"
+                        ></button>
                       </td>
                     </tr>
                   </table>
@@ -3279,7 +3106,7 @@
           </li>
         </ul>
       </li>
-      <li>
+      <li name="Utrsustning">
         <input
           type="checkbox"
           class="sheet-testing sheet-firstLevelTab"
