@@ -3131,6 +3131,15 @@
                         <td class="sheet-box_alternate">Beskrivning</td>
                         <td class="sheet-box_alternate">Antal</td>
                         <td class="sheet-box_alternate">Vikt</td>
+                        <td>
+                          <select
+                            name="attr_utrustning_choice"
+                            class="sheet-fardighetstabell_text_narrow"
+                          >
+                            <option class="sheet-utrustning-all-categories sheet-utrustning-no-categories">Alla</option>
+                            <option class="sheet-utrustning-clothes">Kläder</option>
+                          </select>
+                        </td>
                       </tr>
                     </thead>
                     <tr>
@@ -3169,6 +3178,16 @@
                           step="any"
                           name="attr_utrustningvikt_display"
                         />
+                      </td>
+                      <td>
+                        <select
+                          name="attr_utrustningTyp_display"
+                          class="sheet-fardighetstabell_text_narrow"
+                        >
+                          <option class="sheet-utrustning-no-categories">Ingen kategori</option>
+                          <option class="sheet-utrustning-all-categories">Alla kategorier</option>
+                          <option class="sheet-utrustning-clothes">Kläder</option>
+                        </select>
                       </td>
                     </tr>
                   </table>
@@ -3211,6 +3230,16 @@
                             step="any"
                             name="attr_utrustningvikt"
                           />
+                        </td>
+                        <td>
+                          <select
+                            name="attr_utrustningTyp"
+                            class="sheet-fardighetstabell_text_narrow"
+                          >
+                            <option class="sheet-utrustning-no-categories">Ingen kategori</option>
+                            <option class="sheet-utrustning-all-categories">Alla kategorier</option>
+                            <option class="sheet-utrustning-clothes">Kläder</option>
+                          </select>
                         </td>
                       </tr>
                     </table>
