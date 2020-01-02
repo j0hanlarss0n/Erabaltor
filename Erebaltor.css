@@ -341,6 +341,12 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   width: 7em;
 }
 
+.sheet-fardighetstabell_select {
+  border: 1px solid black;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
 .sheet-tarningstabell {
   border: 1px solid black;
 
@@ -673,4 +679,18 @@ ul li .sheet-testing:checked .sheet-firstLevelTab .sheet-secondLevelTabs {
 
 .sheet-secondLevelTab:hover ~ h3 {
   background-color: oliveDrab;
+}
+
+.sheet-filtreradUtrustning_display {
+  height: 0px;
+}
+
+.sheet-filtrerad_utrustning {
+  /* By default, display no items of a filter box */
+  display: none;
+}
+/* Decide which specific repitems to display.  */
+input.sheet-utrustning-alla-kategorier~.sheet-filtrerad_utrustning,      /* Always display all spells of circle zero.  */
+.sheet-utrustning-klader~sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-klader:checked~table .sheet-filtrerad_utrustning {
+  display: block;
 }

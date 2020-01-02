@@ -3117,46 +3117,89 @@
           <li>
             <input
               type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
+              class="sheet-testing sheet-secondLevelTab sheet-utrustning-allt"
               checked
             />
-            <h3>Saker</h3>
+            <h3>Allt</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
-                <div class="sheet-colrow">
+                <table>
+                  <thead>
+                    <tr>
+                      <td class="sheet-box_alternate" style="width: 180">Typ</td>
+                      <td class="sheet-box_alternate" style="width: 350">Beskrivning</td>
+                      <td class="sheet-box_alternate" style="width: 45.5">Antal</td>
+                      <td class="sheet-box_alternate" style="width: 45.5">Vikt</td>
+                      <td class="sheet-box_alternate" style="width: 115">Kategori</td>
+                    </tr>
+                  </thead>
+                  <tr class="sheet-filtreradUtrustning_display" style="height: 0px">
+                    <td>
+                      <input
+                        class="sheet-fardighetstabell"
+                        type="text"
+                        style="Width: 180px"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        class="sheet-fardighetstabell"
+                        type="text"
+                        style="width: 350px"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        class="sheet-fardighetstabell"
+                        type="number"
+                      />
+                    </td>
+                    <td>
+                       <input
+                        class="sheet-fardighetstabell"
+                        type="number"
+                       />
+                    </td>
+                    <td>
+                      <select
+                        name="attr_utrustningTyp"
+                        class="sheet-fardighetstabell_select"
+                      >
+                        <option class="sheet-utrustning-no-categories">Ingen kategori</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+                <fieldset class="repeating_utrustning">
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" checked />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ingen-kategori"  value="Ingen kategori"/>
                   <table>
-                    <thead>
-                      <tr>
-                        <td class="sheet-box_alternate">Typ</td>
-                        <td class="sheet-box_alternate">Beskrivning</td>
-                        <td class="sheet-box_alternate">Antal</td>
-                        <td class="sheet-box_alternate">Vikt</td>
-                        <td>
-                          <select
-                            name="attr_utrustning_choice"
-                            class="sheet-fardighetstabell_text_narrow"
-                          >
-                            <option class="sheet-utrustning-all-categories sheet-utrustning-no-categories">Alla</option>
-                            <option class="sheet-utrustning-clothes">Kläder</option>
-                          </select>
-                        </td>
-                      </tr>
-                    </thead>
                     <tr>
                       <td>
                         <input
                           class="sheet-fardighetstabell"
                           type="text"
-                          name="attr_utrustningtyp_display"
+                          name="attr_utrustningtyp"
                           style="width: 180px"
-                        />
+                          />
                       </td>
                       <td>
                         <input
                           class="sheet-fardighetstabell"
                           type="text"
-                          name="attr_utrustningbesk_display"
+                          name="attr_utrustningbesk"
                           style="width: 350px"
+                         />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningantal"
                         />
                       </td>
                       <td>
@@ -3166,85 +3209,149 @@
                           min="0"
                           value="0"
                           step="any"
-                          name="attr_utrustningantal_display"
+                          name="attr_utrustningvikt"
                         />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningvikt_display"
-                        />
-                      </td>
+                       </td>
                       <td>
                         <select
-                          name="attr_utrustningTyp_display"
-                          class="sheet-fardighetstabell_text_narrow"
+                          name="attr_utrustning_filter"
+                          class="sheet-fardighetstabell_select"
                         >
-                          <option class="sheet-utrustning-no-categories">Ingen kategori</option>
-                          <option class="sheet-utrustning-all-categories">Alla kategorier</option>
-                          <option class="sheet-utrustning-clothes">Kläder</option>
+                          <option>Ingen kategori</option>
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
                         </select>
                       </td>
-                    </tr>
+                     </tr>
                   </table>
-
-                  <fieldset class="repeating_utrustning">
-                    <table>
-                      <tr>
-                        <td>
-                          <input
-                            class="sheet-fardighetstabell"
-                            type="text"
-                            name="attr_utrustningtyp"
-                            style="width: 180px"
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              class="sheet-testing sheet-secondLevelTab sheet-utrustning-klader"
+              checked
+            />
+            <h3>Kläder</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-colrow">
+                <table>
+                  <thead>
+                    <tr>
+                      <td class="sheet-box_alternate">Typ</td>
+                      <td class="sheet-box_alternate">Beskrivning</td>
+                      <td class="sheet-box_alternate">Antal</td>
+                      <td class="sheet-box_alternate">Vikt</td>
+                      <td class="sheet-box_alternate">Kategori</td>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tr class="sheet-filtreradUtrustning_display">
+                    <td>
+                      <input
+                        class="sheet-fardighetstabell"
+                        type="text"
+                        name="attr_utrustningtyp_display_klader"
+                        style="width: 180px"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        class="sheet-fardighetstabell"
+                        type="text"
+                        name="attr_utrustningbesk_display_klader"
+                        style="width: 350px"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        class="sheet-fardighetstabell"
+                        type="number"
+                        min="0"
+                        value="0"
+                        step="any"
+                        name="attr_utrustningantal_display_klader"
+                      />
+                    </td>
+                    <td>
+                       <input
+                        class="sheet-fardighetstabell"
+                        type="number"
+                        min="0"
+                        value="0"
+                        step="any"
+                        name="attr_utrustningvikt_display_klader"
+                       />
+                    </td>
+                    <td>
+                      <select
+                        name="attr_utrustningTyp_display"
+                        class="sheet-fardighetstabell_select"
+                      >
+                        <option class="sheet-utrustning-klader">Kläder</option>
+                        <option class="sheet-utrustning-no-categories">Ingen kategori</option>
+                        <option class="sheet-utrustning-all-categories">Alla kategorier</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+                <fieldset class="repeating_utrustning">
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" checked />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ingen-kategori"  value="Ingen kategori"/>
+                  <table>
+                    <tr class="sheet-filtrerad_utrustning">
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningtyp"
+                          style="width: 180px"
                           />
-                        </td>
-                        <td>
-                          <input
-                            class="sheet-fardighetstabell"
-                            type="text"
-                            name="attr_utrustningbesk"
-                            style="width: 350px"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            class="sheet-fardighetstabell"
-                            type="number"
-                            min="0"
-                            value="0"
-                            step="any"
-                            name="attr_utrustningantal"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            class="sheet-fardighetstabell"
-                            type="number"
-                            min="0"
-                            value="0"
-                            step="any"
-                            name="attr_utrustningvikt"
-                          />
-                        </td>
-                        <td>
-                          <select
-                            name="attr_utrustningTyp"
-                            class="sheet-fardighetstabell_text_narrow"
-                          >
-                            <option class="sheet-utrustning-no-categories">Ingen kategori</option>
-                            <option class="sheet-utrustning-all-categories">Alla kategorier</option>
-                            <option class="sheet-utrustning-clothes">Kläder</option>
-                          </select>
-                        </td>
-                      </tr>
-                    </table>
-                  </fieldset>
-                </div>
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningbesk"
+                          style="width: 350px"
+                         />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningantal"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningvikt"
+                        />
+                       </td>
+                      <td>
+                        <select
+                          name="attr_utrustning_filter"
+                          class="sheet-fardighetstabell_select"
+                        >
+                          <option>Ingen kategori</option>
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                        </select>
+                      </td>
+                     </tr>
+                  </table>
+                </fieldset>
               </div>
             </div>
           </li>
