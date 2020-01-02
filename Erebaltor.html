@@ -3171,9 +3171,12 @@
                   </tr>
                 </table>
                 <fieldset class="repeating_utrustning">
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" checked />
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ingen-kategori"  value="Ingen kategori"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier" checked/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
                   <table>
                     <tr>
                       <td>
@@ -3212,14 +3215,18 @@
                           name="attr_utrustningvikt"
                         />
                        </td>
-                      <td>
+                       <td>
                         <select
                           name="attr_utrustning_filter"
                           class="sheet-fardighetstabell_select"
+                          style="width: 116px"
                         >
-                          <option>Ingen kategori</option>
                           <option>Alla kategorier</option>
                           <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -3240,67 +3247,61 @@
                 <table>
                   <thead>
                     <tr>
-                      <td class="sheet-box_alternate">Typ</td>
-                      <td class="sheet-box_alternate">Beskrivning</td>
-                      <td class="sheet-box_alternate">Antal</td>
-                      <td class="sheet-box_alternate">Vikt</td>
-                      <td class="sheet-box_alternate">Kategori</td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          Value="Typ"
+                          style="width: 180px"
+                          disabled="true"
+                        />
                       </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Beskrivning"
+                          style="width: 350px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Antal"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Vikt"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Kategori"
+                          style="width: 116px;"
+                          disabled="true"
+                        />
+                      </td>    
                     </tr>
                   </thead>
-                  <tr class="sheet-filtreradUtrustning_display">
-                    <td>
-                      <input
-                        class="sheet-fardighetstabell"
-                        type="text"
-                        name="attr_utrustningtyp_display_klader"
-                        style="width: 180px"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        class="sheet-fardighetstabell"
-                        type="text"
-                        name="attr_utrustningbesk_display_klader"
-                        style="width: 350px"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        class="sheet-fardighetstabell"
-                        type="number"
-                        min="0"
-                        value="0"
-                        step="any"
-                        name="attr_utrustningantal_display_klader"
-                      />
-                    </td>
-                    <td>
-                       <input
-                        class="sheet-fardighetstabell"
-                        type="number"
-                        min="0"
-                        value="0"
-                        step="any"
-                        name="attr_utrustningvikt_display_klader"
-                       />
-                    </td>
-                    <td>
-                      <select
-                        name="attr_utrustningTyp_display"
-                        class="sheet-fardighetstabell_select"
-                      >
-                        <option class="sheet-utrustning-klader">Kläder</option>
-                        <option class="sheet-utrustning-no-categories">Ingen kategori</option>
-                        <option class="sheet-utrustning-all-categories">Alla kategorier</option>
-                      </select>
-                    </td>
-                  </tr>
                 </table>
                 <fieldset class="repeating_utrustning">
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" checked />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ingen-kategori"  value="Ingen kategori"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" checked/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
                       <td>
@@ -3344,9 +3345,520 @@
                           name="attr_utrustning_filter"
                           class="sheet-fardighetstabell_select"
                         >
-                          <option>Ingen kategori</option>
+                        <option>Alla kategorier</option>
+                        <option>Kläder</option>
+                        <option>Drycker</option>
+                        <option>Magiska föremål</option>
+                        <option>Egendom</option>
+                        <option>Övrigt</option>
+                        </select>
+                      </td>
+                     </tr>
+                  </table>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              class="sheet-testing sheet-secondLevelTab sheet-utrustning-drycker"
+              checked
+            />
+            <h3>Drycker</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-colrow">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          Value="Typ"
+                          style="width: 180px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Beskrivning"
+                          style="width: 350px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Antal"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Vikt"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Kategori"
+                          style="width: 116px;"
+                          disabled="true"
+                        />
+                      </td>    
+                    </tr>
+                  </thead>
+                </table>
+                <fieldset class="repeating_utrustning">
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker" checked/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
+                  <table>
+                    <tr class="sheet-filtrerad_utrustning">
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningtyp"
+                          style="width: 180px"
+                          />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningbesk"
+                          style="width: 350px"
+                         />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningantal"
+                          style="width: 45.5px"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningvikt"
+                          style="width: 45.5px"
+                        />
+                       </td>
+                      <td>
+                        <select
+                          name="attr_utrustning_filter"
+                          class="sheet-fardighetstabell_select"
+                          style="width: 116px"
+                        >
                           <option>Alla kategorier</option>
                           <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
+                        </select>
+                      </td>
+                     </tr>
+                  </table>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              class="sheet-testing sheet-secondLevelTab sheet-utrustning-magiska"
+              checked
+            />
+            <h3>Magiska föremål</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-colrow">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          Value="Typ"
+                          style="width: 180px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Beskrivning"
+                          style="width: 350px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Antal"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Vikt"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Kategori"
+                          style="width: 116px;"
+                          disabled="true"
+                        />
+                      </td>    
+                    </tr>
+                  </thead>
+                </table>
+                <fieldset class="repeating_utrustning">
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål" checked/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
+                  <table>
+                    <tr class="sheet-filtrerad_utrustning">
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningtyp"
+                          style="width: 180px"
+                          />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningbesk"
+                          style="width: 350px"
+                         />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningantal"
+                          style="width: 45.5px"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningvikt"
+                          style="width: 45.5px"
+                        />
+                       </td>
+                      <td>
+                        <select
+                          name="attr_utrustning_filter"
+                          class="sheet-fardighetstabell_select"
+                          style="width: 116px"
+                        >
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
+                        </select>
+                      </td>
+                     </tr>
+                  </table>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              class="sheet-testing sheet-secondLevelTab sheet-utrustning-egendom"
+              checked
+            />
+            <h3>Egendom</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-colrow">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          Value="Typ"
+                          style="width: 180px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Beskrivning"
+                          style="width: 350px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Antal"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Vikt"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Kategori"
+                          style="width: 116px;"
+                          disabled="true"
+                        />
+                      </td>    
+                    </tr>
+                  </thead>
+                </table>
+                <fieldset class="repeating_utrustning">
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom" checked/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
+                  <table>
+                    <tr class="sheet-filtrerad_utrustning">
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningtyp"
+                          style="width: 180px"
+                          />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningbesk"
+                          style="width: 350px"
+                         />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningantal"
+                          style="width: 45.5px"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningvikt"
+                          style="width: 45.5px"
+                        />
+                       </td>
+                      <td>
+                        <select
+                          name="attr_utrustning_filter"
+                          class="sheet-fardighetstabell_select"
+                          style="width: 116px"
+                        >
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
+                        </select>
+                      </td>
+                     </tr>
+                  </table>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              class="sheet-testing sheet-secondLevelTab sheet-utrustning-ovrigt"
+              checked
+            />
+            <h3>Övrigt</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-colrow">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          Value="Typ"
+                          style="width: 180px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Beskrivning"
+                          style="width: 350px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Antal"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-slim"
+                          type="text"
+                          value="Vikt"
+                          style="width: 45.5px"
+                          disabled="true"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-table-header-text-normal"
+                          type="text"
+                          value="Kategori"
+                          style="width: 116px;"
+                          disabled="true"
+                        />
+                      </td>    
+                    </tr>
+                  </thead>
+                </table>
+                <fieldset class="repeating_utrustning">
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt" checked/>
+                  <table>
+                    <tr class="sheet-filtrerad_utrustning">
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningtyp"
+                          style="width: 180px"
+                          />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="text"
+                          name="attr_utrustningbesk"
+                          style="width: 350px"
+                         />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningantal"
+                          style="width: 45.5px"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          class="sheet-fardighetstabell"
+                          type="number"
+                          min="0"
+                          value="0"
+                          step="any"
+                          name="attr_utrustningvikt"
+                          style="width: 45.5px"
+                        />
+                       </td>
+                      <td>
+                        <select
+                          name="attr_utrustning_filter"
+                          class="sheet-fardighetstabell_select"
+                          style="width: 116px"
+                        >
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>

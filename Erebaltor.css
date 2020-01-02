@@ -690,7 +690,135 @@ ul li .sheet-testing:checked .sheet-firstLevelTab .sheet-secondLevelTabs {
 }
 
 /* Decide which specific repitems to display.  */
-input.sheet-utrustning-alla-kategorier~.sheet-filtrerad_utrustning,      /* Always display all spells of circle zero.  */
-.sheet-utrustning-klader~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-klader:checked~table .sheet-filtrerad_utrustning {
+input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning,      /* Always display all spells of circle zero.  */
+.sheet-utrustning-klader~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-klader:checked~table .sheet-filtrerad_utrustning,
+.sheet-utrustning-drycker~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~table .sheet-filtrerad_utrustning,
+.sheet-utrustning-magiska~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~table .sheet-filtrerad_utrustning,
+.sheet-utrustning-egendom~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~table .sheet-filtrerad_utrustning,
+.sheet-utrustning-ovrigt~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~table .sheet-filtrerad_utrustning {
   display: block;
+}
+
+.sheet-table-header-text-normal {
+  border: 1px solid black;
+
+  background-color: gray;
+
+  font-weight: bold;
+
+  color: white;
+
+  font-size: 16px;
+
+  text-align: left;
+
+  padding: 0px;
+
+  margin: 0px;
+
+  width: 100%;
+}
+
+.sheet-table-header-select-normal {
+  border: 1px solid black;
+
+  background-color: gray;
+
+  font-weight: bold;
+
+  color: white;
+
+  font-size: 16px;
+
+  text-align: left;
+
+  padding: 0px;
+
+  margin: 0px;
+
+  width: 100%;
+}
+
+.sheet-table-header-number-normal {
+  border: 1px solid black;
+
+  background-color: gray;
+
+  font-weight: bold;
+
+  color: white;
+
+  font-size: 16px;
+
+  text-align: left;
+
+  padding: 0px;
+
+  margin: 0px;
+
+  width: 100%;
+}
+
+.sheet-table-header-number-wide {
+  border: 1px solid black;
+
+  background-color: gray;
+
+  font-weight: bold;
+
+  color: white;
+
+  font-size: 16px;
+
+  text-align: left;
+
+  padding: 0px;
+
+  margin: 0px;
+
+  width: 7em;
+}
+
+.sheet-table-header-text-narrow {
+  border: 1px solid black;
+
+  background-color: gray;
+
+  font-weight: bold;
+
+  color: white;
+
+  font-size: 16px;
+
+  text-align: left;
+
+  padding: 0px;
+
+  margin: 0px;
+
+  width: 7em;
+}
+
+.sheet-table-header-text-slim {
+  border: 1px solid black;
+
+  background-color: gray;
+
+  font-weight: bold;
+
+  color: white;
+
+  font-size: 16px;
+
+  text-align: left;
+
+  padding: 0px;
+
+  margin: 0px;
+
+  width: 3.5em;
+}
+
+.sheet-hidden {
+  display: none;
 }
