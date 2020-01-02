@@ -686,11 +686,11 @@ ul li .sheet-testing:checked .sheet-firstLevelTab .sheet-secondLevelTabs {
 }
 
 .sheet-filtrerad_utrustning {
-  /* By default, display no items of a filter box */
   display: none;
 }
+
 /* Decide which specific repitems to display.  */
 input.sheet-utrustning-alla-kategorier~.sheet-filtrerad_utrustning,      /* Always display all spells of circle zero.  */
-.sheet-utrustning-klader~sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-klader:checked~table .sheet-filtrerad_utrustning {
+.sheet-utrustning-klader~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-klader:checked~table .sheet-filtrerad_utrustning {
   display: block;
 }
