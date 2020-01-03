@@ -1,3 +1,9 @@
+:root {
+  --select-normal: 115px;
+  --text-normal: 178px;
+  --number-normal: 46px;
+}
+
 .charsheet {
   background-color: white;
 }
@@ -341,10 +347,10 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   width: 7em;
 }
 
-.sheet-fardighetstabell_select {
+.sheet-fardighetstabell-select {
   border: 1px solid black;
   margin-bottom: 0px;
-  width: 100%;
+  width: 116px;
 }
 
 .sheet-tarningstabell {
@@ -699,124 +705,68 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   display: block;
 }
 
-.sheet-table-header-text-normal {
-  border: 1px solid black;
-
-  background-color: gray;
-
-  font-weight: bold;
-
-  color: white;
-
-  font-size: 16px;
-
-  text-align: left;
-
-  padding: 0px;
-
-  margin: 0px;
-
-  width: 100%;
-}
-
 .sheet-table-header-select-normal {
   border: 1px solid black;
-
   background-color: gray;
-
   font-weight: bold;
-
   color: white;
-
   font-size: 16px;
-
   text-align: left;
-
   padding: 0px;
-
   margin: 0px;
-
-  width: 100%;
+  width: 115px;
 }
 
-.sheet-table-header-number-normal {
+.sheet-table-header-text {
   border: 1px solid black;
-
   background-color: gray;
-
   font-weight: bold;
-
   color: white;
-
   font-size: 16px;
-
   text-align: left;
-
   padding: 0px;
-
   margin: 0px;
-
-  width: 100%;
+}
+.sheet-text-width-normal {
+  width: 178px;
 }
 
-.sheet-table-header-number-wide {
-  border: 1px solid black;
-
-  background-color: gray;
-
-  font-weight: bold;
-
-  color: white;
-
-  font-size: 16px;
-
-  text-align: left;
-
-  padding: 0px;
-
-  margin: 0px;
-
-  width: 7em;
+.sheet-text-width-narrow {
+  width: 91px;
 }
 
-.sheet-table-header-text-narrow {
-  border: 1px solid black;
-
-  background-color: gray;
-
-  font-weight: bold;
-
-  color: white;
-
-  font-size: 16px;
-
-  text-align: left;
-
-  padding: 0px;
-
-  margin: 0px;
-
-  width: 7em;
+.sheet-text-width-slim {
+  width: 45.5px;
 }
 
-.sheet-table-header-text-slim {
+.sheet-table-header-select {
   border: 1px solid black;
-
   background-color: gray;
-
   font-weight: bold;
-
   color: white;
-
   font-size: 16px;
-
   text-align: left;
-
   padding: 0px;
-
   margin: 0px;
+}
 
-  width: 3.5em;
+.sheet-select-width-normal {
+  width: 116px;
+}
+
+.sheet-table-header-number {
+  border: 1px solid black;
+  background-color: gray;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.sheet-number-width-normal {
+  width: 46px;
 }
 
 .sheet-hidden {

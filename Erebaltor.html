@@ -268,8 +268,8 @@
                           type="number"
                           min="0"
                           name="attr_fysTot"
-                          value="(@{fys}+@{fysMod})"
-                          disabled="true"
+                          value=""
+                          readonly="true"
                         />
                       </td>
                       <td>
@@ -468,8 +468,8 @@
                           type="number"
                           min="0"
                           name="attr_stoTot"
-                          value="(@{sto}+@{stoMod})"
-                          disabled="true"
+                          value=""
+                          readonly="true"
                         />
                       </td>
                       <td>
@@ -626,151 +626,28 @@
                     <td class="sheet-box_alternate"><span>FV</span></td>
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Bluffa"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="KAR"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_bluffaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_bluffa"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_bluffa"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Bluffa}} {{slag=?{Slagtyp|Summa, Bluffa = [[@{bluffa}+1d20|Motstånd, Bluffa <-> [[@{bluffa}-1d20}+@{bluffaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Bluffa"             disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="KAR"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_bluffaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_bluffa"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_bluffa"         value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Bluffa}} {{slag=?{Slagtyp|Summa, Bluffa = [[@{bluffa}+1d20|Motstånd, Bluffa <-> [[@{bluffa}-1d20}+@{bluffaMod}+?{Modifikation|0}]]}}"></button></td>
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Finna dolda ting"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="INT"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_finnaDoldaTingMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_finnaDoldaTing"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_finnaDoldaTing"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Finna dolda ting}} {{slag=?{Slagtyp|Summa, Finna dolda ting = [[@{finnaDoldaTing}+1d20|Motstånd, Finna dolda ting <-> [[@{finnaDoldaTing}-1d20}+@{finnaDoldaTingMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Finna dolda ting"   disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="INT"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_finnaDoldaTingMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_finnaDoldaTing"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_finnaDoldaTing" value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Finna dolda ting}} {{slag=?{Slagtyp|Summa, Finna dolda ting = [[@{finnaDoldaTing}+1d20|Motstånd, Finna dolda ting <-> [[@{finnaDoldaTing}-1d20}+@{finnaDoldaTingMod}+?{Modifikation|0}]]}}"></button></td>
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Första hjälpen"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="INT"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_forstaHjalpenMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_forstaHjalpen"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_forstaHjalpen"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Första hjälpen}} {{slag=?{Slagtyp|Summa, Första hjälpen = [[@{forstaHjalpen}+1d20|Motstånd, Första hjälpen <-> [[@{forstaHjalpen}-1d20}+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Första hjälpen"     disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="INT"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_forstaHjalpenMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_forstaHjalpen"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_forstaHjalpen"  value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Första hjälpen}} {{slag=?{Slagtyp|Summa, Första hjälpen = [[@{forstaHjalpen}+1d20|Motstånd, Första hjälpen <-> [[@{forstaHjalpen}-1d20}+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"></button></td>
                   </tr>
                   <tr>
                     <td>
@@ -1569,60 +1446,13 @@
               <div class="sheet-colrow">
                 <table>
                   <tr>
-                    <td class="sheet-box_alternate"><span>Namn</span></td>
-                    <td class="sheet-box_alternate"><span>Bas</span></td>
-                    <td class="sheet-box_alternate"><span>Mod.</span></td>
-                    <td class="sheet-box_alternate"><span>erf</span></td>
-                    <td class="sheet-box_alternate"><span>FV</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_yrkesnamn_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_yrkesbas_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_yrkesMod_display"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_yrkeserf_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_yrkesfv_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_yrkes_display"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=@{yrkesnamn_display}}} {{slag=?{Slagtyp|Summa, @{yrkesnamn_display} = [[@{yrkesfv_display}+1d20|Motstånd, @{yrkesnamn_display} <-> [[@{yrkesfv_display}-1d20}+@{yrkesMod_display}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Namn" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Bas" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod." /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="erf" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV" /></td>
                   </tr>
                 </table>
-
                 <fieldset class="repeating_yrkes">
                   <table>
                     <tr>
@@ -1687,60 +1517,13 @@
               <div class="sheet-colrow">
                 <table>
                   <tr>
-                    <td class="sheet-box_alternate"><span>Namn</span></td>
-                    <td class="sheet-box_alternate"><span>Bas</span></td>
-                    <td class="sheet-box_alternate"><span>Mod.</span></td>
-                    <td class="sheet-box_alternate"><span>erf</span></td>
-                    <td class="sheet-box_alternate"><span>FV</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_sekundarnamn_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_sekundarbas_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_sekundarMod_display"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_sekundarerf_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_sekundarfv_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_sekundar_display"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=@{sekundarnamn_display}}} {{slag=?{Slagtyp|Summa, @{sekundarnamn_display} = [[@{sekundarfv_display}+1d20|Motstånd, @{sekundarnamn_display} <-> [[@{sekundarfv_display}-1d20}+@{sekundarMod_display}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Namn" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Bas" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod." /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="erf" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV" /></td>
                   </tr>
                 </table>
-
                 <fieldset class="repeating_sekundar">
                   <table>
                     <tr>
@@ -1805,60 +1588,13 @@
               <div class="sheet-colrow">
                 <table>
                   <tr>
-                    <td class="sheet-box_alternate"><span>Namn</span></td>
-                    <td class="sheet-box_alternate"><span>Bas</span></td>
-                    <td class="sheet-box_alternate"><span>Mod.</span></td>
-                    <td class="sheet-box_alternate"><span>erf</span></td>
-                    <td class="sheet-box_alternate"><span>FV</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_spraknamn_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_sprakbas_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_sprakMod_display"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_sprakerf_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_sprakfv_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_sprak_display"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=@{spraknamn_display}}} {{slag=?{Slagtyp|Summa, @{spraknamn_display} = [[@{sprakfv_display}+1d20|Motstånd, @{spraknamn_display} <-> [[@{sprakfv_display}-1d20}+@{sprakMod_display}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Namn" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Bas" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod." /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="erf" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV" /></td>
                   </tr>
                 </table>
-
                 <fieldset class="repeating_sprak">
                   <table>
                     <tr>
@@ -1933,106 +1669,19 @@
               <div class="sheet-colrow">
                 <table>
                   <tr>
-                    <td class="sheet-box_alternate"><span>Namn</span></td>
-                    <td class="sheet-box_alternate"><span>Beskrivning</span></td>
-                    <td class="sheet-box_alternate"><span>Kost.</span></td>
-                    <td class="sheet-box_alternate"><span>Mod.</span></td>
-                    <td class="sheet-box_alternate"><span>K</span></td>
-                    <td class="sheet-box_alternate"><span>I</span></td>
-                    <td class="sheet-box_alternate"><span>T</span></td>
-                    <td class="sheet-box_alternate"><span>erf</span></td>
-                    <td class="sheet-box_alternate"><span>FV</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_maginamn_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_magidesc_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_magikost_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_magimod_display"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_magiK_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_magiI_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_magiT_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_magierf_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_magifv_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_magi_display"
-                        value="&{template:DoDSummaEllerMotstandMagi} {{name=@{maginamn_display}}} {{effekt=?{E|1}}} {{slag=@{maginamn_display} ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20-?{E}+@{magifv_display}+@{magimod_display}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Namn"        /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Beskrivning" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Kost."       /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod.."       /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="K."          /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="I"           /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="T"           /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="erf"         /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV"          /></td>
                   </tr>
                 </table>
                 <fieldset class="repeating_magi">
                   <table>
-                    <tr>
-                      <td class="sheet-box_alternate"><span>Namn</span></td>
-                      <td class="sheet-box_alternate">
-                        <span>Beskrivning</span>
-                      </td>
-                      <td class="sheet-box_alternate"><span>Kost.</span></td>
-                      <td class="sheet-box_alternate"><span>Mod.</span></td>
-                      <td class="sheet-box_alternate"><span>K</span></td>
-                      <td class="sheet-box_alternate"><span>I</span></td>
-                      <td class="sheet-box_alternate"><span>T</span></td>
-                      <td class="sheet-box_alternate"><span>erf</span></td>
-                      <td class="sheet-box_alternate"><span>FV</span></td>
-                    </tr>
                     <tr>
                       <td>
                         <input
@@ -2234,10 +1883,10 @@
                     <td>
                       <input
                         type="number"
-                        name="attr_kroppsPoangTotalt"
+                        name="attr_kp_max"
                         class="sheet-fardighetstabell"
-                        value="(@{kroppsPoang}+@{kroppsPoangMod})"
-                        disabled="true"
+                        value=""
+                        readonly="true"
                       />
                     </td>
                   </tr>
@@ -2278,18 +1927,18 @@
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        disabled="true"
-                        name="attr_totkphuvud"
-                        value="(ceil((@{totkp}/2)-2))"
+                        readonly="true"
+                        name="attr_kphuvud_max"
+                        value=""
                       />
                     </td>
                     <td>
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        name="attr_nukphuvud"
-                        disabled="true"
-                        value="(@{totkphuvud}-@{sarhuvud})"
+                        name="attr_kphuvud"
+                        readonly="true"
+                        value=""
                       />
                     </td>
                     <td>
@@ -2335,18 +1984,18 @@
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        disabled="true"
-                        name="attr_totkphogerarm"
-                        value="(ceil((@{totkp}/2)-2))"
+                        readonly="true"
+                        name="attr_kphogerarm_max"
+                        value=""
                       />
                     </td>
                     <td>
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        disabled="true"
-                        name="attr_nukphogerarm"
-                        value="(@{totkphogerarm}-@{sarhogerarm})"
+                        readonly="true"
+                        name="attr_kphogerarm"
+                        value=""
                       />
                     </td>
                     <td>
@@ -2392,18 +2041,18 @@
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        disabled="true"
-                        name="attr_totkpvansterarm"
-                        value="(ceil((@{totkp}/2)-2))"
+                        readonly="true"
+                        name="attr_kpvansterarm_max"
+                        value=""
                       />
                     </td>
                     <td>
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        name="attr_nukpvansterarm"
-                        disabled="true"
-                        value="(@{totkpvansterarm}-@{sarvansterarm})"
+                        name="attr_kpvansterarm"
+                        readonly="true"
+                        value=""
                       />
                     </td>
                     <td>
@@ -2450,18 +2099,18 @@
                         class="sheet-fardighetstabell"
                         type="number"
                         min="0"
-                        disabled="true"
-                        name="attr_totkpbrost"
-                        value="(ceil(@{totkp}/2))"
+                        readonly="true"
+                        name="attr_kpbrost_max"
+                        value=""
                       />
                     </td>
                     <td>
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        name="attr_nukpbrost"
-                        disabled="true"
-                        value="(@{totkpbrost}-@{sarbrost})"
+                        name="attr_kpbrost"
+                        readonly="true"
+                        value=""
                       />
                     </td>
                     <td>
@@ -2508,18 +2157,18 @@
                         class="sheet-fardighetstabell"
                         type="number"
                         min="0"
-                        disabled="true"
-                        name="attr_totkpmage"
-                        value="(ceil((@{totkp}/2)-1))"
+                        readonly="true"
+                        name="attr_kpmage_max"
+                        value=""
                       />
                     </td>
                     <td>
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        name="attr_nukpmage"
-                        disabled="true"
-                        value="(@{totkpmage}-@{sarmage})"
+                        name="attr_kpmage"
+                        readonly="true"
+                        value=""
                       />
                     </td>
                     <td>
@@ -2566,18 +2215,18 @@
                         class="sheet-fardighetstabell"
                         type="number"
                         min="0"
-                        disabled="true"
-                        name="attr_totkphogerben"
-                        value="(ceil((@{totkp}/2)-1))"
+                        readonly="true"
+                        name="attr_kphogerben_max"
+                        value=""
                       />
                     </td>
                     <td>
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        name="attr_nukphogerben"
-                        disabled="true"
-                        value="(@{totkphogerben}-@{sarhogerben})"
+                        name="attr_kphogerben"
+                        readonly="true"
+                        value=""
                       />
                     </td>
                     <td>
@@ -2624,18 +2273,18 @@
                         class="sheet-fardighetstabell"
                         type="number"
                         min="0"
-                        disabled="true"
-                        name="attr_totkpvansterben"
-                        value="(ceil((@{totkp}/2)-1))"
+                        readonly="true"
+                        name="attr_kpvansterben_max"
+                        value=""
                       />
                     </td>
                     <td>
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        name="attr_nukpvansterben"
-                        disabled="true"
-                        value="(@{totkpvansterben}-@{sarvansterben})"
+                        name="attr_kpvansterben"
+                        readonly="true"
+                        value=""
                       />
                     </td>
                     <td>
@@ -2683,18 +2332,18 @@
                         class="sheet-fardighetstabell"
                         type="number"
                         min="0"
-                        disabled="true"
-                        name="attr_totkpgenerell"
-                        value="0"
+                        readonly="true"
+                        name="attr_kpgenerell_max"
+                        value=""
                       />
                     </td>
                     <td>
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        name="attr_nukpgenerell"
-                        disabled="true"
-                        value="(@{nukpgenerell}-@{sargenerell})"
+                        name="attr_kpgenerell"
+                        readonly="true"
+                        value=""
                       />
                     </td>
                     <td>
@@ -2740,9 +2389,8 @@
                       <input
                         class="sheet-fardighetstabell"
                         type="number"
-                        value="(@{kroppsPoangTotalt})"
-                        name="attr_totkp"
-                        disabled="true"
+                        name="attr_kp_max"
+                        readonly="true"
                       />
                     </td>
                     <td>
@@ -2750,9 +2398,9 @@
                         class="sheet-fardighetstabell"
                         type="number"
                         min="0"
-                        name="attr_nutotkp"
-                        disabled="true"
-                        value="(@{totkp}-@{totsar})"
+                        name="attr_kp"
+                        readonly="true"
+                        value=""
                       />
                     </td>
                     <td><span></span></td>
@@ -2771,9 +2419,9 @@
                         class="sheet-fardighetstabell"
                         type="number"
                         min="0"
-                        disabled="true"
-                        name="attr_totsar"
-                        value="(@{sarhuvud}+@{sarhogerarm}+@{sarvansterarm}+@{sarbrost}+@{sarmage}+@{sarhogerben}+@{sarvansterben}+@{sargenerell})"
+                        readonly="true"
+                        name="attr_sar_totalt"
+                        value=""
                       />
                     </td>
                     <td>
@@ -2844,128 +2492,16 @@
               <div class="sheet-colrow">
                 <table>
                   <tr>
-                    <td class="sheet-box_alternate"><span>Vapen</span></td>
-                    <td class="sheet-box_alternate"><span>FV</span></td>
-                    <td class="sheet-box_alternate"><span>Mod.</span></td>
-                    <td class="sheet-box_alternate"><span>BV</span></td>
-                    <td class="sheet-box_alternate"><span>Vikt (kg)</span></td>
-                    <td class="sheet-box_alternate"><span>Räckvidd</span></td>
-                    <td class="sheet-box_alternate"><span>Skada</span></td>
-                    <td class="sheet-box_alternate"><span>Bonus</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_vapenNamn_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_vapenFv_display"
-                        value="0"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_vapenMod_display"
-                        value="0"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_vapenBv_display"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_vapenVikt_display"
-                        class="sheet-fardighetstabell_number_wide"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_vapenRackvidd_display"
-                        class="sheet-fardighetstabell_number_wide"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_vapenSkada_display"
-                        class="sheet-fardighetstabell_text_narrow"
-                      />
-                    </td>
-                    <td>
-                      <select
-                        name="attr_vapenSkadaBonus_display3"
-                        class="sheet-fardighetstabell_text_narrow"
-                      >
-                        <option value="@{skadeBonus}">Normal</option>
-                        <option value="@{skadeBonusBage}">Båge</option>
-                        <option value="@{skadeBonusTvaHand}">2-hands</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input
-                        type="hidden"
-                        name="attr_vapenRollAttack_display"
-                        value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada_display}+@{vapenSkadaBonus_display3}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa_display}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv_display}+@{vapenMod_display}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="hidden"
-                        name="attr_vapenRollTraffa_display"
-                        value="?{Träfftabell&amp;#124;Standard&amp;#44; [[ 1t[standard]]]&amp;#124;Högt&amp;#44; [[1t[hitHigh]]]&amp;#124;Lågt&amp;#44; [[ 1t[hitLow]]]&amp;#124;Standard - Avstånd&amp;#44; [[ 1t[standardRanged]]]&amp;#124;Högt - Avstånd&amp;#44; [[ 1t[hitHighRanged]]]&amp;#124;Lågt - Avstånd&amp;#44; [[ 1t[hitLowRanged]]]&amp;#125;"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="hidden"
-                        name="attr_vapenRollSikta_display"
-                        value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=10&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser_display}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv_display}+@{vapenMod_display}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="hidden"
-                        name="attr_vapenRollSiktaPlatser_display"
-                        value="?{Sikta på&amp;#124;Huvudet&amp;#44; huvudet&amp;#124;Vänster arm&amp;#44; Vänster arm&amp;#124;Höger arm&amp;#44; Höger arm&amp;#124;Bröstkorg&amp;#44; Bröstkorg&amp;#124;Mage&amp;#44; Mage&amp;#124;Vänster ben&amp;#44; Vänster ben&amp;#124;Höger ben&amp;#44; Höger ben&amp;#125;"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="hidden"
-                        name="attr_vapenRollParrera_display"
-                        value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv_display}+@{vapenMod_display}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
-                        class="sheet-fardighetstabell"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_vapen_display"
-                        value="&{template:dropdownTest} {{name=@{vapenNamn_display}}} ?{Handling|Attack, @{vapenRollAttack_display}|Sikta, @{vapenRollSikta_display}|Parrera, @{vapenRollParrera_display}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Vapen" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod." /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="BV" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Vikt (kg)" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Räckvidd" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Skada" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Bonus" /></td>
                   </tr>
                 </table>
-
                 <fieldset class="repeating_vapen">
                   <table>
                     <tr>
@@ -3086,7 +2622,7 @@
           </li>
         </ul>
       </li>
-      <li name="Utrsustning">
+      <li name="Utrustning">
         <input
           type="checkbox"
           class="sheet-testing sheet-firstLevelTab"
@@ -3142,11 +2678,12 @@
                     </td>
                     <td>
                       <select
-                        name="attr_utrustningTyp"
-                        class="sheet-fardighetstabell_select"
+                        name="attr_utrustning_filter"
+                        class="sheet-fardighetstabell-select"
                       >
-                        <option class="sheet-utrustning-no-categories">Ingen kategori</option>
+                        <option>Ingen kategori</option>
                       </select>
+                    </td>
                     </td>
                   </tr>
                 </table>
@@ -3198,15 +2735,14 @@
                        <td>
                         <select
                           name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell_select"
-                          style="width: 116px"
+                          class="sheet-fardighetstabell-select"
                         >
-                          <option>Alla kategorier</option>
-                          <option>Kläder</option>
-                          <option>Drycker</option>
-                          <option>Magiska föremål</option>
-                          <option>Egendom</option>
-                          <option>Övrigt</option>
+                        <option>Alla kategorier</option>
+                        <option>Kläder</option>
+                        <option>Drycker</option>
+                        <option>Magiska föremål</option>
+                        <option>Egendom</option>
+                        <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -3229,7 +2765,7 @@
                     <tr>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           Value="Typ"
                           style="width: 180px"
@@ -3238,7 +2774,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           value="Beskrivning"
                           style="width: 350px"
@@ -3247,7 +2783,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Antal"
                           style="width: 45.5px"
@@ -3256,7 +2792,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Vikt"
                           style="width: 45.5px"
@@ -3264,13 +2800,7 @@
                         />
                       </td>
                       <td>
-                        <input
-                          class="sheet-table-header-text-normal"
-                          type="text"
-                          value="Kategori"
-                          style="width: 116px;"
-                          disabled="true"
-                        />
+                        <input class="sheet-table-header-text sheet-select-width-normal" disabled="true" value="Kategori"/>
                       </td>    
                     </tr>
                   </thead>
@@ -3323,7 +2853,7 @@
                       <td>
                         <select
                           name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell_select"
+                          class="sheet-fardighetstabell-select"
                         >
                         <option>Alla kategorier</option>
                         <option>Kläder</option>
@@ -3353,7 +2883,7 @@
                     <tr>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           Value="Typ"
                           style="width: 180px"
@@ -3362,7 +2892,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           value="Beskrivning"
                           style="width: 350px"
@@ -3371,7 +2901,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Antal"
                           style="width: 45.5px"
@@ -3380,7 +2910,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Vikt"
                           style="width: 45.5px"
@@ -3388,13 +2918,9 @@
                         />
                       </td>
                       <td>
-                        <input
-                          class="sheet-table-header-text-normal"
-                          type="text"
-                          value="Kategori"
-                          style="width: 116px;"
-                          disabled="true"
-                        />
+                        <td>
+                          <input class="sheet-table-header-text sheet-select-width-normal" disabled="true" value="Kategori"/>
+                        </td> 
                       </td>    
                     </tr>
                   </thead>
@@ -3446,18 +2972,17 @@
                           style="width: 45.5px"
                         />
                        </td>
-                      <td>
+                       <td>
                         <select
                           name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell_select"
-                          style="width: 116px"
+                          class="sheet-fardighetstabell-select"
                         >
-                          <option>Alla kategorier</option>
-                          <option>Kläder</option>
-                          <option>Drycker</option>
-                          <option>Magiska föremål</option>
-                          <option>Egendom</option>
-                          <option>Övrigt</option>
+                        <option>Alla kategorier</option>
+                        <option>Kläder</option>
+                        <option>Drycker</option>
+                        <option>Magiska föremål</option>
+                        <option>Egendom</option>
+                        <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -3480,7 +3005,7 @@
                     <tr>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           Value="Typ"
                           style="width: 180px"
@@ -3489,7 +3014,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           value="Beskrivning"
                           style="width: 350px"
@@ -3498,7 +3023,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Antal"
                           style="width: 45.5px"
@@ -3507,7 +3032,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Vikt"
                           style="width: 45.5px"
@@ -3516,7 +3041,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           value="Kategori"
                           style="width: 116px;"
@@ -3573,18 +3098,17 @@
                           style="width: 45.5px"
                         />
                        </td>
-                      <td>
+                       <td>
                         <select
                           name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell_select"
-                          style="width: 116px"
+                          class="sheet-fardighetstabell-select"
                         >
-                          <option>Alla kategorier</option>
-                          <option>Kläder</option>
-                          <option>Drycker</option>
-                          <option>Magiska föremål</option>
-                          <option>Egendom</option>
-                          <option>Övrigt</option>
+                        <option>Alla kategorier</option>
+                        <option>Kläder</option>
+                        <option>Drycker</option>
+                        <option>Magiska föremål</option>
+                        <option>Egendom</option>
+                        <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -3607,7 +3131,7 @@
                     <tr>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           Value="Typ"
                           style="width: 180px"
@@ -3616,7 +3140,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           value="Beskrivning"
                           style="width: 350px"
@@ -3625,7 +3149,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Antal"
                           style="width: 45.5px"
@@ -3634,7 +3158,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Vikt"
                           style="width: 45.5px"
@@ -3643,7 +3167,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           value="Kategori"
                           style="width: 116px;"
@@ -3700,18 +3224,17 @@
                           style="width: 45.5px"
                         />
                        </td>
-                      <td>
+                       <td>
                         <select
                           name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell_select"
-                          style="width: 116px"
+                          class="sheet-fardighetstabell-select"
                         >
-                          <option>Alla kategorier</option>
-                          <option>Kläder</option>
-                          <option>Drycker</option>
-                          <option>Magiska föremål</option>
-                          <option>Egendom</option>
-                          <option>Övrigt</option>
+                        <option>Alla kategorier</option>
+                        <option>Kläder</option>
+                        <option>Drycker</option>
+                        <option>Magiska föremål</option>
+                        <option>Egendom</option>
+                        <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -3734,7 +3257,7 @@
                     <tr>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           Value="Typ"
                           style="width: 180px"
@@ -3743,7 +3266,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           value="Beskrivning"
                           style="width: 350px"
@@ -3752,7 +3275,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Antal"
                           style="width: 45.5px"
@@ -3761,7 +3284,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-slim"
+                          class="sheet-table-header-text sheet-text-width-slim"
                           type="text"
                           value="Vikt"
                           style="width: 45.5px"
@@ -3770,7 +3293,7 @@
                       </td>
                       <td>
                         <input
-                          class="sheet-table-header-text-normal"
+                          class="sheet-table-header-text sheet-text-width-normal"
                           type="text"
                           value="Kategori"
                           style="width: 116px;"
@@ -3826,19 +3349,18 @@
                           name="attr_utrustningvikt"
                           style="width: 45.5px"
                         />
-                       </td>
+                      </td>
                       <td>
                         <select
                           name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell_select"
-                          style="width: 116px"
+                          class="sheet-fardighetstabell-select"
                         >
-                          <option>Alla kategorier</option>
-                          <option>Kläder</option>
-                          <option>Drycker</option>
-                          <option>Magiska föremål</option>
-                          <option>Egendom</option>
-                          <option>Övrigt</option>
+                        <option>Alla kategorier</option>
+                        <option>Kläder</option>
+                        <option>Drycker</option>
+                        <option>Magiska föremål</option>
+                        <option>Egendom</option>
+                        <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -3855,6 +3377,9 @@
       <div class="sheet-col sheet-dod-min">Version 0.1</div>
     </div>
   </div>
+
+
+
 
   <rolltemplate class="sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap">
     <div class="container">
@@ -4048,3 +3573,187 @@
     </div>
   </rolltemplate>
 </div>
+
+
+<script type="text/worker">
+
+  const parseValues = (values, stat, type='int') => {
+    if(type === 'int') 
+      return parseInt(values[stat],10)||0;
+    else if(type === 'float')
+      return parseFloat(values[stat],10)||0;
+    else if(type === 'str') 
+      return values[stat];
+  };
+
+  on("change:fys sheet:opened", function() {
+    console.log("hej");
+    getAttrs(["fys"], function(values) {
+        var f = values.fys;
+        var hit = f;
+        setAttrs({
+            fysTot: hit
+        });
+    });
+  });
+
+  on("change:fys change:fysmod sheet:opened", function() {
+    console.log("på");
+    getAttrs(["fys", "fysMod"], function(values) {
+        var number = parseInt(values["fys"],10)||0;
+        var modifier = parseInt(values["fysMod"],10)||0;
+        setAttrs({
+            fysTot: modifier+number
+        });
+    });
+  });
+
+  on("change:sto change:stomod sheet:opened", function() {
+    console.log("dig");
+    getAttrs(["sto", "stoMod"], function(values) {
+        var number = parseInt(values["sto"],10)||0;
+        var modifier = parseInt(values["stoMod"],10)||0;
+        setAttrs({
+            stoTot: modifier+number
+        });
+    });
+  });
+
+  on("change:fystot change:stotot change:kroppspoangmod sheet:opened", function() {
+    console.log("denna");
+    getAttrs(["fysTot", "stoTot", "kroppsPoangMod"], function(values) {
+        var fysTot = parseInt(values["fysTot"],10)||0;
+        var stoTot = parseInt(values["stoTot"],10)||0;
+        var kpMod = parseInt(values["kroppsPoangMod"],10)||0;
+        setAttrs({
+            kp_max: (Math.ceil((fysTot+stoTot)/2))+kpMod
+        });
+    });
+  });
+
+  on("change:kp_max sheet:opened", function() {
+    console.log("dag");
+    getAttrs(["kp_max"], function(values) {
+        var kp_max = parseInt(values["kp_max"],10)||0;
+        setAttrs({
+          kphuvud_max: (Math.ceil(kp_max/2))-2,
+          kphogerarm_max: (Math.ceil(kp_max/2))-2,
+          kpvansterarm_max: (Math.ceil(kp_max/2))-2,
+          kpbrost_max: Math.ceil(kp_max/2),
+          kpmage_max: (Math.ceil(kp_max/2))-1,
+          kphogerben_max: (Math.ceil(kp_max/2))-1,
+          kpvansterben_max: (Math.ceil(kp_max/2))-1,
+          kpgenerell_max: kp_max
+        });
+    });
+  });
+
+
+  on("change:kphuvud_max change:sarhuvud sheet:opened", function() {
+    getAttrs(["kphuvud_max", "sarhuvud"], function(values) {
+        var kphuvud_max = parseInt(values["kphuvud_max"],10)||0;
+        var sarhuvud = parseInt(values["sarhuvud"],10)||0;
+        setAttrs({
+            kphuvud: kphuvud_max-sarhuvud
+        });
+    });
+  });
+
+  on("change:kpvansterarm_max change:sarvansterarm sheet:opened", function() {
+    getAttrs(["kpvansterarm_max", "sarvansterarm"], function(values) {
+        var kpvansterarm_max = parseInt(values["kpvansterarm_max"],10)||0;
+        var sarvansterarm = parseInt(values["sarvansterarm"],10)||0;
+        setAttrs({
+          kpvansterarm: kpvansterarm_max-sarvansterarm
+        });
+    });
+  });
+
+  on("change:kphogerarm_max change:sarhogerarm sheet:opened", function() {
+    getAttrs(["kphogerarm_max", "sarhogerarm"], function(values) {
+        var kphogerarm_max = parseInt(values["kphogerarm_max"],10)||0;
+        var sarhogerarm = parseInt(values["sarhogerarm"],10)||0;
+        setAttrs({
+          kphogerarm: kphogerarm_max-sarhogerarm
+        });
+    });
+  });
+
+  on("change:kpbrost_max change:sarbrost sheet:opened", function() {
+    getAttrs(["kpbrost_max", "sarbrost"], function(values) {
+        var kpbrost_max = parseInt(values["kpbrost_max"],10)||0;
+        var sarbrost = parseInt(values["sarbrost"],10)||0;
+        setAttrs({
+          kpbrost: kpbrost_max-sarbrost
+        });
+    });
+  });
+
+  on("change:kpmage_max change:sarmage sheet:opened", function() {
+    getAttrs(["kpmage_max", "sarmage"], function(values) {
+        var kpmage_max = parseInt(values["kpmage_max"],10)||0;
+        var sarmage = parseInt(values["sarmage"],10)||0;
+        setAttrs({
+          kpmage: kpmage_max-sarmage
+        });
+    });
+  });
+
+  on("change:kphogerben_max change:sarhogerben sheet:opened", function() {
+    getAttrs(["kphogerben_max", "sarhogerben"], function(values) {
+        var kphogerben_max = parseInt(values["kphogerben_max"],10)||0;
+        var sarhogerben = parseInt(values["sarhogerben"],10)||0;
+        setAttrs({
+          kphogerben: kphogerben_max-sarhogerben
+        });
+    });
+  });
+
+  on("change:kpvansterben_max change:sarvansterben sheet:opened", function() {
+    getAttrs(["kpvansterben_max", "sarvansterben"], function(values) {
+        var kpvansterben_max = parseInt(values["kpvansterben_max"],10)||0;
+        var sarvansterben = parseInt(values["sarvansterben"],10)||0;
+        setAttrs({
+          kpvansterben: kpvansterben_max-sarvansterben
+        });
+    });
+  });
+
+  on("change:kpgenerell_max change:sargenerell sheet:opened", function() {
+    getAttrs(["kpgenerell_max", "sargenerell"], function(values) {
+        var kpgenerell_max = parseInt(values["kpgenerell_max"],10)||0;
+        var sargenerell = parseInt(values["sargenerell"],10)||0;
+        setAttrs({
+          kpgenerell: kpgenerell_max-sargenerell
+        });
+    });
+  });
+
+  on("change:sarhuvud change:sarvansterarm change:sarhogerarm change:sarbrost change:sarmage change:sarvansterben change:sarhogerben change:sargenerell sheet:opened", function() {
+    getAttrs(["sarhuvud", "sarvansterarm", "sarhogerarm", "sarbrost", "sarmage", "sarvansterben", "sarhogerben", "sargenerell"], function(values) {
+        var sarhuvud = parseInt(values["sarhuvud"],10)||0;
+        var sarvansterarm = parseInt(values["sarvansterarm"],10)||0;
+        var sarhogerarm = parseInt(values["sarhogerarm"],10)||0;
+        var sarbrost = parseInt(values["sarbrost"],10)||0;
+        var sarmage = parseInt(values["sarmage"],10)||0;
+        var sarvansterben = parseInt(values["sarvansterben"],10)||0;
+        var sarhogerben = parseInt(values["sarhogerben"],10)||0;
+        var sargenerell = parseInt(values["sargenerell"],10)||0;
+        setAttrs({
+          sar_totalt: sarhuvud+sarvansterarm+sarhogerarm+sarbrost+sarmage+sarvansterben+sarhogerben+sargenerell
+        });
+    });
+  });
+
+  on("change:kp_max change:sar_totalt sheet:opened", function() {
+    getAttrs(["kp_max", "sar_totalt"], function(values) {
+        var kp_max = parseInt(values["kp_max"],10)||0;
+        var sar_totalt = parseInt(values["sar_totalt"],10)||0;
+        setAttrs({
+          kp: kp_max-sar_totalt
+        });
+    });
+  });
+
+</script>
+
