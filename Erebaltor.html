@@ -236,7 +236,7 @@
                         <button
                           type="roll"
                           name="roll_styr"
-                          value="&{template:DoDSummaEllerMotstandGrundegenskap} {{name=Styrka}}  {{slag=Styrka ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -276,7 +276,7 @@
                         <button
                           type="roll"
                           name="roll_fysr"
-                          value="&{template:DoDSummaEllerMotstandGrundegenskap} {{name=Fysik}}  {{slag=Fysik ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{fys}+@{fysMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=Fysik}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{fys}+@{fysMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -316,7 +316,7 @@
                         <button
                           type="roll"
                           name="roll_smir"
-                          value="&{template:DoDSummaEllerMotstandGrundegenskap} {{name=Smidighet}}  {{slag=Smidighet ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{smi}+@{smiMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=Smidighet}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{smi}+@{smiMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -356,7 +356,7 @@
                         <button
                           type="roll"
                           name="roll_intr"
-                          value="&{template:DoDSummaEllerMotstandGrundegenskap} {{name=Intelligens}}  {{slag=Intelligens ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{int}+@{intMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=Intelligens}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{int}+@{intMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -396,7 +396,7 @@
                         <button
                           type="roll"
                           name="roll_psyr"
-                          value="&{template:DoDSummaEllerMotstandGrundegenskap} {{name=Psyke}}  {{slag=Psyke ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{psy}+@{psyMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=Psyke}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{psy}+@{psyMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -436,7 +436,7 @@
                         <button
                           type="roll"
                           name="roll_karr"
-                          value="&{template:DoDSummaEllerMotstandGrundegenskap} {{name=Karisma}}  {{slag=Karisma ?{Slagtyp|Summa, @{kar} = [[ |Motstånd, <-> [[ -1* }1d20+@{kar}+@{karMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=Karisma}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{kar}+@{karMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -476,7 +476,7 @@
                         <button
                           type="roll"
                           name="roll_stor"
-                          value="&{template:DoDSummaEllerMotstandGrundegenskap} {{name=Storlek}}  {{slag=Storlek ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20+@{sto}+@{stoMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=Storlek}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sto}+@{stoMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -631,7 +631,7 @@
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_bluffaMod"/></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_bluffa"/></td>
-                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_bluffa"         value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Bluffa}} {{slag=?{Slagtyp|Summa, Bluffa = [[@{bluffa}+1d20|Motstånd, Bluffa <-> [[@{bluffa}-1d20}+@{bluffaMod}+?{Modifikation|0}]]}}"></button></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_bluffa"         value="&{template:combined} {{name=Bluffa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{bluffaMod}+?{Modifikation|0}]]}}"></button></td>
                   </tr>
                   <tr>
                     <td><input  type="text"   class="sheet-fardighetstabell" value="Finna dolda ting"   disabled="true" /></td>
@@ -639,7 +639,7 @@
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_finnaDoldaTingMod"/></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_finnaDoldaTing"/></td>
-                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_finnaDoldaTing" value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Finna dolda ting}} {{slag=?{Slagtyp|Summa, Finna dolda ting = [[@{finnaDoldaTing}+1d20|Motstånd, Finna dolda ting <-> [[@{finnaDoldaTing}-1d20}+@{finnaDoldaTingMod}+?{Modifikation|0}]]}}"></button></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_finnaDoldaTing" value="&{template:combined} {{name=Finna dolda ting}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{finnaDoldaTingMod}+?{Modifikation|0}]]}}"></button></td>
                   </tr>
                   <tr>
                     <td><input  type="text"   class="sheet-fardighetstabell" value="Första hjälpen"     disabled="true" /></td>
@@ -647,7 +647,7 @@
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_forstaHjalpenMod"/></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_forstaHjalpen"/></td>
-                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_forstaHjalpen"  value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Första hjälpen}} {{slag=?{Slagtyp|Summa, Första hjälpen = [[@{forstaHjalpen}+1d20|Motstånd, Första hjälpen <-> [[@{forstaHjalpen}-1d20}+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"></button></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_forstaHjalpen"  value="&{template:combined} {{name=Första hjälpen}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"></button></td>
                   </tr>
                   <tr>
                     <td>
@@ -692,8 +692,8 @@
                     <td>
                       <button
                         type="roll"
-                        name="roll_gommaSig"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Gömma sig}} {{slag=?{Slagtyp|Summa, Gömma sig = [[@{gommaSig}+1d20|Motstånd, Gömma sig <-> [[@{gommaSig}-1d20}+@{gommaSigMod}+?{Modifikation|0}]]}}"
+                        name="roll_gommaSig"       
+                        value="&{template:combined} {{name=Gömma sig}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{gommaSig}+@{gommaSigMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -742,7 +742,7 @@
                       <button
                         type="roll"
                         name="roll_hoppa"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Hoppa}} {{slag=?{Slagtyp|Summa, Hoppa = [[@{hoppa}+1d20|Motstånd, Hoppa <-> [[@{hoppa}-1d20}+@{hoppaMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Hoppa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{hoppa}+@{hoppaMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -791,7 +791,7 @@
                       <button
                         type="roll"
                         name="roll_klattra"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Klättra}} {{slag=?{Slagtyp|Summa, Klättra = [[@{klattra}+1d20|Motstånd, Klättra <-> [[@{klattra}-1d20}+@{klattraMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Klättra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{klattra}+@{klattraMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -840,7 +840,7 @@
                       <button
                         type="roll"
                         name="roll_kopsla"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Köpslå}} {{slag=?{Slagtyp|Summa, Köpslå = [[@{kopsla}+1d20|Motstånd, Köpslå <-> [[@{kopsla}-1d20}+@{kopslaMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Köpslå}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{kopsla}+@{kopslaMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -889,7 +889,7 @@
                       <button
                         type="roll"
                         name="roll_lyssna"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Lyssna}} {{slag=?{Slagtyp|Summa, Lyssna = [[@{lyssna}+1d20|Motstånd, Lyssna <-> [[@{lyssna}-1d20}+@{lyssnaMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Lyssna}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lyssna}+@{lyssnaMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -938,7 +938,7 @@
                       <button
                         type="roll"
                         name="roll_lsModermal"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=L/S modersmål}} {{slag=?{Slagtyp|Summa, L/S modersmål = [[@{lsModersmal}+1d20|Motstånd, L/S modersmål <-> [[@{lsModersmal}-1d20}+@{lsModersmalMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=L/S modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lsModersmal}+@{lsModersmalMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -987,7 +987,7 @@
                       <button
                         type="roll"
                         name="roll_rida"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Rida}} {{slag=?{Slagtyp|Summa, Rida = [[@{rida}+1d20|Motstånd, Rida <-> [[@{rida}-1d20}+@{ridaMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Rida}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{rida}+@{ridaMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1036,7 +1036,7 @@
                       <button
                         type="roll"
                         name="roll_sjunga"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Sjunga}} {{slag=?{Slagtyp|Summa, Sjunga = [[@{sjunga}+1d20|Motstånd, Sjunga <-> [[@{sjunga}-1d20}+@{sjungaMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Sjunga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sjunga}+@{sjungaMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1085,7 +1085,7 @@
                       <button
                         type="roll"
                         name="roll_slagsmal"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Slagsmål}} {{slag=?{Slagtyp|Summa, Slagsmål = [[@{slagsmal}+1d20|Motstånd, Slagsmål <-> [[@{slagsmal}-1d20}+@{slagsmalMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Slagsmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{slagsmal}+@{slagsmalMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1134,7 +1134,7 @@
                       <button
                         type="roll"
                         name="roll_smyga"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Smyga}} {{slag=?{Slagtyp|Summa, Smyga = [[@{smyga}+1d20|Motstånd, Smyga <-> [[@{smyga}-1d20}+@{smygaMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Smyga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{smyga}+@{smygaMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1183,7 +1183,7 @@
                       <button
                         type="roll"
                         name="roll_spara"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Spåra}} {{slag=?{Slagtyp|Summa, Spåra = [[@{spara}+1d20|Motstånd, Spåra <-> [[@{spara}-1d20}+@{sparaMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Spåra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{spara}+@{sparaMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1232,7 +1232,7 @@
                       <button
                         type="roll"
                         name="roll_stjalaForemal"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Stjäla föremål}} {{slag=?{Slagtyp|Summa, Stjäla föremål = [[@{stjalaForemal}+1d20|Motstånd, Stjäla föremål <-> [[@{stjalaForemal}-1d20}+@{stjalaForemalMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Stjäla föremål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{stjalaForemal}+@{stjalaForemalMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1281,7 +1281,7 @@
                       <button
                         type="roll"
                         name="roll_talaModersmal"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Tala modersmål}} {{slag=?{Slagtyp|Summa, Tala modersmål = [[@{talaModersmal}+1d20|Motstånd, Tala modersmål <-> [[@{talaModersmal}-1d20}+@{talaModersmalMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Tala modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{talaModersmal}+@{talaModersmalMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1330,7 +1330,7 @@
                       <button
                         type="roll"
                         name="roll_upptackaFara"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Upptäcka fara}} {{slag=?{Slagtyp|Summa, Upptäcka fara = [[@{upptackaFara}+1d20|Motstånd, Upptäcka fara <-> [[@{upptackaFara}-1d20}+@{upptackaFaraMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Upptäcka fara}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{upptackaFara}+@{upptackaFaraMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1357,6 +1357,7 @@
                         type="number"
                         name="attr_varderaMod"
                         class="sheet-fardighetstabell"
+                        value="0"
                       />
                     </td>
                     <td>
@@ -1371,13 +1372,14 @@
                         type="number"
                         name="attr_vardera"
                         class="sheet-fardighetstabell"
+                        value="0"
                       />
                     </td>
                     <td>
                       <button
                         type="roll"
                         name="roll_vardera"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Värdera}} {{slag=?{Slagtyp|Summa, Värdera = [[@{vardera}+1d20|Motstånd, Värdera <-> [[@{vardera}-1d20}+@{varderaMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Värdera}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{vardera}+@{varderaMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1426,7 +1428,7 @@
                       <button
                         type="roll"
                         name="roll_overtala"
-                        value="&{template:DoDSummaEllerMotstandFardighet} {{namn=Övertala}} {{slag=?{Slagtyp|Summa, Övertala = [[@{overtala}+1d20|Motstånd, Övertala <-> [[@{overtala}-1d20}+@{overtalaMod}+?{Modifikation|0}]]}}"
+                        value="&{template:combined} {{name=Övertala}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{overtala}+@{overtalaMod}+?{Modifikation|0}]]}}"
                         class="sheet-tarningstabell"
                       ></button>
                     </td>
@@ -1496,7 +1498,7 @@
                         <button
                           type="roll"
                           name="roll_yrkes"
-                          value="&{template:DoDSummaEllerMotstandFardighet} {{namn=@{yrkesnamn}}} {{slag=?{Slagtyp|Summa, @{yrkesnamn} = [[@{yrkesfv}+1d20|Motstånd, @{yrkesnamn} <-> [[@{yrkesfv}-1d20}+@{yrkesMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=@{yrkesnamn}}} {{vad=Yrkes}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{yrkesfv}+@{yrkesMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -1567,7 +1569,7 @@
                         <button
                           type="roll"
                           name="roll_yrkes"
-                          value="&{template:DoDSummaEllerMotstandFardighet} {{namn=@{sekundarnamn}}} {{slag=?{Slagtyp|Summa, @{sekundarnamn} = [[@{sekundarfv}+1d20|Motstånd, @{sekundarnamn} <-> [[@{sekundarfv}-1d20}+@{sekundarMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=@{sekundarnamn}}} {{vad=Sekundär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sekundarfv}+@{sekundarMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -1638,7 +1640,7 @@
                         <button
                           type="roll"
                           name="roll_sprak"
-                          value="&{template:DoDSummaEllerMotstandFardighet} {{namn=@{spraknamn}}} {{slag=?{Slagtyp|Summa, @{spraknamn} = [[@{sprakfv}+1d20|Motstånd, @{spraknamn} <-> [[@{sprakfv}-1d20}+@{sprakMod}+?{Modifikation|0}]]}}"
+                          value="&{template:combined} {{name=@{spraknamn}}} {{vad=Språk}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sprakfv}+@{sprakMod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -1709,6 +1711,7 @@
                           type="number"
                           name="attr_magimod"
                           class="sheet-fardighetstabell"
+                          value="0"
                           
                         />
                       </td>
@@ -1751,7 +1754,7 @@
                         <button
                           type="roll"
                           name="roll_magi"
-                          value="&{template:DoDSummaEllerMotstandMagi} {{name=@{maginamn}}} {{effekt=?{E|1}}} {{slag=@{maginamn} ?{Slagtyp|Summa, = [[ |Motstånd, <-> [[ -1* }1d20-?{E}+@{magifv}+@{magimod}]]}}"
+                          value="&{template:combined} {{name=@{maginamn}}} {{effekt=?{E|1}}} {{vad=Formel}} ?{Slagtyp|Summa, {{typ=Magi&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Magi - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20-?{E}+@{magifv}+@{magimod}+?{Modifikation|0}]]}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -3497,27 +3500,93 @@
 
   <rolltemplate class="sheet-rolltemplate-dropdownTest">
     <div class="container">
-      <div><h1>Test</h1></div>
-      {{#typ}}
-      <div class="rowcolor"><span class="tcat">typ: </span>{{ typ }}</div>
-      {{/typ}}
-      {{#name}}
-        <div class="rowcolor"><span class="tcat">Namn: </span>{{ name }}</div>
-      {{/name}}
-
-      {{#slag}}
-        <div class="rowcolor"><span class="tcat">slag: </span>{{ slag }}</div>
-      {{/slag}}
-
-      {{#skada}}
-        <div class="rowcolor"><span class="tcat">Skada: </span>{{ skada }}</div>
-      {{/skada}}
-
-      {{#var}}
-        <div class="rowcolor"><span class="tcat">var: </span>{{ var }}</div>
-      {{/var}}
-
       <div class="arrow-container"><div class="line"></div></div>
+
+      {{#typ}}<div><h1>{{typ}}</h1></div>{{/typ}}
+      {{^typ}}<div><h1>Handling</h1></div>{{/typ}}
+      <table>
+        {{#name}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">Vapen: </span></div></td>
+            <td><div class="rowcolor"><span class="sheet-bold">{{ name }}</span></div></td>
+          </tr>
+        {{/name}}
+
+        {{#slag}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
+            <td><div class="rowcolor">{{ slag }}</div></td>
+          </tr>
+        {{/slag}}
+        
+        {{#effekt}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">Effektgrad: </span></div></td>
+            <td><div class="rowcolor"><span class="sheet-bold">{{ effekt }}</span></div></td>
+          </tr>
+        {{/effekt}}
+
+        {{#skada}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">skada: </span></div></td>
+            <td><div class="rowcolor">{{ skada }}</div></td>
+          </tr>
+        {{/skada}}
+
+        {{#var}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">Träffar: </span></div></td>
+            <td><div class="rowcolor"><span class="sheet-bold">{{ var }}</span></div></td>
+          </tr>
+        {{/var}}
+
+      </table>
+    </div>
+  </rolltemplate>
+
+  <rolltemplate class="sheet-rolltemplate-combined">
+    <div class="container">
+      <div class="arrow-container"><div class="line"></div></div>
+
+      {{#typ}}<div><h1>{{typ}}</h1></div>{{/typ}}
+      {{^typ}}<div><h1>Handling</h1></div>{{/typ}}
+      <table>
+        {{#name}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">{{ vad }}: </span></div></td>
+            <td><div class="rowcolor"><span class="sheet-bold">{{ name }}</span></div></td>
+          </tr>
+        {{/name}}
+
+        {{#slag}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
+            <td><div class="rowcolor">{{ slag }}</div></td>
+          </tr>
+        {{/slag}}
+        
+        {{#effekt}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">Effektgrad: </span></div></td>
+            <td><div class="rowcolor"><span class="sheet-bold">{{ effekt }}</span></div></td>
+          </tr>
+        {{/effekt}}
+
+        {{#skada}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">skada: </span></div></td>
+            <td><div class="rowcolor">{{ skada }}</div></td>
+          </tr>
+        {{/skada}}
+
+        {{#var}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">Träffar: </span></div></td>
+            <td><div class="rowcolor"><span class="sheet-bold">{{ var }}</span></div></td>
+          </tr>
+        {{/var}}
+
+      </table>
     </div>
   </rolltemplate>
 

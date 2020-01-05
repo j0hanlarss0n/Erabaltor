@@ -368,6 +368,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
 }
 
 /* roll template */
+.sheet-rolltemplate-combined .sheet-container .sheet-container,
 .sheet-rolltemplate-dropdownTest .sheet-container .sheet-container,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap
   .sheet-container
@@ -394,6 +395,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   text-align: center;
 }
 
+.sheet-rolltemplate-combined .sheet-container h1,
 .sheet-rolltemplate-dropdownTest .sheet-container h1,
 .sheet-rolltemplate-DoDSummaEllerMotstandMagi .sheet-container h1,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .sheet-container h1,
@@ -415,6 +417,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   text-align: center;
 }
 
+.sheet-rolltemplate-combined div,
 .sheet-rolltemplate-dropdownTest div,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap div,
 .sheet-rolltemplate-DoDSummaEllerMotstandMagi div,
@@ -427,6 +430,21 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   padding: 2px;
 }
 
+.sheet-rolltemplate-combined .sheet-bold,
+.sheet-rolltemplate-dropdownTest .sheet-bold,
+.sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .sheet-bold,
+.sheet-rolltemplate-DoDSummaEllerMotstandMagi .sheet-bold,
+.sheet-rolltemplate-DoDSummaEllerMotstandFardighet .sheet-bold,
+.sheet-rolltemplate-DoDSummaEllerMotstandVapen .sheet-bold,
+.sheet-rolltemplate-DoDSummaEllerMotstand .sheet-bold,
+.sheet-rolltemplate-DoDFardighet .sheet-bold,
+.sheet-rolltemplate-DoDText .sheet-bold,
+.sheet-rolltemplate-DoDAttack .sheet-bold {
+  
+  font-weight: bold;
+}
+
+.sheet-rolltemplate-combined span,
 .sheet-rolltemplate-dropdownTest span,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap span,
 .sheet-rolltemplate-DoDSummaEllerMotstandMagi span,
@@ -451,6 +469,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   text-align: center;
 }
 
+.sheet-rolltemplate-combined .sheet-subheader,
 .sheet-rolltemplate-dropdownTest .sheet-subheader,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .sheet-subheader,
 .sheet-rolltemplate-DoDSummaEllerMotstandMagi .sheet-subheader,
@@ -469,6 +488,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   text-align: center;
 }
 
+.sheet-rolltemplate-combined .sheet-arrow-right,
 .sheet-rolltemplate-dropdownTest .sheet-arrow-right,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .sheet-arrow-right,
 .sheet-rolltemplate-DoDSummaEllerMotstandMagi .sheet-arrow-right,
@@ -485,6 +505,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   border-top: 2px solid transparent;
 }
 
+.sheet-rolltemplate-combined .sheet-line,
 .sheet-rolltemplate-dropdownTest .sheet-line,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .sheet-line,
 .sheet-rolltemplate-DoDSummaEllerMotstandMagi .sheet-line,
@@ -497,6 +518,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   border-left: 194px solid darkolivegreen;
 }
 
+.sheet-rolltemplate-combined .sheet-tcat,
 .sheet-rolltemplate-dropdownTest .sheet-tcat,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .sheet-tcat,
 .sheet-rolltemplate-DoDSummaEllerMotstandMagi .sheet-tcat,
@@ -509,6 +531,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   font-style: italic;
 }
 
+.sheet-rolltemplate-combined .inlinerollresult,
 .sheet-rolltemplate-dropdownTest .inlinerollresult,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .inlinerollresult,
 .sheet-rolltemplate-DoDSummaEllerMotstandMagi .inlinerollresult,
@@ -518,13 +541,15 @@ input[type="number"].sheet-fardighetstabell_number_wide {
 .sheet-rolltemplate-DoDFardighet .inlinerollresult,
 .sheet-rolltemplate-DoDText .inlinerollresult,
 .sheet-rolltemplate-DoDAttack .inlinerollresult {
-  background-color: white;
+  background-color: transparent;
 
   border: none;
 
   text-align: center;
+
 }
 
+.sheet-rolltemplate-combined .inlinerollresult.fullcrit,
 .sheet-rolltemplate-dropdownTest .inlinerollresult.fullcrit,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap
   .inlinerollresult.fullcrit,
@@ -540,6 +565,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   border: none;
 }
 
+.sheet-rolltemplate-combined .inlinerollresult.fullfail,
 .sheet-rolltemplate-dropdownTest .inlinerollresult.fullfail,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap
   .inlinerollresult.fullfail,
@@ -555,6 +581,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   border: none;
 }
 
+.sheet-rolltemplate-combined .inlinerollresult.importandivoll,
 .sheet-rolltemplate-dropdownTest .inlinerollresult.importandivoll,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap
   .inlinerollresult.importandivoll,
