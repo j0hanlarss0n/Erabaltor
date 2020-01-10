@@ -631,7 +631,7 @@
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_bluffaMod"/></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_bluffa"/></td>
-                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_bluffa"         value="&{template:combined} {{name=Bluffa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{bluffaMod}+?{Modifikation|0}]]}}"></button></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_bluffa"         value="&{template:combined} {{name=Bluffa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{bluffa}+@{bluffaMod}+?{Modifikation|0}]]}}"></button></td>
                   </tr>
                   <tr>
                     <td><input  type="text"   class="sheet-fardighetstabell" value="Finna dolda ting"   disabled="true" /></td>
@@ -639,7 +639,7 @@
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_finnaDoldaTingMod"/></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_finnaDoldaTing"/></td>
-                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_finnaDoldaTing" value="&{template:combined} {{name=Finna dolda ting}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{finnaDoldaTingMod}+?{Modifikation|0}]]}}"></button></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_finnaDoldaTing" value="&{template:combined} {{name=Finna dolda ting}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{finnaDoldaTing}+@{finnaDoldaTingMod}+?{Modifikation|0}]]}}"></button></td>
                   </tr>
                   <tr>
                     <td><input  type="text"   class="sheet-fardighetstabell" value="Första hjälpen"     disabled="true" /></td>
@@ -647,7 +647,8 @@
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_forstaHjalpenMod"/></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_forstaHjalpen"/></td>
-                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_forstaHjalpen"  value="&{template:combined} {{name=Första hjälpen}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"></button></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_forstaHjalpen"  value="&{template:combined} {{name=Första hjälpen}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{forstaHjalpen}+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"></button></td>
+                        
                   </tr>
                   <tr>
                     <td>
