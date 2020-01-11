@@ -647,792 +647,135 @@
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_forstaHjalpenMod"/></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
                     <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_forstaHjalpen"/></td>
-                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_forstaHjalpen"  value="&{template:combined} {{name=Första hjälpen}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{forstaHjalpen}+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"></button></td>
-                        
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_forstaHjalpen"  value="&{template:combined} {{name=Första hjälpen}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{forstaHjalpen}+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Gömma sig"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="INT"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_gommaSigMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_gommaSig"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_gommaSig"       
-                        value="&{template:combined} {{name=Gömma sig}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{gommaSig}+@{gommaSigMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Gömma sig"          disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="INT"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_gommaSigMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_gommaSig"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_gommaSig"       value="&{template:combined} {{name=Gömma sig}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{gommaSig}+@{gommaSigMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Hoppa"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="SMI"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_hoppaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_hoppa"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_hoppa"
-                        value="&{template:combined} {{name=Hoppa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{hoppa}+@{hoppaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Hoppa"              disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="SMI"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_hoppaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_hoppa"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_hoppa"          value="&{template:combined} {{name=Hoppa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{hoppa}+@{hoppaMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Klättra"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="KAR"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_klattraMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_klattra"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_klattra"
-                        value="&{template:combined} {{name=Klättra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{klattra}+@{klattraMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Klättra"            disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="SMI"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_klattraMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_klattra"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_klattra"        value="&{template:combined} {{name=Klättra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{klattra}+@{klattraMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Köpslå"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="KAR"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_kopslaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_kopsla"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_kopsla"
-                        value="&{template:combined} {{name=Köpslå}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{kopsla}+@{kopslaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Köpslå"             disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="KAR"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_kopslaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_kopsla"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_kopsla"         value="&{template:combined} {{name=Köpslå}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{kopsla}+@{kopslaMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Lyssna"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="INT"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_lyssnaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_lyssna"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_lyssna"
-                        value="&{template:combined} {{name=Lyssna}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lyssna}+@{lyssnaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Lyssna"             disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="INT"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_lyssnaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_lyssna"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_lyssna"         value="&{template:combined} {{name=Lyssna}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lyssna}+@{lyssnaMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="L/S modersmål"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="spec."
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_lsModersmalMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_lsModersmal"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_lsModermal"
-                        value="&{template:combined} {{name=L/S modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lsModersmal}+@{lsModersmalMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="L/S modersmål"      disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="spec."              disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_lsModersmalModMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_lsModersmalMod"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_lsModersmalMod" value="&{template:combined} {{name=L/S modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lsModersmalMod}+@{lsModersmalModMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Rida"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="SMI"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_ridaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_rida"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_rida"
-                        value="&{template:combined} {{name=Rida}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{rida}+@{ridaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Rida"               disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="SMI"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_ridaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_rida"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_rida"           value="&{template:combined} {{name=Rida}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{rida}+@{ridaMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Sjunga"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="KAR"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_sjungaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_sjunga"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_sjunga"
-                        value="&{template:combined} {{name=Sjunga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sjunga}+@{sjungaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Sjunga"             disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="KAR"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_sjungaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_sjunga"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_sjunga"         value="&{template:combined} {{name=Sjunga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sjunga}+@{sjungaMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Slagsmål"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="STY"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_slagsmalMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_slagsmal"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_slagsmal"
-                        value="&{template:combined} {{name=Slagsmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{slagsmal}+@{slagsmalMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Slagsmål"           disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="STY"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_slagsmalMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_slagsmal"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_slagsmal"       value="&{template:combined} {{name=Slagsmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{slagsmal}+@{slagsmalMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Smyga"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="SMI"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_smygaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_smyga"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_smyga"
-                        value="&{template:combined} {{name=Smyga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{smyga}+@{smygaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Smyga"              disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="SMI"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_smygaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_smyga"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_smyga"          value="&{template:combined} {{name=Smyga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{smyga}+@{smygaMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Spåra"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="INT"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_sparaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_spara"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_spara"
-                        value="&{template:combined} {{name=Spåra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{spara}+@{sparaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Spåra"              disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="INT"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_sparaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_spara"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_spara"          value="&{template:combined} {{name=Spåra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{spara}+@{sparaMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Stjäla föremål"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="SMI"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_stjalaForemalMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_stjalaForemal"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_stjalaForemal"
-                        value="&{template:combined} {{name=Stjäla föremål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{stjalaForemal}+@{stjalaForemalMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Stjäla föremål"     disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="SMI"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_stjalaForemalMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_stjalaForemal"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_stjalaForemal"  value="&{template:combined} {{name=Stjäla föremål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{stjalaForemal}+@{stjalaForemalMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Tala modersmål"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="spec."
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_talaModersmalMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_talaModersmal"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_talaModersmal"
-                        value="&{template:combined} {{name=Tala modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{talaModersmal}+@{talaModersmalMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Tala modersmål"     disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="spec."              disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_talaModersmalMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_talaModersmal"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_talaModersmal"  value="&{template:combined} {{name=Tala modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{talaModersmal}+@{talaModersmalMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Upptäcka fara"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="PSY"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_upptackaFaraMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_upptackaFara"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_upptackaFara"
-                        value="&{template:combined} {{name=Upptäcka fara}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{upptackaFara}+@{upptackaFaraMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Upptäcka fara"      disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="PSY"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_upptackaFaraMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_upptackaFara"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_upptackaFara"   value="&{template:combined} {{name=Upptäcka fara}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{upptackaFara}+@{upptackaFaraMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Värdera"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="INT"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_varderaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_vardera"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_vardera"
-                        value="&{template:combined} {{name=Värdera}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{vardera}+@{varderaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Värdera"            disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="INT"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_varderaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_vardera"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_vardera"        value="&{template:combined} {{name=Värdera}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{vardera}+@{varderaMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        value="Övertala"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value="KAR"
-                        class="sheet-fardighetstabell"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_overtalaMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_overtala"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <button
-                        type="roll"
-                        name="roll_overtala"
-                        value="&{template:combined} {{name=Övertala}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{overtala}+@{overtalaMod}+?{Modifikation|0}]]}}"
-                        class="sheet-tarningstabell"
-                      ></button>
-                    </td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="Övertala"           disabled="true" /></td>
+                    <td><input  type="text"   class="sheet-fardighetstabell" value="KAR"                disabled="true"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_overtalaMod"/></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  /></td>
+                    <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_overtala"/></td>
+                    <td><button type="roll"   class="sheet-tarningstabell"   name="roll_overtala"       value="&{template:combined} {{name=Övertala}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{overtala}+@{overtalaMod}+?{Modifikation|0}]]}}"></button></td>          
                   </tr>
                 </table>
               </div>
@@ -1449,60 +792,22 @@
               <div class="sheet-colrow">
                 <table>
                   <tr>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Namn" /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Bas" /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod." /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="erf" /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Namn"  /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Bas"   /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod."  /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="erf"   /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV"    /></td>
                   </tr>
                 </table>
                 <fieldset class="repeating_yrkes">
                   <table>
                     <tr>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_yrkesnamn"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_yrkesbas"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_yrkesMod"
-                          class="sheet-fardighetstabell"
-                          value="0"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_yrkeserf"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_yrkesfv"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <button
-                          type="roll"
-                          name="roll_yrkes"
-                          value="&{template:combined} {{name=@{yrkesnamn}}} {{vad=Yrkes}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{yrkesfv}+@{yrkesMod}+?{Modifikation|0}]]}}"
-                          class="sheet-tarningstabell"
-                        ></button>
-                      </td>
+                      <td><input  type="text"   name="attr_yrkesnamn" class="sheet-fardighetstabell"            /></td>
+                      <td><input  type="text"   name="attr_yrkesbas"  class="sheet-fardighetstabell"            /></td>
+                      <td><input  type="number" name="attr_yrkesMod"  class="sheet-fardighetstabell"  value="0" /></td>
+                      <td><input  type="number" name="attr_yrkeserf"  class="sheet-fardighetstabell"            /></td>
+                      <td><input  type="number" name="attr_yrkesfv"   class="sheet-fardighetstabell"            /></td>
+                      <td><button type="roll"   name="roll_yrkes"     class="sheet-tarningstabell"    value="&{template:combined} {{name=@{yrkesnamn}}} {{vad=Yrkes}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{yrkesfv}+@{yrkesMod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                   </table>
                 </fieldset>
