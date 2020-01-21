@@ -339,6 +339,7 @@
                           min="0"
                           name="attr_psy"
                           value="psy"
+                          value="0"
                         />
                       </td>
                       <td>
@@ -2836,8 +2837,28 @@
             <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
             <td><div class="rowcolor">{{ slag }}</div></td>
           </tr>
+          {{#conditional}}
+            {{#rollGreater() slag -1}}
+              <tr>
+                <td><div class="rowcolor"><span class="tcat">Slaget: </span></div></td>
+                <td><div class="rowcolor"><span class="sheet-bold">Lyckas</span></div></td>
+              </tr>
+              {{#resultat}}
+                <tr>
+                  <td><div class="rowcolor"><span class="tcat">{{ resultatLabel }}: </span></div></td>
+                  <td><div class="rowcolor"><span class="sheet-bold success">{{ resultat }}</span></div></td>
+                </tr>
+              {{/resultat}}
+            {{/rollGreater() slag -1}}
+            {{#rollLess() slag 0}}
+              <tr>
+                <td><div class="rowcolor"><span class="tcat">Slaget: </span></div></td>
+                <td><div class="rowcolor"><span class="sheet-bold failure">Misslyckas</span></div></td>
+              </tr>
+            {{/rollLess() slag 0}}
+          {{/conditional}}
         {{/slag}}
-        
+ 
         {{#effekt}}
           <tr>
             <td><div class="rowcolor"><span class="tcat">Effektgrad: </span></div></td>
@@ -2858,25 +2879,6 @@
             <td><div class="rowcolor"><span class="sheet-bold">{{ var }}</span></div></td>
           </tr>
         {{/var}}
-
-        {{#rollGreater() Condition -1}}
-          <tr>
-            <td><div class="rowcolor"><span class="tcat">Slaget: </span></div></td>
-            <td><div class="rowcolor-success"><span class="sheet-bold">Lyckas</span></div></td>
-          </tr>
-          {{#resultat}}
-            <tr>
-              <td><div class="rowcolor"><span class="tcat">Resultat: </span></div></td>
-              <td><div class="rowcolor"><span class="sheet-bold">{{ resultat }}</span></div></td>
-            </tr>
-          {{/tesultat}}
-        {{/rollGreater() Condition -1}}
-        {{#rollLess() Condition 0}}
-          <tr>
-            <td><div class="rowcolor"><span class="tcat">Slaget: </span></div></td>
-            <td><div class="rowcolor-fail"><span class="sheet-bold">Misslyckas</span></div></td>
-          </tr>
-        {{/rollLess() Condition 0}}
 
       </table>
     </div>

@@ -463,24 +463,12 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   text-align: center;
 }
 
-.sheet-rolltemplate-combined .sheet-rowcolor-fail {
+.sheet-rolltemplate-combined .sheet-failure {
   color: rgb(185, 60, 60);
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.2em;
-  font-variant: small-caps;
-  line-height: 1.6em;
-  padding-left: 5px;
-  text-align: center;
 }
 
-.sheet-rolltemplate-combined .sheet-rowcolor-success {
+.sheet-rolltemplate-combined .sheet--success {
   color: rgb(52, 107, 189);
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.2em;
-  font-variant: small-caps;
-  line-height: 1.6em;
-  padding-left: 5px;
-  text-align: center;
 }
 
 .sheet-rolltemplate-combined .sheet-subheader,
