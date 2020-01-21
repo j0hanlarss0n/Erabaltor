@@ -202,44 +202,11 @@
                       <td class="sheet-box_alternate"><span>Tot.</span></td>
                     </tr>
                     <tr>
-                      <td class="sheet-box_alternate_row">
-                        <span>Styrka (STY)</span>
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          name="attr_sty"
-                          value="0"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          name="attr_styMod"
-                          value="0"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          name="attr_styTot"
-                          value="(@{sty}+@{styMod})"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <button
-                          type="roll"
-                          name="roll_styr"
-                          value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"
-                          class="sheet-tarningstabell"
-                        ></button>
-                      </td>
+                      <td         class="sheet-box_alternate_row"><span>Styrka (STY)</span></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_sty"    value="0"                                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_styMod" value="0"                                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_styTot" value="(@{sty}+@{styMod})" disabled="true" /></td>
+                      <td><button class="sheet-tarningstabell"    type="roll"   name="roll_styr"   value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                     <tr>
                       <td class="sheet-box_alternate_row">
@@ -2891,6 +2858,25 @@
             <td><div class="rowcolor"><span class="sheet-bold">{{ var }}</span></div></td>
           </tr>
         {{/var}}
+
+        {{#rollGreater() Condition -1}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">Slaget: </span></div></td>
+            <td><div class="rowcolor-success"><span class="sheet-bold">Lyckas</span></div></td>
+          </tr>
+          {{#resultat}}
+            <tr>
+              <td><div class="rowcolor"><span class="tcat">Resultat: </span></div></td>
+              <td><div class="rowcolor"><span class="sheet-bold">{{ resultat }}</span></div></td>
+            </tr>
+          {{/tesultat}}
+        {{/rollGreater() Condition -1}}
+        {{#rollLess() Condition 0}}
+          <tr>
+            <td><div class="rowcolor"><span class="tcat">Slaget: </span></div></td>
+            <td><div class="rowcolor-fail"><span class="sheet-bold">Misslyckas</span></div></td>
+          </tr>
+        {{/rollLess() Condition 0}}
 
       </table>
     </div>
