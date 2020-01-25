@@ -94,51 +94,51 @@
                     </tr>
                     <tr>
                       <td         class="sheet-box_alternate_row"><span>Styrka (STY)</span></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_sty"    value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_styMod" value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_styTot" value="(@{sty}+@{styMod})" disabled="true" /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_sty"    value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_styMod" value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_styTot" value="0" readonly="true" /></td>
                       <td><button class="sheet-tarningstabell"    type="roll"   name="roll_styr"   value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                     <tr>
                       <td         class="sheet-box_alternate_row"><span>Fysik (FYS)</span></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_fys"    value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_fysMod" value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_fysTot" value="(@{fys}+@{fysMod})" disabled="true" /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_fys"    value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_fysMod" value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_fysTot" value="0" readonly="true" /></td>
                       <td><button class="sheet-tarningstabell"    type="roll"   name="roll_fysr"   value="&{template:combined} {{name=Fysik}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{fys}+@{fysMod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                     <tr>
                       <td         class="sheet-box_alternate_row"><span>Smidighet (SMI)</span></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_smi"    value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_smiMod" value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_smiTot" value="(@{smi}+@{smiMod})" disabled="true" /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_smi"    value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_smiMod" value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_smiTot" value="0" readonly="true" /></td>
                       <td><button class="sheet-tarningstabell"    type="roll"   name="roll_smir"   value="&{template:combined} {{name=Smidighet}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{smi}+@{smiMod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                     <tr>
                       <td         class="sheet-box_alternate_row"><span>Intelligens (INT)</span></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_int"    value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_intMod" value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_intTot" value="(@{int}+@{intMod})" disabled="true" /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_int"    value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_intMod" value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_intTot" value="0" readonly="true"  /></td>
                       <td><button class="sheet-tarningstabell"    type="roll"   name="roll_intr"   value="&{template:combined} {{name=Intelligens}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{int}+@{intMod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                     <tr>
                       <td         class="sheet-box_alternate_row"><span>Psyke (PSY)</span></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_psy"    value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_psyMod" value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_psyTot" value="(@{psy}+@{psyMod})" disabled="true" /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_psy"    value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_psyMod" value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_psyTot" value="0" readonly="true"  /></td>
                       <td><button class="sheet-tarningstabell"    type="roll"   name="roll_psyr"   value="&{template:combined} {{name=Psyke}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{psy}+@{psyMod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                     <tr>
                       <td         class="sheet-box_alternate_row"><span>Karisma (KAR)</span></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_kar"    value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_karMod" value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_karTot" value="(@{kar}+@{karMod})" disabled="true" /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_kar"    value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_karMod" value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_karTot" value="0" readonly="true"  /></td>
                       <td><button class="sheet-tarningstabell"    type="roll"   name="roll_karr"   value="&{template:combined} {{name=Karisma}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{kar}+@{karMod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                     <tr>
                       <td         class="sheet-box_alternate_row"><span>Storlek (STO)</span></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_sto"    value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_stoMod" value="0"                                  /></td>
-                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_stoTot" value="(@{sto}+@{stoMod})" disabled="true" /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_sto"    value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_stoMod" value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_stoTot" value="0" readonly="true"  /></td>
                       <td><button class="sheet-tarningstabell"    type="roll"   name="roll_stor"   value="&{template:combined} {{name=Storlek}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sto}+@{stoMod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                   </table>
@@ -2480,12 +2480,72 @@
 
 <script type="text/worker">
 
+  on("change:sty change:stymod sheet:opened", function() {
+    getAttrs(["sty", "styMod"], function(values) {
+        var number = parseInt(values["sty"],10)||0;
+        var modifier = parseInt(values["styMod"],10)||0;
+        setAttrs({
+            styTot: modifier+number
+        });
+    });
+  });
+
+  on("change:fys change:fysmod sheet:opened", function() {
+    getAttrs(["fys", "fysMod"], function(values) {
+        var number = parseInt(values["fys"],10)||0;
+        var modifier = parseInt(values["fysMod"],10)||0;
+        setAttrs({
+            fysTot: modifier+number
+        });
+    });
+  });
+
+  on("change:smi change:smimod sheet:opened", function() {
+    getAttrs(["smi", "smiMod"], function(values) {
+        var number = parseInt(values["smi"],10)||0;
+        var modifier = parseInt(values["smiMod"],10)||0;
+        setAttrs({
+            smiTot: modifier+number
+        });
+    });
+  });
+
+  on("change:int change:intmod sheet:opened", function() {
+    getAttrs(["int", "intMod"], function(values) {
+        var number = parseInt(values["int"],10)||0;
+        var modifier = parseInt(values["intMod"],10)||0;
+        setAttrs({
+            intTot: modifier+number
+        });
+    });
+  });
+
   on("change:psy change:psymod sheet:opened", function() {
     getAttrs(["psy", "psyMod"], function(values) {
         var psy = parseInt(values["psy"],10)||0;
         var psyMod = parseInt(values["psyMod"],10)||0;
         setAttrs({
             psyTot: psy+psyMod
+        });
+    });
+  });
+
+  on("change:kar change:karmod sheet:opened", function() {
+    getAttrs(["kar", "karMod"], function(values) {
+        var number = parseInt(values["kar"],10)||0;
+        var modifier = parseInt(values["karMod"],10)||0;
+        setAttrs({
+            karTot: modifier+number
+        });
+    });
+  });
+
+  on("change:sto change:stomod sheet:opened", function() {
+    getAttrs(["sto", "stoMod"], function(values) {
+        var number = parseInt(values["sto"],10)||0;
+        var modifier = parseInt(values["stoMod"],10)||0;
+        setAttrs({
+            stoTot: modifier+number
         });
     });
   });
@@ -2515,26 +2575,6 @@
         var psykePoangForbrukade = parseInt(values["psykePoangForbrukade"],10)||0;
         setAttrs({
             psykePoang: psykePoang_max-psykePoangForbrukade
-        });
-    });
-  });
-
-  on("change:fys change:fysmod sheet:opened", function() {
-    getAttrs(["fys", "fysMod"], function(values) {
-        var number = parseInt(values["fys"],10)||0;
-        var modifier = parseInt(values["fysMod"],10)||0;
-        setAttrs({
-            fysTot: modifier+number
-        });
-    });
-  });
-
-  on("change:sto change:stomod sheet:opened", function() {
-    getAttrs(["sto", "stoMod"], function(values) {
-        var number = parseInt(values["sto"],10)||0;
-        var modifier = parseInt(values["stoMod"],10)||0;
-        setAttrs({
-            stoTot: modifier+number
         });
     });
   });
