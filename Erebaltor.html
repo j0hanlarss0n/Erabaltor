@@ -394,10 +394,10 @@
                     <tr>
                       <td><input  type="text"   name="attr_yrkesnamn" class="sheet-fardighetstabell"            /></td>
                       <td><input  type="text"   name="attr_yrkesbas"  class="sheet-fardighetstabell"            /></td>
-                      <td><input  type="number" name="attr_yrkesMod"  class="sheet-fardighetstabell"  value="0" /></td>
+                      <td><input  type="number" name="attr_yrkesmod"  class="sheet-fardighetstabell"  value="0" /></td>
                       <td><input  type="number" name="attr_yrkeserf"  class="sheet-fardighetstabell"            /></td>
                       <td><input  type="number" name="attr_yrkesfv"   class="sheet-fardighetstabell"            /></td>
-                      <td><button type="roll"   name="roll_yrkes"     class="sheet-tarningstabell"    value="&{template:combined} {{name=@{yrkesnamn}}} {{vad=Yrkes}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{yrkesfv}+@{yrkesMod}+?{Modifikation|0}]]}}"></button></td>
+                      <td><button type="roll"   name="roll_yrkes"     class="sheet-tarningstabell"    value="&{template:combined} {{name=@{yrkesnamn}}} {{vad=Yrkes}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{yrkesfv}+@{yrkesmod}+?{Modifikation|0}]]}}"></button></td>
                     </tr>
                   </table>
                 </fieldset>
@@ -2712,6 +2712,21 @@
         });
     });
   });
+
+  on("change:repeating_yrkes:yrkesmod change:repeating_yrkes:yrkesfv", function() {
+    getAttrs(["repeating_yrkes_yrkesmod", "repeating_yrkes_yrkesfv", "repeating_yrkes_yrkesnamn"], function(values) {
+        if (values.repeating_yrkes_yrkesnamn === "reflexer") {
+          console.log('I listan');
+          setAttrs({
+            [values.repeating_yrkes_yrkesnamn]: "test"
+          });
+        }
+        else {
+          console.log('Inte i listan');
+        }
+    });
+ });
+
 
 </script>
 
