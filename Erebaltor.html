@@ -1313,7 +1313,7 @@
                 <table>
                   <tr>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Vapen" /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Färdighet" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Färdighet" /></td>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV" /></td>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod." /></td>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="BV" /></td>
@@ -1335,9 +1335,10 @@
                       </td>
                       <td>
                         <select
-                          name="attr_vapenSkill"
-                          class="sheet-fardighetstabell_text_narrow"
+                          name="attr_vapenskill"
+                          class="sheet-text-width-normal"
                         >
+                        <option value="">Inget</option>
                           <option value="@{Slagsmål}">Slagsmål</option>
                           <option value="@{Dolk}">Dolk</option>
                           <option value="@{Enhandssvärd}">Enhandssvärd</option>
@@ -1402,7 +1403,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollAttack"
-                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkadaBonus}+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
