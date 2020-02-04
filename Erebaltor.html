@@ -1313,6 +1313,7 @@
                 <table>
                   <tr>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Vapen" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Färdighet" /></td>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV" /></td>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod." /></td>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="BV" /></td>
@@ -1332,6 +1333,17 @@
                           class="sheet-fardighetstabell sheet-text-width-normal"
                         />
                       </td>
+                      <td>
+                        <select
+                          name="attr_vapenSkill"
+                          class="sheet-fardighetstabell_text_narrow"
+                        >
+                          <option value="@{Slagsmål}">Slagsmål</option>
+                          <option value="@{Dolk}">Dolk</option>
+                          <option value="@{Enhandssvärd}">Enhandssvärd</option>
+                        </select>
+                      </td>
+                      <td>
                       <td>
                         <input
                           type="number"
@@ -1390,7 +1402,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollAttack"
-                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -2715,10 +2727,13 @@
 
   on("change:repeating_yrkes:yrkesmod change:repeating_yrkes:yrkesfv", function() {
     getAttrs(["repeating_yrkes_yrkesmod", "repeating_yrkes_yrkesfv", "repeating_yrkes_yrkesnamn"], function(values) {
-        if (values.repeating_yrkes_yrkesnamn === "reflexer") {
+        let skillNames = ["Slagsmål", "Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans"]
+        if (skillNames.includes(values.repeating_yrkes_yrkesnamn)) {
+          let fvMod = parseInt(values.repeating_yrkes_yrkesmod,10)||0;
+          let fv = parseInt(values.repeating_yrkes_yrkesfv,10)||0;
           console.log('I listan');
           setAttrs({
-            [values.repeating_yrkes_yrkesnamn]: "test"
+            [values.repeating_yrkes_yrkesnamn]: fvMod+fv
           });
         }
         else {
