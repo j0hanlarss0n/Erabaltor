@@ -1335,8 +1335,8 @@
                       </td>
                       <td>
                         <select
-                          name="attr_vapenskill"
-                          class="sheet-text-width-normal"
+                          name="attr_vapenSkill"
+                          class="sheet-fardighetstabell_text_narrow"
                         >
                         <option value="">Inget</option>
                           <option value="@{Slagsmål}">Slagsmål</option>
@@ -1403,7 +1403,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollAttack"
-                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkadaBonus}+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
