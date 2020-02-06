@@ -1312,15 +1312,16 @@
               <div class="sheet-colrow">
                 <table>
                   <tr>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Vapen" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-normal"  value="Vapen"     /></td>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Färdighet" /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV" /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod." /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="BV" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="FV"        /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod."      /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="BV"        /></td>
                     <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Vikt (kg)" /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Räckvidd" /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Skada" /></td>
-                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Bonus" /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Räckvidd"  /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Skada"     /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-slim"    value="Mod."      /></td>
+                    <td><input type="text" disabled="true" class="sheet-table-header-text sheet-text-width-narrow"  value="Bonus"     /></td>
                   </tr>
                 </table>
                 <fieldset class="repeating_vapen">
@@ -1339,9 +1340,22 @@
                           class="sheet-fardighetstabell_text_narrow"
                         >
                         <option value="">Inget</option>
-                          <option value="@{Slagsmål}">Slagsmål</option>
+                          <option value="@{Armborst}">Armborst</option>
+                          <option value="@{Båge}">Båge</option>
                           <option value="@{Dolk}">Dolk</option>
+                          <option value="@{Enhandskrossvapen}">Enhandskrossvapen</option>
                           <option value="@{Enhandssvärd}">Enhandssvärd</option>
+                          <option value="@{Enhandsyxa}">Enhandsyxa</option>
+                          <option value="@{Kastvapen}">Kastvapen</option>
+                          <option value="@{Lans}">Lans</option>
+                          <option value="@{Parerdolk}">Parerdolk</option>
+                          <option value="@{Sköld}">Sköld</option>
+                          <option value="@{Slagsmål}">Slagsmål</option>
+                          <option value="@{Stångvapen}">Stångvapen</option>
+                          <option value="@{Tvåhandskrossvapen}">Tvåhandskrossvapen</option>
+                          <option value="@{Tvåhandssvärd}">Tvåhandssvärd</option>
+                          <option value="@{Tvåhandsyxa}">Tvåhandsyxa</option>
+                          <option value="@{Värja}">Värja</option>
                         </select>
                       </td>
                       <td>
@@ -1356,7 +1370,7 @@
                       <td>
                         <input
                           type="number"
-                          name="attr_vapenMod"
+                          name="attr_vapenFvMod"
                           value="0"
                           class="sheet-fardighetstabell"
                         />
@@ -1372,6 +1386,7 @@
                         <input
                           type="number"
                           name="attr_vapenVikt"
+                          step="any"
                           class="sheet-fardighetstabell_number_wide"
                         />
                       </td>
@@ -1386,7 +1401,16 @@
                         <input
                           type="text"
                           name="attr_vapenSkada"
+                          value="0"
                           class="sheet-fardighetstabell_text_narrow"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="number"
+                          name="attr_vapenSkadaMod"
+                          value="0"
+                          class="sheet-fardighetstabell"
                         />
                       </td>
                       <td>
@@ -1403,7 +1427,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollAttack"
-                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -1419,7 +1443,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollSikta"
-                          value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -1435,7 +1459,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollParrera"
-                          value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenFv}+@{vapenMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -2728,21 +2752,47 @@
 
   on("change:repeating_yrkes:yrkesmod change:repeating_yrkes:yrkesfv", function() {
     getAttrs(["repeating_yrkes_yrkesmod", "repeating_yrkes_yrkesfv", "repeating_yrkes_yrkesnamn"], function(values) {
-        let skillNames = ["Slagsmål", "Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans"]
-        if (skillNames.includes(values.repeating_yrkes_yrkesnamn)) {
-          let fvMod = parseInt(values.repeating_yrkes_yrkesmod,10)||0;
-          let fv = parseInt(values.repeating_yrkes_yrkesfv,10)||0;
-          console.log('I listan');
-          setAttrs({
-            [values.repeating_yrkes_yrkesnamn]: fvMod+fv
-          });
-        }
-        else {
-          console.log('Inte i listan');
-        }
+      let skillNames = ["Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans"]
+      if (skillNames.includes(values.repeating_yrkes_yrkesnamn)) {
+        let fvMod = parseInt(values.repeating_yrkes_yrkesmod,10)||0;
+        let fv = parseInt(values.repeating_yrkes_yrkesfv,10)||0;
+        console.log('I listan');
+        setAttrs({
+          [values.repeating_yrkes_yrkesnamn]: fvMod+fv
+        });
+      }
+      else {
+        console.log('Inte i listan');
+      }
     });
- });
+  });
 
+  on("change:repeating_sekundar:sekundarmod change:repeating_sekundar:sekundarfv", function() {
+    getAttrs(["repeating_sekundar_sekundarmod", "repeating_sekundar_sekundarfv", "repeating_sekundar_sekundarnamn"], function(values) {
+      let skillNames = ["Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans"]
+      if (skillNames.includes(values.repeating_sekundar_sekundarnamn)) {
+        let fvMod = parseInt(values.repeating_sekundar_sekundarmod,10)||0;
+        let fv = parseInt(values.repeating_sekundar_sekundarfv,10)||0;
+        console.log('I listan');
+        setAttrs({
+          [values.repeating_sekundar_sekundarnamn]: fvMod+fv
+        });
+      }
+      else {
+        console.log('Inte i listan');
+      }
+    });
+  });
+
+  on("change:slagsmalmod change:slagsmal", function() {
+    getAttrs(["slagsmalmod", "slagsmal"], function(values) {
+      let fvMod = parseInt(values.slagsmalmod,10)||0;
+      let fv = parseInt(values.slagsmal,10)||0;
+      setAttrs({
+        Slagsmål: fvMod+fv
+      });
+    });
+  });
 
 </script>
 
