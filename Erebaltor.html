@@ -1351,6 +1351,7 @@
                           <option value="@{Parerdolk}">Parerdolk</option>
                           <option value="@{Sköld}">Sköld</option>
                           <option value="@{Slagsmål}">Slagsmål</option>
+                          <option value="@{Slunga}">Slunga</option>
                           <option value="@{Stångvapen}">Stångvapen</option>
                           <option value="@{Tvåhandskrossvapen}">Tvåhandskrossvapen</option>
                           <option value="@{Tvåhandssvärd}">Tvåhandssvärd</option>
@@ -2752,7 +2753,7 @@
 
   on("change:repeating_yrkes:yrkesmod change:repeating_yrkes:yrkesfv", function() {
     getAttrs(["repeating_yrkes_yrkesmod", "repeating_yrkes_yrkesfv", "repeating_yrkes_yrkesnamn"], function(values) {
-      let skillNames = ["Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans"]
+      let skillNames = ["Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans", "Slunga"]
       if (skillNames.includes(values.repeating_yrkes_yrkesnamn)) {
         let fvMod = parseInt(values.repeating_yrkes_yrkesmod,10)||0;
         let fv = parseInt(values.repeating_yrkes_yrkesfv,10)||0;
@@ -2769,7 +2770,7 @@
 
   on("change:repeating_sekundar:sekundarmod change:repeating_sekundar:sekundarfv", function() {
     getAttrs(["repeating_sekundar_sekundarmod", "repeating_sekundar_sekundarfv", "repeating_sekundar_sekundarnamn"], function(values) {
-      let skillNames = ["Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans"]
+      let skillNames = ["Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans", "Slunga"]
       if (skillNames.includes(values.repeating_sekundar_sekundarnamn)) {
         let fvMod = parseInt(values.repeating_sekundar_sekundarmod,10)||0;
         let fv = parseInt(values.repeating_sekundar_sekundarfv,10)||0;
