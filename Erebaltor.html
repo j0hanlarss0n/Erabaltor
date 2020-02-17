@@ -2409,6 +2409,17 @@
             <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
             <td><div class="rowcolor">{{ slag }}</div></td>
           </tr>
+          {{#minmax}}
+            <tr>
+              <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
+              {{#rollTotal() slag perfekt}}
+                <td><div class="rowcolor">Perfekt!</div></td>
+              {{/rollTotal() slag perfekt}}
+              {{#rollTotal() slag fummel}}
+                <td><div class="rowcolor">Fummel</div></td>
+              {{/rollTotal() slag fummel}}
+            </tr>
+          {{/minmax}}
           {{#conditional}}
             {{#rollGreater() slag -1}}
               <tr>
