@@ -1428,7 +1428,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollAttack"
-                          value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Attack&amp;#125;&amp;#125; {{{{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen: &amp;#125;&amp;#125; {{perfektslag=[[1t[perfektaslag]]]&amp;#125;&amp;#125; {{fummelslag=Illa&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -1444,7 +1444,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollSikta"
-                          value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen: &amp;#125;&amp;#125; {{perfektslag=[[1t[perfektaslag]]]&amp;#125;&amp;#125; {{fummelslag=Illa&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -1460,7 +1460,7 @@
                         <input
                           type="hidden"
                           name="attr_vapenRollParrera"
-                          value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125"
+                          value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen: &amp;#125;&amp;#125; {{perfektslag=[[1t[perfektaslag]]]&amp;#125;&amp;#125; {{fummelslag=Illa&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125"
                           class="sheet-fardighetstabell"
                         />
                       </td>
@@ -1468,7 +1468,7 @@
                         <button
                           type="roll"
                           name="roll_vapen"
-                          value="&{template:dropdownTest} {{name=@{vapenNamn}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"
+                          value="&{template:combined} {{name=@{vapenNamn}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"
                           class="sheet-tarningstabell"
                         ></button>
                       </td>
@@ -2409,25 +2409,27 @@
             <tr>
               <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
               <td><div class="rowcolor">{{ slag }}</div></td>
+              <td><div class="rowcolor">1</div></td>
             </tr>
           {{/minmax}}
           {{#minmax}}
             <tr>
               <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
               <td><div class="rowcolor">{{ slag }}</div></td>
-              {{#rollTotal() slag perfekt}}
-                <tr>
-                  <td><div class="rowcolor"><span class="tcat">Perfekt: </span></div></td>
-                  <td><div class="rowcolor sheet-perfekt"><span class="sheet-bold">{{ perfektslag  }}</span></div></td>
-                </tr>
-              {{/rollTotal() slag perfekt}}
-              {{#rollTotal() slag fummel}}
-                </tr>
-                  <td><div class="rowcolor"><span class="tcat">Fummel: </span></div></td>
-                  <td><div class="rowcolor sheet-fummel"><span class="sheet-bold">{{ fummelslag  }}</span></div></td>
-                </tr>
-              {{/rollTotal() slag fummel}}
+              <td><div class="rowcolor">3</div></td>
             </tr>
+            {{#rollTotal() slag perfekt}}
+              <tr>
+                <td><div class="rowcolor"><span class="tcat">Perfekt: </span></div></td>
+                <td><div class="rowcolor sheet-perfekt"><span class="sheet-bold">{{ perfektslag  }}</span></div></td>
+              </tr>
+            {{/rollTotal() slag perfekt}}
+            {{#rollTotal() slag fummel}}
+              <tr>
+                <td><div class="rowcolor"><span class="tcat">Fummel: </span></div></td>
+                <td><div class="rowcolor sheet-fummel"><span class="sheet-bold">{{ fummelslag  }}</span></div></td>
+              </tr>
+            {{/rollTotal() slag fummel}}
           {{/minmax}}
           {{#conditional}}
             {{#rollGreater() slag -1}}
