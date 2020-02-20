@@ -575,7 +575,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
 .sheet-rolltemplate-DoDFardighet .inlinerollresult.fullcrit,
 .sheet-rolltemplate-DoDText .inlinerollresult.fullcrit,
 .sheet-rolltemplate-DoDAttack .inlinerollresult.fullcrit {
-  color: red;
+  color: green;
 
   border: none;
 }
@@ -591,7 +591,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
 .sheet-rolltemplate-DoDFardighet .inlinerollresult.fullfail,
 .sheet-rolltemplate-DoDText .inlinerollresult.fullfail,
 .sheet-rolltemplate-DoDAttack .inlinerollresult.fullfail {
-  color: green;
+  color: red;
 
   border: none;
 }
