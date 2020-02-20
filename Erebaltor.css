@@ -522,6 +522,31 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   font-style: italic;
 }
 
+.sheet-rolltemplate-combined .sheet-perfekt span,
+.sheet-rolltemplate-dropdownTest .sheet-perfekt span,
+.sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .sheet-perfekt span,
+.sheet-rolltemplate-DoDSummaEllerMotstandMagi .sheet-perfekt span,
+.sheet-rolltemplate-DoDSummaEllerMotstandFardighet .sheet-perfekt span,
+.sheet-rolltemplate-DoDSummaEllerMotstandVapen .sheet-perfekt span,
+.sheet-rolltemplate-DoDSummaEllerMotstand .sheet-perfekt span,
+.sheet-rolltemplate-DoDFardighet .sheet-perfekt span,
+.sheet-rolltemplate-DoDText .sheet-perfekt span,
+.sheet-rolltemplate-DoDAttack .sheet-perfekt span {
+  color: green;
+}
+
+.sheet-rolltemplate-combined .sheet-fummel span,
+.sheet-rolltemplate-dropdownTest .sheet-fummel span,
+.sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .sheet-fummel span,
+.sheet-rolltemplate-DoDSummaEllerMotstandMagi .sheet-fummel span,
+.sheet-rolltemplate-DoDSummaEllerMotstandFardighet .sheet-fummel span,
+.sheet-rolltemplate-DoDSummaEllerMotstandVapen .sheet-fummel span,
+.sheet-rolltemplate-DoDSummaEllerMotstand .sheet-fummel span,
+.sheet-rolltemplate-DoDFardighet .sheet-fummel span,
+.sheet-rolltemplate-DoDText .sheet-fummel span,
+.sheet-rolltemplate-DoDAttack .sheet-fummel span {
+  color: red;
+}
 .sheet-rolltemplate-combined .inlinerollresult,
 .sheet-rolltemplate-dropdownTest .inlinerollresult,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap .inlinerollresult,

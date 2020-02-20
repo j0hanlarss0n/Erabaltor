@@ -2405,18 +2405,27 @@
         {{/name}}
 
         {{#slag}}
-          <tr>
-            <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
-            <td><div class="rowcolor">{{ slag }}</div></td>
-          </tr>
+          {{^minmax}}
+            <tr>
+              <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
+              <td><div class="rowcolor">{{ slag }}</div></td>
+            </tr>
+          {{/minmax}}
           {{#minmax}}
             <tr>
               <td><div class="rowcolor"><span class="tcat">Rullar: </span></div></td>
+              <td><div class="rowcolor">{{ slag }}</div></td>
               {{#rollTotal() slag perfekt}}
-                <td><div class="rowcolor">Perfekt!</div></td>
+                <tr>
+                  <td><div class="rowcolor"><span class="tcat">Perfekt: </span></div></td>
+                  <td><div class="rowcolor sheet-perfekt"><span class="sheet-bold">{{ perfektslag  }}</span></div></td>
+                </tr>
               {{/rollTotal() slag perfekt}}
               {{#rollTotal() slag fummel}}
-                <td><div class="rowcolor">Fummel</div></td>
+                </tr>
+                  <td><div class="rowcolor"><span class="tcat">Fummel: </span></div></td>
+                  <td><div class="rowcolor sheet-fummel"><span class="sheet-bold">{{ fummelslag  }}</span></div></td>
+                </tr>
               {{/rollTotal() slag fummel}}
             </tr>
           {{/minmax}}
