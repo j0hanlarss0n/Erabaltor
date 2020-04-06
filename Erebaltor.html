@@ -372,11 +372,7 @@
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
             <h3>Yrkesfärdigheter</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
@@ -434,11 +430,7 @@
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
             <h3>Språk</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
@@ -493,79 +485,16 @@
                 <fieldset class="repeating_magi">
                   <table>
                     <tr>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_maginamn"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_magidesc_display"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_magikost"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_magimod"
-                          class="sheet-fardighetstabell"
-                          value="0"
-                          
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_magiK_display"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_magiI"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_magiT"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_magierf"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_magifv"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <button
-                          type="roll"
-                          name="roll_magi"
-                          value="&{template:combined} {{name=@{maginamn}}} {{effekt=?{E|1}}} {{vad=Formel}} ?{Slagtyp|Summa, {{typ=Magi&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Magi - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20-?{E}+@{magifv}+@{magimod}+?{Modifikation|0}]]}}"
-                          class="sheet-tarningstabell"
-                        ></button>
-                      </td>
+                      <td><input  type="text"   name="attr_maginamn"          class="sheet-fardighetstabell"          /></td>
+                      <td><input  type="text"   name="attr_magidesc_display"  class="sheet-fardighetstabell"          /></td>
+                      <td><input  type="number" name="attr_magikost"          class="sheet-fardighetstabell"          /></td>
+                      <td><input  type="number" name="attr_magimod"           class="sheet-fardighetstabell" value="0"/></td>
+                      <td><input  type="number" name="attr_magiK_display"     class="sheet-fardighetstabell"          /></td>
+                      <td><input  type="number" name="attr_magiI"             class="sheet-fardighetstabell"          /></td>
+                      <td><input  type="number" name="attr_magiT"             class="sheet-fardighetstabell"          /></td>
+                      <td><input  type="number" name="attr_magierf"           class="sheet-fardighetstabell"          /></td>
+                      <td><input  type="number" name="attr_magifv"            class="sheet-fardighetstabell"          /></td>
+                      <td><button type="roll"   name="roll_magi" value="&{template:combined} {{name=@{maginamn}}} {{effekt=?{E|1}}} {{vad=Formel}} ?{Slagtyp|Summa, {{typ=Magi&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Magi - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20-?{E}+@{magifv}+@{magimod}+?{Modifikation|0}]]}}" class="sheet-tarningstabell"></button></td>
                     </tr>
                   </table>
                 </fieldset>
@@ -573,11 +502,7 @@
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
             <h3>Psykepoäng</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
@@ -591,60 +516,15 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_psykePoangGrund"
-                        class="sheet-fardighetstabell"
-                        value=""
-                        readonly="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_psykePoangMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        readonly="true"
-                        name="attr_psykePoang_max"
-                        class="sheet-fardighetstabell_number_wide"
-                        value=""
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_psykePoangForbrukade"
-                        class="sheet-fardighetstabell_number_wide"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_psykePoang"
-                        class="sheet-fardighetstabell"
-                        value="(@{psykePoang}-@{forbrukadePsykePoang}+@{psykePoangMod})"
-                        readonly="true"
-                      />
-                    </td>
+                    <td><input type="number" name="attr_psykePoangGrund"      class="sheet-fardighetstabell"              value=""                                                          readonly="true" /></td>
+                    <td><input type="number" name="attr_psykePoangMod"        class="sheet-fardighetstabell"              value="0"                                                                         /></td>
+                    <td><input type="number" name="attr_psykePoang_max"       class="sheet-fardighetstabell_number_wide"  value=""                                                          readonly="true" /></td>
+                    <td><input type="number" name="attr_psykePoangForbrukade" class="sheet-fardighetstabell_number_wide"  value="0"                                                                         /></td>
+                    <td><input type="text"   name="attr_psykePoang"           class="sheet-fardighetstabell"              value="(@{psykePoang}-@{forbrukadePsykePoang}+@{psykePoangMod})"  readonly="true" /></td>
                   </tr>
                 </table>
-
                 <tr>
-                  <td>
-                    <textarea
-                      class="sheet-textarea_wide"
-                      style="Width: 400px"
-                      name="attr_psykePoang_notes"
-                    ></textarea>
-                  </td>
+                  <td><textarea class="sheet-textarea_wide" style="Width: 400px" name="attr_psykePoang_notes"></textarea></td>
                 </tr>
               </div>
             </div>
@@ -652,92 +532,45 @@
         </ul>
       </li>
       <li name="Strid">
-        <input
-          type="checkbox"
-          class="sheet-testing sheet-firstLevelTab"
-          checked
-        />
+        <input type="checkbox" class="sheet-testing sheet-firstLevelTab" checked/>
         <h1>Strid</h1>
         <ul class="sheet-testtab sheet-secondLevelTabs">
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
             <h3>Kroppspoäng</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
                 <table>
                   <tr>
                     <td class="sheet-box_alternate_row2"><span></span></td>
-                    <td class="sheet-box_alternate_row2">
-                      <span>FysSto</span>
-                    </td>
+                    <td class="sheet-box_alternate_row2"><span>FysSto</span></td>
                     <td class="sheet-box_alternate_row2"><span>Mod</span></td>
-                    <td class="sheet-box_alternate_row2">
-                      <span>KP-tot</span>
-                    </td>
+                    <td class="sheet-box_alternate_row2"><span>KP-tot</span></td>
                   </tr>
                   <tr>
-                    <td class="sheet-box_alternate_row2">
-                      <span>Total KP</span>
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_kroppsPoang"
-                        class="sheet-fardighetstabell"
-                        value="(ceil((@{fys}+@{sto})/2))"
-                        disabled="true"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_kroppsPoangMod"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="attr_kp_max"
-                        class="sheet-fardighetstabell"
-                        value=""
-                        readonly="true"
-                      />
-                    </td>
+                    <td class="sheet-box_alternate_row2"><span>Total KP</span></td>
+                    <td><input type="number" name="attr_kroppsPoang" class="sheet-fardighetstabell" value="(ceil((@{fys}+@{sto})/2))" disabled="true"/></td>
+                    <td><input type="number" name="attr_kroppsPoangMod" class="sheet-fardighetstabell" value="0"/></td>
+                    <td><input type="number" name="attr_kp_max" class="sheet-fardighetstabell" value="" readonly="true"/></td>
                   </tr>
                 </table>
               </div>
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
             <h3>Kroppspoäng och rustning</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
                 <table>
                   <tr>
                     <td class="sheet-box_alternate_row2"><span></span></td>
-                    <td class="sheet-box_alternate_row2">
-                      <span>KP-tot</span>
-                    </td>
+                    <td class="sheet-box_alternate_row2"><span>KP-tot</span></td>
                     <td class="sheet-box_alternate_row2"><span>KP</span></td>
                     <td class="sheet-box_alternate_row2"><span>RV</span></td>
                     <td class="sheet-box_alternate_row2"><span>Vikt</span></td>
-                    <td class="sheet-box_alternate_row2">
-                      <span>Skador</span>
-                    </td>
-                    <td class="sheet-box_alternate_row2">
-                      <span>Övrigt</span>
-                    </td>
+                    <td class="sheet-box_alternate_row2"><span>Skador</span></td>
+                    <td class="sheet-box_alternate_row2"><span>Övrigt</span></td>
                   </tr>
                   <tr>
                     <td class="sheet-box_alternate_row2">
@@ -1257,11 +1090,7 @@
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
             <h3>Skadebonus</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
@@ -1272,41 +1101,16 @@
                     <td class="sheet-box_alternate"><span>2-hands</span></td>
                   </tr>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_skadeBonus"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_skadeBonusBage"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="attr_skadeBonusTvaHand"
-                        class="sheet-fardighetstabell"
-                        value="0"
-                      />
-                    </td>
+                    <td><input type="text" name="attr_skadeBonus"         class="sheet-fardighetstabell" value="0"/></td>
+                    <td><input type="text" name="attr_skadeBonusBage"     class="sheet-fardighetstabell" value="0"/></td>
+                    <td><input type="text" name="attr_skadeBonusTvaHand"  class="sheet-fardighetstabell" value="0"/></td>
                   </tr>
                 </table>
               </div>
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
             <h3>Vapen</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
@@ -1328,18 +1132,11 @@
                   <table>
                     <tr>
                       <td>
-                        <input
-                          type="text"
-                          name="attr_vapenNamn"
-                          class="sheet-fardighetstabell sheet-text-width-normal"
-                        />
+                        <input type="text" name="attr_vapenNamn" class="sheet-fardighetstabell sheet-text-width-normal"/>
                       </td>
                       <td>
-                        <select
-                          name="attr_vapenSkill"
-                          class="sheet-fardighetstabell_text_narrow"
-                        >
-                        <option value="">Inget</option>
+                        <select name="attr_vapenSkill" class="sheet-fardighetstabell_text_narrow">
+                          <option value="">Inget</option>
                           <option value="@{Armborst}">Armborst</option>
                           <option value="@{Båge}">Båge</option>
                           <option value="@{Dolk}">Dolk</option>
@@ -1359,66 +1156,15 @@
                           <option value="@{Värja}">Värja</option>
                         </select>
                       </td>
+                      <td><input type="number" name="attr_vapenFv"        class="sheet-fardighetstabell"              value="0" /></td>
+                      <td><input type="number" name="attr_vapenFvMod"     class="sheet-fardighetstabell"              value="0" /></td>
+                      <td><input type="number" name="attr_vapenBv"        class="sheet-fardighetstabell"                        /></td>
+                      <td><input type="number" name="attr_vapenVikt"      class="sheet-fardighetstabell_number_wide"  step="any"/></td>
+                      <td><input type="number" name="attr_vapenRackvidd"  class="sheet-fardighetstabell_number_wide"            /></td>
+                      <td><input type="text"   name="attr_vapenSkada"     class="sheet-fardighetstabell_text_narrow"  value="0" /></td>
+                      <td><input type="number" name="attr_vapenSkadaMod"  class="sheet-fardighetstabell"              value="0" /></td>
                       <td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_vapenFv"
-                          value="0"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_vapenFvMod"
-                          value="0"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_vapenBv"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_vapenVikt"
-                          step="any"
-                          class="sheet-fardighetstabell_number_wide"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_vapenRackvidd"
-                          class="sheet-fardighetstabell_number_wide"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          name="attr_vapenSkada"
-                          value="0"
-                          class="sheet-fardighetstabell_text_narrow"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          type="number"
-                          name="attr_vapenSkadaMod"
-                          value="0"
-                          class="sheet-fardighetstabell"
-                        />
-                      </td>
-                      <td>
-                        <select
-                          name="attr_vapenSkadaBonus"
-                          class="sheet-fardighetstabell_text_narrow"
-                        >
+                        <select name="attr_vapenSkadaBonus" class="sheet-fardighetstabell_text_narrow">
                           <option value="@{skadeBonus}">Normal</option>
                           <option value="@{skadeBonusBage}">Båge</option>
                           <option value="@{skadeBonusTvaHand}">2-hands</option>
@@ -1481,68 +1227,24 @@
         </ul>
       </li>
       <li name="Utrustning">
-        <input
-          type="checkbox"
-          class="sheet-testing sheet-firstLevelTab"
-          checked
-        />
+        <input type="checkbox" class="sheet-testing sheet-firstLevelTab" checked/>
         <h1>Utrustning</h1>
         <ul class="sheet-testtab sheet-secondLevelTabs">
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab sheet-utrustning-allt"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-utrustning-allt" checked/>
             <h3>Allt</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
                 <table>
                   <thead>
                     <tr>
-                      <td class="sheet-box_alternate" style="width: 180">Typ</td>
-                      <td class="sheet-box_alternate" style="width: 350">Beskrivning</td>
-                      <td class="sheet-box_alternate" style="width: 45.5">Antal</td>
-                      <td class="sheet-box_alternate" style="width: 45.5">Vikt</td>
-                      <td class="sheet-box_alternate" style="width: 115">Kategori</td>
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    Value="Typ"         disabled="true" type="text" style="width: 180px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    value="Beskrivning" disabled="true" type="text" style="width: 425px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Antal"       disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Vikt"        disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-select-width-normal"  value="Kategori"    disabled="true" /></td>    
                     </tr>
                   </thead>
-                  <tr class="sheet-filtreradUtrustning_display" style="height: 0px">
-                    <td>
-                      <input
-                        class="sheet-fardighetstabell"
-                        type="text"
-                        style="Width: 180px"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        class="sheet-fardighetstabell"
-                        type="text"
-                        style="width: 425px"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        class="sheet-fardighetstabell"
-                        type="number"
-                      />
-                    </td>
-                    <td>
-                       <input
-                        class="sheet-fardighetstabell"
-                        type="number"
-                       />
-                    </td>
-                    <td>
-                      <select
-                        name="attr_utrustning_filter"
-                        class="sheet-fardighetstabell-select"
-                      >
-                        <option>Ingen kategori</option>
-                      </select>
-                    </td>
-                  </tr>
                 </table>
                 <fieldset class="repeating_utrustning">
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier" checked/>
@@ -1553,171 +1255,63 @@
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
                   <table>
                     <tr>
+                      <td><input class="sheet-fardighetstabell" type="text"   name="attr_utrustningtyp"   style="width: 180px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="text"   name="attr_utrustningbesk"  style="width: 425px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" name="attr_utrustningantal" min="0" value="0" step="any"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" name="attr_utrustningvikt"  min="0" value="0" step="any"/></td>
                       <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningtyp"
-                          style="width: 180px"
-                          />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningbesk"
-                          style="width: 425px"
-                         />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningantal"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningvikt"
-                        />
-                       </td>
-                       <td>
-                        <select
-                          name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell-select"
-                        >
-                        <option>Alla kategorier</option>
-                        <option>Kläder</option>
-                        <option>Drycker</option>
-                        <option>Magiska föremål</option>
-                        <option>Egendom</option>
-                        <option>Övrigt</option>
+                        <select name="attr_utrustning_filter" class="sheet-fardighetstabell-select">
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
                         </select>
                       </td>
-                     </tr>
+                    </tr>
                   </table>
                 </fieldset>
               </div>
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab sheet-utrustning-klader"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-utrustning-klader" checked/>
             <h3>Kläder</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
                 <table>
                   <thead>
                     <tr>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          Value="Typ"
-                          style="width: 180px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          value="Beskrivning"
-                          style="width: 425px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Antal"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Vikt"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input class="sheet-table-header-text sheet-select-width-normal" disabled="true" value="Kategori"/>
-                      </td>    
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    Value="Typ"         disabled="true" type="text" style="width: 180px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    value="Beskrivning" disabled="true" type="text" style="width: 425px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Antal"       disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Vikt"        disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-select-width-normal"  value="Kategori"    disabled="true" /></td>    
                     </tr>
                   </thead>
                 </table>
                 <fieldset class="repeating_utrustning">
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" checked/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" checked  />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"          />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningtyp" style="width: 180px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningbesk" style="width: 425px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningantal"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningvikt"/></td>
                       <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningtyp"
-                          style="width: 180px"
-                          />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningbesk"
-                          style="width: 425px"
-                         />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningantal"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningvikt"
-                        />
-                       </td>
-                      <td>
-                        <select
-                          name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell-select"
-                        >
-                        <option>Alla kategorier</option>
-                        <option>Kläder</option>
-                        <option>Drycker</option>
-                        <option>Magiska föremål</option>
-                        <option>Egendom</option>
-                        <option>Övrigt</option>
+                        <select name="attr_utrustning_filter" class="sheet-fardighetstabell-select">
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -1727,117 +1321,42 @@
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab sheet-utrustning-drycker"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-utrustning-drycker" checked/>
             <h3>Drycker</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
                 <table>
                   <thead>
                     <tr>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          Value="Typ"
-                          style="width: 180px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          value="Beskrivning"
-                          style="width: 425px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Antal"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Vikt"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input class="sheet-table-header-text sheet-select-width-normal" disabled="true" value="Kategori"/>
-                      </td>    
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    Value="Typ"         disabled="true" type="text" style="width: 180px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    value="Beskrivning" disabled="true" type="text" style="width: 425px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Antal"       disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Vikt"        disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-select-width-normal"  value="Kategori"    disabled="true" /></td>    
                     </tr>
                   </thead>
                 </table>
                 <fieldset class="repeating_utrustning">
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" />
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker" checked/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"  />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker" checked        />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"          />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningtyp" style="width: 180px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningbesk" style="width: 425px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningantal"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningvikt"/></td>
                       <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningtyp"
-                          style="width: 180px"
-                          />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningbesk"
-                          style="width: 425px"
-                         />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningantal"
-                          style="width: 45.5px"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningvikt"
-                          style="width: 45.5px"
-                        />
-                       </td>
-                       <td>
-                        <select
-                          name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell-select"
-                        >
-                        <option>Alla kategorier</option>
-                        <option>Kläder</option>
-                        <option>Drycker</option>
-                        <option>Magiska föremål</option>
-                        <option>Egendom</option>
-                        <option>Övrigt</option>
+                        <select name="attr_utrustning_filter" class="sheet-fardighetstabell-select">
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -1847,123 +1366,42 @@
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab sheet-utrustning-magiska"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-utrustning-magiska" checked/>
             <h3>Magiska föremål</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
                 <table>
                   <thead>
                     <tr>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          Value="Typ"
-                          style="width: 180px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          value="Beskrivning"
-                          style="width: 425px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Antal"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Vikt"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          value="Kategori"
-                          style="width: 116px;"
-                          disabled="true"
-                        />
-                      </td>    
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    Value="Typ"         disabled="true" type="text" style="width: 180px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    value="Beskrivning" disabled="true" type="text" style="width: 425px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Antal"       disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Vikt"        disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-select-width-normal"  value="Kategori"    disabled="true" /></td>    
                     </tr>
                   </thead>
                 </table>
                 <fieldset class="repeating_utrustning">
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" />
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål" checked/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"   />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål" checked />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"          />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningtyp" style="width: 180px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningbesk" style="width: 425px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningantal"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningvikt"/></td>
                       <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningtyp"
-                          style="width: 180px"
-                          />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningbesk"
-                          style="width: 425px"
-                         />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningantal"
-                          style="width: 45.5px"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningvikt"
-                          style="width: 45.5px"
-                        />
-                       </td>
-                       <td>
-                        <select
-                          name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell-select"
-                        >
-                        <option>Alla kategorier</option>
-                        <option>Kläder</option>
-                        <option>Drycker</option>
-                        <option>Magiska föremål</option>
-                        <option>Egendom</option>
-                        <option>Övrigt</option>
+                        <select name="attr_utrustning_filter" class="sheet-fardighetstabell-select">
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -1973,123 +1411,42 @@
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab sheet-utrustning-egendom"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-utrustning-egendom" checked/>
             <h3>Egendom</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
                 <table>
                   <thead>
                     <tr>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          Value="Typ"
-                          style="width: 180px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          value="Beskrivning"
-                          style="width: 425px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Antal"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Vikt"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          value="Kategori"
-                          style="width: 116px;"
-                          disabled="true"
-                        />
-                      </td>    
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    Value="Typ"         disabled="true" type="text" style="width: 180px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    value="Beskrivning" disabled="true" type="text" style="width: 425px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Antal"       disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Vikt"        disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-select-width-normal"  value="Kategori"    disabled="true" /></td>    
                     </tr>
                   </thead>
                 </table>
                 <fieldset class="repeating_utrustning">
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" />
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom" checked/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"   />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"   checked      />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"          />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningtyp" style="width: 180px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningbesk" style="width: 425px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningantal"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningvikt"/></td>
                       <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningtyp"
-                          style="width: 180px"
-                          />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningbesk"
-                          style="width: 425px"
-                         />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningantal"
-                          style="width: 45.5px"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningvikt"
-                          style="width: 45.5px"
-                        />
-                       </td>
-                       <td>
-                        <select
-                          name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell-select"
-                        >
-                        <option>Alla kategorier</option>
-                        <option>Kläder</option>
-                        <option>Drycker</option>
-                        <option>Magiska föremål</option>
-                        <option>Egendom</option>
-                        <option>Övrigt</option>
+                        <select name="attr_utrustning_filter" class="sheet-fardighetstabell-select">
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>
@@ -2099,123 +1456,42 @@
             </div>
           </li>
           <li>
-            <input
-              type="checkbox"
-              class="sheet-testing sheet-secondLevelTab sheet-utrustning-ovrigt"
-              checked
-            />
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-utrustning-ovrigt" checked/>
             <h3>Övrigt</h3>
             <div class="sheet-body sheet-testtab">
               <div class="sheet-colrow">
                 <table>
                   <thead>
                     <tr>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          Value="Typ"
-                          style="width: 180px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          value="Beskrivning"
-                          style="width: 425px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Antal"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-slim"
-                          type="text"
-                          value="Vikt"
-                          style="width: 45.5px"
-                          disabled="true"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-table-header-text sheet-text-width-normal"
-                          type="text"
-                          value="Kategori"
-                          style="width: 116px;"
-                          disabled="true"
-                        />
-                      </td>    
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    Value="Typ"         disabled="true" type="text" style="width: 180px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    value="Beskrivning" disabled="true" type="text" style="width: 425px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Antal"       disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Vikt"        disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-select-width-normal"  value="Kategori"    disabled="true" /></td>    
                     </tr>
                   </thead>
                 </table>
                 <fieldset class="repeating_utrustning">
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder" />
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
-                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt" checked/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"   />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"   checked       />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningtyp" style="width: 180px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningbesk" style="width: 425px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningantal"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningvikt"/></td>
                       <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningtyp"
-                          style="width: 180px"
-                          />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="text"
-                          name="attr_utrustningbesk"
-                          style="width: 425px"
-                         />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningantal"
-                          style="width: 45.5px"
-                        />
-                      </td>
-                      <td>
-                        <input
-                          class="sheet-fardighetstabell"
-                          type="number"
-                          min="0"
-                          value="0"
-                          step="any"
-                          name="attr_utrustningvikt"
-                          style="width: 45.5px"
-                        />
-                      </td>
-                      <td>
-                        <select
-                          name="attr_utrustning_filter"
-                          class="sheet-fardighetstabell-select"
-                        >
-                        <option>Alla kategorier</option>
-                        <option>Kläder</option>
-                        <option>Drycker</option>
-                        <option>Magiska föremål</option>
-                        <option>Egendom</option>
-                        <option>Övrigt</option>
+                        <select name="attr_utrustning_filter" class="sheet-fardighetstabell-select">
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Övrigt</option>
                         </select>
                       </td>
                      </tr>

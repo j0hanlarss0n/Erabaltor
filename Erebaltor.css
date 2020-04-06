@@ -738,7 +738,7 @@ ul li .sheet-testing:checked .sheet-firstLevelTab .sheet-secondLevelTabs {
 }
 
 /* Decide which specific repitems to display.  */
-input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning,      /* Always display all spells of circle zero.  */
+input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning,      /* Always display items marked alla  */
 .sheet-utrustning-klader~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-klader:checked~table .sheet-filtrerad_utrustning,
 .sheet-utrustning-drycker~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~table .sheet-filtrerad_utrustning,
 .sheet-utrustning-magiska~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~table .sheet-filtrerad_utrustning,
