@@ -743,6 +743,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-utrustning-drycker~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~table .sheet-filtrerad_utrustning,
 .sheet-utrustning-magiska~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~table .sheet-filtrerad_utrustning,
 .sheet-utrustning-egendom~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~table .sheet-filtrerad_utrustning,
+.sheet-utrustning-riddjur~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-riddjur:checked~table .sheet-filtrerad_utrustning,
 .sheet-utrustning-ovrigt~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~table .sheet-filtrerad_utrustning {
   display: block;
 }

@@ -1252,6 +1252,7 @@
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"/>
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"/>
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"/>
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-riddjur"         value="Riddjur"   />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
                   <table>
                     <tr>
@@ -1266,6 +1267,7 @@
                           <option>Drycker</option>
                           <option>Magiska föremål</option>
                           <option>Egendom</option>
+                          <option>Riddjur</option>
                           <option>Övrigt</option>
                         </select>
                       </td>
@@ -1297,6 +1299,7 @@
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål" />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-riddjur"         value="Riddjur"   />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"          />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
@@ -1311,6 +1314,7 @@
                           <option>Drycker</option>
                           <option>Magiska föremål</option>
                           <option>Egendom</option>
+                          <option>Riddjur</option>
                           <option>Övrigt</option>
                         </select>
                       </td>
@@ -1342,6 +1346,7 @@
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker" checked        />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål" />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-riddjur"         value="Riddjur"   />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"          />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
@@ -1356,6 +1361,7 @@
                           <option>Drycker</option>
                           <option>Magiska föremål</option>
                           <option>Egendom</option>
+                          <option>Riddjur</option>
                           <option>Övrigt</option>
                         </select>
                       </td>
@@ -1387,6 +1393,7 @@
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål" checked />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-riddjur"         value="Riddjur"   />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"          />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
@@ -1401,6 +1408,7 @@
                           <option>Drycker</option>
                           <option>Magiska föremål</option>
                           <option>Egendom</option>
+                          <option>Riddjur</option>
                           <option>Övrigt</option>
                         </select>
                       </td>
@@ -1432,6 +1440,7 @@
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"   checked      />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-riddjur"         value="Riddjur"   />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"          />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
@@ -1446,6 +1455,54 @@
                           <option>Drycker</option>
                           <option>Magiska föremål</option>
                           <option>Egendom</option>
+                          <option>Riddjur</option>
+                          <option>Övrigt</option>
+                        </select>
+                      </td>
+                     </tr>
+                  </table>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-utrustning-riddjur" checked/>
+            <h3>Riddjur</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-colrow">
+                <table>
+                  <thead>
+                    <tr>
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    Value="Typ"         disabled="true" type="text" style="width: 180px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-normal"    value="Beskrivning" disabled="true" type="text" style="width: 425px"  /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Antal"       disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-text-width-slim"      value="Vikt"        disabled="true" type="text" style="width: 45.5px" /></td>
+                      <td><input class="sheet-table-header-text sheet-select-width-normal"  value="Kategori"    disabled="true" /></td>    
+                    </tr>
+                  </thead>
+                </table>
+                <fieldset class="repeating_utrustning">
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-alla-kategorier" value="Alla kategorier" />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"   />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-riddjur"         value="Riddjur"   checked      />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"          />
+                  <table>
+                    <tr class="sheet-filtrerad_utrustning">
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningtyp" style="width: 180px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="text" name="attr_utrustningbesk" style="width: 425px"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningantal"/></td>
+                      <td><input class="sheet-fardighetstabell" type="number" min="0" value="0" step="any" name="attr_utrustningvikt"/></td>
+                      <td>
+                        <select name="attr_utrustning_filter" class="sheet-fardighetstabell-select">
+                          <option>Alla kategorier</option>
+                          <option>Kläder</option>
+                          <option>Drycker</option>
+                          <option>Magiska föremål</option>
+                          <option>Egendom</option>
+                          <option>Riddjur</option>
                           <option>Övrigt</option>
                         </select>
                       </td>
@@ -1477,6 +1534,7 @@
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+                  <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-riddjur"         value="Riddjur"   />
                   <input type="radio" name="attr_utrustning_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"   checked       />
                   <table>
                     <tr class="sheet-filtrerad_utrustning">
@@ -1491,6 +1549,7 @@
                           <option>Drycker</option>
                           <option>Magiska föremål</option>
                           <option>Egendom</option>
+                          <option>Riddjur</option>
                           <option>Övrigt</option>
                         </select>
                       </td>
