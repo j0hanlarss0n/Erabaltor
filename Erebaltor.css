@@ -337,6 +337,16 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   width: 7em;
 }
 
+.sheet-fardighetstabell-slim {
+  width: 45.5px;
+}
+
+.sheet-fardighetstabell-text-tiny {
+  border: 1px solid black;
+  margin-bottom: 0px;
+  width: 3em;
+}
+
 .sheet-fardighetstabell-select {
   border: 1px solid black;
   margin-bottom: 0px;
@@ -780,6 +790,10 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 
 .sheet-text-width-slim {
   width: 45.5px;
+}
+
+.sheet-text-width-tiny {
+  width: 3em;
 }
 
 .sheet-table-header-select {
