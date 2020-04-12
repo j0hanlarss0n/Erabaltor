@@ -634,6 +634,13 @@ p {
   z-index: 2;
 }
 
+.sheet-section {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50;
+  z-index: 2;
+}
+
 ul {
   list-style: none;
   perspective: 900;
@@ -918,4 +925,26 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   margin-bottom: 200;
   opacity: 0;
   transform: translate(0, 50%);
+}
+
+.sheet-skill-header-display {
+  display: grid;
+  grid-column: 5;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.sheet-skill-header.sheet-skill-name {
+  justify-self: left;
+}
+
+.sheet-skill-display-wrapper {
+  display: grid;
+  grid-column: 5;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.sheet-skill.sheet-skill-name {
+  justify-self: left;
 }

@@ -1574,11 +1574,34 @@
         </ul>
       </li>
       <li name="Färdigheter2">
-        <input type="checkbox" class="sheet-testing sheet-firstLevelTab sheet-skill-tab" checked/>
+        <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-skill-tab" checked/>
         <h1>Färdigheter</h1>
-        <div class="sheet-skill-grid">
+        <div class="sheet-section sheet-skill-grid">
           <div class="sheet-skill-grid-primary">
             <span>Test</span>
+            <div class="sheet-skill-header-display">
+              <div class="sheet-skill-header sheet-skill-name">Namn</div>
+              <div class="sheet-skill-header sheet-skill-base">Bas</div>
+              <div class="sheet-skill-header sheet-skill-erf">Erf</div>
+              <div class="sheet-skill-header sheet-skill-mod">Mod</div>
+              <div class="sheet-skill-header sheet-skill-fv">FV</div> 
+            </div>
+            <div class="sheet-skill-display sheet-skill-bluffa">
+              <div class="sheet-skill-display-wrapper sheet-skill-edit-show">
+                <strong class="sheet-skill sheet-skill-name">Bluffa</strong>
+                <div class="sheet-skill sheet-skill-base">KAR</div>
+                <input class="sheet-skill sheet-skill-erf" type="number" value="0"/>
+                <input class="sheet-skill sheet-skill-mod" type="number" value="1"/>
+                <input class="sheet-skill sheet-skill-fv" type="number" value="2"/>
+              </div>
+              <div class="sheet-skill-display-wrapper sheet-skill-edit-hide">
+                <strong class="sheet-skill sheet-skill-name">Bluffa</strong>
+                <span class="sheet-skill sheet-skill-base">KAR</span>
+                <span class="sheet-skill sheet-skill-erf">0</span>
+                <span class="sheet-skill sheet-skill-mod">1</span>
+                <span class="sheet-skill sheet-skill-fv">2</span>
+              </div>
+            </div>
           </div>
           <div class="sheet-skill-grid-profession">
             <span>Test</span>
