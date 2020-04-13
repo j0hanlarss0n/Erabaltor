@@ -7,7 +7,7 @@
     </div>
     <div class="sheet-toggle-edit">
       <label>
-        <input type="checkbox" name="toggle-edit"><span>Editera</span>
+        <input type="checkbox" checked="checked" name="toggle_edit"><span>Editera</span>
       </label>
     </div>
   </div>
@@ -1578,118 +1578,137 @@
         <h1>Färdigheter</h1>
         <div class="sheet-section sheet-skill-grid">
           <div class="sheet-skill-grid-primary">
-            <div class="sheet-skill-header-display">
-              <div class="sheet-skill-header sheet-skill-name">Namn</div>
-              <div class="sheet-skill-header sheet-skill-base">Bas</div>
-              <div class="sheet-skill-header sheet-skill-erf">Erf</div>
-              <div class="sheet-skill-header sheet-skill-mod">Mod</div>
-              <div class="sheet-skill-header sheet-skill-fv">FV</div> 
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
             </div>
-            <div class="sheet-skill-display sheet-skill-bluffa">
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-show">
-                <strong class="sheet-skill sheet-skill-name">Bluffa</strong>
-                <div class="sheet-skill sheet-skill-base">KAR</div>
-                <input class="sheet-skill sheet-skill-erf" type="number" value="0"/>
-                <input class="sheet-skill sheet-skill-mod" type="number" value="1"/>
-                <input class="sheet-skill sheet-skill-fv" type="number" value="2"/>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+            </div>
+            <div class="sheet-skill-pair sheet-skill-bluffa">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Bluffa</strong>
+                <div class="sheet-table-row-field sheet-skill-base">KAR</div>
+                <input class="sheet-table-row-field sheet-skill-erf" type="number" value="0"/>
+                <input class="sheet-table-row-field sheet-skill-mod" type="number" value="1"/>
+                <input class="sheet-table-row-field sheet-skill-fv" type="number" value="2"/>
               </div>
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-hide">
-                <strong class="sheet-skill sheet-skill-name">Bluffa</strong>
-                <span class="sheet-skill sheet-skill-base">KAR</span>
-                <span class="sheet-skill sheet-skill-erf">0</span>
-                <span class="sheet-skill sheet-skill-mod">1</span>
-                <span class="sheet-skill sheet-skill-fv">2</span>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <strong class="sheet-table-row-field sheet-skill-name">Bluffa</strong>
+                <span class="sheet-table-row-field sheet-skill-base">KAR</span>
+                <span class="sheet-table-row-field sheet-skill-erf">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv">2</span>
               </div>
             </div>
-            <div class="sheet-skill-display sheet-skill-bluffa">
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-show">
-                <strong class="sheet-skill sheet-skill-name">Springa</strong>
-                <div class="sheet-skill sheet-skill-base">KAR</div>
-                <input class="sheet-skill sheet-skill-erf" type="number" value="0"/>
-                <input class="sheet-skill sheet-skill-mod" type="number" value="1"/>
-                <input class="sheet-skill sheet-skill-fv" type="number" value="2"/>
+            <div class="sheet-skill-pair sheet-skill-bluffa">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Springa</strong>
+                <div class="sheet-table-row-field sheet-skill-base">KAR</div>
+                <input class="sheet-table-row-field sheet-skill-erf" type="number" value="0"/>
+                <input class="sheet-table-row-field sheet-skill-mod" type="number" value="1"/>
+                <input class="sheet-table-row-field sheet-skill-fv" type="number" value="2"/>
               </div>
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-hide">
-                <strong class="sheet-skill sheet-skill-name">Springa</strong>
-                <span class="sheet-skill sheet-skill-base">KAR</span>
-                <span class="sheet-skill sheet-skill-erf">0</span>
-                <span class="sheet-skill sheet-skill-mod">1</span>
-                <span class="sheet-skill sheet-skill-fv">2</span>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <strong class="sheet-table-row-field sheet-skill-name">Springa</strong>
+                <span class="sheet-table-row-field sheet-skill-base">KAR</span>
+                <span class="sheet-table-row-field sheet-skill-erf">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv">2</span>
               </div>
             </div>
           </div>
           <div class="sheet-skill-grid-profession">
-            <div class="sheet-skill-header-display">
-              <div class="sheet-skill-header sheet-skill-name">Namn</div>
-              <div class="sheet-skill-header sheet-skill-base">Bas</div>
-              <div class="sheet-skill-header sheet-skill-erf">Erf</div>
-              <div class="sheet-skill-header sheet-skill-mod">Mod</div>
-              <div class="sheet-skill-header sheet-skill-fv">FV</div> 
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
             </div>
-            <div class="sheet-skill-display sheet-skill-bluffa">
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-show">
-                <strong class="sheet-skill sheet-skill-name">Hoppa</strong>
-                <div class="sheet-skill sheet-skill-base">KAR</div>
-                <input class="sheet-skill sheet-skill-erf" type="number" value="0"/>
-                <input class="sheet-skill sheet-skill-mod" type="number" value="1"/>
-                <input class="sheet-skill sheet-skill-fv" type="number" value="2"/>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+            </div>
+            <div class="sheet-skill-pair sheet-skill-bluffa">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Hoppa</strong>
+                <div class="sheet-table-row-field sheet-skill-base">KAR</div>
+                <input class="sheet-table-row-field sheet-skill-erf" type="number" value="0"/>
+                <input class="sheet-table-row-field sheet-skill-mod" type="number" value="1"/>
+                <input class="sheet-table-row-field sheet-skill-fv" type="number" value="2"/>
               </div>
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-hide">
-                <strong class="sheet-skill sheet-skill-name">Hoppa</strong>
-                <span class="sheet-skill sheet-skill-base">KAR</span>
-                <span class="sheet-skill sheet-skill-erf">0</span>
-                <span class="sheet-skill sheet-skill-mod">1</span>
-                <span class="sheet-skill sheet-skill-fv">2</span>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <strong class="sheet-table-row-field sheet-skill-name">Hoppa</strong>
+                <span class="sheet-table-row-field sheet-skill-base">KAR</span>
+                <span class="sheet-table-row-field sheet-skill-erf">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv">2</span>
               </div>
             </div>
           </div>
           <div class="sheet-skill-grid-secondary">
-            <div class="sheet-skill-header-display">
-              <div class="sheet-skill-header sheet-skill-name">Namn</div>
-              <div class="sheet-skill-header sheet-skill-base">Bas</div>
-              <div class="sheet-skill-header sheet-skill-erf">Erf</div>
-              <div class="sheet-skill-header sheet-skill-mod">Mod</div>
-              <div class="sheet-skill-header sheet-skill-fv">FV</div> 
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
             </div>
-            <div class="sheet-skill-display sheet-skill-bluffa">
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-show">
-                <strong class="sheet-skill sheet-skill-name">Klättra</strong>
-                <div class="sheet-skill sheet-skill-base">KAR</div>
-                <input class="sheet-skill sheet-skill-erf" type="number" value="0"/>
-                <input class="sheet-skill sheet-skill-mod" type="number" value="1"/>
-                <input class="sheet-skill sheet-skill-fv" type="number" value="2"/>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+            </div>
+            <div class="sheet-skill-pair sheet-skill-bluffa">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Klättra</strong>
+                <div class="sheet-table-row-field sheet-skill-base">KAR</div>
+                <input class="sheet-table-row-field sheet-skill-erf" type="number" value="0"/>
+                <input class="sheet-table-row-field sheet-skill-mod" type="number" value="1"/>
+                <input class="sheet-table-row-field sheet-skill-fv" type="number" value="2"/>
               </div>
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-hide">
-                <strong class="sheet-skill sheet-skill-name">Klättra</strong>
-                <span class="sheet-skill sheet-skill-base">KAR</span>
-                <span class="sheet-skill sheet-skill-erf">0</span>
-                <span class="sheet-skill sheet-skill-mod">1</span>
-                <span class="sheet-skill sheet-skill-fv">2</span>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <strong class="sheet-table-row-field sheet-skill-name">Klättra</strong>
+                <span class="sheet-table-row-field sheet-skill-base">KAR</span>
+                <span class="sheet-table-row-field sheet-skill-erf">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv">2</span>
               </div>
             </div>
           </div>
           <div class="sheet-skill-grid-language">
-            <div class="sheet-skill-header-display">
-              <div class="sheet-skill-header sheet-skill-name">Namn</div>
-              <div class="sheet-skill-header sheet-skill-base">Bas</div>
-              <div class="sheet-skill-header sheet-skill-erf">Erf</div>
-              <div class="sheet-skill-header sheet-skill-mod">Mod</div>
-              <div class="sheet-skill-header sheet-skill-fv">FV</div> 
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
             </div>
-            <div class="sheet-skill-display sheet-skill-bluffa">
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-show">
-                <strong class="sheet-skill sheet-skill-name">Springa</strong>
-                <div class="sheet-skill sheet-skill-base">KAR</div>
-                <input class="sheet-skill sheet-skill-erf" type="number" value="0"/>
-                <input class="sheet-skill sheet-skill-mod" type="number" value="1"/>
-                <input class="sheet-skill sheet-skill-fv" type="number" value="2"/>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+            </div>
+            <div class="sheet-skill-pair sheet-skill-bluffa">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Springa</strong>
+                <div class="sheet-table-row-field sheet-skill-base">KAR</div>
+                <input class="sheet-table-row-field sheet-skill-erf" type="number" value="0"/>
+                <input class="sheet-table-row-field sheet-skill-mod" type="number" value="1"/>
+                <input class="sheet-table-row-field sheet-skill-fv" type="number" value="2"/>
               </div>
-              <div class="sheet-skill-display-wrapper sheet-skill-edit-hide">
-                <strong class="sheet-skill sheet-skill-name">Springa</strong>
-                <span class="sheet-skill sheet-skill-base">KAR</span>
-                <span class="sheet-skill sheet-skill-erf">0</span>
-                <span class="sheet-skill sheet-skill-mod">1</span>
-                <span class="sheet-skill sheet-skill-fv">2</span>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <strong class="sheet-table-row-field sheet-skill-name">Springa</strong>
+                <span class="sheet-table-row-field sheet-skill-base">KAR</span>
+                <span class="sheet-table-row-field sheet-skill-erf">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv">2</span>
               </div>
             </div>
           </div>

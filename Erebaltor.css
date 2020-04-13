@@ -929,17 +929,32 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 
 .sheet-skill {
-
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 5px;
 }
 
-.sheet-header {
-
+.sheet-skill-edit-hide {
+  grid-template-columns: auto 3em 3em 3em;
 }
 
-.sheet-row {
-
+.sheet-skill-edit-show {
+  grid-template-columns: auto 3em 3em 3em 3em;
 }
 
+
+.sheet-table-header {
+  background-color: #666666;
+}
+
+.sheet-table-row {
+  background-color: #999999;
+  border: 1px solid #635b14;
+  min-height: 28px;
+}
+
+/*
 .sheet-skill-header-display {
   display: grid;
   grid-column: 6;
@@ -957,10 +972,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   border: 1px solid #635b14;
   min-height: 28px;
 }
-
-.sheet-skill-display {
-  padding-bottom: 5px;
-}
+*/
 
 .sheet-skill-name {
   justify-self: left;
@@ -1002,3 +1014,23 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   border: 1px solid #e5d280;
   resize: vertical;
 }
+
+/*
+.sheet-wrapper input[name=toggle_edit][value="0"] ~ * .sheet-skill-edit-hide {
+  display: none;
+}
+
+.sheet-wrapper input[name=toggle_edit][value=on] ~ * .sheet-skill-edit-show {
+  display: none;
+}
+*/
+.sheet-wrapper input[name=toggle_edit][value=on] ~ * .sheet-skill-edit-hide {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  left: -10000px;
+}
+
