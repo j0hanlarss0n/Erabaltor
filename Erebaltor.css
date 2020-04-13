@@ -900,7 +900,8 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
     'primary profession'
     'primary secondary'
     'primary language';
-    justify-items: center;  
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
 .sheet-skill-grid-primary {
@@ -930,8 +931,9 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-skill-header-display {
   display: grid;
   grid-column: 5;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto 3em 3em 3em 3em;
   justify-items: center;
+  padding-bottom: 5px;
 }
 
 .sheet-skill-header.sheet-skill-name {
@@ -941,10 +943,53 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-skill-display-wrapper {
   display: grid;
   grid-column: 5;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto 3em 3em 3em 3em;
+  align-items: center;
   justify-items: center;
+  border: 1px solid #635b14;
+  min-height: 28px;
+}
+
+.sheet-skill-display {
+  padding-bottom: 5px;
 }
 
 .sheet-skill.sheet-skill-name {
   justify-self: left;
+}
+
+.sheet-skill-grid input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.sheet-skill-grid input[type=number]::-webkit-outer-spin-button,
+.sheet-skill-grid input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sheet-skill-grid input[type=number],
+.sheet-skill-grid input[type=text],
+.sheet-skill-grid select,
+.sheet-skill-grid textarea {
+  width: 100%;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-family: "Lucida Bright", "Cambria", serif;
+}
+
+.sheet-skill-grid input[type=number],
+.sheet-skill-grid input[type=text],
+.sheet-skill-grid select {
+  border: none;
+  border-bottom: 1px solid #e5d280;
+  text-align: center;
+  height: auto;
+  padding: 0;
+}
+
+.sheet-skill-grid textarea {
+  padding: 0.5rem;
+  border: 1px solid #e5d280;
+  resize: vertical;
 }
