@@ -4,6 +4,20 @@
   --number-normal: 46px;
 }
 
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-skill-edit-show {
+  display: none;
+}
+
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-edit-hide {
+  display: none;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-base,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-erf,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-mod {
+  display: none;
+}
+
 .charsheet {
   background-color: white;
 }
@@ -623,10 +637,10 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   border: none;
 }
 
-p {
-}
+
 .sheet-firstLevelTab {
 }
+
 .sheet-testtab {
   position: relative;
   overflow: hidden;
@@ -930,19 +944,42 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 
 .sheet-skill {
   display: grid;
+  grid-template-columns: auto 3em 3em 3em 3em;
   align-items: center;
   justify-items: center;
   margin-bottom: 5px;
+
 }
 
-.sheet-skill-edit-hide {
+.sheet-skill.sheet-table-row:hover {
+  background-color: #b0b0b0;
+}
+
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
+  grid-template-columns: auto 3em;
+}
+
+/*
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-edit-hide {
+  grid-template-columns: auto 3em;
+}
+
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-skill-edit-hide {
   grid-template-columns: auto 3em 3em 3em;
 }
 
-.sheet-skill-edit-show {
-  grid-template-columns: auto 3em 3em 3em 3em;
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-edit-show {
+  grid-template-columns: auto 3em;
 }
 
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-skill-edit-show {
+  grid-template-columns: auto 3em 3em 3em 3em;
+}
+*/
 
 .sheet-table-header {
   background-color: #666666;
@@ -1015,15 +1052,10 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   resize: vertical;
 }
 
-/*
-.sheet-wrapper input[name=toggle_edit][value="0"] ~ * .sheet-skill-edit-hide {
-  display: none;
-}
 
-.sheet-wrapper input[name=toggle_edit][value=on] ~ * .sheet-skill-edit-show {
-  display: none;
-}
-*/
+
+
+/*
 .sheet-wrapper input[name=toggle_edit][value=on] ~ * .sheet-skill-edit-hide {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
@@ -1033,4 +1065,5 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   position: absolute;
   left: -10000px;
 }
+*/
 
