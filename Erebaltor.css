@@ -12,11 +12,26 @@
   display: none;
 }
 
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-base,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-erf,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-mod {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-skill-totFv{
   display: none;
 }
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-base,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-erf,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-mod,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-fv {
+  display: none;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-fv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-mod {
+  display: block;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-totFv {
+  display: none;
+}
+
 
 .charsheet {
   background-color: white;
@@ -914,8 +929,9 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
     'primary profession'
     'primary secondary'
     'primary language';
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .sheet-skill-grid-primary {
@@ -959,6 +975,10 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
   grid-template-columns: auto 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill {
+  grid-template-columns: auto 3em 3em;
 }
 
 .charsheet .sheet-wrapper button.sheet-button-full-hidden {
@@ -1066,6 +1086,25 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   resize: vertical;
 }
 
+h2.sheet-grid-section-header {
+  font-size: 22;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-transform: uppercase;
+  color: #e5d280;
+}
+
+h2.sheet-grid-section-header:after,
+h2.sheet-grid-section-header:before {
+  flex: 1;
+  display: block;
+  content: "";
+  height: 0;
+  margin: 1rem;
+  border-bottom: 2px solid #e5d280;
+}
 
 
 

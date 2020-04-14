@@ -1580,19 +1580,22 @@
         <h1>Färdigheter</h1>
         <div class="sheet-section sheet-skill-grid">
           <div class="sheet-skill-grid-primary">
+            <h2 class="sheet-grid-section-header">Primära</h2>
             <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
               <div class="sheet-table-header-field sheet-skill-name">Namn</div>
               <div class="sheet-table-header-field sheet-skill-base">Bas</div>
               <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
               <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
             </div>
             <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
               <div class="sheet-table-header-field sheet-skill-name">Namn</div>
               <div class="sheet-table-header-field sheet-skill-base">Bas</div>
               <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
               <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
             </div>
             <div class="sheet-skill-pair sheet-skill-bluffa">
               <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
@@ -1609,6 +1612,7 @@
                 <span class="sheet-table-row-field sheet-skill-erf">0</span>
                 <span class="sheet-table-row-field sheet-skill-mod">1</span>
                 <span class="sheet-table-row-field sheet-skill-fv">2</span>
+                <span class="sheet-table-row-field sheet-skill-totFv">3</span>
               </div>
             </div>
             <div class="sheet-skill-pair sheet-skill-springa">
@@ -1625,24 +1629,27 @@
                 <span class="sheet-table-row-field sheet-skill-erf">0</span>
                 <span class="sheet-table-row-field sheet-skill-mod">1</span>
                 <span class="sheet-table-row-field sheet-skill-fv">2</span>
-                <button type="roll"   class="sheet-button-full-hidden" name="roll_bluffa" value="&{template:combined} {{name=Bluffa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{bluffa}+@{bluffaMod}+?{Modifikation|0}]]}}"></button>
-              </div>
+                <span class="sheet-table-row-field sheet-skill-totFv">3</span>
+                </div>
             </div>
           </div>
           <div class="sheet-skill-grid-profession">
+            <h2 class="sheet-grid-section-header">Yrkes</h2>
             <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
               <div class="sheet-table-header-field sheet-skill-name">Namn</div>
               <div class="sheet-table-header-field sheet-skill-base">Bas</div>
               <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
               <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
             </div>
             <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
               <div class="sheet-table-header-field sheet-skill-name">Namn</div>
               <div class="sheet-table-header-field sheet-skill-base">Bas</div>
               <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
               <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
             </div>
             <div class="sheet-skill-pair sheet-skill-bluffa">
               <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
@@ -1658,23 +1665,27 @@
                 <span class="sheet-table-row-field sheet-skill-erf">0</span>
                 <span class="sheet-table-row-field sheet-skill-mod">1</span>
                 <span class="sheet-table-row-field sheet-skill-fv">2</span>
+                <span class="sheet-table-row-field sheet-skill-totFv">3</span>
               </div>
             </div>
           </div>
           <div class="sheet-skill-grid-secondary">
+            <h2 class="sheet-grid-section-header">Sekundära</h2>
             <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
               <div class="sheet-table-header-field sheet-skill-name">Namn</div>
               <div class="sheet-table-header-field sheet-skill-base">Bas</div>
               <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
               <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
             </div>
             <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
               <div class="sheet-table-header-field sheet-skill-name">Namn</div>
               <div class="sheet-table-header-field sheet-skill-base">Bas</div>
               <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
               <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
             </div>
             <div class="sheet-skill-pair sheet-skill-bluffa">
               <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
@@ -1690,23 +1701,27 @@
                 <span class="sheet-table-row-field sheet-skill-erf">0</span>
                 <span class="sheet-table-row-field sheet-skill-mod">1</span>
                 <span class="sheet-table-row-field sheet-skill-fv">2</span>
+                <span class="sheet-table-row-field sheet-skill-totFv">3</span>
               </div>
             </div>
           </div>
           <div class="sheet-skill-grid-language">
+            <h2 class="sheet-grid-section-header">Språk</h2>
             <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
               <div class="sheet-table-header-field sheet-skill-name">Namn</div>
               <div class="sheet-table-header-field sheet-skill-base">Bas</div>
               <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
               <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
             </div>
             <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
               <div class="sheet-table-header-field sheet-skill-name">Namn</div>
               <div class="sheet-table-header-field sheet-skill-base">Bas</div>
               <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
               <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div> 
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
             </div>
             <div class="sheet-skill-pair sheet-skill-bluffa">
               <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
@@ -1722,6 +1737,7 @@
                 <span class="sheet-table-row-field sheet-skill-erf">0</span>
                 <span class="sheet-table-row-field sheet-skill-mod">1</span>
                 <span class="sheet-table-row-field sheet-skill-fv">2</span>
+                <span class="sheet-table-row-field sheet-skill-totFv">3</span>
               </div>
             </div>
           </div>
