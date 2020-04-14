@@ -885,7 +885,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   height: 25px;
   transform: translate(-25%, -25%);
   background: #262626;
-  color: 333;
+  color: #444444;
   text-align: center;
   line-height: 25px;
   border-radius: 25px;
@@ -900,7 +900,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 
 .sheet-toggle input:hover + span {
-  color: #444;
+  color: #555555;
 }
 
 .sheet-toggle input:checked + span {
@@ -943,6 +943,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 
 .sheet-skill {
+  position: relative;
   display: grid;
   grid-template-columns: auto 3em 3em 3em 3em;
   align-items: center;
@@ -958,6 +959,19 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
   grid-template-columns: auto 3em;
+}
+
+.charsheet .sheet-wrapper button.sheet-button-full-hidden {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0;
 }
 
 /*
@@ -982,11 +996,11 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 */
 
 .sheet-table-header {
-  background-color: #666666;
+  background-color: #888888;
 }
 
 .sheet-table-row {
-  background-color: #999999;
+  background-color: #cccccc;
   border: 1px solid #635b14;
   min-height: 28px;
 }
