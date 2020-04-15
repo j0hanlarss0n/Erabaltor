@@ -1612,20 +1612,9 @@
                 <span class="sheet-table-row-field sheet-skill-erf"   name="attr_bluffaErf">0</span>
                 <span class="sheet-table-row-field sheet-skill-mod"   name="attr_bluffaMod">1</span>
                 <span class="sheet-table-row-field sheet-skill-fv"    name="attr_bluffa">2</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_bluffa">2</span>>3</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_bluffaTotFv">2</span>
               </div>
             </div>
-
-            <tr>
-              <td><input  type="text"   class="sheet-fardighetstabell" value="Bluffa"             disabled="true"               /></td>
-              <td><input  type="text"   class="sheet-fardighetstabell-slim" value="KAR"                disabled="true"               /></td>
-              <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_bluffaMod"         /></td>
-              <td><input  type="number" class="sheet-fardighetstabell" value="0"                                                /></td>
-              <td><input  type="number" class="sheet-fardighetstabell" value="0"                  name="attr_bluffa"            /></td>
-              <td><button type="roll"   class="sheet-tarningstabell"   name="roll_bluffa"         value="&{template:combined} {{name=Bluffa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{bluffa}+@{bluffaMod}+?{Modifikation|0}]]}}"></button></td>
-            </tr>
-
-
             <div class="sheet-skill-pair sheet-skill-springa">
               <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
                 <strong class="sheet-table-row-field sheet-skill-name">Springa</strong>
@@ -2384,27 +2373,28 @@
       let varderaMod = parseInt(values.varderaMod,10)||0;
       let vardera = parseInt(values.vardera,10)||0;
       let overtalaMod = parseInt(values.overtalaMod,10)||0;
-      let overtala = parseInt(values.overtala,10)||0; 
+      let overtala = parseInt(values.overtala,10)||0;
+      console.log('Updating attributes');
       setAttrs({
-        bluffaTotFv: bluffa+bluffaMod;
-        finnaDoldaTingTotFv: finnaDoldaTing+finnaDoldaTingMod;
-        forstaHjalpenTotFv: forstaHjalpen+forstaHjalpenMod;
-        gommaSigTotFv: gommaSig+gommaSigMod;
-        hoppaTotFv: hoppa+hoppaMod;
-        klattraTotFv: klattra+klattraMod;
-        kopslaTotFv: kopsla+kopslaMod;
-        lyssnaTotFv: lyssna+lyssnaMod;
-        lsModersmalModTotFv: lsModersmalMod+lsModersmalModMod;
-        ridaTotFv: rida+ridaMod;
-        sjungaTotFv: sjunga+sjungaMod;
-        slagsmalTotFv: slagsmal+slagsmalMod;
-        smygaTotFv: smyga+smygaMod;
-        sparaTotFv: spara+sparaMod;
-        stjalaForemalTotFv: stjalaForemal+stjalaForemalMod;
-        talaModersmalTotFv: talaModersmal+talaModersmalMod;
-        upptackaFaraTotFv: upptackaFara+upptackaFaraMod;
-        varderaTotFv: vardera+varderaMod;
-        overtalaTotFv: overtala+overtalaMod;
+        bluffaTotFv: bluffa+bluffaMod,
+        finnaDoldaTingTotFv: finnaDoldaTing+finnaDoldaTingMod,
+        forstaHjalpenTotFv: forstaHjalpen+forstaHjalpenMod,
+        gommaSigTotFv: gommaSig+gommaSigMod,
+        hoppaTotFv: hoppa+hoppaMod,
+        klattraTotFv: klattra+klattraMod,
+        kopslaTotFv: kopsla+kopslaMod,
+        lyssnaTotFv: lyssna+lyssnaMod,
+        lsModersmalModTotFv: lsModersmalMod+lsModersmalModMod,
+        ridaTotFv: rida+ridaMod,
+        sjungaTotFv: sjunga+sjungaMod,
+        slagsmalTotFv: slagsmal+slagsmalMod,
+        smygaTotFv: smyga+smygaMod,
+        sparaTotFv: spara+sparaMod,
+        stjalaForemalTotFv: stjalaForemal+stjalaForemalMod,
+        talaModersmalTotFv: talaModersmal+talaModersmalMod,
+        upptackaFaraTotFv: upptackaFara+upptackaFaraMod,
+        varderaTotFv: vardera+varderaMod,
+        overtalaTotFv: overtala+overtalaMod
       });
     });
   });
