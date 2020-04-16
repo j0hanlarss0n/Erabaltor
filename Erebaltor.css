@@ -1120,6 +1120,19 @@ h2.sheet-grid-section-header:before {
   border-bottom: 2px solid #e5d280;
 }
 
+.charsheet .repcontainer .repitem .itemcontrol .repcontrol_move {
+  cursor: move;
+  float: right;
+  position: sticky;
+  z-index: 50;
+}
+
+.charsheet .repcontainer .repitem .itemcontrol .repcontrol_del {
+  float: right;
+  position: sticky;
+  z-index: 50;
+}
+
 
 
 /*
