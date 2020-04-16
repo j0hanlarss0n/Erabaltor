@@ -2662,7 +2662,7 @@
       let vardera = parseInt(values.vardera,10)||0;
       let overtalaMod = parseInt(values.overtalaMod,10)||0;
       let overtala = parseInt(values.overtala,10)||0;
-      console.log('Updating attributes');
+      console.log('Updating Primär skill');
       setAttrs({
         bluffaTotFv: bluffa+bluffaMod,
         finnaDoldaTingTotFv: finnaDoldaTing+finnaDoldaTingMod,
@@ -2683,6 +2683,39 @@
         upptackaFaraTotFv: upptackaFara+upptackaFaraMod,
         varderaTotFv: vardera+varderaMod,
         overtalaTotFv: overtala+overtalaMod
+      });
+    });
+  });
+
+  on("change:repeating_yrkes:yrkesmod change:repeating_yrkes:yrkesfv", function() {
+    getAttrs(["repeating_yrkes_yrkesmod", "repeating_yrkes_yrkesfv"], function(values) {
+      let Mod = parseInt(values.repeating_yrkes_yrkesmod,10)||0;
+      let Fv = parseInt(values.repeating_yrkes_yrkesfv,10)||0;
+      console.log('Updating Yrkes skill');
+      setAttrs({
+        repeating_yrkes_yrkestotfv: Fv+Mod
+      });
+    });
+  });
+
+  on("change:repeating_sekundar:sekundarmod change:repeating_sekundar:sekundarfv", function() {
+    getAttrs(["repeating_sekundar_sekundarmod", "repeating_sekundar_sekundarfv"], function(values) {
+      let Mod = parseInt(values.repeating_sekundar_sekundarmod,10)||0;
+      let Fv = parseInt(values.repeating_sekundar_sekundarfv,10)||0;
+      console.log('Updating Sekundär skill');
+      setAttrs({
+        repeating_sekundar_sekundartotfv: Fv+Mod
+      });
+    });
+  });
+
+  on("change:repeating_sprak:sprakmod change:repeating_sprak:sprakfv", function() {
+    getAttrs(["repeating_sprak_sprakmod", "repeating_sprak_sprakfv"], function(values) {
+      let Mod = parseInt(values.repeating_sprak_sprakmod,10)||0;
+      let Fv = parseInt(values.repeating_sprak_sprakfv,10)||0;
+      console.log('Updating Språk skill');
+      setAttrs({
+        repeating_sprak_spraktotfv: Fv+Mod
       });
     });
   });
