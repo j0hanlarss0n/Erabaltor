@@ -1993,6 +1993,26 @@
                 <span class="sheet-table-row-field sheet-skill-totFv">3</span>
               </div>
             </div>
+            <fieldset class="repeating_sekundar">
+              <div class="sheet-skill-pair sheet-skill-sekundar">
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                  <input class="sheet-table-row-field sheet-skill-name" type="text"   name="attr_sekundarnamn"/>
+                  <input class="sheet-table-row-field sheet-skill-base" type="text"   name="attr_sekundarbas"/>
+                  <input class="sheet-table-row-field sheet-skill-erf"  type="number" name="attr_sekundarerf" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-mod"  type="number" name="attr_sekundarMod" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-fv"   type="number" name="attr_sekundarfv"  value="0"/>
+                </div>
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                  <button type="roll" name="roll_yrkes" class="sheet-button-full-hidden"   value="&{template:combined} {{name=@{sekundarnamn}}} {{vad=Sekundär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sekundarfv}+@{sekundarMod}+?{Modifikation|0}]]}}"></button>
+                  <span   class="sheet-table-row-field sheet-skill-name"  name="attr_sekundarnamn"  ></span>
+                  <span   class="sheet-table-row-field sheet-skill-base"  name="attr_sekundarbas"   ></span>
+                  <span   class="sheet-table-row-field sheet-skill-erf"   name="attr_sekundarerf"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-mod"   name="attr_sekundarMod"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-fv"    name="attr_sekundarfv"    >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-totFv" name="attr_sekundartotfv" >0</span>
+                </div>
+              </div>
+            </fieldset>
           </div>
           <div class="sheet-skill-grid-language">
             <h2 class="sheet-grid-section-header">Språk</h2>
