@@ -474,6 +474,490 @@
           </li>
         </ul>
       </li>
+      <li name="Färdigheter2">
+        <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-skill-tab" checked/>
+        <h1>Färdigheter</h1>
+        <div class="sheet-section sheet-skill-grid">
+          <div class="sheet-skill-grid-primary">
+            <h2 class="sheet-grid-section-header">Primära</h2>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
+            </div>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-bluffa">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Bluffa</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  KAR</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_bluffaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_bluffaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_bluffa"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_bluffa" value="&{template:combined} {{name=Bluffa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{bluffa}+@{bluffaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Bluffa</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> KAR</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_bluffaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_bluffaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_bluffa">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_bluffaTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-finnaDoldaTing">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Finna dolda ting</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_finnaDoldaTingErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_finnaDoldaTingMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_finnaDoldaTing"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_finnaDoldaTing" value="&{template:combined} {{name=Finna dolda ting}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{finnaDoldaTing}+@{finnaDoldaTingMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Finna dolda ting</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_finnaDoldaTingErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_finnaDoldaTingMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_finnaDoldaTing">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_finnaDoldaTingTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-forstaHjalpen">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Första hjälpen</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_forstaHjalpenErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_forstaHjalpenMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_forstaHjalpen"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_forstaHjalpen" value="&{template:combined} {{name=Första hjälpen}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{forstaHjalpen}+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Första hjälpen</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_forstaHjalpenErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_forstaHjalpenMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_forstaHjalpen">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_forstaHjalpenTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-gommaSig">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Gömma sig</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_gommaSigErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_gommaSigMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_gommaSig"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_gommaSig" value="&{template:combined} {{name=Gömma sig}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{gommaSig}+@{gommaSigMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Gömma sig</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_gommaSigErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_gommaSigMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_gommaSig">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_gommaSigTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-hoppa">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Hoppa</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_hoppaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_hoppaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_hoppa"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_hoppa" value="&{template:combined} {{name=Hoppa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{hoppa}+@{hoppaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Hoppa</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_hoppaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_hoppaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_hoppa">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_hoppaTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-klattra">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Klättra</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_klattraErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_klattraMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_klattra"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_klattra" value="&{template:combined} {{name=Klättra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{klattra}+@{klattraMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Klättra</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_klattraErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_klattraMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_klattra">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_klattraTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-kopsla">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Köpslå</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  KAR</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_kopslaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_kopslaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_kopsla"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_kopsla" value="&{template:combined} {{name=Köpslå}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{kopsla}+@{kopslaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Köpslå</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> KAR</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_kopslaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_kopslaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_kopsla">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_kopslaTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-lyssna">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Lyssna</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_lyssnaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_lyssnaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_lyssna"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_lyssna" value="&{template:combined} {{name=Lyssna}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lyssna}+@{lyssnaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Lyssna</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_lyssnaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_lyssnaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_lyssna">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_lyssnaTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-lsModersmalMod">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">L/S modersmål</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  spec</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_lsModersmalModErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_lsModersmalModMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_lsModersmalMod"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_lsModersmalMod" value="&{template:combined} {{name=L/S modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lsModersmalMod}+@{lsModersmalModMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">L/S modersmål</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> spec</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_lsModersmalModErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_lsModersmalModMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_lsModersmalMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_lsModersmalModTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-rida">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Rida</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_ridaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_ridaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_rida"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_rida" value="&{template:combined} {{name=Rida}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{rida}+@{ridaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Rida</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_ridaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_ridaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_rida">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_ridaTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-sjunga">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Sjunga</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  KAR</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_sjungaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_sjungaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_sjunga"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_sjunga" value="&{template:combined} {{name=Sjunga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sjunga}+@{sjungaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Sjunga</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> KAR</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_sjungaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_sjungaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_sjunga">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_sjungaTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-slagsmal">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Slagsmål</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  STY</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_slagsmalErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_slagsmalMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_slagsmal"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_slagsmal" value="&{template:combined} {{name=Slagsmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{slagsmal}+@{slagsmalMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Slagsmål</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> STY</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_slagsmalErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_slagsmalMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_slagsmal">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_slagsmalTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-smyga">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Smyga</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_smygaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_smygaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_smyga"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_smyga" value="&{template:combined} {{name=Smyga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{smyga}+@{smygaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Smyga</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_smygaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_smygaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_smyga">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_smygaTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-spara">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Spåra</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_sparaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_sparaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_spara"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_spara" value="&{template:combined} {{name=Spåra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{spara}+@{sparaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Spåra</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_sparaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_sparaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_spara">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_sparaTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-stjalaForemal">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Stjäla föremål</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_stjalaForemalErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_stjalaForemalMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_stjalaForemal"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_stjalaForemal" value="&{template:combined} {{name=Stjäla föremål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{stjalaForemal}+@{stjalaForemalMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Stjäla föremål</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_stjalaForemalErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_stjalaForemalMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_stjalaForemal">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_stjalaForemalTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-talaModersmal">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Tala modersmål</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  spec</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_talaModersmalErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_talaModersmalMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_talaModersmal"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_talaModersmal" value="&{template:combined} {{name=Tala modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{talaModersmal}+@{talaModersmalMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Tala modersmål</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> spec</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_talaModersmalErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_talaModersmalMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_talaModersmal">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_talaModersmalTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-upptackaFara">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Upptäcka fara</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  PSY</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_upptackaFaraErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_upptackaFaraMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_upptackaFara"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_upptackaFara" value="&{template:combined} {{name=Upptäcka fara}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{upptackaFara}+@{upptackaFaraMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Upptäcka fara</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> PSY</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_upptackaFaraErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_upptackaFaraMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_upptackaFara">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_upptackaFaraTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-vardera">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Värdera</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_varderaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_varderaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_vardera"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_vardera" value="&{template:combined} {{name=Värdera}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{vardera}+@{varderaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Värdera</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_varderaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_varderaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_vardera">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_varderaTotFv">0</span>
+              </div>
+            </div>
+            <div class="sheet-skill-pair sheet-skill-overtala">
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                <strong class="sheet-table-row-field sheet-skill-name">Övertala</strong>
+                <div class="sheet-table-row-field sheet-skill-base">  KAR</div>
+                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_overtalaErf"/>
+                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_overtalaMod"/>
+                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_overtala"/>
+              </div>
+              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                <button type="roll" class="sheet-button-full-hidden" name="roll_overtala" value="&{template:combined} {{name=Övertala}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{overtala}+@{overtalaMod}+?{Modifikation|0}]]}}"></button>
+                <strong class="sheet-table-row-field sheet-skill-name">Övertala</strong>
+                <span class="sheet-table-row-field sheet-skill-base"> KAR</span>
+                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_overtalaErf">0</span>
+                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_overtalaMod">0</span>
+                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_overtala">0</span>
+                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_overtalaTotFv">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="sheet-skill-grid-profession">
+            <h2 class="sheet-grid-section-header">Yrkes</h2>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
+            </div>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
+            </div>
+            <fieldset class="repeating_yrkes">
+              <div class="sheet-skill-pair sheet-skill-yrkes">
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                  <input class="sheet-table-row-field sheet-skill-name" type="text"   name="attr_yrkesnamn"/>
+                  <input class="sheet-table-row-field sheet-skill-base" type="text"   name="attr_yrkesbas"/>
+                  <input class="sheet-table-row-field sheet-skill-erf"  type="number" name="attr_yrkeserf" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-mod"  type="number" name="attr_yrkesMod" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-fv"   type="number" name="attr_yrkesfv"  value="0"/>
+                </div>
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                  <button type="roll" name="roll_yrkes" class="sheet-button-full-hidden"   value="&{template:combined} {{name=@{yrkesnamn}}} {{vad=Yrkes}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{yrkesfv}+@{yrkesMod}+?{Modifikation|0}]]}}"></button>
+                  <span   class="sheet-table-row-field sheet-skill-name"  name="attr_yrkesnamn"  ></span>
+                  <span   class="sheet-table-row-field sheet-skill-base"  name="attr_yrkesbas"   ></span>
+                  <span   class="sheet-table-row-field sheet-skill-erf"   name="attr_yrkeserf"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-mod"   name="attr_yrkesMod"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-fv"    name="attr_yrkesfv"    >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-totFv" name="attr_yrkestotfv" >0</span>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="sheet-skill-grid-secondary">
+            <h2 class="sheet-grid-section-header">Sekundära</h2>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
+            </div>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
+            </div>
+            <fieldset class="repeating_sekundar">
+              <div class="sheet-skill-pair sheet-skill-sekundar">
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                  <input class="sheet-table-row-field sheet-skill-name" type="text"   name="attr_sekundarnamn"/>
+                  <input class="sheet-table-row-field sheet-skill-base" type="text"   name="attr_sekundarbas"/>
+                  <input class="sheet-table-row-field sheet-skill-erf"  type="number" name="attr_sekundarerf" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-mod"  type="number" name="attr_sekundarMod" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-fv"   type="number" name="attr_sekundarfv"  value="0"/>
+                </div>
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                  <button type="roll" name="roll_sekundar" class="sheet-button-full-hidden"   value="&{template:combined} {{name=@{sekundarnamn}}} {{vad=Sekundär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sekundarfv}+@{sekundarMod}+?{Modifikation|0}]]}}"></button>
+                  <span   class="sheet-table-row-field sheet-skill-name"  name="attr_sekundarnamn"  ></span>
+                  <span   class="sheet-table-row-field sheet-skill-base"  name="attr_sekundarbas"   ></span>
+                  <span   class="sheet-table-row-field sheet-skill-erf"   name="attr_sekundarerf"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-mod"   name="attr_sekundarMod"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-fv"    name="attr_sekundarfv"    >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-totFv" name="attr_sekundartotfv" >0</span>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="sheet-skill-grid-language">
+            <h2 class="sheet-grid-section-header">Språk</h2>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
+            </div>
+            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
+              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
+              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
+              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
+              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
+              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
+            </div>
+            <fieldset class="repeating_sprak">
+              <div class="sheet-skill-pair sheet-skill-sprak">
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                  <input class="sheet-table-row-field sheet-skill-name" type="text"   name="attr_spraknamn"/>
+                  <input class="sheet-table-row-field sheet-skill-base" type="text"   name="attr_sprakbas"/>
+                  <input class="sheet-table-row-field sheet-skill-erf"  type="number" name="attr_sprakerf" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-mod"  type="number" name="attr_sprakMod" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-fv"   type="number" name="attr_sprakfv"  value="0"/>
+                </div>
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                  <button type="roll" name="roll_sprak" class="sheet-button-full-hidden"   value="&{template:combined} {{name=@{spraknamn}}} {{vad=Språk}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sprakfv}+@{sprakMod}+?{Modifikation|0}]]}}"></button>
+                  <span   class="sheet-table-row-field sheet-skill-name"  name="attr_spraknamn"  ></span>
+                  <span   class="sheet-table-row-field sheet-skill-base"  name="attr_sprakbas"   ></span>
+                  <span   class="sheet-table-row-field sheet-skill-erf"   name="attr_sprakerf"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-mod"   name="attr_sprakMod"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-fv"    name="attr_sprakfv"    >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-totFv" name="attr_spraktotfv" >0</span>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </li>
       <li name="Magi">
         <input type="checkbox" class="sheet-testing sheet-firstLevelTab" checked/>
         <h1>Magi</h1>
@@ -1688,490 +2172,6 @@
             </div>
           </li>
         </ul>
-      </li>
-      <li name="Färdigheter2">
-        <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-skill-tab" checked/>
-        <h1>Färdigheter</h1>
-        <div class="sheet-section sheet-skill-grid">
-          <div class="sheet-skill-grid-primary">
-            <h2 class="sheet-grid-section-header">Primära</h2>
-            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
-              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
-              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
-              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
-              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
-              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
-            </div>
-            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
-              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
-              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
-              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
-              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
-              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-bluffa">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Bluffa</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  KAR</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_bluffaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_bluffaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_bluffa"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_bluffa" value="&{template:combined} {{name=Bluffa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{bluffa}+@{bluffaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Bluffa</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> KAR</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_bluffaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_bluffaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_bluffa">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_bluffaTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-finnaDoldaTing">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Finna dolda ting</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_finnaDoldaTingErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_finnaDoldaTingMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_finnaDoldaTing"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_finnaDoldaTing" value="&{template:combined} {{name=Finna dolda ting}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{finnaDoldaTing}+@{finnaDoldaTingMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Finna dolda ting</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_finnaDoldaTingErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_finnaDoldaTingMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_finnaDoldaTing">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_finnaDoldaTingTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-forstaHjalpen">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Första hjälpen</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_forstaHjalpenErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_forstaHjalpenMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_forstaHjalpen"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_forstaHjalpen" value="&{template:combined} {{name=Första hjälpen}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{forstaHjalpen}+@{forstaHjalpenMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Första hjälpen</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_forstaHjalpenErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_forstaHjalpenMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_forstaHjalpen">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_forstaHjalpenTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-gommaSig">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Gömma sig</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_gommaSigErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_gommaSigMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_gommaSig"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_gommaSig" value="&{template:combined} {{name=Gömma sig}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{gommaSig}+@{gommaSigMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Gömma sig</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_gommaSigErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_gommaSigMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_gommaSig">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_gommaSigTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-hoppa">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Hoppa</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_hoppaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_hoppaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_hoppa"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_hoppa" value="&{template:combined} {{name=Hoppa}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{hoppa}+@{hoppaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Hoppa</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_hoppaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_hoppaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_hoppa">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_hoppaTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-klattra">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Klättra</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_klattraErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_klattraMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_klattra"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_klattra" value="&{template:combined} {{name=Klättra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{klattra}+@{klattraMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Klättra</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_klattraErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_klattraMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_klattra">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_klattraTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-kopsla">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Köpslå</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  KAR</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_kopslaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_kopslaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_kopsla"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_kopsla" value="&{template:combined} {{name=Köpslå}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{kopsla}+@{kopslaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Köpslå</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> KAR</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_kopslaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_kopslaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_kopsla">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_kopslaTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-lyssna">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Lyssna</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_lyssnaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_lyssnaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_lyssna"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_lyssna" value="&{template:combined} {{name=Lyssna}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lyssna}+@{lyssnaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Lyssna</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_lyssnaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_lyssnaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_lyssna">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_lyssnaTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-lsModersmalMod">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">L/S modersmål</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  spec</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_lsModersmalModErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_lsModersmalModMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_lsModersmalMod"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_lsModersmalMod" value="&{template:combined} {{name=L/S modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{lsModersmalMod}+@{lsModersmalModMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">L/S modersmål</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> spec</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_lsModersmalModErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_lsModersmalModMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_lsModersmalMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_lsModersmalModTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-rida">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Rida</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_ridaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_ridaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_rida"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_rida" value="&{template:combined} {{name=Rida}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{rida}+@{ridaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Rida</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_ridaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_ridaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_rida">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_ridaTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-sjunga">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Sjunga</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  KAR</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_sjungaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_sjungaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_sjunga"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_sjunga" value="&{template:combined} {{name=Sjunga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sjunga}+@{sjungaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Sjunga</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> KAR</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_sjungaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_sjungaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_sjunga">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_sjungaTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-slagsmal">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Slagsmål</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  STY</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_slagsmalErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_slagsmalMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_slagsmal"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_slagsmal" value="&{template:combined} {{name=Slagsmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{slagsmal}+@{slagsmalMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Slagsmål</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> STY</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_slagsmalErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_slagsmalMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_slagsmal">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_slagsmalTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-smyga">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Smyga</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_smygaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_smygaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_smyga"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_smyga" value="&{template:combined} {{name=Smyga}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{smyga}+@{smygaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Smyga</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_smygaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_smygaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_smyga">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_smygaTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-spara">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Spåra</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_sparaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_sparaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_spara"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_spara" value="&{template:combined} {{name=Spåra}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{spara}+@{sparaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Spåra</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_sparaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_sparaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_spara">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_sparaTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-stjalaForemal">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Stjäla föremål</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  SMI</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_stjalaForemalErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_stjalaForemalMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_stjalaForemal"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_stjalaForemal" value="&{template:combined} {{name=Stjäla föremål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{stjalaForemal}+@{stjalaForemalMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Stjäla föremål</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> SMI</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_stjalaForemalErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_stjalaForemalMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_stjalaForemal">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_stjalaForemalTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-talaModersmal">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Tala modersmål</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  spec</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_talaModersmalErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_talaModersmalMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_talaModersmal"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_talaModersmal" value="&{template:combined} {{name=Tala modersmål}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{talaModersmal}+@{talaModersmalMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Tala modersmål</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> spec</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_talaModersmalErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_talaModersmalMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_talaModersmal">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_talaModersmalTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-upptackaFara">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Upptäcka fara</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  PSY</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_upptackaFaraErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_upptackaFaraMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_upptackaFara"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_upptackaFara" value="&{template:combined} {{name=Upptäcka fara}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{upptackaFara}+@{upptackaFaraMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Upptäcka fara</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> PSY</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_upptackaFaraErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_upptackaFaraMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_upptackaFara">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_upptackaFaraTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-vardera">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Värdera</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  INT</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_varderaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_varderaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_vardera"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_vardera" value="&{template:combined} {{name=Värdera}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{vardera}+@{varderaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Värdera</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> INT</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_varderaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_varderaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_vardera">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_varderaTotFv">0</span>
-              </div>
-            </div>
-            <div class="sheet-skill-pair sheet-skill-overtala">
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                <strong class="sheet-table-row-field sheet-skill-name">Övertala</strong>
-                <div class="sheet-table-row-field sheet-skill-base">  KAR</div>
-                <input class="sheet-table-row-field sheet-skill-erf"  type="number" value="0" name="attr_overtalaErf"/>
-                <input class="sheet-table-row-field sheet-skill-mod"  type="number" value="0" name="attr_overtalaMod"/>
-                <input class="sheet-table-row-field sheet-skill-fv"   type="number" value="0" name="attr_overtala"/>
-              </div>
-              <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                <button type="roll" class="sheet-button-full-hidden" name="roll_overtala" value="&{template:combined} {{name=Övertala}} {{vad=Primär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{overtala}+@{overtalaMod}+?{Modifikation|0}]]}}"></button>
-                <strong class="sheet-table-row-field sheet-skill-name">Övertala</strong>
-                <span class="sheet-table-row-field sheet-skill-base"> KAR</span>
-                <span class="sheet-table-row-field sheet-skill-erf"   name="attr_overtalaErf">0</span>
-                <span class="sheet-table-row-field sheet-skill-mod"   name="attr_overtalaMod">0</span>
-                <span class="sheet-table-row-field sheet-skill-fv"    name="attr_overtala">0</span>
-                <span class="sheet-table-row-field sheet-skill-totFv" name="attr_overtalaTotFv">0</span>
-              </div>
-            </div>
-          </div>
-          <div class="sheet-skill-grid-profession">
-            <h2 class="sheet-grid-section-header">Yrkes</h2>
-            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
-              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
-              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
-              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
-              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
-              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
-            </div>
-            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
-              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
-              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
-              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
-              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
-              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
-            </div>
-            <fieldset class="repeating_yrkes">
-              <div class="sheet-skill-pair sheet-skill-yrkes">
-                <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                  <input class="sheet-table-row-field sheet-skill-name" type="text"   name="attr_yrkesnamn"/>
-                  <input class="sheet-table-row-field sheet-skill-base" type="text"   name="attr_yrkesbas"/>
-                  <input class="sheet-table-row-field sheet-skill-erf"  type="number" name="attr_yrkeserf" value="0"/>
-                  <input class="sheet-table-row-field sheet-skill-mod"  type="number" name="attr_yrkesMod" value="0"/>
-                  <input class="sheet-table-row-field sheet-skill-fv"   type="number" name="attr_yrkesfv"  value="0"/>
-                </div>
-                <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                  <button type="roll" name="roll_yrkes" class="sheet-button-full-hidden"   value="&{template:combined} {{name=@{yrkesnamn}}} {{vad=Yrkes}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{yrkesfv}+@{yrkesMod}+?{Modifikation|0}]]}}"></button>
-                  <span   class="sheet-table-row-field sheet-skill-name"  name="attr_yrkesnamn"  ></span>
-                  <span   class="sheet-table-row-field sheet-skill-base"  name="attr_yrkesbas"   ></span>
-                  <span   class="sheet-table-row-field sheet-skill-erf"   name="attr_yrkeserf"   >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-mod"   name="attr_yrkesMod"   >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-fv"    name="attr_yrkesfv"    >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-totFv" name="attr_yrkestotfv" >0</span>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-          <div class="sheet-skill-grid-secondary">
-            <h2 class="sheet-grid-section-header">Sekundära</h2>
-            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
-              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
-              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
-              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
-              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
-              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
-            </div>
-            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
-              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
-              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
-              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
-              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
-              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
-            </div>
-            <fieldset class="repeating_sekundar">
-              <div class="sheet-skill-pair sheet-skill-sekundar">
-                <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                  <input class="sheet-table-row-field sheet-skill-name" type="text"   name="attr_sekundarnamn"/>
-                  <input class="sheet-table-row-field sheet-skill-base" type="text"   name="attr_sekundarbas"/>
-                  <input class="sheet-table-row-field sheet-skill-erf"  type="number" name="attr_sekundarerf" value="0"/>
-                  <input class="sheet-table-row-field sheet-skill-mod"  type="number" name="attr_sekundarMod" value="0"/>
-                  <input class="sheet-table-row-field sheet-skill-fv"   type="number" name="attr_sekundarfv"  value="0"/>
-                </div>
-                <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                  <button type="roll" name="roll_sekundar" class="sheet-button-full-hidden"   value="&{template:combined} {{name=@{sekundarnamn}}} {{vad=Sekundär}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sekundarfv}+@{sekundarMod}+?{Modifikation|0}]]}}"></button>
-                  <span   class="sheet-table-row-field sheet-skill-name"  name="attr_sekundarnamn"  ></span>
-                  <span   class="sheet-table-row-field sheet-skill-base"  name="attr_sekundarbas"   ></span>
-                  <span   class="sheet-table-row-field sheet-skill-erf"   name="attr_sekundarerf"   >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-mod"   name="attr_sekundarMod"   >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-fv"    name="attr_sekundarfv"    >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-totFv" name="attr_sekundartotfv" >0</span>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-          <div class="sheet-skill-grid-language">
-            <h2 class="sheet-grid-section-header">Språk</h2>
-            <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
-              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
-              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
-              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
-              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
-              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
-            </div>
-            <div class="sheet-skill sheet-table-header sheet-skill-edit-hide">
-              <div class="sheet-table-header-field sheet-skill-name">Namn</div>
-              <div class="sheet-table-header-field sheet-skill-base">Bas</div>
-              <div class="sheet-table-header-field sheet-skill-erf">Erf</div>
-              <div class="sheet-table-header-field sheet-skill-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-skill-fv">FV</div>
-              <div class="sheet-table-header-field sheet-skill-totFv">FV</div>
-            </div>
-            <fieldset class="repeating_sprak">
-              <div class="sheet-skill-pair sheet-skill-sprak">
-                <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                  <input class="sheet-table-row-field sheet-skill-name" type="text"   name="attr_spraknamn"/>
-                  <input class="sheet-table-row-field sheet-skill-base" type="text"   name="attr_sprakbas"/>
-                  <input class="sheet-table-row-field sheet-skill-erf"  type="number" name="attr_sprakerf" value="0"/>
-                  <input class="sheet-table-row-field sheet-skill-mod"  type="number" name="attr_sprakMod" value="0"/>
-                  <input class="sheet-table-row-field sheet-skill-fv"   type="number" name="attr_sprakfv"  value="0"/>
-                </div>
-                <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                  <button type="roll" name="roll_sprak" class="sheet-button-full-hidden"   value="&{template:combined} {{name=@{spraknamn}}} {{vad=Språk}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sprakfv}+@{sprakMod}+?{Modifikation|0}]]}}"></button>
-                  <span   class="sheet-table-row-field sheet-skill-name"  name="attr_spraknamn"  ></span>
-                  <span   class="sheet-table-row-field sheet-skill-base"  name="attr_sprakbas"   ></span>
-                  <span   class="sheet-table-row-field sheet-skill-erf"   name="attr_sprakerf"   >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-mod"   name="attr_sprakMod"   >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-fv"    name="attr_sprakfv"    >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-totFv" name="attr_spraktotfv" >0</span>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-        </div>
       </li>
     </ul>
 
