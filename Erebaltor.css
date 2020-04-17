@@ -4,10 +4,12 @@
   --number-normal: 46px;
 }
 
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-vapen-edit-show,
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-skill-edit-show {
   display: none;
 }
 
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-vapen-edit-hide,
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-edit-hide {
   display: none;
 }
@@ -20,6 +22,12 @@
   display: none;
 }
 
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-fv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-fv-mod,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-bv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-vikt,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-rv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-skada-bonus,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-base,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-erf,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-mod,
@@ -938,6 +946,11 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   grid-row-gap: 20px;
 }
 
+.sheet-vapen-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .sheet-skill-grid-primary {
   grid-area: primary;
 }
@@ -962,6 +975,15 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   transform: translate(0, 50%);
 }
 
+.sheet-vapen {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 8em 3em 3em 3em 4em 3em 5em 3em 6em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 5px;
+}
+
 .sheet-skill {
   position: relative;
   display: grid;
@@ -969,13 +991,16 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   align-items: center;
   justify-items: center;
   margin-bottom: 5px;
-
 }
 
+.sheet-vapen.sheet-table-row:hover,
 .sheet-skill.sheet-table-row:hover {
   background-color: #b0b0b0;
 }
 
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen {
+  grid-template-columns: auto 8em 5em 3em;
+}
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
   grid-template-columns: auto 3em;
@@ -1049,23 +1074,31 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 */
 input.sheet-skill-name,
+input.sheet-vapen-namn,
+.sheet-vapen-namn,
 .sheet-skill-name {
   justify-self: left;
   padding-left: 5px;
   font-weight: bold;
 }
 
-
+.sheet-vapen-grid input[type=number],
 .sheet-skill-grid input[type=number] {
   -moz-appearance: textfield;
 }
 
+.sheet-vapen-grid input[type=number]::-webkit-outer-spin-button,
+.sheet-vapen-grid input[type=number]::-webkit-inner-spin-button,
 .sheet-skill-grid input[type=number]::-webkit-outer-spin-button,
 .sheet-skill-grid input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+.sheet-vapen-grid input[type=number],
+.sheet-vapen-grid input[type=text],
+.sheet-vapen-grid select,
+.sheet-vapen-grid textarea,
 .sheet-skill-grid input[type=number],
 .sheet-skill-grid input[type=text],
 .sheet-skill-grid select,
@@ -1076,6 +1109,9 @@ input.sheet-skill-name,
   font-family: "Lucida Bright", "Cambria", serif;
 }
 
+.sheet-vapen-grid input[type=number],
+.sheet-vapen-grid input[type=text],
+.sheet-vapen-grid select,
 .sheet-skill-grid input[type=number],
 .sheet-skill-grid input[type=text],
 .sheet-skill-grid select {
@@ -1086,6 +1122,7 @@ input.sheet-skill-name,
   padding: 0;
 }
 
+.charsheet .sheet-vapen-grid input[type=text].sheet-vapen-namn,
 .charsheet .sheet-skill-grid input[type=text].sheet-skill-name {
   text-align: left;
   padding-left: 5px;
