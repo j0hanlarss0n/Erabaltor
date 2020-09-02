@@ -1019,7 +1019,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-armor {
   position: relative;
   display: grid;
-  grid-template-columns: auto 15em 3em 3em 3em 3em 3em 3em 3em 3em;
+  grid-template-columns: auto 15em 5em 5em 5em 5em 5em 5em 5em 5em;
   align-items: center;
   justify-items: center;
   margin-bottom: 5px;
