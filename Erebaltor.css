@@ -1019,7 +1019,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-armor {
   position: relative;
   display: grid;
-  grid-template-columns: auto 15em 5em 5em 5em 5em 5em 5em 5em 5em;
+  grid-template-columns: auto 15em 4em 4em 4em 4em 4em 4em 4em 4em;
   align-items: center;
   justify-items: center;
   margin-bottom: 5px;
@@ -1040,7 +1040,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor {
-  grid-template-columns: auto 3em 3em 3em 3em 3em 3em 3em 3em;
+  grid-template-columns: auto 4em 4em 4em 4em 4em 4em 4em 4em;
 }
 
 
