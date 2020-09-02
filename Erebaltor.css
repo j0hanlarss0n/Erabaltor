@@ -1113,22 +1113,27 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 */
 input.sheet-skill-name,
 input.sheet-vapen-namn,
+input.sheet-armor-namn,
 .sheet-vapen-namn,
-.sheet-skill-name {
+.sheet-skill-name,
+.sheet-armor-name {
   justify-self: left;
   padding-left: 5px;
   font-weight: bold;
 }
 
 .sheet-vapen-grid input[type=number],
-.sheet-skill-grid input[type=number] {
+.sheet-skill-grid input[type=number],
+.sheet-combat-grid input[type=number] {
   -moz-appearance: textfield;
 }
 
 .sheet-vapen-grid input[type=number]::-webkit-outer-spin-button,
 .sheet-vapen-grid input[type=number]::-webkit-inner-spin-button,
 .sheet-skill-grid input[type=number]::-webkit-outer-spin-button,
-.sheet-skill-grid input[type=number]::-webkit-inner-spin-button {
+.sheet-skill-grid input[type=number]::-webkit-inner-spin-button,
+.sheet-combat-grid input[type=number]::-webkit-outer-spin-button,
+.sheet-combat-grid input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -1140,7 +1145,11 @@ input.sheet-vapen-namn,
 .sheet-skill-grid input[type=number],
 .sheet-skill-grid input[type=text],
 .sheet-skill-grid select,
-.sheet-skill-grid textarea {
+.sheet-skill-grid textarea,
+.sheet-combat-grid input[type=number],
+.sheet-combat-grid input[type=text],
+.sheet-combat-grid select,
+.sheet-combat-grid textarea  {
   width: 100%;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1152,7 +1161,10 @@ input.sheet-vapen-namn,
 .sheet-vapen-grid select,
 .sheet-skill-grid input[type=number],
 .sheet-skill-grid input[type=text],
-.sheet-skill-grid select {
+.sheet-skill-grid select,
+.sheet-combat-grid input[type=number],
+.sheet-combat-grid input[type=text],
+.sheet-combat-grid select {
   border: none;
   border-bottom: 1px solid #e5d280;
   text-align: center;
@@ -1161,7 +1173,8 @@ input.sheet-vapen-namn,
 }
 
 .charsheet .sheet-vapen-grid input[type=text].sheet-vapen-namn,
-.charsheet .sheet-skill-grid input[type=text].sheet-skill-name {
+.charsheet .sheet-skill-grid input[type=text].sheet-skill-name,
+.charsheet .sheet-combat-grid input[type=text].sheet-armor-name {
   text-align: left;
   padding-left: 5px;
   font-weight: bold;
