@@ -944,7 +944,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
     'wounds'
     'armor'
     'weapon';
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
