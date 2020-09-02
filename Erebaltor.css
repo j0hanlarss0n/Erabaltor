@@ -991,7 +991,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 
 
-.sheet-testing:checked ~ .sheet-skill-grid {
+.sheet-testing:checked ~ .sheet-grid {
   max-height: 0;
   margin-bottom: 200;
   opacity: 0;
