@@ -1030,6 +1030,10 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-armor.sheet-table-row:hover {
   background-color: #b0b0b0;
 }
+.sheet-table-row:hover select {
+  background-color: #b0b0b0;
+  border: none;
+}
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen {
   grid-template-columns: auto 8em 5em 3em;
@@ -1158,18 +1162,30 @@ input.sheet-armor-namn,
 
 .sheet-vapen-grid input[type=number],
 .sheet-vapen-grid input[type=text],
-.sheet-vapen-grid select,
+.sheet-vapen-grid.sheet-vapen-edit-hide select,
 .sheet-skill-grid input[type=number],
 .sheet-skill-grid input[type=text],
-.sheet-skill-grid select,
+.sheet-skill-grid.sheet-vapen-edit-hide select,
 .sheet-combat-grid input[type=number],
 .sheet-combat-grid input[type=text],
-.sheet-combat-grid select {
+.sheet-combat-grid.sheet-combat-edit.hide select {
   border: none;
   border-bottom: 1px solid #e5d280;
   text-align: center;
   height: auto;
   padding: 0;
+}
+.sheet-vapen-edit-hide select,
+.sheet-skill-edit-hide select,
+.sheet-combat-edit.hide select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #cccccc;
+}
+
+.sheet-table-header-field.sheet-vapen-skill,
+.sheet-table-header-field.sheet-vapen-skada-bonus {
+  justify-self: left;
 }
 
 .charsheet .sheet-vapen-grid input[type=text].sheet-vapen-namn,
