@@ -948,13 +948,13 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
-.sheet-skill-grid-wounds {
+.sheet-combat-grid-wounds {
   grid-area: wounds;
 }
-.sheet-skill-grid-armor {
+.sheet-combat-grid-armor {
   grid-area: armor;
 }
-.sheet-skill-grid-weapon {
+.sheet-combat-grid-weapon {
   grid-area: weapon;
 }
 
