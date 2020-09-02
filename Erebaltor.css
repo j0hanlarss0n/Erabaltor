@@ -5,12 +5,14 @@
 }
 
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-vapen-edit-show,
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-skill-edit-show {
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-skill-edit-show,
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-armor-edit-show {
   display: none;
 }
 
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-vapen-edit-hide,
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-edit-hide {
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-edit-hide,
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-armor-edit-hide {
   display: none;
 }
 
@@ -31,7 +33,8 @@
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-base,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-erf,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-mod,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-fv {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-fv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor-details {
   display: none;
 }
 
@@ -935,6 +938,26 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   text-shadow: 0 0 2px 00fff5;
 }
 
+.sheet-combat-grid {
+  display: grid;
+  grid-template-areas: 
+    'wounds'
+    'armor'
+    'weapon';
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.sheet-skill-grid-wounds {
+  grid-area: wounds;
+}
+.sheet-skill-grid-armor {
+  grid-area: armor;
+}
+.sheet-skill-grid-weapon {
+  grid-area: weapon;
+}
+
 .sheet-skill-grid {
   display: grid;
   grid-template-areas: 
@@ -993,8 +1016,18 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   margin-bottom: 5px;
 }
 
+.sheet-armor {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 15em 3em 3em 3em 3em 3em 3em 3em 3em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 5px;
+}
+
 .sheet-vapen.sheet-table-row:hover,
-.sheet-skill.sheet-table-row:hover {
+.sheet-skill.sheet-table-row:hover,
+.sheet-armor.sheet-table-row:hover {
   background-color: #b0b0b0;
 }
 
@@ -1005,6 +1038,11 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
   grid-template-columns: auto 3em;
 }
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor {
+  grid-template-columns: auto 3em 3em 3em 3em 3em 3em 3em 3em;
+}
+
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill {
   grid-template-columns: auto 3em 3em;
