@@ -1010,7 +1010,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   grid-template-columns: auto 8em 3em 3em 3em 4em 3em 5em 3em 6em;
   align-items: center;
   justify-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .sheet-skill {
@@ -1019,7 +1019,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   grid-template-columns: auto 3em 3em 3em 3em;
   align-items: center;
   justify-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .sheet-armor {
@@ -1028,16 +1028,16 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   grid-template-columns: auto 15em 4em 4em 4em 4em 4em 4em 4em 4em;
   align-items: center;
   justify-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .sheet-health {
   position: relative;
   display: grid;
-  grid-template-columns: 7em 4em 4em 4em 4em auto;
+  grid-template-columns: 8em auto 4em 4em 4em 4em;
   align-items: center;
   justify-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .sheet-vapen.sheet-table-row:hover,
@@ -1045,6 +1045,20 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-armor.sheet-table-row:hover {
   background-color: #b0b0b0;
 }
+
+.sheet-health.sheet-table-row:hover > input.sheet-table-row-field {
+  background-color: #b0b0b0;
+}
+
+/*
+.sheet-health.sheet-table-row:hover > input[type=number]::-webkit-inner-spin-button,
+.sheet-health.sheet-table-row:hover > input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: scrollbarbutton-down;
+  -webkit-appearance: scrollbarbutton-up;
+
+}
+*/
+
 .sheet-table-row:hover select {
   background-color: #b0b0b0;
   border: none;
@@ -1118,7 +1132,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 
 .sheet-table-row .sheet-table-row-field {
-  background-color: green;
+  /*background-color: green;*/
 }
 
 .sheet-table-summary {
@@ -1165,7 +1179,11 @@ input.sheet-health-bodypart,
 
 .sheet-vapen-grid input[type=number],
 .sheet-skill-grid input[type=number],
-.sheet-combat-grid input[type=number] {
+.sheet-combat-grid-armor input[type=number],
+.sheet-combat-grid-weapon input[type=number],
+.sheet-combat-grid-weapon input[type=number].sheet-health-max,
+.sheet-combat-grid-weapon input[type=number].sheet-health-current,
+.sheet-combat-grid-weapon input[type=number].sheet-health-armor {
   -moz-appearance: textfield;
 }
 
@@ -1173,8 +1191,14 @@ input.sheet-health-bodypart,
 .sheet-vapen-grid input[type=number]::-webkit-inner-spin-button,
 .sheet-skill-grid input[type=number]::-webkit-outer-spin-button,
 .sheet-skill-grid input[type=number]::-webkit-inner-spin-button,
-.sheet-combat-grid input[type=number]::-webkit-outer-spin-button,
-.sheet-combat-grid input[type=number]::-webkit-inner-spin-button {
+.sheet-combat-grid-armor input[type=number]::-webkit-outer-spin-button,
+.sheet-combat-grid-armor input[type=number]::-webkit-inner-spin-button,
+.sheet-combat-grid-weapon input[type=number]::-webkit-outer-spin-button.sheet-health-max,
+.sheet-combat-grid-weapon input[type=number]::-webkit-inner-spin-button.sheet-health-max,
+.sheet-combat-grid-health input[type=number]::-webkit-outer-spin-button.sheet-health-current,
+.sheet-combat-grid-health input[type=number]::-webkit-inner-spin-button.sheet-health-current,
+.sheet-combat-grid-health input[type=number]::-webkit-outer-spin-button.sheet-health-armor,
+.sheet-combat-grid-health input[type=number]::-webkit-inner-spin-button.sheet-health-armor {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -1194,7 +1218,7 @@ input.sheet-health-bodypart,
   width: 100%;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.2);
-  font-family: "Lucida Bright", "Cambria", serif;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .sheet-combat-grid .sheet-table-summary input[type=number], 
@@ -1202,7 +1226,7 @@ input.sheet-health-bodypart,
   font-weight: bold;
   color:black;
   cursor: default;
-  background-color:#999999;
+  background-color:#aaaaaa;
   border: none;
   border-radius: unset;
   border-left: 1px solid grey;
@@ -1251,11 +1275,7 @@ input.sheet-health-bodypart,
 .charsheet .sheet-skill-grid input[type=text].sheet-skill-name,
 .charsheet .sheet-combat-grid input[type=text].sheet-armor-name,
 .charsheet .sheet-combat-grid input[type=text].sheet-health-bodypart,
-.charsheet .sheet-combat-grid input[type=number].sheet-health-max,
-.charsheet .sheet-combat-grid input[type=number].sheet-health-current,
-.charsheet .sheet-combat-grid input[type=number].sheet-health-armor,
-.charsheet .sheet-combat-grid input[type=number].sheet-health-wounds,
-.charsheet .sheet-combat-grid input[type=text].sheet-health-other {
+.charsheet .sheet-combat-grid input[type=text].sheet-armor-sum {
   text-align: left;
   padding-left: 5px;
   font-weight: bold;
