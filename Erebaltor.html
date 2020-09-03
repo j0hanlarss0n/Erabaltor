@@ -1845,26 +1845,26 @@
           <div class="sheet-combat-grid-health">
             <h2 class="sheet-grid-section-header">Hälsa</h2>
             <div class="sheet-health sheet-table-header">
-              <div class="sheet-table-header-field sheet-health-bodypart">Kroppsdel</div>
-              <div class="sheet-table-header-field sheet-health-max">KP-full</div>
-              <div class="sheet-table-header-field sheet-health-current">KP</div>
-              <div class="sheet-table-header-field sheet-health-armor">RV</div>
-              <div class="sheet-table-header-field sheet-health-wounds">Skada</div>
-              <div class="sheet-table-header-field sheet-health-other">Övrigt</div>
+              <div class="sheet-table-header-field sheet-health-bodypart sheet-first-column">Kroppsdel</div>
+              <div class="sheet-table-header-field sheet-health-max"                        >KP-full</div>
+              <div class="sheet-table-header-field sheet-health-current"                    >KP</div>
+              <div class="sheet-table-header-field sheet-health-armor"                      >RV</div>
+              <div class="sheet-table-header-field sheet-health-wounds"                     >Skada</div>
+              <div class="sheet-table-header-field sheet-health-other"                      >Övrigt</div>
             </div>
             <div class="sheet-health sheet-table-row">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Huvud"     />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kphuvud_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kphuvud"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_head_sum"  value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarhuvud"        value="0" min="0" />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-bodypart sheet-first-column" type="text"   readonly="true"                               value="Huvud"     />
+              <input class="sheet-table-row-field sheet-health-max"                         type="number" readonly="true"   name="attr_kphuvud_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"                     type="number" readonly="true"   name="attr_kphuvud"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"                       type="number" readonly="true"   name="attr_armor_head_sum"  value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"                      type="number"                   name="attr_sarhuvud"        value="0" min="0" />
+              <input class="sheet-table-row-field sheet-health-other"                       type="text"                                                 value=""          />
             </div>
           </div>
           <div class="sheet-combat-grid-armor">
             <h2 class="sheet-grid-section-header">Rustning</h2>
             <div class="sheet-armor sheet-table-header">
-              <div class="sheet-table-header-field sheet-armor-name">Rustning</div>
+              <div class="sheet-table-header-field sheet-armor-name sheet-first-column">Rustning</div>
               <div class="sheet-table-header-field sheet-armor-details">Detaljer</div>
               <div class="sheet-table-header-field sheet-armor-weight">Vikt</div>
               <div class="sheet-table-header-field sheet-armor-head">Huvud</div>
@@ -1878,7 +1878,7 @@
             <fieldset class="repeating_armor">
               <div class="sheet-armor-pair">
                 <div class="sheet-armor sheet-table-row sheet-show-while-edit">
-                  <input class="sheet-table-row-field sheet-armor-name"       type="text"   name="attr_armor_name"/>
+                  <input class="sheet-table-row-field sheet-armor-name sheet-first-column"       type="text"   name="attr_armor_name"/>
                   <input class="sheet-table-row-field sheet-armor-details"    type="text"   name="attr_armor_details"/>
                   <input class="sheet-table-row-field sheet-armor-weight"     type="number" name="attr_armor_weight"   value="0"/>
                   <input class="sheet-table-row-field sheet-armor-head"       type="number" name="attr_armor_head"     value="0"/>
@@ -1890,7 +1890,7 @@
                   <input class="sheet-table-row-field sheet-armor-leftleg"    type="number" name="attr_armor_leftleg"  value="0"/>
                 </div>
                 <div class="sheet-armor sheet-table-row sheet-hide-while-edit">
-                  <span class="sheet-table-row-field sheet-armor-name"      name="attr_armor_name"     ></span>
+                  <span class="sheet-table-row-field sheet-armor-name sheet-first-column"      name="attr_armor_name"     ></span>
                   <span class="sheet-table-row-field sheet-armor-details"   name="attr_armor_details"  ></span>
                   <span class="sheet-table-row-field sheet-armor-weight"    name="attr_armor_weight"   >0</span>
                   <span class="sheet-table-row-field sheet-armor-head"      name="attr_armor_head"     >0</span>
@@ -1904,7 +1904,7 @@
               </div>
             </fieldset>
             <div class="sheet-armor sheet-table-summary sheet-hide-while-edit">
-              <input class="sheet-table-summary-field sheet-armor-sum"      type="text"    readonly="true"                                value="SUMMA:"/>
+              <input class="sheet-table-summary-field sheet-armor-sum sheet-first-column"      type="text"    readonly="true"                                value="SUMMA:"/>
               <input class="sheet-table-summary-field sheet-armor-details"  type="text"    readonly="true"                                value=""/>
               <input class="sheet-table-summary-field sheet-armor-weight"   type="number"  readonly="true" name="attr_armor_weight_sum"   value="0"/>
               <input class="sheet-table-summary-field sheet-armor-head"     type="number"  readonly="true" name="attr_armor_head_sum"     value="0"/>
@@ -1920,7 +1920,7 @@
             <h2 class="sheet-grid-section-header">Vapen</h2>
             <div class="sheet-vapen-grid">
               <div class="sheet-vapen sheet-table-header sheet-vapen-edit-show">
-                <div class="sheet-table-header-field sheet-vapen-namn">Vapen</div>
+                <div class="sheet-table-header-field sheet-vapen-namn sheet-first-column">Vapen</div>
                 <div class="sheet-table-header-field sheet-vapen-skill">Färdighet</div>
                 <div class="sheet-table-header-field sheet-vapen-fv">Fv</div>
                 <div class="sheet-table-header-field sheet-vapen-fv-mod">Mod</div>
@@ -1932,7 +1932,7 @@
                 <div class="sheet-table-header-field sheet-vapen-skada-bonus">Bonus</div>
               </div>
               <div class="sheet-vapen sheet-table-header sheet-vapen-edit-hide">
-                <div class="sheet-table-header-field sheet-vapen-namn">Vapen</div>
+                <div class="sheet-table-header-field sheet-vapen-namn sheet-first-column">Vapen</div>
                 <div class="sheet-table-header-field sheet-vapen-skill">Färdighet</div>
                 <div class="sheet-table-header-field sheet-vapen-fv">Fv</div>
                 <div class="sheet-table-header-field sheet-vapen-fv-mod">Mod</div>
@@ -1946,7 +1946,7 @@
               <fieldset class="repeating_vapen">
                 <div class="sheet-vapen-pair">
                   <div class="sheet-vapen sheet-table-row sheet-vapen-edit-show">
-                    <input class="sheet-table-row-field sheet-vapen-namn" type="text"   name="attr_vapenNamn"/>
+                    <input class="sheet-table-row-field sheet-vapen-namn sheet-first-column" type="text"   name="attr_vapenNamn"/>
                     <select class="sheet-table-row-field sheet-vapen-skill" type="text"   name="attr_vapenSkill"/>
                       <option value="">Inget</option>
                       <option value="@{Armborst}">Armborst</option>
@@ -1981,7 +1981,7 @@
                     </select>
                   </div>
                   <div class="sheet-vapen sheet-table-row sheet-vapen-edit-hide">
-                    <span class="sheet-table-row-field sheet-vapen-namn" name="attr_vapenNamn"></span>
+                    <span class="sheet-table-row-field sheet-vapen-namn sheet-first-column" name="attr_vapenNamn"></span>
                     <select class="sheet-table-row-field sheet-vapen-skill" type="text"   name="attr_vapenSkill"/>
                           <option value="">Inget</option>
                           <option value="@{Armborst}">Armborst</option>

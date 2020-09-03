@@ -1102,11 +1102,18 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 */
 
+.sheet-table-header-field,
+.sheet-table-row-field,
+.sheet-table-summary-field {
+  justify-self: center;
+  text-align: center;
+}
+
 .sheet-table-header {
   background-color: #999999;
 }
 
-.sheet-table-header .sheet-table-header-field {
+.sheet-table-header-field {
   font-weight: bold;
   color:black;
 }
@@ -1118,7 +1125,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 
 .sheet-table-row .sheet-table-row-field {
-  background-color: green;
+  background-color: #cccccc;
 }
 
 .sheet-table-summary {
@@ -1129,6 +1136,13 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 
 .sheet-table-summary .sheet-table-summary-field {
   background-color: #aaaaaa;
+}
+
+.sheet-first-column {
+  justify-self: left;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
 }
 
 /*
@@ -1150,18 +1164,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   min-height: 28px;
 }
 */
-input.sheet-skill-name,
-input.sheet-vapen-namn,
-input.sheet-armor-namn,
-input.sheet-health-bodypart,
-.sheet-vapen-namn,
-.sheet-skill-name,
-.sheet-armor-name,
-.sheet-health-bodypart {
-  justify-self: left;
-  padding-left: 5px;
-  font-weight: bold;
-}
+
 
 .sheet-vapen-grid input[type=number],
 .sheet-skill-grid input[type=number],
