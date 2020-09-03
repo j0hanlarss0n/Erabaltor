@@ -40,8 +40,7 @@ When editing the sheet, the sections that are shown when not editing should be h
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-erf,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-mod,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-fv,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor-details,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health-max {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor-details {
   display: none;
 }
 
@@ -1064,10 +1063,6 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   grid-template-columns: auto 4em 4em 4em 4em 4em 4em 4em 4em;
 }
 
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health {
-  grid-template-columns: 7em 4em 4em 4em 4em auto;
-}
-
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill {
   grid-template-columns: auto 3em 3em;
@@ -1108,7 +1103,12 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 */
 
 .sheet-table-header {
-  background-color: #888888;
+  background-color: #999999;
+}
+
+.sheet-table-header .sheet-table-header-field {
+  font-weight: bold;
+  color:black;
 }
 
 .sheet-table-row {
@@ -1117,10 +1117,18 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   min-height: 28px;
 }
 
+.sheet-table-row .sheet-table-row-field {
+  background-color: green;
+}
+
 .sheet-table-summary {
-  background-color: #999999;
+  background-color: #aaaaaa;
   border: 1px solid #635b14;
   min-height: 28px;
+}
+
+.sheet-table-summary .sheet-table-summary-field {
+  background-color: #aaaaaa;
 }
 
 /*
@@ -1145,9 +1153,11 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 input.sheet-skill-name,
 input.sheet-vapen-namn,
 input.sheet-armor-namn,
+input.sheet-health-bodypart,
 .sheet-vapen-namn,
 .sheet-skill-name,
-.sheet-armor-name {
+.sheet-armor-name,
+.sheet-health-bodypart {
   justify-self: left;
   padding-left: 5px;
   font-weight: bold;
@@ -1189,12 +1199,24 @@ input.sheet-armor-namn,
 
 .sheet-combat-grid .sheet-table-summary input[type=number], 
 .sheet-combat-grid .sheet-table-summary input[type=text] {
+  font-weight: bold;
+  color:black;
   cursor: default;
   background-color:#999999;
   border: none;
   border-radius: unset;
-  border-left: 1px solid slategrey;
+  border-left: 1px solid grey;
   pointer-events: none;
+}
+
+
+.sheet-combat-grid-health .sheet-table-row input[type=number], 
+.sheet-combat-grid-health .sheet-table-row input[type=text] {
+  cursor: default;
+  background-color:#cccccc;
+  border: none;
+  border-radius: unset;
+  padding: 4px;
 }
 
 .sheet-vapen-grid input[type=number],
@@ -1214,7 +1236,7 @@ input.sheet-armor-namn,
 }
 .sheet-vapen-edit-hide select,
 .sheet-skill-edit-hide select,
-.sheet-combat-edit.hide select {
+.sheet-combat-edit-hide select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background-color: #cccccc;
@@ -1227,7 +1249,13 @@ input.sheet-armor-namn,
 
 .charsheet .sheet-vapen-grid input[type=text].sheet-vapen-namn,
 .charsheet .sheet-skill-grid input[type=text].sheet-skill-name,
-.charsheet .sheet-combat-grid input[type=text].sheet-armor-name {
+.charsheet .sheet-combat-grid input[type=text].sheet-armor-name,
+.charsheet .sheet-combat-grid input[type=text].sheet-health-bodypart,
+.charsheet .sheet-combat-grid input[type=number].sheet-health-max,
+.charsheet .sheet-combat-grid input[type=number].sheet-health-current,
+.charsheet .sheet-combat-grid input[type=number].sheet-health-armor,
+.charsheet .sheet-combat-grid input[type=number].sheet-health-wounds,
+.charsheet .sheet-combat-grid input[type=text].sheet-health-other {
   text-align: left;
   padding-left: 5px;
   font-weight: bold;
