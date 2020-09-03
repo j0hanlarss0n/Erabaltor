@@ -4,13 +4,21 @@
   --number-normal: 46px;
 }
 
+/*
+When not editing the sheet, the sections that are shown while editing should be hidden
+*/
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-vapen-edit-show,
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-skill-edit-show {
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-skill-edit-show,
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-show-while-edit {
   display: none;
 }
 
+/*
+When editing the sheet, the sections that are shown when not editing should be hidden
+*/
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-vapen-edit-hide,
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-edit-hide {
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-edit-hide,
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-hide-while-edit {
   display: none;
 }
 
@@ -31,7 +39,8 @@
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-base,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-erf,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-mod,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-fv {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-fv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor-details {
   display: none;
 }
 
@@ -935,6 +944,26 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   text-shadow: 0 0 2px 00fff5;
 }
 
+.sheet-combat-grid {
+  display: grid;
+  grid-template-areas: 
+    'wounds'
+    'armor'
+    'weapon';
+  grid-template-columns: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.sheet-combat-grid-wounds {
+  grid-area: wounds;
+}
+.sheet-combat-grid-armor {
+  grid-area: armor;
+}
+.sheet-combat-grid-weapon {
+  grid-area: weapon;
+}
+
 .sheet-skill-grid {
   display: grid;
   grid-template-areas: 
@@ -968,7 +997,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 }
 
 
-.sheet-testing:checked ~ .sheet-skill-grid {
+.sheet-testing:checked ~ .sheet-grid {
   max-height: 0;
   margin-bottom: 200;
   opacity: 0;
@@ -993,10 +1022,25 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   margin-bottom: 5px;
 }
 
+.sheet-armor {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 15em 4em 4em 4em 4em 4em 4em 4em 4em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 5px;
+}
+
 .sheet-vapen.sheet-table-row:hover,
-.sheet-skill.sheet-table-row:hover {
+.sheet-skill.sheet-table-row:hover,
+.sheet-armor.sheet-table-row:hover {
   background-color: #b0b0b0;
 }
+.sheet-table-row:hover select {
+  background-color: #b0b0b0;
+  border: none;
+}
+
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen {
   grid-template-columns: auto 8em 5em 3em;
@@ -1005,6 +1049,11 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
   grid-template-columns: auto 3em;
 }
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor {
+  grid-template-columns: auto 4em 4em 4em 4em 4em 4em 4em 4em;
+}
+
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill {
   grid-template-columns: auto 3em 3em;
@@ -1054,6 +1103,12 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   min-height: 28px;
 }
 
+.sheet-table-summary {
+  background-color: #999999;
+  border: 1px solid #635b14;
+  min-height: 28px;
+}
+
 /*
 .sheet-skill-header-display {
   display: grid;
@@ -1075,22 +1130,27 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 */
 input.sheet-skill-name,
 input.sheet-vapen-namn,
+input.sheet-armor-namn,
 .sheet-vapen-namn,
-.sheet-skill-name {
+.sheet-skill-name,
+.sheet-armor-name {
   justify-self: left;
   padding-left: 5px;
   font-weight: bold;
 }
 
 .sheet-vapen-grid input[type=number],
-.sheet-skill-grid input[type=number] {
+.sheet-skill-grid input[type=number],
+.sheet-combat-grid input[type=number] {
   -moz-appearance: textfield;
 }
 
 .sheet-vapen-grid input[type=number]::-webkit-outer-spin-button,
 .sheet-vapen-grid input[type=number]::-webkit-inner-spin-button,
 .sheet-skill-grid input[type=number]::-webkit-outer-spin-button,
-.sheet-skill-grid input[type=number]::-webkit-inner-spin-button {
+.sheet-skill-grid input[type=number]::-webkit-inner-spin-button,
+.sheet-combat-grid input[type=number]::-webkit-outer-spin-button,
+.sheet-combat-grid input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -1102,28 +1162,58 @@ input.sheet-vapen-namn,
 .sheet-skill-grid input[type=number],
 .sheet-skill-grid input[type=text],
 .sheet-skill-grid select,
-.sheet-skill-grid textarea {
+.sheet-skill-grid textarea,
+.sheet-combat-grid input[type=number],
+.sheet-combat-grid input[type=text],
+.sheet-combat-grid select,
+.sheet-combat-grid textarea  {
   width: 100%;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.2);
   font-family: "Lucida Bright", "Cambria", serif;
 }
 
+.sheet-combat-grid .sheet-table-summary input[type=number], 
+.sheet-combat-grid .sheet-table-summary input[type=text] {
+  cursor: default;
+  background-color:#999999;
+  border: none;
+  border-radius: unset;
+  border-left: 1px solid slategrey;
+  pointer-events: none;
+}
+
 .sheet-vapen-grid input[type=number],
 .sheet-vapen-grid input[type=text],
-.sheet-vapen-grid select,
+.sheet-vapen-grid.sheet-vapen-edit-hide select,
 .sheet-skill-grid input[type=number],
 .sheet-skill-grid input[type=text],
-.sheet-skill-grid select {
+.sheet-skill-grid.sheet-vapen-edit-hide select,
+.sheet-combat-grid input[type=number],
+.sheet-combat-grid input[type=text],
+.sheet-combat-grid.sheet-combat-edit.hide select {
   border: none;
   border-bottom: 1px solid #e5d280;
   text-align: center;
   height: auto;
   padding: 0;
 }
+.sheet-vapen-edit-hide select,
+.sheet-skill-edit-hide select,
+.sheet-combat-edit.hide select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #cccccc;
+}
+
+.sheet-table-header-field.sheet-vapen-skill,
+.sheet-table-header-field.sheet-vapen-skada-bonus {
+  justify-self: left;
+}
 
 .charsheet .sheet-vapen-grid input[type=text].sheet-vapen-namn,
-.charsheet .sheet-skill-grid input[type=text].sheet-skill-name {
+.charsheet .sheet-skill-grid input[type=text].sheet-skill-name,
+.charsheet .sheet-combat-grid input[type=text].sheet-armor-name {
   text-align: left;
   padding-left: 5px;
   font-weight: bold;
