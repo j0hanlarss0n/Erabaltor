@@ -1193,12 +1193,12 @@ input.sheet-health-bodypart,
 .sheet-skill-grid input[type=number]::-webkit-inner-spin-button,
 .sheet-combat-grid-armor input[type=number]::-webkit-outer-spin-button,
 .sheet-combat-grid-armor input[type=number]::-webkit-inner-spin-button,
-.sheet-combat-grid-weapon input[type=number]::-webkit-outer-spin-button.sheet-health-max,
-.sheet-combat-grid-weapon input[type=number]::-webkit-inner-spin-button.sheet-health-max,
-.sheet-combat-grid-health input[type=number]::-webkit-outer-spin-button.sheet-health-current,
-.sheet-combat-grid-health input[type=number]::-webkit-inner-spin-button.sheet-health-current,
-.sheet-combat-grid-health input[type=number]::-webkit-outer-spin-button.sheet-health-armor,
-.sheet-combat-grid-health input[type=number]::-webkit-inner-spin-button.sheet-health-armor {
+.sheet-combat-grid-weapon input[type=number].sheet-health-max::-webkit-outer-spin-button,
+.sheet-combat-grid-weapon input[type=number].sheet-health-max::-webkit-inner-spin-button,
+.sheet-combat-grid-health input[type=number].sheet-health-current::-webkit-outer-spin-button,
+.sheet-combat-grid-health input[type=number].sheet-health-current::-webkit-inner-spin-button,
+.sheet-combat-grid-health input[type=number].sheet-health-armor::-webkit-outer-spin-button,
+.sheet-combat-grid-health input[type=number].sheet-health-armor::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
