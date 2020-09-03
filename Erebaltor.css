@@ -1035,6 +1035,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   border: none;
 }
 
+
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen {
   grid-template-columns: auto 8em 5em 3em;
 }
@@ -1092,6 +1093,12 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 
 .sheet-table-row {
   background-color: #cccccc;
+  border: 1px solid #635b14;
+  min-height: 28px;
+}
+
+.sheet-table-summary {
+  background-color: #999999;
   border: 1px solid #635b14;
   min-height: 28px;
 }
