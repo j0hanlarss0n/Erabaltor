@@ -40,7 +40,8 @@ When editing the sheet, the sections that are shown when not editing should be h
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-erf,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-mod,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill-fv,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor-details {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor-details,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health-max {
   display: none;
 }
 
@@ -947,15 +948,15 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-combat-grid {
   display: grid;
   grid-template-areas: 
-    'wounds'
+    'health'
     'armor'
     'weapon';
   grid-template-columns: 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
-.sheet-combat-grid-wounds {
-  grid-area: wounds;
+.sheet-combat-grid-health {
+  grid-area: health;
 }
 .sheet-combat-grid-armor {
   grid-area: armor;
@@ -1031,6 +1032,15 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   margin-bottom: 5px;
 }
 
+.sheet-health {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7em 4em 4em 4em 4em auto;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 5px;
+}
+
 .sheet-vapen.sheet-table-row:hover,
 .sheet-skill.sheet-table-row:hover,
 .sheet-armor.sheet-table-row:hover {
@@ -1052,6 +1062,10 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor {
   grid-template-columns: auto 4em 4em 4em 4em 4em 4em 4em 4em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health {
+  grid-template-columns: 7em 4em 4em 4em 4em auto;
 }
 
 
