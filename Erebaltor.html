@@ -1842,8 +1842,88 @@
         <input type="checkbox" class="sheet-testing sheet-secondLevelTab sheet-skill-tab" checked/>
         <h1>Strid</h1>
         <div class="sheet-section sheet-grid sheet-combat-grid">
-          <div class="sheet-combat-grid-wounds">
-            <h2 class="sheet-grid-section-header">Skador</h2>
+          <div class="sheet-combat-grid-health">
+            <h2 class="sheet-grid-section-header">Hälsa</h2>
+            <div class="sheet-health sheet-table-header">
+              <div class="sheet-table-header-field sheet-health-bodypart">Kroppsdel</div>
+              <div class="sheet-table-header-field sheet-health-other">Övrigt</div>
+              <div class="sheet-table-header-field sheet-health-max">KP-full</div>
+              <div class="sheet-table-header-field sheet-health-current">KP</div>
+              <div class="sheet-table-header-field sheet-health-armor">RV</div>
+              <div class="sheet-table-header-field sheet-health-wounds">Skada</div>
+            </div>
+            <div class="sheet-health sheet-table-row">
+              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Huvud"     />
+              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kphuvud_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kphuvud"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_head_sum"  value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarhuvud"        value="0" min="0" />
+            </div>
+            <div class="sheet-health sheet-table-row">
+              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Höger arm"     />
+              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kphogerarm_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kphogerarm"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_rightarm_sum"  value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarhogerarm"        value="0" min="0" />
+            </div>
+            <div class="sheet-health sheet-table-row">
+              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Vänster arm"     />
+              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpvansterarm_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpvansterarm"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_leftarm_sum"  value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarvansterarm"        value="0" min="0" />
+            </div>
+            <div class="sheet-health sheet-table-row">
+              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Torso"     />
+              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpbrost_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpbrost"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_torso_sum"  value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarbrost"        value="0" min="0" />
+            </div>
+            <div class="sheet-health sheet-table-row">
+              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Mage"     />
+              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpmage_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpmage"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_stomach_sum"  value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarmage"        value="0" min="0" />
+            </div>
+            <div class="sheet-health sheet-table-row">
+              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Höger ben"     />
+              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kphogerben_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kphogerben"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_rightleg_sum"  value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarhogerben"        value="0" min="0" />
+            </div>
+            <div class="sheet-health sheet-table-row">
+              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Vänster ben"     />
+              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpvansterben_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpvansterben"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_leftleg_sum"  value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarvansterben"        value="0" min="0" />
+            </div>
+            <div class="sheet-health sheet-table-row">
+              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="KP skador:"     />
+              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpgenerell_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpgenerell"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"                                   value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sargenerell"        value="0" min="0" />
+            </div>
+            <div class="sheet-health sheet-table-summary">
+              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Totalt:"     />
+              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
+              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kp_max"     value=""          />
+              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kp"         value=""          />
+              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"                                   value=""  min="0" />
+              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sar_totalt"        value="0" min="0" />
+            </div>
           </div>
           <div class="sheet-combat-grid-armor">
             <h2 class="sheet-grid-section-header">Rustning</h2>
@@ -1862,42 +1942,42 @@
             <fieldset class="repeating_armor">
               <div class="sheet-armor-pair">
                 <div class="sheet-armor sheet-table-row sheet-show-while-edit">
-                  <input class="sheet-table-row-field sheet-armor-name"       type="text"   name="attr_armorname"/>
-                  <input class="sheet-table-row-field sheet-armor-details"    type="text"   name="attr_armordetails"/>
-                  <input class="sheet-table-row-field sheet-armor-weight"     type="number" name="attr_armorweight"   value="0"/>
-                  <input class="sheet-table-row-field sheet-armor-head"       type="number" name="attr_armorhead"     value="0"/>
-                  <input class="sheet-table-row-field sheet-armor-rightArm"   type="number" name="attr_armorrightarm" value="0"/>
-                  <input class="sheet-table-row-field sheet-armor-leftArm"    type="number" name="attr_armorleftarm"  value="0"/>
-                  <input class="sheet-table-row-field sheet-armor-torso"      type="number" name="attr_armortorso"    value="0"/>
-                  <input class="sheet-table-row-field sheet-armor-stomach"    type="number" name="attr_armorstomach"  value="0"/>
-                  <input class="sheet-table-row-field sheet-armor-rightLeg"   type="number" name="attr_armorrightleg" value="0"/>
-                  <input class="sheet-table-row-field sheet-armor-leftleg"    type="number" name="attr_armorleftleg"  value="0"/>
+                  <input class="sheet-table-row-field sheet-armor-name"       type="text"   name="attr_armor_name"/>
+                  <input class="sheet-table-row-field sheet-armor-details"    type="text"   name="attr_armor_details"/>
+                  <input class="sheet-table-row-field sheet-armor-weight"     type="number" name="attr_armor_weight"   value="0"/>
+                  <input class="sheet-table-row-field sheet-armor-head"       type="number" name="attr_armor_head"     value="0"/>
+                  <input class="sheet-table-row-field sheet-armor-rightArm"   type="number" name="attr_armor_rightarm" value="0"/>
+                  <input class="sheet-table-row-field sheet-armor-leftArm"    type="number" name="attr_armor_leftarm"  value="0"/>
+                  <input class="sheet-table-row-field sheet-armor-torso"      type="number" name="attr_armor_torso"    value="0"/>
+                  <input class="sheet-table-row-field sheet-armor-stomach"    type="number" name="attr_armor_stomach"  value="0"/>
+                  <input class="sheet-table-row-field sheet-armor-rightLeg"   type="number" name="attr_armor_rightleg" value="0"/>
+                  <input class="sheet-table-row-field sheet-armor-leftleg"    type="number" name="attr_armor_leftleg"  value="0"/>
                 </div>
                 <div class="sheet-armor sheet-table-row sheet-hide-while-edit">
-                  <span class="sheet-table-row-field sheet-armor-name"      name="attr_armorname"     ></span>
-                  <span class="sheet-table-row-field sheet-armor-details"   name="attr_armordetails"  ></span>
-                  <span class="sheet-table-row-field sheet-armor-weight"    name="attr_armorweight"   >0</span>
-                  <span class="sheet-table-row-field sheet-armor-head"      name="attr_armorhead"     >0</span>
-                  <span class="sheet-table-row-field sheet-armor-rightArm"  name="attr_armorrightarm" >0</span>
-                  <span class="sheet-table-row-field sheet-armor-leftArm"   name="attr_armorleftarm"  >0</span>
-                  <span class="sheet-table-row-field sheet-armor-torso"     name="attr_armortorso"    >0</span>
-                  <span class="sheet-table-row-field sheet-armor-stomach"   name="attr_armorstomach"  >0</span>
-                  <span class="sheet-table-row-field sheet-armor-rightLeg"  name="attr_armorrightleg" >0</span>
-                  <span class="sheet-table-row-field sheet-armor-leftleg"   name="attr_armorleftleg"  >0</span>
+                  <span class="sheet-table-row-field sheet-armor-name"      name="attr_armor_name"     ></span>
+                  <span class="sheet-table-row-field sheet-armor-details"   name="attr_armor_details"  ></span>
+                  <span class="sheet-table-row-field sheet-armor-weight"    name="attr_armor_weight"   >0</span>
+                  <span class="sheet-table-row-field sheet-armor-head"      name="attr_armor_head"     >0</span>
+                  <span class="sheet-table-row-field sheet-armor-rightArm"  name="attr_armor_rightarm" >0</span>
+                  <span class="sheet-table-row-field sheet-armor-leftArm"   name="attr_armor_leftarm"  >0</span>
+                  <span class="sheet-table-row-field sheet-armor-torso"     name="attr_armor_torso"    >0</span>
+                  <span class="sheet-table-row-field sheet-armor-stomach"   name="attr_armor_stomach"  >0</span>
+                  <span class="sheet-table-row-field sheet-armor-rightLeg"  name="attr_armor_rightleg" >0</span>
+                  <span class="sheet-table-row-field sheet-armor-leftleg"   name="attr_armor_leftleg"  >0</span>
                 </div>
               </div>
             </fieldset>
             <div class="sheet-armor sheet-table-summary sheet-hide-while-edit">
-              <input class="sheet-table-summary-field sheet-armor-name"     type="text"    readonly="true"                                value="SUMMA:"/>
+              <input class="sheet-table-summary-field sheet-armor-sum"      type="text"    readonly="true"                                value="Totalt:"/>
               <input class="sheet-table-summary-field sheet-armor-details"  type="text"    readonly="true"                                value=""/>
-              <input class="sheet-table-summary-field sheet-armor-weight"   type="number"  readonly="true" name="attr_armorweight_sum"    value="0"/>
-              <input class="sheet-table-summary-field sheet-armor-head"     type="number"  readonly="true" name="attr_armorhead_sum"      value="0"/>
-              <input class="sheet-table-summary-field sheet-armor-rightArm" type="number"  readonly="true" name="attr_armorrightarm_sum"  value="0"/>
-              <input class="sheet-table-summary-field sheet-armor-leftArm"  type="number"  readonly="true" name="attr_armorleftarm_sum"   value="0"/>
-              <input class="sheet-table-summary-field sheet-armor-torso"    type="number"  readonly="true" name="attr_armortorso_sum"     value="0"/>
-              <input class="sheet-table-summary-field sheet-armor-stomach"  type="number"  readonly="true" name="attr_armorstomach_sum"   value="0"/>
-              <input class="sheet-table-summary-field sheet-armor-rightLeg" type="number"  readonly="true" name="attr_armorrightleg_sum"  value="0"/>
-              <input class="sheet-table-summary-field sheet-armor-leftLeg"  type="number"  readonly="true" name="attr_armorleftleg_sum"   value="0"/>
+              <input class="sheet-table-summary-field sheet-armor-weight"   type="number"  readonly="true" name="attr_armor_weight_sum"   value="0"/>
+              <input class="sheet-table-summary-field sheet-armor-head"     type="number"  readonly="true" name="attr_armor_head_sum"     value="0"/>
+              <input class="sheet-table-summary-field sheet-armor-rightArm" type="number"  readonly="true" name="attr_armor_rightarm_sum" value="0"/>
+              <input class="sheet-table-summary-field sheet-armor-leftArm"  type="number"  readonly="true" name="attr_armor_leftarm_sum"  value="0"/>
+              <input class="sheet-table-summary-field sheet-armor-torso"    type="number"  readonly="true" name="attr_armor_torso_sum"    value="0"/>
+              <input class="sheet-table-summary-field sheet-armor-stomach"  type="number"  readonly="true" name="attr_armor_stomach_sum"  value="0"/>
+              <input class="sheet-table-summary-field sheet-armor-rightLeg" type="number"  readonly="true" name="attr_armor_rightleg_sum" value="0"/>
+              <input class="sheet-table-summary-field sheet-armor-leftLeg"  type="number"  readonly="true" name="attr_armor_leftleg_sum"  value="0"/>
             </div>
           </div>
           <div class="sheet-combat-grid-weapon">
@@ -3699,14 +3779,14 @@ var TAS = TAS || (function(){
   });
 
   on('change:repeating_armor', function(){
-    TAS.repeatingSimpleSum('armor','armorweight','armorweight_sum');
-    TAS.repeatingSimpleSum('armor','armorhead','armorhead_sum');
-    TAS.repeatingSimpleSum('armor','armorrightarm','armorrightarm_sum');
-    TAS.repeatingSimpleSum('armor','armorleftarm','armorleftarm_sum');
-    TAS.repeatingSimpleSum('armor','armortorso','armortorso_sum');
-    TAS.repeatingSimpleSum('armor','armorstomach','armorstomach_sum');
-    TAS.repeatingSimpleSum('armor','armorrightleg','armorrightleg_sum');
-    TAS.repeatingSimpleSum('armor','armorleftleg','armorleftleg_sum');
+    TAS.repeatingSimpleSum('armor','armor_weight','armor_weight_sum');
+    TAS.repeatingSimpleSum('armor','armor_head','armor_head_sum');
+    TAS.repeatingSimpleSum('armor','armor_rightarm','armor_rightarm_sum');
+    TAS.repeatingSimpleSum('armor','armor_leftarm','armor_leftarm_sum');
+    TAS.repeatingSimpleSum('armor','armor_torso','armor_torso_sum');
+    TAS.repeatingSimpleSum('armor','armor_stomach','armor_stomach_sum');
+    TAS.repeatingSimpleSum('armor','armor_rightleg','armor_rightleg_sum');
+    TAS.repeatingSimpleSum('armor','armor_leftleg','armor_leftleg_sum');
   });
 
 </script>
