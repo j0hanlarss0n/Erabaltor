@@ -1847,20 +1847,8 @@
           </div>
           <div class="sheet-combat-grid-armor">
             <h2 class="sheet-grid-section-header">Rustning</h2>
-            <div class="sheet-armor sheet-table-header sheet-armor-edit-show">
-              <div class="sheet-table-header-field sheet-armor-name">Namn</div>
-              <div class="sheet-table-header-field sheet-armor-details">Detaljer</div>
-              <div class="sheet-table-header-field sheet-armor-weight">Vikt</div>
-              <div class="sheet-table-header-field sheet-armor-head">Huvud</div>
-              <div class="sheet-table-header-field sheet-armor-rightArm">H. arm</div>
-              <div class="sheet-table-header-field sheet-armor-leftArm">V. arm</div>
-              <div class="sheet-table-header-field sheet-armor-torsa">Bröst</div>
-              <div class="sheet-table-header-field sheet-armor-stomach">Mage</div>
-              <div class="sheet-table-header-field sheet-armor-rightLeg">H. ben</div>
-              <div class="sheet-table-header-field sheet-armor-leftLeg">V. ben</div>
-            </div>
-            <div class="sheet-armor sheet-table-header sheet-armor-edit-hide">
-              <div class="sheet-table-header-field sheet-armor-name">Namn</div>
+            <div class="sheet-armor sheet-table-header">
+              <div class="sheet-table-header-field sheet-armor-name">Rustning</div>
               <div class="sheet-table-header-field sheet-armor-details">Detaljer</div>
               <div class="sheet-table-header-field sheet-armor-weight">Vikt</div>
               <div class="sheet-table-header-field sheet-armor-head">Huvud</div>
@@ -1873,7 +1861,7 @@
             </div>
             <fieldset class="repeating_armor">
               <div class="sheet-armor-pair">
-                <div class="sheet-armor sheet-table-row sheet-armor-edit-show">
+                <div class="sheet-armor sheet-table-row sheet-show-while-edit">
                   <input class="sheet-table-row-field sheet-armor-name"       type="text"   name="attr_armorname"/>
                   <input class="sheet-table-row-field sheet-armor-details"    type="text"   name="attr_armordetails"/>
                   <input class="sheet-table-row-field sheet-armor-weight"     type="number" name="attr_armorweight"   value="0"/>
@@ -1885,7 +1873,7 @@
                   <input class="sheet-table-row-field sheet-armor-rightLeg"   type="number" name="attr_armorrightleg" value="0"/>
                   <input class="sheet-table-row-field sheet-armor-leftleg"    type="number" name="attr_armorleftleg"  value="0"/>
                 </div>
-                <div class="sheet-armor sheet-table-row sheet-combat-edit-hide">
+                <div class="sheet-armor sheet-table-row sheet-hide-while-edit">
                   <span class="sheet-table-row-field sheet-armor-name"      name="attr_armorname"     ></span>
                   <span class="sheet-table-row-field sheet-armor-details"   name="attr_armordetails"  ></span>
                   <span class="sheet-table-row-field sheet-armor-weight"    name="attr_armorweight"   >0</span>
@@ -1899,7 +1887,7 @@
                 </div>
               </div>
             </fieldset>
-            <div class="sheet-armor sheet-table-summary sheet-combat-edit-hide">
+            <div class="sheet-armor sheet-table-summary sheet-hide-while-edit">
               <input class="sheet-table-summary-field sheet-armor-name"     type="text"    readonly="true"                                value="SUMMA:"/>
               <input class="sheet-table-summary-field sheet-armor-details"  type="text"    readonly="true"                                value=""/>
               <input class="sheet-table-summary-field sheet-armor-weight"   type="number"  readonly="true" name="attr_armorweight_sum"    value="0"/>
@@ -3710,5 +3698,15 @@ var TAS = TAS || (function(){
     });
   });
 
-</script>
+  on('change:repeating_armor', function(){
+    TAS.repeatingSimpleSum('armor','armorweight','armorweight_sum');
+    TAS.repeatingSimpleSum('armor','armorhead','armorhead_sum');
+    TAS.repeatingSimpleSum('armor','armorrightarm','armorrightarm_sum');
+    TAS.repeatingSimpleSum('armor','armorleftarm','armorleftarm_sum');
+    TAS.repeatingSimpleSum('armor','armortorso','armortorso_sum');
+    TAS.repeatingSimpleSum('armor','armorstomach','armorstomach_sum');
+    TAS.repeatingSimpleSum('armor','armorrightleg','armorrightleg_sum');
+    TAS.repeatingSimpleSum('armor','armorleftleg','armorleftleg_sum');
+  });
 
+</script>

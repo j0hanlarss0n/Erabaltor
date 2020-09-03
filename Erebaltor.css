@@ -4,15 +4,21 @@
   --number-normal: 46px;
 }
 
+/*
+When not editing the sheet, the sections that are shown while editing should be hidden
+*/
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-vapen-edit-show,
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-skill-edit-show,
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-armor-edit-show {
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-show-while-edit {
   display: none;
 }
 
+/*
+When editing the sheet, the sections that are shown when not editing should be hidden
+*/
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-vapen-edit-hide,
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-edit-hide,
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-armor-edit-hide {
+.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-hide-while-edit {
   display: none;
 }
 
@@ -1169,10 +1175,12 @@ input.sheet-armor-namn,
 
 .sheet-combat-grid .sheet-table-summary input[type=number], 
 .sheet-combat-grid .sheet-table-summary input[type=text] {
+  cursor: default;
   background-color:#999999;
   border: none;
   border-radius: unset;
   border-left: 1px solid slategrey;
+  pointer-events: none;
 }
 
 .sheet-vapen-grid input[type=number],
