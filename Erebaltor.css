@@ -1167,6 +1167,14 @@ input.sheet-armor-namn,
   font-family: "Lucida Bright", "Cambria", serif;
 }
 
+.sheet-combat-grid .sheet-table-summary input[type=number], 
+.sheet-combat-grid .sheet-table-summary input[type=text] {
+  background-color:#999999;
+  border: none;
+  border-radius: unset;
+  border-left: 1px solid slategrey;
+}
+
 .sheet-vapen-grid input[type=number],
 .sheet-vapen-grid input[type=text],
 .sheet-vapen-grid.sheet-vapen-edit-hide select,
