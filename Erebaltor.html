@@ -656,7 +656,7 @@
             </fieldset>
           </div>
           <div class="sheet-skill-grid-language">
-            <h2 class="sheet-grid-section-header">Språk (4)</h2>
+            <h2 class="sheet-grid-section-header">Språk (3)</h2>
             <div class="sheet-skill sheet-table-header sheet-skill-edit-show">
               <div class="sheet-table-header-field sheet-skill-name">Namn</div>
               <div class="sheet-table-header-field sheet-skill-base">Bas</div>
@@ -1540,14 +1540,14 @@
                       <option value="@{Tvåhandsyxa}">Tvåhandsyxa</option>
                       <option value="@{Värja}">Värja</option>
                     </select>
-                    <input class="sheet-table-row-field sheet-vapen-fv"  type="number" name="attr_vapenFv"  value="0"/>
-                    <input class="sheet-table-row-field sheet-vapen-fv-mod"  type="number" name="attr_vapenFvMod" value="0"/>
-                    <input class="sheet-table-row-field sheet-vapen-bv"   type="number" name="attr_vapenBv"   value="0"/>
-                    <input class="sheet-table-row-field sheet-vapen-vikt"   type="number" name="attr_vapenVikt"  value="0"/>
-                    <input class="sheet-table-row-field sheet-vapen-rv"   type="number" name="attr_vapenRackvidd"   value="0"/>
-                    <input class="sheet-table-row-field sheet-vapen-skada"   type="text" name="attr_vapenSkada"   value="0"/>
-                    <input class="sheet-table-row-field sheet-vapen-skada-mod"   type="number" name="attr_vapenSkadaMod"   value="0"/>
-                    <select class="sheet-table-row-field sheet-vapen-skada-bonus" name="attr_vapenSkadaBonus">
+                    <input class="sheet-table-row-field sheet-vapen-fv"           type="number" name="attr_vapenFv"         value="0"/>
+                    <input class="sheet-table-row-field sheet-vapen-fv-mod"       type="number" name="attr_vapenFvMod"      value="0"/>
+                    <input class="sheet-table-row-field sheet-vapen-bv"           type="number" name="attr_vapenBv"         value="0"/>
+                    <input class="sheet-table-row-field sheet-vapen-vikt"         type="number" name="attr_vapenVikt"       value="0"/>
+                    <input class="sheet-table-row-field sheet-vapen-rv"           type="number" name="attr_vapenRackvidd"   value="0"/>
+                    <input class="sheet-table-row-field sheet-vapen-skada"        type="text"   name="attr_vapenSkada"      value="0"/>
+                    <input class="sheet-table-row-field sheet-vapen-skada-mod"    type="number" name="attr_vapenSkadaMod"   value="0"/>
+                    <select class="sheet-table-row-field sheet-vapen-skada-bonus"               name="attr_vapenSkadaBonus">
                       <option value="@{skadeBonus}">Normal</option>
                       <option value="@{skadeBonusBage}">Båge</option>
                       <option value="@{skadeBonusTvaHand}">2-hands</option>
@@ -1575,24 +1575,24 @@
                           <option value="@{Tvåhandsyxa}">Tvåhandsyxa</option>
                           <option value="@{Värja}">Värja</option>
                         </select>
-                    <span class="sheet-table-row-field sheet-vapen-fv"  name="attr_vapenFv"  value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-fv-mod" name="attr_vapenFvMod" value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-bv" name="attr_vapenBv"   value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-vikt" name="attr_vapenVikt"  value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-rv" name="attr_vapenRackvidd"   value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-skada" name="attr_vapenSkada"   value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-skada-mod"  name="attr_vapenSkadaMod"   value="0"></span>
-                    <select class="sheet-table-row-field sheet-vapen-skada-bonus" name="attr_vapenSkadaBonus">
+                    <span class="sheet-table-row-field sheet-vapen-fv"              name="attr_vapenFv"         value="0"></span>
+                    <span class="sheet-table-row-field sheet-vapen-fv-mod"          name="attr_vapenFvMod"      value="0"></span>
+                    <span class="sheet-table-row-field sheet-vapen-bv"              name="attr_vapenBv"         value="0"></span>
+                    <span class="sheet-table-row-field sheet-vapen-vikt"            name="attr_vapenVikt"       value="0"></span>
+                    <span class="sheet-table-row-field sheet-vapen-rv"              name="attr_vapenRackvidd"   value="0"></span>
+                    <span class="sheet-table-row-field sheet-vapen-skada"           name="attr_vapenSkada"      value="0"></span>
+                    <span class="sheet-table-row-field sheet-vapen-skada-mod"       name="attr_vapenSkadaMod"   value="0"></span>
+                    <select class="sheet-table-row-field sheet-vapen-skada-bonus"   name="attr_vapenSkadaBonus">
                       <option value="@{skadeBonus}">Normal</option>
                       <option value="@{skadeBonusBage}">Båge</option>
                       <option value="@{skadeBonusTvaHand}">2-hands</option>
                     </select>
-                    <input  class="sheet-fardighetstabell"    type="hidden" name="attr_vapenRollAttack"         value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]]&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
-                    <input  class="sheet-fardighetstabell"    type="hidden" name="attr_vapenRollTraffa"         value="?{Träfftabell&amp;#124;Standard&amp;#44; [[ 1t[standard]]]&amp;#124;Högt&amp;#44; [[1t[hitHigh]]]&amp;#124;Lågt&amp;#44; [[ 1t[hitLow]]]&amp;#124;Standard - Avstånd&amp;#44; [[ 1t[standardRanged]]]&amp;#124;Högt - Avstånd&amp;#44; [[ 1t[hitHighRanged]]]&amp;#124;Lågt - Avstånd&amp;#44; [[ 1t[hitLowRanged]]]&amp;#125;"/>
-                    <input  class="sheet-fardighetstabell"    type="hidden" name="attr_vapenRollSikta"          value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]];#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
-                    <input  class="sheet-fardighetstabell"    type="hidden" name="attr_vapenRollSiktaPlatser"   value="?{Sikta på&amp;#124;Huvudet&amp;#44; huvudet&amp;#124;Vänster arm&amp;#44; Vänster arm&amp;#124;Höger arm&amp;#44; Höger arm&amp;#124;Bröstkorg&amp;#44; Bröstkorg&amp;#124;Mage&amp;#44; Mage&amp;#124;Vänster ben&amp;#44; Vänster ben&amp;#124;Höger ben&amp;#44; Höger ben&amp;#125;"/>
-                    <input  class="sheet-fardighetstabell"    type="hidden" name="attr_vapenRollParrera"        value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]]&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
-                    <button class="sheet-button-full-hidden"  type="roll"   name="roll_vapen"                   value="&{template:combined} {{name=@{vapenNamn}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"></button>
+                    <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollAttack"       value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]]&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
+                    <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollTraffa"       value="?{Träfftabell&amp;#124;Standard&amp;#44; [[ 1t[standard]]]&amp;#124;Högt&amp;#44; [[1t[hitHigh]]]&amp;#124;Lågt&amp;#44; [[ 1t[hitLow]]]&amp;#124;Standard - Avstånd&amp;#44; [[ 1t[standardRanged]]]&amp;#124;Högt - Avstånd&amp;#44; [[ 1t[hitHighRanged]]]&amp;#124;Lågt - Avstånd&amp;#44; [[ 1t[hitLowRanged]]]&amp;#125;"/>
+                    <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollSikta"        value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]];#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
+                    <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollSiktaPlatser" value="?{Sikta på&amp;#124;Huvudet&amp;#44; huvudet&amp;#124;Vänster arm&amp;#44; Vänster arm&amp;#124;Höger arm&amp;#44; Höger arm&amp;#124;Bröstkorg&amp;#44; Bröstkorg&amp;#124;Mage&amp;#44; Mage&amp;#124;Vänster ben&amp;#44; Vänster ben&amp;#124;Höger ben&amp;#44; Höger ben&amp;#125;"/>
+                    <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollParrera"      value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]]&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
+                    <button class="sheet-button-full-hidden" type="roll"   name="roll_vapen"                 value="&{template:combined} {{name=@{vapenNamn}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"></button>
                   </div>
                 </div>
               </fieldset>
@@ -2201,6 +2201,7 @@
       </div>
     </div>
   </rolltemplate>
+
   <rolltemplate class="sheet-rolltemplate-DoDText">
     <div class="container">
       <div>
@@ -2223,6 +2224,7 @@
       {{/text2}}
     </div>
   </rolltemplate>
+
   <rolltemplate class="sheet-rolltemplate-DoDAttack">
     <div class="container">
       <div>
