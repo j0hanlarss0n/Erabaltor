@@ -18,6 +18,144 @@
       <li name="Karaktär">
         <input type="checkbox" class="sheet-testing sheet-firstLevelTab" checked/>
         <h1>Karaktär</h1>
+        <div class="sheet-section sheet-grid sheet-characterdata-grid">
+          <div class="sheet-characterdata-grid-general">
+            <h2 class="sheet-grid-section-header">Generellt</h2>
+            <div class="sheet-general sheet-table-header">
+              <div class="sheet-table-header-field sheet-general-name">Namn</div>
+              <div class="sheet-table-header-field sheet-general-value">Värde</div>
+            </div>
+            <div class="sheet-general-pair sheet-general-gm">
+              <div class="sheet-general sheet-table-row sheet-show-while-edit">
+                <strong class="sheet-table-row-field sheet-general-name">Spelledare</strong>
+                <input  class="sheet-table-row-field sheet-general-value" type="text" value="" name="attr_gm"/>
+              </div>
+              <div class="sheet-general sheet-table-row sheet-hide-while-edit">
+                <strong class="sheet-table-row-field sheet-general-name">Spelledare</strong>
+                <span   class="sheet-table-row-field sheet-general-value" name="attr_gm"></span>
+              </div>
+            </div>
+          <div class="sheet-characterdata-grid-attribute">
+            <h2 class="sheet-grid-section-header">Attribut</h2>
+            <div class="sheet-attribute sheet-table-header sheet-show-while-edit">
+              <div class="sheet-table-header-field sheet-attribute-name">Namn</div>
+              <div class="sheet-table-header-field sheet-attribute-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-attribute-fv">FV</div>
+              <div class="sheet-table-header-field sheet-attribute-totFv">Fv</div>
+            </div>
+            <div class="sheet-attribute sheet-table-header sheet-hide-while-edit">
+              <div class="sheet-table-header-field sheet-attribute-name">Namn</div>
+              <div class="sheet-table-header-field sheet-attribute-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-attribute-fv">FV</div>
+              <div class="sheet-table-header-field sheet-attribute-totFv">Fv</div>
+            </div>
+            <div class="sheet-attribute-pair sheet-attribute-strength">
+              <div class="sheet-attribute sheet-table-row sheet-show-while-edit">
+                <strong class="sheet-table-row-field sheet-attribute-name">Styrka (STY)</strong>
+                <input  class="sheet-table-row-field sheet-attribute-mod"   type="number" value="0" name="attr_styMod"/>
+                <input  class="sheet-table-row-field sheet-attribute-fv"    type="number" value="0" name="attr_sty"/>
+                <input  class="sheet-table-row-field sheet-attribute-totFv" type="number" value="0" name="attr_styTot"/>
+              </div>
+              <div class="sheet-attribute sheet-table-row sheet-hide-while-edit">
+                <button class="sheet-tarningstabell" type="roll" name="roll_styr" value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"></button></td>
+                <strong class="sheet-table-row-field sheet-attribute-name"  >Styrka (STY)</strong>
+                <span   class="sheet-table-row-field sheet-attribute-mod"   name="attr_styMod">0</span>
+                <span   class="sheet-table-row-field sheet-attribute-fv"    name="attr_sty">0</span>
+                <span   class="sheet-table-row-field sheet-attribute-totFv" name="attr_styTot">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="sheet-characterdata-grid-derived">
+            <h2 class="sheet-grid-section-header">Beräknade</h2>
+            <div class="sheet-derived sheet-table-header sheet-show-while-edit">
+              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
+              <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-derived-fv">FV</div>
+              <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
+            </div>
+            <div class="sheet-derived sheet-table-header sheet-hide-while-edit">
+              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
+              <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-derived-fv">FV</div>
+              <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
+            </div>
+            <div class="sheet-attribute-pair sheet-attribute-strength">
+              <div class="sheet-attribute sheet-table-row sheet-show-while-edit">
+                <strong class="sheet-table-row-field sheet-attribute-name">Styrka (STY)</strong>
+                <input  class="sheet-table-row-field sheet-attribute-mod"   type="number" value="0" name="attr_styMod"/>
+                <input  class="sheet-table-row-field sheet-attribute-fv"    type="number" value="0" name="attr_sty"/>
+                <input  class="sheet-table-row-field sheet-attribute-totFv" type="number" value="0" name="attr_styTot"/>
+              </div>
+              <div class="sheet-attribute sheet-table-row sheet-hide-while-edit">
+                <button class="sheet-tarningstabell" type="roll" name="roll_styr" value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"></button></td>
+                <strong class="sheet-table-row-field sheet-attribute-name"  >Styrka (STY)</strong>
+                <span   class="sheet-table-row-field sheet-attribute-mod"   name="attr_styMod">0</span>
+                <span   class="sheet-table-row-field sheet-attribute-fv"    name="attr_sty">0</span>
+                <span   class="sheet-table-row-field sheet-attribute-totFv" name="attr_styTot">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="sheet-characterdata-grid-derived">
+            <h2 class="sheet-grid-section-header">Poäng</h2>
+            <div class="sheet-derived sheet-table-header sheet-show-while-edit">
+              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
+              <div class="sheet-table-header-field sheet-derived-number">Antal</div>
+            </div>
+            <div class="sheet-derived sheet-table-header sheet-hide-while-edit">
+              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
+              <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
+            </div>
+            <div class="sheet-attribute-pair sheet-attribute-strength">
+              <div class="sheet-attribute sheet-table-row sheet-show-while-edit">
+                <strong class="sheet-table-row-field sheet-attribute-name">Styrka (STY)</strong>
+                <input  class="sheet-table-row-field sheet-attribute-mod"   type="number" value="0" name="attr_styMod"/>
+                <input  class="sheet-table-row-field sheet-attribute-fv"    type="number" value="0" name="attr_sty"/>
+                <input  class="sheet-table-row-field sheet-attribute-totFv" type="number" value="0" name="attr_styTot"/>
+              </div>
+              <div class="sheet-attribute sheet-table-row sheet-hide-while-edit">
+                <strong class="sheet-table-row-field sheet-attribute-name"  >Styrka (STY)</strong>
+                <span   class="sheet-table-row-field sheet-attribute-mod"   name="attr_styMod">0</span>
+                <span   class="sheet-table-row-field sheet-attribute-fv"    name="attr_sty">0</span>
+                <span   class="sheet-table-row-field sheet-attribute-totFv" name="attr_styTot">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="sheet-characterdata-grid-derived">
+            <h2 class="sheet-grid-section-header">Förmågor</h2>
+            <div class="sheet-derived sheet-table-header sheet-show-while-edit">
+              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
+              <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-derived-fv">FV</div>
+              <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
+            </div>
+            <div class="sheet-derived sheet-table-header sheet-hide-while-edit">
+              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
+              <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
+              <div class="sheet-table-header-field sheet-derived-fv">FV</div>
+              <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
+            </div>
+            <fieldset class="repeating_yrkes">
+              <div class="sheet-skill-pair sheet-skill-yrkes">
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
+                  <input class="sheet-table-row-field sheet-skill-name" type="text"   name="attr_yrkesnamn"/>
+                  <input class="sheet-table-row-field sheet-skill-base" type="text"   name="attr_yrkesbas"/>
+                  <input class="sheet-table-row-field sheet-skill-erf"  type="number" name="attr_yrkeserf" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-mod"  type="number" name="attr_yrkesMod" value="0"/>
+                  <input class="sheet-table-row-field sheet-skill-fv"   type="number" name="attr_yrkesfv"  value="0"/>
+                </div>
+                <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
+                  <button type="roll" name="roll_yrkes" class="sheet-button-full-hidden"   value="&{template:combined} {{name=@{yrkesnamn}}} {{vad=Yrkes}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{yrkesfv}+@{yrkesMod}+?{Modifikation|0}]]}}"></button>
+                  <span   class="sheet-table-row-field sheet-skill-name"  name="attr_yrkesnamn"  ></span>
+                  <span   class="sheet-table-row-field sheet-skill-base"  name="attr_yrkesbas"   ></span>
+                  <span   class="sheet-table-row-field sheet-skill-erf"   name="attr_yrkeserf"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-mod"   name="attr_yrkesMod"   >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-fv"    name="attr_yrkesfv"    >0</span>
+                  <span   class="sheet-table-row-field sheet-skill-totFv" name="attr_yrkestotfv" >0</span>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
         <ul class="sheet-testtab sheet-secondLevelTabs">
           <li>
             <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
