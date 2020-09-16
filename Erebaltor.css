@@ -1153,7 +1153,8 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 
 .sheet-vapen.sheet-table-row:hover,
 .sheet-skill.sheet-table-row:hover,
-.sheet-armor.sheet-table-row:hover {
+.sheet-armor.sheet-table-row:hover,
+.sheet-attribute.sheet-table-row:hover {
   background-color: #b0b0b0;
 }
 
