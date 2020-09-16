@@ -70,87 +70,78 @@
             <div class="sheet-derived sheet-table-header sheet-show-while-edit">
               <div class="sheet-table-header-field sheet-derived-name">Namn</div>
               <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-derived-fv">FV</div>
-              <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
+              <div class="sheet-table-header-field sheet-derived-value">Värde</div>
+              <div class="sheet-table-header-field sheet-derived-totValue">FV</div>
             </div>
             <div class="sheet-derived sheet-table-header sheet-hide-while-edit">
               <div class="sheet-table-header-field sheet-derived-name">Namn</div>
               <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-derived-fv">FV</div>
-              <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
+              <div class="sheet-table-header-field sheet-derived-value">FV</div>
+              <div class="sheet-table-header-field sheet-derived-totValue">FV</div>
             </div>
-            <div class="sheet-attribute-pair sheet-attribute-strength">
-              <div class="sheet-attribute sheet-table-row sheet-show-while-edit">
-                <strong class="sheet-table-row-field sheet-attribute-name">Styrka (STY)</strong>
-                <input  class="sheet-table-row-field sheet-attribute-mod"   type="number" value="0" name="attr_styMod"/>
-                <input  class="sheet-table-row-field sheet-attribute-fv"    type="number" value="0" name="attr_sty"/>
-                <input  class="sheet-table-row-field sheet-attribute-totFv" type="number" value="0" name="attr_styTot"/>
+            <div class="sheet-derived-pair sheet-derived-strength">
+              <div class="sheet-derived sheet-table-row sheet-show-while-edit">
+                <strong class="sheet-table-row-field sheet-derived-name">Skadebonus</strong>
+                <input  class="sheet-table-row-field sheet-derived-mod"      type="number" value="0" name="attr_styMod"/>
+                <input  class="sheet-table-row-field sheet-derived-value"    type="number" value="0" name="attr_sty"/>
+                <input  class="sheet-table-row-field sheet-derived-totValue" type="number" value="0" name="attr_styTot"/>
               </div>
-              <div class="sheet-attribute sheet-table-row sheet-hide-while-edit">
-                <button class="sheet-tarningstabell" type="roll" name="roll_styr" value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"></button></td>
-                <strong class="sheet-table-row-field sheet-attribute-name"  >Styrka (STY)</strong>
-                <span   class="sheet-table-row-field sheet-attribute-mod"   name="attr_styMod">0</span>
-                <span   class="sheet-table-row-field sheet-attribute-fv"    name="attr_sty">0</span>
-                <span   class="sheet-table-row-field sheet-attribute-totFv" name="attr_styTot">0</span>
-              </div>
-            </div>
-          </div>
-          <div class="sheet-characterdata-grid-derived">
-            <h2 class="sheet-grid-section-header">Poäng</h2>
-            <div class="sheet-derived sheet-table-header sheet-show-while-edit">
-              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
-              <div class="sheet-table-header-field sheet-derived-number">Antal</div>
-            </div>
-            <div class="sheet-derived sheet-table-header sheet-hide-while-edit">
-              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
-              <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
-            </div>
-            <div class="sheet-attribute-pair sheet-attribute-strength">
-              <div class="sheet-attribute sheet-table-row sheet-show-while-edit">
-                <strong class="sheet-table-row-field sheet-attribute-name">Styrka (STY)</strong>
-                <input  class="sheet-table-row-field sheet-attribute-mod"   type="number" value="0" name="attr_styMod"/>
-                <input  class="sheet-table-row-field sheet-attribute-fv"    type="number" value="0" name="attr_sty"/>
-                <input  class="sheet-table-row-field sheet-attribute-totFv" type="number" value="0" name="attr_styTot"/>
-              </div>
-              <div class="sheet-attribute sheet-table-row sheet-hide-while-edit">
-                <strong class="sheet-table-row-field sheet-attribute-name"  >Styrka (STY)</strong>
-                <span   class="sheet-table-row-field sheet-attribute-mod"   name="attr_styMod">0</span>
-                <span   class="sheet-table-row-field sheet-attribute-fv"    name="attr_sty">0</span>
-                <span   class="sheet-table-row-field sheet-attribute-totFv" name="attr_styTot">0</span>
+              <div class="sheet-derived sheet-table-row sheet-hide-while-edit">
+                <strong class="sheet-table-row-field sheet-derived-name">Styrka (STY)</strong>
+                <span   class="sheet-table-row-field sheet-derived-mod"      name="attr_styMod">0</span>
+                <span   class="sheet-table-row-field sheet-derived-value"    name="attr_sty">0</span>
+                <span   class="sheet-table-row-field sheet-derived-totValue" name="attr_styTot">0</span>
               </div>
             </div>
           </div>
-          <div class="sheet-characterdata-grid-derived">
+          <div class="sheet-characterdata-grid-experience">
+            <h2 class="sheet-grid-section-header">Erfarenhet</h2>
+            <div class="sheet-experience sheet-table-header sheet-show-while-edit">
+              <div class="sheet-table-header-field sheet-experience-name">Namn</div>
+              <div class="sheet-table-header-field sheet-experience-unused">Nya</div>
+              <div class="sheet-table-header-field sheet-experience-total">Totalt</div>
+            </div>
+            <div class="sheet-experience sheet-table-header sheet-hide-while-edit">
+              <div class="sheet-table-header-field sheet-experience-name">Namn</div>
+              <div class="sheet-table-header-field sheet-experience-unused">Nya</div>
+              <div class="sheet-table-header-field sheet-experience-total">Totalt</div>
+            </div>
+            <div class="sheet-experience-pair sheet-experience-strength">
+              <div class="sheet-experience sheet-table-row sheet-show-while-edit">
+                <strong class="sheet-table-row-field sheet-experience-name">Hjältepoäng</strong>
+                <input  class="sheet-table-row-field sheet-experience-unused"   type="number" value="0" name="attr_heroPoints_unused"/>
+                <input  class="sheet-table-row-field sheet-experience-total"    type="number" value="0" name="attr_heroPoints_total"/>
+              </div>
+              <div class="sheet-experience sheet-table-row sheet-hide-while-edit">
+                <strong class="sheet-table-row-field sheet-experience-name">Hjältepoäng</strong>
+                <span   class="sheet-table-row-field sheet-experience-unused"   name="attr_heroPoints_unused">0</span>
+                <span   class="sheet-table-row-field sheet-experience-total"    name="attr_heroPoints_total">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="sheet-characterdata-grid-ability">
             <h2 class="sheet-grid-section-header">Förmågor</h2>
-            <div class="sheet-derived sheet-table-header sheet-show-while-edit">
-              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
-              <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
+            <div class="sheet-ability sheet-table-header sheet-show-while-edit">
+              <div class="sheet-table-header-field sheet-ability-name">Namn</div>
+              <div class="sheet-table-header-field sheet-ability-mod">Mod</div>
               <div class="sheet-table-header-field sheet-derived-fv">FV</div>
               <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
             </div>
-            <div class="sheet-derived sheet-table-header sheet-hide-while-edit">
-              <div class="sheet-table-header-field sheet-derived-name">Namn</div>
-              <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
+            <div class="sheet-ability sheet-table-header sheet-hide-while-edit">
+              <div class="sheet-table-header-field sheet-ability-name">Namn</div>
+              <div class="sheet-table-header-field sheet-ability-mod">Mod</div>
               <div class="sheet-table-header-field sheet-derived-fv">FV</div>
               <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
             </div>
-            <fieldset class="repeating_yrkes">
-              <div class="sheet-skill-pair sheet-skill-yrkes">
-                <div class="sheet-skill sheet-table-row sheet-skill-edit-show">
-                  <input class="sheet-table-row-field sheet-skill-name" type="text"   name="attr_yrkesnamn"/>
-                  <input class="sheet-table-row-field sheet-skill-base" type="text"   name="attr_yrkesbas"/>
-                  <input class="sheet-table-row-field sheet-skill-erf"  type="number" name="attr_yrkeserf" value="0"/>
-                  <input class="sheet-table-row-field sheet-skill-mod"  type="number" name="attr_yrkesMod" value="0"/>
-                  <input class="sheet-table-row-field sheet-skill-fv"   type="number" name="attr_yrkesfv"  value="0"/>
+            <fieldset class="repeating_ability">
+              <div class="sheet-ability-pair sheet-characterdata-ability">
+                <div class="sheet-ability sheet-table-row sheet-show-while-edit">
+                  <input class="sheet-table-row-field sheet-ability-name" type="text" name="attr_abilityName"/>
+                  <input class="sheet-table-row-field sheet-ability-desc" type="text" name="attr_abilityDesc"/>
                 </div>
-                <div class="sheet-skill sheet-table-row sheet-skill-edit-hide">
-                  <button type="roll" name="roll_yrkes" class="sheet-button-full-hidden"   value="&{template:combined} {{name=@{yrkesnamn}}} {{vad=Yrkes}} ?{Slagtyp|Summa, {{typ=Färdighet&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Färdighet - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{yrkesfv}+@{yrkesMod}+?{Modifikation|0}]]}}"></button>
-                  <span   class="sheet-table-row-field sheet-skill-name"  name="attr_yrkesnamn"  ></span>
-                  <span   class="sheet-table-row-field sheet-skill-base"  name="attr_yrkesbas"   ></span>
-                  <span   class="sheet-table-row-field sheet-skill-erf"   name="attr_yrkeserf"   >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-mod"   name="attr_yrkesMod"   >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-fv"    name="attr_yrkesfv"    >0</span>
-                  <span   class="sheet-table-row-field sheet-skill-totFv" name="attr_yrkestotfv" >0</span>
+                <div class="sheet-skill sheet-table-row sheet-hide-while-edit">
+                  <span   class="sheet-table-row-field sheet-ability-name"  name="attr_abilityName"></span>
+                  <span   class="sheet-table-row-field sheet-ability-desc"  name="attr_abilityDesc"></span>
                 </div>
               </div>
             </fieldset>
