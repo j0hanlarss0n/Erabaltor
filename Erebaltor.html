@@ -35,19 +35,20 @@
                 <span   class="sheet-table-row-field sheet-general-value" name="attr_gm"></span>
               </div>
             </div>
+          </div>
           <div class="sheet-characterdata-grid-attribute">
             <h2 class="sheet-grid-section-header">Attribut</h2>
             <div class="sheet-attribute sheet-table-header sheet-show-while-edit">
               <div class="sheet-table-header-field sheet-attribute-name">Namn</div>
               <div class="sheet-table-header-field sheet-attribute-mod">Mod</div>
               <div class="sheet-table-header-field sheet-attribute-fv">FV</div>
-              <div class="sheet-table-header-field sheet-attribute-totFv">Fv</div>
+              <div class="sheet-table-header-field sheet-attribute-totFv">FV</div>
             </div>
             <div class="sheet-attribute sheet-table-header sheet-hide-while-edit">
               <div class="sheet-table-header-field sheet-attribute-name">Namn</div>
               <div class="sheet-table-header-field sheet-attribute-mod">Mod</div>
               <div class="sheet-table-header-field sheet-attribute-fv">FV</div>
-              <div class="sheet-table-header-field sheet-attribute-totFv">Fv</div>
+              <div class="sheet-table-header-field sheet-attribute-totFv">FV</div>
             </div>
             <div class="sheet-attribute-pair sheet-attribute-strength">
               <div class="sheet-attribute sheet-table-row sheet-show-while-edit">
@@ -57,7 +58,7 @@
                 <input  class="sheet-table-row-field sheet-attribute-totFv" type="number" value="0" name="attr_styTot"/>
               </div>
               <div class="sheet-attribute sheet-table-row sheet-hide-while-edit">
-                <button class="sheet-tarningstabell" type="roll" name="roll_styr" value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"></button></td>
+                <button class="sheet-button-full-hidden" type="roll"   name="roll_styr" value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"></button></td>
                 <strong class="sheet-table-row-field sheet-attribute-name"  >Styrka (STY)</strong>
                 <span   class="sheet-table-row-field sheet-attribute-mod"   name="attr_styMod">0</span>
                 <span   class="sheet-table-row-field sheet-attribute-fv"    name="attr_sty">0</span>
@@ -71,13 +72,13 @@
               <div class="sheet-table-header-field sheet-derived-name">Namn</div>
               <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
               <div class="sheet-table-header-field sheet-derived-value">Värde</div>
-              <div class="sheet-table-header-field sheet-derived-totValue">FV</div>
+              <div class="sheet-table-header-field sheet-derived-totValue">Värde</div>
             </div>
             <div class="sheet-derived sheet-table-header sheet-hide-while-edit">
               <div class="sheet-table-header-field sheet-derived-name">Namn</div>
               <div class="sheet-table-header-field sheet-derived-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-derived-value">FV</div>
-              <div class="sheet-table-header-field sheet-derived-totValue">FV</div>
+              <div class="sheet-table-header-field sheet-derived-value">Värde</div>
+              <div class="sheet-table-header-field sheet-derived-totValue">Värde</div>
             </div>
             <div class="sheet-derived-pair sheet-derived-strength">
               <div class="sheet-derived sheet-table-row sheet-show-while-edit">
@@ -123,15 +124,11 @@
             <h2 class="sheet-grid-section-header">Förmågor</h2>
             <div class="sheet-ability sheet-table-header sheet-show-while-edit">
               <div class="sheet-table-header-field sheet-ability-name">Namn</div>
-              <div class="sheet-table-header-field sheet-ability-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-derived-fv">FV</div>
-              <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
+              <div class="sheet-table-header-field sheet-ability-desc">Beskrivning</div>
             </div>
             <div class="sheet-ability sheet-table-header sheet-hide-while-edit">
               <div class="sheet-table-header-field sheet-ability-name">Namn</div>
-              <div class="sheet-table-header-field sheet-ability-mod">Mod</div>
-              <div class="sheet-table-header-field sheet-derived-fv">FV</div>
-              <div class="sheet-table-header-field sheet-derived-totFv">FV</div>
+              <div class="sheet-table-header-field sheet-ability-desc">Beskrivning</div>
             </div>
             <fieldset class="repeating_ability">
               <div class="sheet-ability-pair sheet-characterdata-ability">
@@ -139,7 +136,7 @@
                   <input class="sheet-table-row-field sheet-ability-name" type="text" name="attr_abilityName"/>
                   <input class="sheet-table-row-field sheet-ability-desc" type="text" name="attr_abilityDesc"/>
                 </div>
-                <div class="sheet-skill sheet-table-row sheet-hide-while-edit">
+                <div class="sheet-ability sheet-table-row sheet-hide-while-edit">
                   <span   class="sheet-table-row-field sheet-ability-name"  name="attr_abilityName"></span>
                   <span   class="sheet-table-row-field sheet-ability-desc"  name="attr_abilityDesc"></span>
                 </div>
@@ -149,7 +146,7 @@
           <div class="sheet-characterdata-grid-extra">
             <h2 class="sheet-grid-section-header">Övrigt</h2>
             <div class="sheet-extra">
-              <textarea name="attr_ovriginfo" style="height: 200px"></textarea>
+              <textarea name="attr_ovriginfo" style="height: 100px"></textarea>
             </div>
           </div>
         </div>
