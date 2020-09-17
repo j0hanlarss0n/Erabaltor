@@ -991,6 +991,12 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-characterdata-grid-extra {
   grid-area: extra;
 }
+.sheet-characterdata-grid-extra textarea {
+  height: 7.5 em;
+  grid-auto-columns: 1fr;
+  box-sizing: border-box;
+  resize: none;
+}
 
 .sheet-general {
   position: relative;
@@ -1337,7 +1343,7 @@ input.sheet-health-bodypart,
 .sheet-characterdata-grid-atribute input[type=number]::-webkit-outer-spin-button,
 .sheet-characterdata-grid-atribute input[type=number]::-webkit-inner-spin-button,
 .sheet-characterdata-grid-derived input[type=number]::-webkit-outer-spin-button,
-.sheet-characterdata-grid-derived input[type=number]::-webkit-inner-spin-button, {
+.sheet-characterdata-grid-derived input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }

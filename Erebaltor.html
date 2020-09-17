@@ -18,6 +18,203 @@
       <li name="Karaktär">
         <input type="checkbox" class="sheet-testing sheet-firstLevelTab" checked/>
         <h1>Karaktär</h1>
+        <ul class="sheet-testtab sheet-secondLevelTabs">
+          <li>
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
+            <h3>Generellt</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-5colrow">
+                <div class="sheet-col">
+                  <table>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Spelledare</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_spelledare"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Spelare</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_spelare"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Namn</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_namn"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Ras</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_ras"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Kön</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_kon"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Socialt stånd</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_socialtStand"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Yrke</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_yrke"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Svärdshand</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_svardshand"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Ålder</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_alder"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Längd</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_langd"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Vikt</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_vikt"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Syn</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_syn"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Hörsel</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="text" name="attr_horsel"/></td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="sheet-col">
+                  <table>
+                    <tr>
+                      <th class="sheet-box_alternate2">Övrig information</th>
+                    </tr>
+                    <tr>
+                      <td><textarea name="attr_ovriginfo" style="width: 600px; height: 220px"></textarea></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
+            <h3>Grundegenskaper</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-5colrow">
+                <div class="sheet-col">
+                  <table>
+                    <tr>
+                      <td class="sheet-box_alternate"><span>Namn</span></td>
+                      <td class="sheet-box_alternate"><span>FV</span></td>
+                      <td class="sheet-box_alternate"><span>Mod.</span></td>
+                      <td class="sheet-box_alternate"><span>Tot.</span></td>
+                    </tr>
+                    <tr>
+                      <td         class="sheet-box_alternate_row"><span>Styrka (STY)</span></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_sty"    value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_styMod" value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_styTot" value="0" readonly="true" /></td>
+                      <td><button class="sheet-tarningstabell"    type="roll"   name="roll_styr"   value="&{template:combined} {{name=Styrka}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sty}+@{styMod}+?{Modifikation|0}]]}}"></button></td>
+                    </tr>
+                    <tr>
+                      <td         class="sheet-box_alternate_row"><span>Fysik (FYS)</span></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_fys"    value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_fysMod" value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_fysTot" value="0" readonly="true" /></td>
+                      <td><button class="sheet-tarningstabell"    type="roll"   name="roll_fysr"   value="&{template:combined} {{name=Fysik}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{fys}+@{fysMod}+?{Modifikation|0}]]}}"></button></td>
+                    </tr>
+                    <tr>
+                      <td         class="sheet-box_alternate_row"><span>Smidighet (SMI)</span></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_smi"    value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_smiMod" value="0"                 /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_smiTot" value="0" readonly="true" /></td>
+                      <td><button class="sheet-tarningstabell"    type="roll"   name="roll_smir"   value="&{template:combined} {{name=Smidighet}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{smi}+@{smiMod}+?{Modifikation|0}]]}}"></button></td>
+                    </tr>
+                    <tr>
+                      <td         class="sheet-box_alternate_row"><span>Intelligens (INT)</span></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_int"    value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_intMod" value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_intTot" value="0" readonly="true"  /></td>
+                      <td><button class="sheet-tarningstabell"    type="roll"   name="roll_intr"   value="&{template:combined} {{name=Intelligens}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{int}+@{intMod}+?{Modifikation|0}]]}}"></button></td>
+                    </tr>
+                    <tr>
+                      <td         class="sheet-box_alternate_row"><span>Psyke (PSY)</span></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_psy"    value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_psyMod" value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_psyTot" value="0" readonly="true"  /></td>
+                      <td><button class="sheet-tarningstabell"    type="roll"   name="roll_psyr"   value="&{template:combined} {{name=Psyke}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{psy}+@{psyMod}+?{Modifikation|0}]]}}"></button></td>
+                    </tr>
+                    <tr>
+                      <td         class="sheet-box_alternate_row"><span>Karisma (KAR)</span></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_kar"    value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_karMod" value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_karTot" value="0" readonly="true"  /></td>
+                      <td><button class="sheet-tarningstabell"    type="roll"   name="roll_karr"   value="&{template:combined} {{name=Karisma}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{kar}+@{karMod}+?{Modifikation|0}]]}}"></button></td>
+                    </tr>
+                    <tr>
+                      <td         class="sheet-box_alternate_row"><span>Storlek (STO)</span></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_sto"    value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_stoMod" value="0"                  /></td>
+                      <td><input  class="sheet-fardighetstabell"  type="number" name="attr_stoTot" value="0" readonly="true"  /></td>
+                      <td><button class="sheet-tarningstabell"    type="roll"   name="roll_stor"   value="&{template:combined} {{name=Storlek}}  {{vad=Egenskap}} ?{Slagtyp|Summa, {{typ=Grundegenskap&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Grundegenskap - Mot&amp;#125;&amp;#125; {{slag=[[ -1* }1d20+@{sto}+@{stoMod}+?{Modifikation|0}]]}}"></button></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
+            <h3>Särskilda förmågor</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-colrow">
+                <table>
+                  <tr>
+                    <td class="sheet-box_alternate"><span>Namn</span></td>
+                    <td class="sheet-box_alternate"><span>Beskrivning</span></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="attr_sarskildNamn_display" class="sheet-fardighetstabell"/></td>
+                    <td><input type="text" name="attr_sarskildDesc_display" class="sheet-fardighetstabell"/></td>
+                  </tr>
+                </table>
+                <fieldset class="repeating_sarskild">
+                  <table>
+                    <tr>
+                      <td><input type="text" name="attr_sarskildNamn" class="sheet-fardighetstabell"/></td>
+                      <td><input type="text" name="attr_sarskildDesc" class="sheet-fardighetstabell"/></td>
+                    </tr>
+                  </table>
+                </fieldset>
+              </div>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" class="sheet-testing sheet-secondLevelTab" checked/>
+            <h3>Stats</h3>
+            <div class="sheet-body sheet-testtab">
+              <div class="sheet-5colrow">
+                <div class="sheet-col">
+                  <table>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Hjältepoäng</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="number" name="attr_hjaltePoang" value="0"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Äventyrspoäng</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="number" name="attr_aventyrsPoang" value="0"/></td>
+                    </tr>
+                    <tr>
+                      <td class="sheet-box_alternate_row"><span>Total ÄP</span></td>
+                      <td><input class="sheet-fardighetstabell_half" type="number" name="attr_totalAventyrsPoang" value="0"/></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li name="Karaktär">
+        <input type="checkbox" class="sheet-testing sheet-firstLevelTab" checked/>
+        <h1>Karaktär</h1>
         <div class="sheet-section sheet-grid sheet-characterdata-grid">
           <div class="sheet-characterdata-grid-general">
             <h2 class="sheet-grid-section-header">Generellt</h2>
@@ -303,29 +500,29 @@
             <div class="sheet-derived-pair sheet-derived-damageBonus">
               <div class="sheet-derived sheet-table-row sheet-show-while-edit">
                 <strong class="sheet-table-row-field sheet-derived-name">Skadebonus</strong>
-                <input  class="sheet-table-row-field sheet-derived-mod"      type="text" value="" />
-                <input  class="sheet-table-row-field sheet-derived-value"    type="text" value="" />
-                <input  class="sheet-table-row-field sheet-derived-totValue" type="text" value="0" name="attr_SkadeBonus"/>
+                <input  class="sheet-table-row-field sheet-derived-mod"      type="text" name="attr_skadeBonusMod" value="" />
+                <input  class="sheet-table-row-field sheet-derived-value"    type="text" name="attr_skadeBonus"    value="" />
+                <input  class="sheet-table-row-field sheet-derived-totValue" type="text" name="attr_skadeBonusTot" value=""/>
               </div>
               <div class="sheet-derived sheet-table-row sheet-hide-while-edit">
                 <strong class="sheet-table-row-field sheet-derived-name">Skadebonus</strong>
-                <span   class="sheet-table-row-field sheet-derived-mod"      ></span>
-                <span   class="sheet-table-row-field sheet-derived-value"    ></span>
-                <span   class="sheet-table-row-field sheet-derived-totValue" name="attr_SkadeBonus">0</span>
+                <span   class="sheet-table-row-field sheet-derived-mod"      name="attr_skadeBonusMod"></span>
+                <span   class="sheet-table-row-field sheet-derived-value"    name="attr_skadeBonus"   ></span>
+                <span   class="sheet-table-row-field sheet-derived-totValue" name="attr_skadeBonusTot"></span>
               </div>
             </div>
             <div class="sheet-derived-pair sheet-derived-hitPoints">
               <div class="sheet-derived sheet-table-row sheet-show-while-edit">
                 <strong class="sheet-table-row-field sheet-derived-name">Kroppspoäng max</strong>
-                <input  class="sheet-table-row-field sheet-derived-mod"      type="number" value="0" name="attr_kroppsPoangMod"/>
-                <span  class="sheet-table-row-field sheet-derived-value"    type="number" value="0" name="attr_kroppsPoang">0</span>
-                <span  class="sheet-table-row-field sheet-derived-totValue" type="number" value="0" name="attr_kp_max">0</span>
+                <input  class="sheet-table-row-field sheet-derived-mod"      type="number" name="attr_kroppsPoangMod" value="0"/>
+                <span   class="sheet-table-row-field sheet-derived-value"    type="number" name="attr_kroppsPoang"    >0</span>
+                <span   class="sheet-table-row-field sheet-derived-totValue" type="number" name="attr_kp_max"         >0</span>
               </div>
               <div class="sheet-derived sheet-table-row sheet-hide-while-edit">
                 <strong class="sheet-table-row-field sheet-derived-name">Kroppspoäng max</strong>
-                <span   class="sheet-table-row-field sheet-derived-mod"      name="attr_kroppsPoangMod">0</span>
-                <span   class="sheet-table-row-field sheet-derived-value"    name="attr_kroppsPoang">0</span>
-                <span   class="sheet-table-row-field sheet-derived-totValue" name="attr_kp_max">0</span>
+                <span  class="sheet-table-row-field sheet-derived-mod"      type="number" name="attr_kroppsPoangMod" >0</span>
+                <span  class="sheet-table-row-field sheet-derived-value"    type="number" name="attr_kroppsPoang"    >0</span>
+                <span  class="sheet-table-row-field sheet-derived-totValue" type="number" name="attr_kp_max"         >0</span>
               </div>
             </div>
             <div class="sheet-derived-pair sheet-derived-manaPoints">
@@ -969,7 +1166,7 @@
                     <td><input type="number" name="attr_psykePoangMod"        class="sheet-fardighetstabell"              value="0"                                                                         /></td>
                     <td><input type="number" name="attr_psykePoang_max"       class="sheet-fardighetstabell_number_wide"  value=""                                                          readonly="true" /></td>
                     <td><input type="number" name="attr_psykePoangForbrukade" class="sheet-fardighetstabell_number_wide"  value="0"                                                                         /></td>
-                    <td><input type="text"   name="attr_psykePoang"           class="sheet-fardighetstabell"              value="(@{psykePoang}-@{forbrukadePsykePoang}+@{psykePoangMod})"  readonly="true" /></td>
+                    <td><input type="text"   name="attr_psykePoang"           class="sheet-fardighetstabell"              value="0"  readonly="true" /></td>
                   </tr>
                 </table>
                 <tr>
@@ -998,7 +1195,6 @@
                   </tr>
                   <tr>
                     <td class="sheet-box_alternate_row2"><span>Total KP</span></td>
-                    <td><input type="number" name="attr_kroppsPoang" class="sheet-fardighetstabell" value="(ceil((@{fys}+@{sto})/2))" disabled="true"/></td>
                     <td><input type="number" name="attr_kroppsPoangMod" class="sheet-fardighetstabell" value="0"/></td>
                     <td><input type="number" name="attr_kp_max" class="sheet-fardighetstabell" value="" readonly="true"/></td>
                   </tr>
@@ -3197,21 +3393,66 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:psytot sheet:opened", function() {
-    getAttrs(["psyTot"], function(values) {
-        var psyTot = parseInt(values["psyTot"],10)||0;
+  on("change:stytot change:stotot sheet:opened", function() {
+    getAttrs(["styTot", "stoTot"], function(values) {
+        var styTot = parseInt(values["styTot"],10)||0;
+        var stoTot = parseInt(values["stoTot"],10)||0;
+        var sum = styTot+stoTot;
+        var sb = "";
+        if (sum < 27) {
+          sb = "0"
+        } else if (sum < 30) {
+          sb = "1"
+        } else if (sum < 33) {
+          sb = "1d2"
+        } else if (sum < 41) {
+          sb = "1d4"
+        } else if (sum < 51) {
+          sb = "1d6"
+        } else if (sum < 61) {
+          sb = "1d8"
+        } else if (sum < 71) {
+          sb = "1d10"
+        } else if (sum < 91) {
+          sb = "2t6"
+        } else if (sum < 111) {
+          sb = "3t6"
+        } else if (sum < 141) {
+          sb = "4t6"
+        } else if (sum < 191) {
+          sb = "5t6"
+        } else {
+          sb = "6t6"
+        }
         setAttrs({
-            psykePoangGrund: psyTot
+            skadeBonus: sb
         });
     });
   });
 
-  on("change:psykepoanggrund change:psykepoangmod sheet:opened", function() {
-    getAttrs(["psykePoangGrund", "psykePoangMod"], function(values) {
-        var psykePoangGrund = parseInt(values["psykePoangGrund"],10)||0;
+  on("change:skadebonus change:skadebonusmod sheet:opened", function() {
+    getAttrs(["skadeBonus", "skadebonusMod"], function(values) {
+        const skadeBonus = values.skadeBonus;
+        const skadeBonusMod = values.skadebonusMod;
+        let total = "";
+        if (skadeBonusMod) {
+          total = skadeBonus + "+" + skadeBonusMod
+        } else {
+          total = skadeBonus
+        }
+        setAttrs({
+            skadeBonusTot: total
+        });
+    });
+  });
+
+  on("change:psytot change:psykepoangmod sheet:opened", function() {
+    getAttrs(["psytot", "psykePoangGrund", "psykePoangMod"], function(values) {
+        var psykeTotal = parseInt(values["psytot"],10)||0;
         var psykePoangMod = parseInt(values["psykePoangMod"],10)||0;
         setAttrs({
-            psykePoang_max: psykePoangGrund+psykePoangMod
+            psykePoangGrund: psykeTotal,
+            psykePoang_max: psykeTotal+psykePoangMod
         });
     });
   });
@@ -3232,7 +3473,8 @@ var TAS = TAS || (function(){
         var stoTot = parseInt(values["stoTot"],10)||0;
         var kpMod = parseInt(values["kroppsPoangMod"],10)||0;
         setAttrs({
-            kp_max: (Math.ceil((fysTot+stoTot)/2))+kpMod
+            kroppsPoang: Math.ceil((fysTot+stoTot)/2),
+            kp_max: Math.ceil((fysTot+stoTot)/2)+kpMod
         });
     });
   });
