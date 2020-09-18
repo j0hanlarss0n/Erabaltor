@@ -978,6 +978,33 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   grid-area: extra;
 }
 
+.sheet-row.sheet-mana {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 4em 4em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-row.sheet-extra {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-row.sheet-spell {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 8em 3em 3em 3em 4em 3em 5em 3em 6em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
 .sheet-characterdata-grid {
   display: grid;
   grid-template-areas: 
