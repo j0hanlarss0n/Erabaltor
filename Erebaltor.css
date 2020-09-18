@@ -956,6 +956,28 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   text-shadow: 0 0 2px 00fff5;
 }
 
+.sheet-magic-grid {
+  display: grid;
+  grid-template-areas: 
+    'mana extra'
+    'spells spells';
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.sheet-magic-grid-spells {
+  grid-area: spells;
+}
+
+.sheet-magic-grid-mana {
+  grid-area: mana;
+}
+
+.sheet-magic-grid-extra {
+  grid-area: extra;
+}
+
 .sheet-characterdata-grid {
   display: grid;
   grid-template-areas: 
@@ -992,14 +1014,14 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   grid-area: extra;
 }
 .sheet-characterdata-grid-extra textarea {
-  height: 7.5 em;
+  height: 7.5em;
   grid-auto-columns: 1fr;
   box-sizing: border-box;
   resize: none;
 }
 
 .sheet-extra textarea {
-  height: 7.5 em;
+  height: 4,75em;
   grid-auto-columns: 1fr;
   box-sizing: border-box;
   resize: none;
