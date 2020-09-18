@@ -1177,6 +1177,94 @@
           </li>
         </ul>
       </li>
+      <li name="Magi2">
+        <input type="checkbox" class="sheet-testing sheet-firstLevelTab" checked/>
+        <h1>Magi</h1>
+        <div class="sheet-section sheet-grid sheet-magic-grid">
+          <div class="sheet-magic-grid-spells">
+            <h2 class="sheet-grid-section-header">Besvärjelser</h2>
+            <div class="sheet-spell sheet-table sheet-header sheet-row sheet-show-while-edit">
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-name">Namn</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-desc">Beskrivning</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-cost">Kostnad</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-quick">Kvick</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-still">Stilla</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-silent">Tyst</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-perfectRolls">Erf</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-fv">FV</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-fv-mod">Mod</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-total">FV</div>
+            </div>
+            <div class="sheet-spell sheet-table sheet-header sheet-row sheet-hide-while-edit">
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-name">Namn</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-desc">Beskrivning</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-cost">Kostnad</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-quick">Kvick</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-still">Stilla</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-silent">Tyst</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-perfectRolls">Erf</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-fv">FV</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-fv-mod">Mod</div>
+              <div class="sheet-spell sheet-table sheet-header sheet-field sheet-fv-total">FV</div>
+            </div>
+            <fieldset class="repeating_spells">
+              <div class="sheet-pair">
+                <div class="sheet-spell sheet-table sheet-row sheet-show-while-edit">
+                  <input class="sheet-spell sheet-table sheet-field sheet-name"     type="text"   name="attr_spell_name"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-desc"     type="text"   name="attr_spell_desc"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-cost"     type="number" name="attr_spell_cost"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-quick"    type="number" name="attr_spell_quick"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-still"    type="number" name="attr_spell_still"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-silent"   type="number" name="attr_spell_silent"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-perfects" type="number" name="attr_spell_perfects"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-fv"       type="number" name="attr_spell_cost"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-fv-mod"   type="number" name="attr_spell_cost"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-fv-total" type="number" name="attr_spell_cost"/>
+                </div>
+                <div class="sheet-spell sheet-table sheet-row sheet-hide-while-edit">
+                  <button type="roll" name="roll_spell" class="sheet-button-full-hidden" value="&{template:combined} {{name=@{spell_name}}} {{effekt=?{E|1}}} {{vad=Besvärjelse}} ?{Slagtyp|Summa, {{typ=Magi&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Magi - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20-?{E}+1+@{spell_fv_total}+?{Modifikation|0}]]}}"></button>
+                  <span class="sheet-spell sheet-table sheet-field sheet-name"     name="attr_spell_name">0</span>
+                  <span class="sheet-spell sheet-table sheet-field sheet-desc"     name="attr_spell_desc">0</span>
+                  <span class="sheet-spell sheet-table sheet-field sheet-cost"     name="attr_spell_cost">0</span>
+                  <span class="sheet-spell sheet-table sheet-field sheet-quick"    name="attr_spell_quick">0</span>
+                  <span class="sheet-spell sheet-table sheet-field sheet-still"    name="attr_spell_still">0</span>
+                  <span class="sheet-spell sheet-table sheet-field sheet-silent"   name="attr_spell_silent">0</span>
+                  <span class="sheet-spell sheet-table sheet-field sheet-perfects" name="attr_spell_perfects">0</span>
+                  <span class="sheet-spell sheet-table sheet-field sheet-fv"       name="attr_spell_fv">0</span>
+                  <span class="sheet-spell sheet-table sheet-field sheet-fv-mod"   name="attr_spell_fv_mod">0</span>
+                  <span class="sheet-spell sheet-table sheet-field sheet-fv-total" name="attr_spell_fv_total">0</span>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="sheet-magic-grid-mana">
+            <h2 class="sheet-grid-section-header">Psykepoäng</h2>
+            <div class="sheet-mana sheet-table sheet-header sheet-row">
+              <div class="sheet-mana sheet-table sheet-field">Max</div>
+              <div class="sheet-mana sheet-table sheet-field">Använda</div>
+              <div class="sheet-mana sheet-table sheet-field">kvar</div>
+            </div>
+            <div class="sheet-pair">
+              <div class="sheet-mana sheet-table sheet-row sheet-show-while-edit">
+                <span  class="sheet-mana sheet-table sheet-field" name="attr_psykePoang_max">0</span>
+                <input class="sheet-mana sheet-table sheet-field" name="attr_psykePoangForbrukade" type="number" value="0"/>
+                <span  class="sheet-mana sheet-table sheet-field" name="attr_psykePoang">0</span>
+              </div>
+              <div class="sheet-mana sheet-table sheet-row sheet-hide-while-edit">
+                <span class="sheet-mana sheet-table sheet-field" name="attr_psykePoang_max">0</span>
+                <span class="sheet-mana sheet-table sheet-field" name="attr_psykePoangForbrukade">0</span>
+                <span class="sheet-mana sheet-table sheet-field" name="attr_psykePoang">2</span>
+              </div>
+            </div>
+          </div>
+          <div class="sheet-magic-grid-extra">
+            <h2 class="sheet-grid-section-header">Övrigt</h2>
+            <div class="sheet-extra">
+              <textarea name="attr_magic_extra" style="height: 100px"></textarea>
+            </div>
+          </div>
+        </div>
+      </li>
       <li name="Strid">
         <input type="checkbox" class="sheet-testing sheet-firstLevelTab" checked/>
         <h1>Strid</h1>

@@ -998,6 +998,13 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   resize: none;
 }
 
+.sheet-extra textarea {
+  height: 7.5 em;
+  grid-auto-columns: 1fr;
+  box-sizing: border-box;
+  resize: none;
+}
+
 .sheet-general {
   position: relative;
   display: grid;
