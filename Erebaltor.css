@@ -1,9 +1,9 @@
-:root {
-  --select-normal: 115px;
-  --text-normal: 178px;
-  --number-normal: 46px;
-}
-
+.charsheet {
+  --background-row: #cccccc;
+  --background-header: #999999;
+  --background-summary: #aaaaaa;
+  --background-hover: #b0b0b0;
+  }
 /*
 When not editing the sheet, the sections that are shown while editing should be hidden
 */
@@ -981,7 +981,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-row.sheet-mana {
   position: relative;
   display: grid;
-  grid-template-columns: auto 4em 4em;
+  grid-template-columns: auto auto auto;
   align-items: center;
   justify-items: center;
   margin-bottom: 3px;
@@ -1549,3 +1549,30 @@ h2.sheet-grid-section-header:before {
 }
 */
 
+/*========================================/
+/                                         /
+/               NEW STYLE                 /
+/                                         /
+/========================================*/
+ 
+.sheet-row {
+  background-color: var(--background-row);
+  border: 1px solid #635b14;
+  height: 2.2em; 
+}
+
+.sheet-field {
+  cursor: default;
+  background-color: #cccccc;
+  text-align: center;
+}
+
+.sheet-header.sheet-row {
+  background-color: var(--background-header);
+  height: 1.38em;
+  font-weight: bold;
+}
+
+.sheet-header.sheet-field {
+  background-color: #999999;
+}
