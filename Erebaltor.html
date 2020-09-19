@@ -1217,9 +1217,9 @@
                   <input class="sheet-spell sheet-table sheet-field sheet-still"    type="number" name="attr_spell_still"/>
                   <input class="sheet-spell sheet-table sheet-field sheet-silent"   type="number" name="attr_spell_silent"/>
                   <input class="sheet-spell sheet-table sheet-field sheet-perfects" type="number" name="attr_spell_perfects"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-fv"       type="number" name="attr_spell_cost"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-fv-mod"   type="number" name="attr_spell_cost"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-fv-total" type="number" name="attr_spell_cost"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-fv"       type="number" name="attr_spell_fv"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-fv-mod"   type="number" name="attr_spell_fv_mod"/>
+                  <input class="sheet-spell sheet-table sheet-field sheet-fv-total" type="number" name="attr_spell_fv_total"/>
                 </div>
                 <div class="sheet-spell sheet-table sheet-row sheet-hide-while-edit">
                   <button type="roll" name="roll_spell" class="sheet-button-full-hidden" value="&{template:combined} {{name=@{spell_name}}} {{effekt=?{E|1}}} {{vad=Besvärjelse}} ?{Slagtyp|Summa, {{typ=Magi&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Magi - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20-?{E}+1+@{spell_fv_total}+?{Modifikation|0}]]}}"></button>

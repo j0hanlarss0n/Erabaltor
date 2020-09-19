@@ -3,6 +3,9 @@
   --background-header: #999999;
   --background-summary: #aaaaaa;
   --background-hover: #b0b0b0;
+  --background-input: #d5d5d5;
+  --height-header: 1.38em;
+  --height-row: 2.2em;
   }
 /*
 When not editing the sheet, the sections that are shown while editing should be hidden
@@ -981,7 +984,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-row.sheet-mana {
   position: relative;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
   margin-bottom: 3px;
@@ -1400,7 +1403,7 @@ input.sheet-health-bodypart,
 .sheet-characterdata-grid-atribute input[type=number]::-webkit-inner-spin-button,
 .sheet-characterdata-grid-derived input[type=number]::-webkit-outer-spin-button,
 .sheet-characterdata-grid-derived input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  -webkit-appearance: none;;
   margin: 0;
 }
 
@@ -1558,21 +1561,49 @@ h2.sheet-grid-section-header:before {
 .sheet-row {
   background-color: var(--background-row);
   border: 1px solid #635b14;
-  height: 2.2em; 
+  height: var(--height-row); 
+}
+
+.sheet-row:hover,
+.sheet-row:hover span {
+  background-color: var(--background-hover);
 }
 
 .sheet-field {
   cursor: default;
-  background-color: #cccccc;
+  background-color: var(--background-row);
   text-align: center;
+}
+
+.sheet-field.sheet-name,
+input[type=text].sheet-field.sheet-name,
+input[type=number].sheet-field.sheet-name {
+  justify-self: left;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+input[type=text].sheet-field,
+input[type=number].sheet-field {
+  background-color: var(--background-input);
+  -moz-appearance: textfield;
+  width: 100%;
+  padding: 0px;
+}
+
+input[type=number].sheet-field::-webkit-inner-spin-button,
+input[type=number].sheet-field::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .sheet-header.sheet-row {
   background-color: var(--background-header);
-  height: 1.38em;
+  height: var(--height-header);
   font-weight: bold;
 }
 
 .sheet-header.sheet-field {
-  background-color: #999999;
+  background-color: var(--background-header);
 }
