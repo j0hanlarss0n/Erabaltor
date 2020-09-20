@@ -31,10 +31,17 @@ When editing the sheet, the sections that are shown when not editing should be h
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-skill-totFv,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-attribute-totFv,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-derived-totValue {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-derived-totValue,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-fv-total {
   display: none;
 }
 
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-totFv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-attribute-totFv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived-totValue,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-fv-total {
+  display: none;
+}
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-fv,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-fv-mod,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-bv,
@@ -49,7 +56,11 @@ When editing the sheet, the sections that are shown when not editing should be h
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-attribute-fv,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-derived-mod,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-derived-value,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor-details {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor-details,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-fv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-fv-mod,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-cost,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-perfects {
   display: none;
 }
 
@@ -58,16 +69,11 @@ When editing the sheet, the sections that are shown when not editing should be h
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-attribute-fv,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-attribute-mod,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived-mod,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived-value {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived-value,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-fv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-fv-mod {
   display: block;
 }
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-totFv,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-attribute-totFv,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived-totValue, {
-  display: none;
-}
-
 
 .charsheet {
   background-color: white;
@@ -1002,7 +1008,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-row.sheet-spell {
   position: relative;
   display: grid;
-  grid-template-columns: auto 12em 4em 4em 4em 4em 3em 3em 3em 3em;
+  grid-template-columns: auto 14em 4em 4em 4em 4em 3em 3em 3em;
   align-items: center;
   justify-items: center;
   margin-bottom: 3px;
@@ -1262,6 +1268,10 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   grid-template-columns: auto 4em 4em 4em 4em 4em 4em 4em 4em;
 }
 
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-spell {
+  grid-template-columns: auto 14em 4em 4em 4em 3em;
+}
+
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill {
   grid-template-columns: auto 3em 3em;
@@ -1273,6 +1283,10 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived {
   grid-template-columns: auto 3em 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-spell {
+  grid-template-columns: auto 14em 4em 4em 4em 3em 3em;
 }
 
 .charsheet .sheet-wrapper button.sheet-button-full-hidden {
