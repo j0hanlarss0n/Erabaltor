@@ -1576,6 +1576,8 @@ h2.sheet-grid-section-header:before {
 }
 
 .sheet-field.sheet-name,
+.sheet-field.sheet-first,
+.sheet-armor-sum.sheet-first,
 input[type=text].sheet-field.sheet-name,
 input[type=number].sheet-field.sheet-name {
   justify-self: left;
