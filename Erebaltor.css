@@ -1623,3 +1623,7 @@ input[type=number].sheet-field::-webkit-outer-spin-button {
 .sheet-header.sheet-field {
   background-color: var(--background-header);
 }
+
+div.sheet-testtab div.sheet-DontShow {
+  
+} 
