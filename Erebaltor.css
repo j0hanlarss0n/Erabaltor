@@ -1002,7 +1002,7 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
 .sheet-row.sheet-spell {
   position: relative;
   display: grid;
-  grid-template-columns: auto 8em 3em 3em 3em 4em 3em 5em 3em 6em;
+  grid-template-columns: auto 12em 4em 4em 4em 4em 3em 3em 3em 3em;
   align-items: center;
   justify-items: center;
   margin-bottom: 3px;
@@ -1477,7 +1477,7 @@ input.sheet-health-bodypart,
 }
 
 .sheet-table-header-field.sheet-vapen-skill,
-.sheet-table-header-field.sheet-vapen-skada-bonus {
+.sheet-table-row-field.sheet-vapen-skill {
   justify-self: left;
 }
 

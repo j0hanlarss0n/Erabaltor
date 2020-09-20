@@ -2045,51 +2045,27 @@
                     <input class="sheet-table-row-field sheet-vapen-skada"        type="text"   name="attr_vapenSkada"      value="0"/>
                     <input class="sheet-table-row-field sheet-vapen-skada-mod"    type="number" name="attr_vapenSkadaMod"   value="0"/>
                     <select class="sheet-table-row-field sheet-vapen-skada-bonus"               name="attr_vapenSkadaBonus">
-                      <option value="@{skadeBonus}">Normal</option>
-                      <option value="@{skadeBonusBage}">Båge</option>
-                      <option value="@{skadeBonusTvaHand}">2-hands</option>
+                      <option value="@{skadeBonusTot}">Normal</option>
+                      <option value="@{skadeBonusTvaHandTot}">2-hands</option>
                     </select>
                   </div>
                   <div class="sheet-vapen sheet-table-row sheet-vapen-edit-hide">
-                    <span class="sheet-table-row-field sheet-vapen-namn" name="attr_vapenNamn"></span>
-                    <select class="sheet-table-row-field sheet-vapen-skill" type="text"   name="attr_vapenSkill"/>
-                          <option value="">Inget</option>
-                          <option value="@{Armborst}">Armborst</option>
-                          <option value="@{Båge}">Båge</option>
-                          <option value="@{Dolk}">Dolk</option>
-                          <option value="@{Enhandskrossvapen}">Enhandskrossvapen</option>
-                          <option value="@{Enhandssvärd}">Enhandssvärd</option>
-                          <option value="@{Enhandsyxa}">Enhandsyxa</option>
-                          <option value="@{Kastvapen}">Kastvapen</option>
-                          <option value="@{Lans}">Lans</option>
-                          <option value="@{Parerdolk}">Parerdolk</option>
-                          <option value="@{Sköld}">Sköld</option>
-                          <option value="@{Slagsmål}">Slagsmål</option>
-                          <option value="@{Slunga}">Slunga</option>
-                          <option value="@{Stångvapen}">Stångvapen</option>
-                          <option value="@{Tvåhandskrossvapen}">Tvåhandskrossvapen</option>
-                          <option value="@{Tvåhandssvärd}">Tvåhandssvärd</option>
-                          <option value="@{Tvåhandsyxa}">Tvåhandsyxa</option>
-                          <option value="@{Värja}">Värja</option>
-                        </select>
-                    <span class="sheet-table-row-field sheet-vapen-fv"              name="attr_vapenFv"         value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-fv-mod"          name="attr_vapenFvMod"      value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-bv"              name="attr_vapenBv"         value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-vikt"            name="attr_vapenVikt"       value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-rv"              name="attr_vapenRackvidd"   value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-skada"           name="attr_vapenSkada"      value="0"></span>
-                    <span class="sheet-table-row-field sheet-vapen-skada-mod"       name="attr_vapenSkadaMod"   value="0"></span>
-                    <select class="sheet-table-row-field sheet-vapen-skada-bonus"   name="attr_vapenSkadaBonus">
-                      <option value="@{skadeBonus}">Normal</option>
-                      <option value="@{skadeBonusBage}">Båge</option>
-                      <option value="@{skadeBonusTvaHand}">2-hands</option>
-                    </select>
+                    <span class="sheet-table-row-field sheet-vapen-namn"        name="attr_vapenNamn"              ></span>
+                    <span class="sheet-table-row-field sheet-vapen-skill"       name="attr_vapenSkillDisplay"      ></span>
+                    <span class="sheet-table-row-field sheet-vapen-fv"          name="attr_vapenFv"                >0</span>
+                    <span class="sheet-table-row-field sheet-vapen-fv-mod"      name="attr_vapenFvMod"             >0</span>
+                    <span class="sheet-table-row-field sheet-vapen-bv"          name="attr_vapenBv"                >0</span>
+                    <span class="sheet-table-row-field sheet-vapen-vikt"        name="attr_vapenVikt"              >0</span>
+                    <span class="sheet-table-row-field sheet-vapen-rv"          name="attr_vapenRackvidd"          >0</span>
+                    <span class="sheet-table-row-field sheet-vapen-skada"       name="attr_vapenSkada"             >0</span>
+                    <span class="sheet-table-row-field sheet-vapen-skada-mod"   name="attr_vapenSkadaMod"          >0</span>
+                    <span class="sheet-table-row-field sheet-vapen-skada-bonus" name="attr_vapenSkadaBonusDisplay" >0</span>
                     <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollAttack"       value="{{typ=Attack&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollTraffa}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]]&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
                     <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollTraffa"       value="?{Träfftabell&amp;#124;Standard&amp;#44; [[ 1t[standard]]]&amp;#124;Högt&amp;#44; [[1t[hitHigh]]]&amp;#124;Lågt&amp;#44; [[ 1t[hitLow]]]&amp;#124;Standard - Avstånd&amp;#44; [[ 1t[standardRanged]]]&amp;#124;Högt - Avstånd&amp;#44; [[ 1t[hitHighRanged]]]&amp;#124;Lågt - Avstånd&amp;#44; [[ 1t[hitLowRanged]]]&amp;#125;"/>
                     <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollSikta"        value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]];#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
                     <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollSiktaPlatser" value="?{Sikta på&amp;#124;Huvudet&amp;#44; huvudet&amp;#124;Vänster arm&amp;#44; Vänster arm&amp;#124;Höger arm&amp;#44; Höger arm&amp;#124;Bröstkorg&amp;#44; Bröstkorg&amp;#124;Mage&amp;#44; Mage&amp;#124;Vänster ben&amp;#44; Vänster ben&amp;#124;Höger ben&amp;#44; Höger ben&amp;#125;"/>
                     <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollParrera"      value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]]&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
-                    <button class="sheet-button-full-hidden" type="roll"   name="roll_vapen"                 value="&{template:combined} {{name=@{vapenNamn}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"></button>
+                    <button class="sheet-button-full-hidden" type="roll"   name="roll_vapen"                 value="&{Dcombined} {{name=@{vapenNamn}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"></button>
                   </div>
                 </div>
               </fieldset>
@@ -3481,55 +3457,65 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:stytot change:stotot sheet:opened", function() {
-    getAttrs(["styTot", "stoTot"], function(values) {
-        var styTot = parseInt(values["styTot"],10)||0;
-        var stoTot = parseInt(values["stoTot"],10)||0;
-        var sum = styTot+stoTot;
-        var sb = "";
+  on("change:stytot change:stotot change:skadebonusmod sheet:opened", function() {
+    getAttrs(["styTot", "stoTot", "skadeBonusMod"], function(values) {
+        const styTot = parseInt(values["styTot"],10)||0;
+        const stoTot = parseInt(values["stoTot"],10)||0;
+        const damagebonusMod = values.skadeBonusMod;
+        const sum = styTot+stoTot;
+        let damagebonus = "";
+        let damagebonusTwoHanded = "";
+        let damagebonusTotal = "";
+        let damagebonusTwoHandedTotal = "";
         if (sum < 27) {
-          sb = "0"
+          damagebonus = "0"
+          damagebonusTwoHanded = "1"
         } else if (sum < 30) {
-          sb = "1"
+          damagebonus = "1"
+          damagebonusTwoHanded = "1d2"
         } else if (sum < 33) {
-          sb = "1d2"
+          damagebonus = "1d2"
+          damagebonusTwoHanded = "1d4"
         } else if (sum < 41) {
-          sb = "1d4"
+          damagebonus = "1d4"
+          damagebonusTwoHanded = "1d6"
         } else if (sum < 51) {
-          sb = "1d6"
+          damagebonus = "1d6"
+          damagebonusTwoHanded = "1d8"
         } else if (sum < 61) {
-          sb = "1d8"
+          damagebonus = "1d8"
+          damagebonusTwoHanded = "1d10"
         } else if (sum < 71) {
-          sb = "1d10"
+          damagebonus = "1d10"
+          damagebonusTwoHanded = "2d6"
         } else if (sum < 91) {
-          sb = "2t6"
+          damagebonus = "2d6"
+          damagebonusTwoHanded = "3d6"
         } else if (sum < 111) {
-          sb = "3t6"
+          damagebonus = "3d6"
+          damagebonusTwoHanded = "4d6"
         } else if (sum < 141) {
-          sb = "4t6"
+          damagebonus = "4d6"
+          damagebonusTwoHanded = "5d6"
         } else if (sum < 191) {
-          sb = "5t6"
+          damagebonus = "5d6"
+          damagebonusTwoHanded = "6d6"
         } else {
-          sb = "6t6"
+          damagebonus = "6d6"
+          damagebonusTwoHanded = "7d6"
+        }
+        if (damagebonusMod) {
+          damagebonusTotal = damagebonus + "+" + damagebonusMod
+          damagebonusTwoHandedTotal = damagebonusTwoHanded + "+" + damagebonusMod
+        } else {
+          damagebonusTotal = damagebonus
+          damagebonusTwoHandedTotal = damagebonusTwoHanded
         }
         setAttrs({
-            skadeBonus: sb
-        });
-    });
-  });
-
-  on("change:skadebonus change:skadebonusmod sheet:opened", function() {
-    getAttrs(["skadeBonus", "skadebonusMod"], function(values) {
-        const skadeBonus = values.skadeBonus;
-        const skadeBonusMod = values.skadebonusMod;
-        let total = "";
-        if (skadeBonusMod) {
-          total = skadeBonus + "+" + skadeBonusMod
-        } else {
-          total = skadeBonus
-        }
-        setAttrs({
-            skadeBonusTot: total
+            skadeBonus: damagebonus,
+            skadeBonusTot: damagebonusTotal,
+            skadeBonusTvaHand: damagebonusTwoHanded,
+            skadeBonusTvaHandTot: damagebonusTwoHandedTotal
         });
     });
   });
@@ -3829,6 +3815,49 @@ var TAS = TAS || (function(){
       setAttrs({
         repeating_sprak_spraktotfv: Fv+Mod
       });
+    });
+  });
+
+  on("change:repeating_spells:spell_fv_mod change:repeating_spells:spell_fv", function() {
+    getAttrs(["repeating_spells_spell_fv_mod", "repeating_spells_spell_fv"], function(values) {
+      let Mod = parseInt(values.repeating_spells_spell_fv_mod,10)||0;
+      let Fv = parseInt(values.repeating_spells_spell_fv,10)||0;
+      console.log('Updating spell skill');
+      setAttrs({
+        repeating_spells_spell_fv_total: Fv+Mod
+      });
+    });
+  });
+
+  on("change:repeating_vapen:vapenskill", function() {
+    getAttrs(["repeating_vapen_vapenSkill"], function(values) {
+      const skill = values.repeating_vapen_vapenSkill;
+      let display = "";
+      display = skill.replace(/\{|\}|\@/gi, '')
+      console.log('Updating vapen skill: ' + skill);
+      console.log('Vapen skill text: ' + display);
+      setAttrs({
+        repeating_vapen_vapenSkillDisplay: display
+      });
+    });
+  });
+
+  on("change:repeating_vapen:vapenskadabonus", function() {
+    getAttrs(["repeating_vapen_vapenSkadaBonus"], function(values) {
+      const damagebonusType = values.repeating_vapen_vapenSkadaBonus;
+      let type = "";
+      let display = "";
+      type = damagebonusType.replace(/\{|\}|\@/gi, '');
+      console.log('Updating damagebonusType: ' + damagebonusType);
+      console.log('damagebonusType text: ' + type);
+      if (type == "skadeBonusTot") {
+        display = "Normal"
+      } else if (type == "skadeBonusTvaHandTot") {
+          display = "2-hand"
+      }
+      setAttrs({
+        repeating_vapen_vapenSkadaBonusDisplay: display
+      })
     });
   });
 
