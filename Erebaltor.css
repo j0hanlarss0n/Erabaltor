@@ -1640,11 +1640,15 @@ h2.sheet-grid-section-header:before {
 /               NEW STYLE                 /
 /                                         /
 /========================================*/
- 
-.sheet-row {
+
+div.charctersheet.charsheet {
+  padding:0px;
+}
+
+.sheet-data.sheet-row {
   background-color: var(--background-row);
   border: 1px solid #635b14;
-  height: var(--height-row); 
+  min-height: var(--height-row); 
 }
 
 .sheet-row:hover,
