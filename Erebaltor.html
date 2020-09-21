@@ -2414,13 +2414,19 @@
         <div class="sheet-section sheet-grid sheet-equiptment-grid">
           <h2 class="sheet-grid-section-header">Utrustning</h2>
           <div class="sheet-equiptment-grid-list">
-            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-allt" value="Allt" />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-allt"            value="Allt" checked/>
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"   />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
-            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-riddjur"         value="Riddjur"   />
-            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"   checked       />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-djur"            value="Djur"   />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-all"                 value="Allt" checked/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-backpack"            value="Packning"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-bank"                value="Bank"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-character"           value="Karaktär"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-house"               value="Hus"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-horse"               value="Häst"/>
             <div class="sheet-equiptment sheet-table sheet-header sheet-row sheet-show-while-edit">
               <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-name">Föremål</div>
               <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-left sheet-desc">Beskrivning</div>
@@ -2432,15 +2438,16 @@
                 <option>Drycker</option>
                 <option>Magiska föremål</option>
                 <option>Egendom</option>
-                <option>Riddjur</option>
+                <option>Djur</option>
                 <option>Övrigt</option>
               </select>
               <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-where" name="attr_equiptment_place">
                 <option>Allt</option>
-                <option>På spelaren</option>
+                <option>Bank</option>
                 <option>Hus</option>
                 <option>Häst</option>
-                <option>Bank</option>
+                <option>Karaktär</option>
+                <option>Packning</option>
               </select>
             </div>
             <div class="sheet-equiptment sheet-table sheet-header sheet-row sheet-hide-while-edit">
@@ -2454,48 +2461,54 @@
                 <option>Drycker</option>
                 <option>Magiska föremål</option>
                 <option>Egendom</option>
-                <option>Riddjur</option>
+                <option>Djur</option>
                 <option>Övrigt</option>
               </select>
               <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-where" name="attr_equiptment_place">
                 <option>Allt</option>
                 <option>Bank</option>
-                <option>Karaktär</option>
-                <option>Packning</option>
                 <option>Hus</option>
                 <option>Häst</option>
+                <option>Karaktär</option>
+                <option>Packning</option>
               </select>
             </div>
             <fieldset class="repeating_equiptment">
-              <input type="radio" name="attr_equiptment_filter" class="sheet-hidden sheet-utrustning-allt" value="Allt" />
-              <input type="radio" name="attr_equiptment_filter" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"   />
-              <input type="radio" name="attr_equiptment_filter" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
-              <input type="radio" name="attr_equiptment_filter" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
-              <input type="radio" name="attr_equiptment_filter" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
-              <input type="radio" name="attr_equiptment_filter" class="sheet-hidden sheet-utrustning-riddjur"         value="Riddjur"   />
-              <input type="radio" name="attr_equiptment_filter" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"   checked       />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-allt"           value="Allt" checked/>
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-klader"         value="Kläder"   />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-drycker"        value="Drycker"         />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-magiska"        value="Magiska föremål"  />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-egendom"        value="Egendom"         />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-djur"           value="Djur"   />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-ovrigt"         value="Övrigt"     />
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-all"                 value="Allt" checked/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-backpack"            value="Packning"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-bank"                value="Bank"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-character"           value="Karaktär"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-house"               value="Hus"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-horse"               value="Häst"/>
               <div class="sheet-equiptment-pair">
                 <div class="sheet-equiptment sheet-table sheet-row sheet-show-while-edit">
                   <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-name" type="text" name="attr_equiptment_item" value=""/>
                   <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-left sheet-desc" type="text" name="attr_equiptment_desc" value=""/>
-                  <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-amount" type="number" name="attr_equiptment_amount" value=""/>
-                  <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-weight" type="number" name="attr_equiptment_weight" value=""/>
+                  <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-amount" type="number" step="any" name="attr_equiptment_amount" value=""/>
+                  <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-weight" type="number" step="any" name="attr_equiptment_weight" value=""/>
                   <select class="sheet-equiptment sheet-table sheet-data sheet-field sheet-select" name="attr_equiptment_filter">
                     <option>Allt</option>
                     <option>Kläder</option>
                     <option>Drycker</option>
                     <option>Magiska föremål</option>
                     <option>Egendom</option>
-                    <option>Riddjur</option>
+                    <option>Djur</option>
                     <option>Övrigt</option>
                   </select>
-                  <select class="sheet-equiptment sheet-table sheet-data sheet-field sheet-select" name="attr_equiptment_place">
+                  <select class="sheet-equiptment sheet-table sheet-data sheet-field sheet-select" name="attr_equiptment_filter_place">
                     <option>Allt</option>
                     <option>Bank</option>
-                    <option>Karaktär</option>
-                    <option>Packning</option>
                     <option>Hus</option>
                     <option>Häst</option>
+                    <option>Karaktär</option>
+                    <option>Packning</option>
                   </select>
                 </div>
                 <div class="sheet-equiptment sheet-table sheet-row sheet-hide-while-edit">
@@ -2504,7 +2517,7 @@
                   <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-amount" name="attr_equiptment_amount"></span>
                   <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-weight" name="attr_equiptment_weight"></span>
                   <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-left" name="attr_equiptment_filter"></span>
-                  <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-left" name="attr_equiptment_place"></span>
+                  <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-left" name="attr_equiptment_filter_place"></span>
                 </div>
               </div>
             </fieldset>
