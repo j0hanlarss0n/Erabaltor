@@ -4,6 +4,7 @@
   --background-summary: #aaaaaa;
   --background-hover: #b0b0b0;
   --background-input: #d5d5d5;
+  --color-text: #404040;
   --height-header: 1.38em;
   --height-row: 2.2em;
   }
@@ -836,11 +837,21 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   display: block;
 }
 
+.sheet-equiptment-pair {
+  display: none;
+}
+input.sheet-utrustning-allt:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-allt:checked~.repcontainer .sheet-equiptment-pair,
+input.sheet-utrustning-klader:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-ovrigt:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~.sheet-equiptment-pair {
+  display: block;
+}
+
 .sheet-table-header-select-normal {
   border: 1px solid black;
   background-color: gray;
   font-weight: bold;
-  color: white;
+
   font-size: 16px;
   text-align: left;
   padding: 0px;
@@ -878,7 +889,6 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   border: 1px solid black;
   background-color: gray;
   font-weight: bold;
-  color: white;
   font-size: 16px;
   text-align: left;
   padding: 0px;
@@ -1014,6 +1024,15 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   margin-bottom: 3px;
 }
 
+.sheet-row.sheet-equiptment {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 5em 5em 9em 8em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
 .sheet-characterdata-grid {
   display: grid;
   grid-template-areas: 
@@ -1067,15 +1086,6 @@ input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning
   position: relative;
   display: grid;
   grid-template-columns: auto 12em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-attribute {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 3em 3em;
   align-items: center;
   justify-items: center;
   margin-bottom: 3px;
@@ -1589,6 +1599,11 @@ h2.sheet-grid-section-header:before {
   text-align: center;
 }
 
+.sheet-field.sheet-left {
+  text-align: left;
+  justify-self: left;
+}
+
 .sheet-field.sheet-name,
 .sheet-field.sheet-first,
 .sheet-armor-sum.sheet-first,
@@ -1622,4 +1637,22 @@ input[type=number].sheet-field::-webkit-outer-spin-button {
 
 .sheet-header.sheet-field {
   background-color: var(--background-header);
+}
+
+.sheet-header.sheet-select {
+  width:100%;
+  padding: 0px;
+  height: 18px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  background-color: var(--background-header);
+  color:var(--color-text);
+  outline: none;
+}
+
+.sheet-data.sheet-select {
+  width:100%;
+  margin-bottom: 0px;
+  background-color: var(--background-input);
+  color: var(--color-text);
 }
