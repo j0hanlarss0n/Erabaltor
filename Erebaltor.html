@@ -1858,77 +1858,157 @@
               <div class="sheet-table-header-field sheet-health-armor">RV</div>
               <div class="sheet-table-header-field sheet-health-wounds">Skada</div>
             </div>
-            <div class="sheet-health sheet-table-row">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Huvud"     />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kphuvud_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kphuvud"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_head_sum"  value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarhuvud"        value="0" min="0" />
+            <div class="sheet-health-pair">
+              <div class="sheet-health sheet-table-row sheet-row sheet-show-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Huvud</span>
+                <input class="sheet-table-row-field sheet-health-other" type="text" name="attr_head_other" value=""/>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kphuvud_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kphuvud">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_head_sum">0</span>
+                <input class="sheet-table-row-field sheet-health-wounds" type="number" name="attr_sarhuvud" value="0" min="0"/>
+              </div>
+              <div class="sheet-health sheet-table-row sheet-row sheet-hide-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Huvud</span>
+                <span class="sheet-table-row-field sheet-health-other" name="attr_head_other"></span>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kphuvud_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kphuvud">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_head_sum">0</span>
+                <span class="sheet-table-row-field sheet-health-wounds" name="attr_sarhuvud">0</span>
+              </div>
             </div>
-            <div class="sheet-health sheet-table-row">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Höger arm"     />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kphogerarm_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kphogerarm"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_rightarm_sum"  value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarhogerarm"        value="0" min="0" />
+            <div class="sheet-health-pair">
+              <div class="sheet-health sheet-table-row sheet-row sheet-show-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Höger arm</span>
+                <input class="sheet-table-row-field sheet-health-other" type="text" name="attr_rightarm_other" value=""/>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kphogerarm_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kphogerarm">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_rightarm_sum">0</span>
+                <input class="sheet-table-row-field sheet-health-wounds" type="number" name="attr_sarhogerarm" value="0" min="0"/>
+              </div>
+              <div class="sheet-health sheet-table-row sheet-row sheet-hide-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Höger arm</span>
+                <span class="sheet-table-row-field sheet-health-other" name="attr_rightarm_other"></span>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kphogerarm_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kphogerarm">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_rightarm_sum">0</span>
+                <span class="sheet-table-row-field sheet-health-wounds" name="attr_sarhogerarm">0</span>
+              </div>
             </div>
-            <div class="sheet-health sheet-table-row">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Vänster arm"     />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpvansterarm_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpvansterarm"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_leftarm_sum"  value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarvansterarm"        value="0" min="0" />
+            <div class="sheet-health-pair">
+              <div class="sheet-health sheet-table-row sheet-row sheet-show-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Vänster arm</span>
+                <input class="sheet-table-row-field sheet-health-other" type="text" name="attr_leftarm_other" value=""/>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpvansterarm_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpvansterarm">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_leftarm_sum">0</span>
+                <input class="sheet-table-row-field sheet-health-wounds" type="number" name="attr_sarvansterarm" value="0" min="0"/>
+              </div>
+              <div class="sheet-health sheet-table-row sheet-row sheet-hide-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Vänster arm</span>
+                <span class="sheet-table-row-field sheet-health-other" name="attr_leftarm_other"></span>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpvansterarm_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpvansterarm">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_leftarm_sum">0</span>
+                <span class="sheet-table-row-field sheet-health-wounds" name="attr_sarvansterarm">0</span>
+              </div>
             </div>
-            <div class="sheet-health sheet-table-row">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Bröst"     />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpbrost_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpbrost"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_torso_sum"  value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarbrost"        value="0" min="0" />
+            <div class="sheet-health-pair">
+              <div class="sheet-health sheet-table-row sheet-row sheet-show-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Bröst</span>
+                <input class="sheet-table-row-field sheet-health-other" type="text" name="attr_torso_other" value=""/>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpbrost_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpbrost">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_torso_sum">0</span>
+                <input class="sheet-table-row-field sheet-health-wounds" type="number" name="attr_sarbrost" value="0" min="0"/>
+              </div>
+              <div class="sheet-health sheet-table-row sheet-row sheet-hide-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Bröst</span>
+                <span class="sheet-table-row-field sheet-health-other" name="attr_torso_other"></span>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpbrost_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpbrost">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_torso_sum">0</span>
+                <span class="sheet-table-row-field sheet-health-wounds" name="attr_sarbrost">0</span>
+              </div>
             </div>
-            <div class="sheet-health sheet-table-row">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Mage"     />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpmage_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpmage"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_stomach_sum"  value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarmage"        value="0" min="0" />
+            <div class="sheet-health-pair">
+              <div class="sheet-health sheet-table-row sheet-row sheet-show-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Mage</span>
+                <input class="sheet-table-row-field sheet-health-other" type="text" name="attr_stomach_other" value=""/>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpmage_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpmage">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_stomach_sum">0</span>
+                <input class="sheet-table-row-field sheet-health-wounds" type="number" name="attr_sarmage" value="0" min="0"/>
+              </div>
+              <div class="sheet-health sheet-table-row sheet-row sheet-hide-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Mage</span>
+                <span class="sheet-table-row-field sheet-health-other" name="attr_stomach_other"></span>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpmage_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpmage">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_stomach_sum">0</span>
+                <span class="sheet-table-row-field sheet-health-wounds" name="attr_sarmage">0</span>
+              </div>
             </div>
-            <div class="sheet-health sheet-table-row">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Höger ben"     />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kphogerben_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kphogerben"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_rightleg_sum"  value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarhogerben"        value="0" min="0" />
+            <div class="sheet-health-pair">
+              <div class="sheet-health sheet-table-row sheet-row sheet-show-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Höger ben</span>
+                <input class="sheet-table-row-field sheet-health-other" type="text" name="attr_rightleg_other" value=""/>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kphogerben_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kphogerben">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_rightleg_sum">0</span>
+                <input class="sheet-table-row-field sheet-health-wounds" type="number" name="attr_sarhogerben" value="0" min="0"/>
+              </div>
+              <div class="sheet-health sheet-table-row sheet-row sheet-hide-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Höger ben</span>
+                <span class="sheet-table-row-field sheet-health-other" name="attr_rightleg_other"></span>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kphogerben_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kphogerben">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_rightleg_sum">0</span>
+                <span class="sheet-table-row-field sheet-health-wounds" name="attr_sarhogerben">0</span>
+              </div>
             </div>
-            <div class="sheet-health sheet-table-row">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Vänster ben"     />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpvansterben_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpvansterben"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"   name="attr_armor_leftleg_sum"  value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sarvansterben"        value="0" min="0" />
+            <div class="sheet-health-pair">
+              <div class="sheet-health sheet-table-row sheet-row sheet-show-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Vänster ben</span>
+                <input class="sheet-table-row-field sheet-health-other" type="text" name="attr_leftleg_other" value=""/>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpvansterben_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpvansterben">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_leftleg_sum">0</span>
+                <input class="sheet-table-row-field sheet-health-wounds" type="number" name="attr_sarvansterben" value="0" min="0"/>
+              </div>
+              <div class="sheet-health sheet-table-row sheet-row sheet-hide-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">Vänster ben</span>
+                <span class="sheet-table-row-field sheet-health-other" name="attr_leftleg_other"></span>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpvansterben_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpvansterben">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_leftleg_sum">0</span>
+                <span class="sheet-table-row-field sheet-health-wounds" name="attr_sarvansterben">0</span>
+              </div>
             </div>
-            <div class="sheet-health sheet-table-row">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="KP skador:"     />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kpgenerell_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kpgenerell"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"                                   value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sargenerell"        value="0" min="0" />
+            <div class="sheet-health-pair">
+              <div class="sheet-health sheet-table-row sheet-row sheet-show-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">KP skador:</span>
+                <input class="sheet-table-row-field sheet-health-other" type="text" name="attr_generall_other" value=""/>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpgenerell_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpgenerell">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor">0</span>
+                <input class="sheet-table-row-field sheet-health-wounds" type="number" name="attr_sargenerell" value="0" min="0"/>
+              </div>
+              <div class="sheet-health sheet-table-row sheet-row sheet-hide-while-edit">
+                <span  class="sheet-table-row-field sheet-health-bodypart">KP skador:</span>
+                <span class="sheet-table-row-field sheet-health-other" name="attr_eng_other"></span>
+                <span  class="sheet-table-row-field sheet-health-max" name="attr_kpgenerell_max">0</span>
+                <span  class="sheet-table-row-field sheet-health-current" name="attr_kpgenerell">0</span>
+                <span  class="sheet-table-row-field sheet-health-armor" name="attr_armor_eng_sum">0</span>
+                <span class="sheet-table-row-field sheet-health-wounds" name="attr_sargenerell">0</span>
+              </div>
             </div>
-            <div class="sheet-health sheet-table-summary">
-              <input class="sheet-table-row-field sheet-health-bodypart"  type="text"   readonly="true"                               value="Totalt:"     />
-              <input class="sheet-table-row-field sheet-health-other"     type="text"                                                 value=""         />
-              <input class="sheet-table-row-field sheet-health-max"       type="number" readonly="true"   name="attr_kp_max"     value=""          />
-              <input class="sheet-table-row-field sheet-health-current"   type="number" readonly="true"   name="attr_kp"         value=""          />
-              <input class="sheet-table-row-field sheet-health-armor"     type="number" readonly="true"                                   value=""  min="0" />
-              <input class="sheet-table-row-field sheet-health-wounds"    type="number"                   name="attr_sar_totalt"        value="0" min="0" />
+            <div class="sheet-health sheet-table-summary sheet-table-row sheet-row">
+              <span  class="sheet-table-summary-field sheet-health-bodypart">Totalt:</span>
+              <span class="sheet-table-summary-field sheet-health-other" name="attr_Total_other"></span>
+              <span  class="sheet-table-summary-field sheet-health-max" name="attr_kp_max">0</span>
+              <span  class="sheet-table-summary-field sheet-health-current" name="attr_kp">0</span>
+              <span  class="sheet-table-summary-field sheet-health-armor"></span>
+              <span class="sheet-table-summary-field sheet-health-wounds" name="attr_sar_totalt">0</span>
             </div>
           </div>
           <div class="sheet-combat-grid-armor">
@@ -3792,7 +3872,7 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:repeating_yrkes:yrkesmod change:repeating_yrkes:yrkesfv", function() {
+  on("change:repeating_yrkes:yrkesmod change:repeating_yrkes:yrkesfv sheet:opened", function() {
     getAttrs(["repeating_yrkes_yrkesmod", "repeating_yrkes_yrkesfv", "repeating_yrkes_yrkesnamn"], function(values) {
       let skillNames = ["Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans", "Slunga"]
       if (skillNames.includes(values.repeating_yrkes_yrkesnamn)) {
@@ -3809,7 +3889,7 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:repeating_sekundar:sekundarmod change:repeating_sekundar:sekundarfv", function() {
+  on("change:repeating_sekundar:sekundarmod change:repeating_sekundar:sekundarfv sheet:opened", function() {
     getAttrs(["repeating_sekundar_sekundarmod", "repeating_sekundar_sekundarfv", "repeating_sekundar_sekundarnamn"], function(values) {
       let skillNames = ["Båge", "Armborst", "Kastvapen", "Stångvapen", "Enhandsyxa", "Tvåhandsyxa", "Dolk", "Enhandssvärd", "Tvåhandssvärd", "Enhandskrossvapen", "Tvåhandskrossvapen", "Sköld", "Värja", "Parerdolk", "Lans", "Slunga"]
       if (skillNames.includes(values.repeating_sekundar_sekundarnamn)) {
@@ -3826,17 +3906,7 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:slagsmalmod change:slagsmal", function() {
-    getAttrs(["slagsmalmod", "slagsmal"], function(values) {
-      let fvMod = parseInt(values.slagsmalmod,10)||0;
-      let fv = parseInt(values.slagsmal,10)||0;
-      setAttrs({
-        Slagsmål: fvMod+fv
-      });
-    });
-  });
-
-  on("change:bluffamod change:bluffa change:finnadoldatingmod change:finnadoldating change:forstahjalpenmod change:forstahjalpen change:gommasigmod change:gommasig change:hoppamod change:hoppa change:klattramod change:klattra change:kopslamod change:kopsla change:lyssnamod change:lyssna change:lsmodersmalmodmod change:lsmodersmalmod change:ridamod change:rida change:sjungamod change:sjunga change:slagsmalmod change:slagsmal change:smygamod change:smyga change:sparamod change:spara change:stjalaforemalmod change:stjalaforemal change:talamodersmalmod change:talamodersmal change:upptackafatamod change:upptackafata change:varderamod change:vardera change:overtalamod change:overtala", function() {
+  on("change:bluffamod change:bluffa change:finnadoldatingmod change:finnadoldating change:forstahjalpenmod change:forstahjalpen change:gommasigmod change:gommasig change:hoppamod change:hoppa change:klattramod change:klattra change:kopslamod change:kopsla change:lyssnamod change:lyssna change:lsmodersmalmodmod change:lsmodersmalmod change:ridamod change:rida change:sjungamod change:sjunga change:slagsmalmod change:slagsmal change:smygamod change:smyga change:sparamod change:spara change:stjalaforemalmod change:stjalaforemal change:talamodersmalmod change:talamodersmal change:upptackafatamod change:upptackafata change:varderamod change:vardera change:overtalamod change:overtala sheet:opened", function() {
     getAttrs(["bluffaMod", "bluffa", "finnaDoldaTingMod", "finnaDoldaTing", "forstaHjalpenMod", "forstaHjalpen", "gommaSigMod", "gommaSig", "hoppaMod", "hoppa", "klattraMod", "klattra", "kopslaMod", "kopsla", "lyssnaMod", "lyssna", "lsModersmalModMod", "lsModersmalMod", "ridaMod", "rida", "sjungaMod", "sjunga", "slagsmalMod", "slagsmal", "smygaMod", "smyga", "sparaMod", "spara", "stjalaForemalMod", "stjalaForemal", "talaModersmalMod", "talaModersmal", "upptackaFaraMod", "upptackaFara", "varderaMod", "vardera", "overtalaMod", "overtala"], function(values) {
       let bluffaMod = parseInt(values.bluffaMod,10)||0;
       let bluffa = parseInt(values.bluffa,10)||0;
@@ -3901,7 +3971,7 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:repeating_yrkes:yrkesmod change:repeating_yrkes:yrkesfv", function() {
+  on("change:repeating_yrkes:yrkesmod change:repeating_yrkes:yrkesfv sheet:opened", function() {
     getAttrs(["repeating_yrkes_yrkesmod", "repeating_yrkes_yrkesfv"], function(values) {
       let Mod = parseInt(values.repeating_yrkes_yrkesmod,10)||0;
       let Fv = parseInt(values.repeating_yrkes_yrkesfv,10)||0;
@@ -3912,7 +3982,7 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:repeating_sekundar:sekundarmod change:repeating_sekundar:sekundarfv", function() {
+  on("change:repeating_sekundar:sekundarmod change:repeating_sekundar:sekundarfv sheet:opened", function() {
     getAttrs(["repeating_sekundar_sekundarmod", "repeating_sekundar_sekundarfv"], function(values) {
       let Mod = parseInt(values.repeating_sekundar_sekundarmod,10)||0;
       let Fv = parseInt(values.repeating_sekundar_sekundarfv,10)||0;
@@ -3923,7 +3993,7 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:repeating_sprak:sprakmod change:repeating_sprak:sprakfv", function() {
+  on("change:repeating_sprak:sprakmod change:repeating_sprak:sprakfv sheet:opened", function() {
     getAttrs(["repeating_sprak_sprakmod", "repeating_sprak_sprakfv"], function(values) {
       let Mod = parseInt(values.repeating_sprak_sprakmod,10)||0;
       let Fv = parseInt(values.repeating_sprak_sprakfv,10)||0;
@@ -3934,7 +4004,7 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:repeating_spells:spell_fv_mod change:repeating_spells:spell_fv", function() {
+  on("change:repeating_spells:spell_fv_mod change:repeating_spells:spell_fv sheet:opened", function() {
     getAttrs(["repeating_spells_spell_fv_mod", "repeating_spells_spell_fv"], function(values) {
       let Mod = parseInt(values.repeating_spells_spell_fv_mod,10)||0;
       let Fv = parseInt(values.repeating_spells_spell_fv,10)||0;
@@ -3945,7 +4015,7 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:repeating_vapen:vapenskill", function() {
+  on("change:repeating_vapen:vapenskill sheet:opened", function() {
     getAttrs(["repeating_vapen_vapenSkill"], function(values) {
       const skill = values.repeating_vapen_vapenSkill;
       let display = "";
@@ -3958,7 +4028,7 @@ var TAS = TAS || (function(){
     });
   });
 
-  on("change:repeating_vapen:vapenskadabonus", function() {
+  on("change:repeating_vapen:vapenskadabonus  sheet:opened", function() {
     getAttrs(["repeating_vapen_vapenSkadaBonus"], function(values) {
       const damagebonusType = values.repeating_vapen_vapenSkadaBonus;
       let type = "";

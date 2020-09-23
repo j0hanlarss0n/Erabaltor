@@ -61,7 +61,8 @@ When editing the sheet, the sections that are shown when not editing should be h
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-fv,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-fv-mod,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-cost,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-perfects {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-perfects,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health-other {
   display: none;
 }
 
@@ -1291,6 +1292,15 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   margin-bottom: 3px;
 }
 
+.sheet-health.sheet-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 8em auto 4em 4em 4em 4em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
 .sheet-vapen.sheet-table-row:hover,
 .sheet-skill.sheet-table-row:hover,
 .sheet-armor.sheet-table-row:hover,
@@ -1341,6 +1351,16 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-template-columns: auto 14em 4em 4em 4em 3em;
 }
 
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health.sheet-row {
+  grid-template-columns: auto 4em 4em 4em 4em;
+}
+
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-health,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-health.sheet-row {
+  grid-template-columns: auto 4em 4em 4em 4em;
+}
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill {
   grid-template-columns: auto 3em 3em;
