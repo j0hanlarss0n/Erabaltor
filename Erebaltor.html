@@ -254,11 +254,11 @@
             </div>
             <div class="sheet-general-pair sheet-general-characterAlignment">
               <div class="sheet-general sheet-table-row sheet-show-while-edit">
-                <strong class="sheet-table-row-field sheet-general-name">Alignment</strong>
+                <strong class="sheet-table-row-field sheet-general-name">karaktärsdrag</strong>
                 <input  class="sheet-table-row-field sheet-general-value" type="text" value="" name="attr_characterAlignment"/>
               </div>
               <div class="sheet-general sheet-table-row sheet-hide-while-edit">
-                <strong class="sheet-table-row-field sheet-general-name">Alignment</strong>
+                <strong class="sheet-table-row-field sheet-general-name">karaktärsdrag</strong>
                 <span   class="sheet-table-row-field sheet-general-value" name="attr_characterAlignment"></span>
               </div>
             </div>
@@ -1209,30 +1209,30 @@
             </div>
             <fieldset class="repeating_spells">
               <div class="sheet-pair">
-                <div class="sheet-spell sheet-table sheet-row sheet-show-while-edit">
-                  <input class="sheet-spell sheet-table sheet-field sheet-name"     type="text"   name="attr_spell_name"      value=""/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-desc"     type="text"   name="attr_spell_desc"      value=""/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-quick"    type="number" name="attr_spell_quick"     value="0"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-still"    type="number" name="attr_spell_still"     value="0"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-silent"   type="number" name="attr_spell_silent"    value="0"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-cost"     type="number" name="attr_spell_cost"      value="0"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-perfects" type="number" name="attr_spell_perfects"  value="0"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-fv-mod"   type="number" name="attr_spell_fv_mod"    value="0"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-fv"       type="number" name="attr_spell_fv"        value="0"/>
-                  <input class="sheet-spell sheet-table sheet-field sheet-fv-total" type="number" name="attr_spell_fv_total"  value="0"/>
+                <div class="sheet-spell sheet-table sheet-data sheet-row sheet-show-while-edit">
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-name"     type="text"   name="attr_spell_name"      value=""/>
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-desc"     type="text"   name="attr_spell_desc"      value=""/>
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-quick"    type="number" name="attr_spell_quick"     value="0"/>
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-still"    type="number" name="attr_spell_still"     value="0"/>
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-silent"   type="number" name="attr_spell_silent"    value="0"/>
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-cost"     type="number" name="attr_spell_cost"      value="0"/>
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-perfects" type="number" name="attr_spell_perfects"  value="0"/>
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-fv-mod"   type="number" name="attr_spell_fv_mod"    value="0"/>
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-fv"       type="number" name="attr_spell_fv"        value="0"/>
+                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-fv-total" type="number" name="attr_spell_fv_total"  value="0"/>
                 </div>
-                <div class="sheet-spell sheet-table sheet-row sheet-hide-while-edit">
+                <div class="sheet-spell sheet-table sheet-data sheet-row sheet-hide-while-edit">
                   <button type="roll" name="roll_spell" class="sheet-button-full-hidden" value="&{template:combined} {{name=@{spell_name}}} {{effekt=?{E|1}}} {{vad=Besvärjelse}} ?{Slagtyp|Summa, {{typ=Magi&amp;#125;&amp;#125; {{slag=[[ |Motstånd, {{typ=Magi - Motstånd&amp;#125;&amp;#125; {{slag=[[ -1* }1d20-?{E}+1+@{spell_fv_total}+?{Modifikation|0}]]}}"></button>
-                  <span class="sheet-spell sheet-table sheet-field sheet-name"     name="attr_spell_name"></span>
-                  <span class="sheet-spell sheet-table sheet-field sheet-desc"     name="attr_spell_desc"></span>
-                  <span class="sheet-spell sheet-table sheet-field sheet-quick"    name="attr_spell_quick"></span>
-                  <span class="sheet-spell sheet-table sheet-field sheet-still"    name="attr_spell_still"></span>
-                  <span class="sheet-spell sheet-table sheet-field sheet-silent"   name="attr_spell_silent"></span>
-                  <span class="sheet-spell sheet-table sheet-field sheet-cost"     name="attr_spell_cost"></span>
-                  <span class="sheet-spell sheet-table sheet-field sheet-perfects" name="attr_spell_perfects"></span>
-                  <span class="sheet-spell sheet-table sheet-field sheet-fv-mod"   name="attr_spell_fv_mod"></span>
-                  <span class="sheet-spell sheet-table sheet-field sheet-fv"       name="attr_spell_fv"></span>
-                  <span class="sheet-spell sheet-table sheet-field sheet-fv-total" name="attr_spell_fv_total"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-name"     name="attr_spell_name"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-desc"     name="attr_spell_desc"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-quick"    name="attr_spell_quick"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-still"    name="attr_spell_still"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-silent"   name="attr_spell_silent"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-cost"     name="attr_spell_cost"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-perfects" name="attr_spell_perfects"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-fv-mod"   name="attr_spell_fv_mod"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-fv"       name="attr_spell_fv"></span>
+                  <span class="sheet-spell sheet-table sheet-data sheet-field sheet-fv-total" name="attr_spell_fv_total"></span>
                 </div>
               </div>
             </fieldset>
@@ -1245,15 +1245,15 @@
               <div class="sheet-mana sheet-table sheet-header sheet-field">kvar</div>
             </div>
             <div class="sheet-pair">
-              <div class="sheet-mana sheet-table sheet-row sheet-show-while-edit">
-                <span  class="sheet-mana sheet-table sheet-field" name="attr_psykePoang_max">0</span>
-                <input class="sheet-mana sheet-table sheet-field" name="attr_psykePoangForbrukade" type="number" value="0"/>
-                <span  class="sheet-mana sheet-table sheet-field" name="attr_psykePoang">0</span>
+              <div class="sheet-mana sheet-table sheet-data sheet-row sheet-show-while-edit">
+                <span  class="sheet-mana sheet-table sheet-data sheet-field" name="attr_psykePoang_max">0</span>
+                <input class="sheet-mana sheet-table sheet-data sheet-field" name="attr_psykePoangForbrukade" type="number" value="0"/>
+                <span  class="sheet-mana sheet-table sheet-data sheet-field" name="attr_psykePoang">0</span>
               </div>
-              <div class="sheet-mana sheet-table sheet-row sheet-hide-while-edit">
-                <span class="sheet-mana sheet-table sheet-field" name="attr_psykePoang_max">0</span>
-                <span class="sheet-mana sheet-table sheet-field" name="attr_psykePoangForbrukade">0</span>
-                <span class="sheet-mana sheet-table sheet-field" name="attr_psykePoang">0</span>
+              <div class="sheet-mana sheet-table sheet-data sheet-row sheet-hide-while-edit">
+                <span class="sheet-mana sheet-table sheet-data sheet-field" name="attr_psykePoang_max">0</span>
+                <span class="sheet-mana sheet-table sheet-data sheet-field" name="attr_psykePoangForbrukade">0</span>
+                <span class="sheet-mana sheet-table sheet-data sheet-field" name="attr_psykePoang">0</span>
               </div>
             </div>
           </div>
@@ -2065,7 +2065,7 @@
                     <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollSikta"        value="{{typ=Sikta&amp;#125;&amp;#125; {{skada=[[@{vapenSkada}+@{vapenSkadaMod}+@{vapenSkadaBonus}]]&amp;#125;&amp;#125; {{var=@{vapenRollSiktaPlatser}&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;-5&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]];#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
                     <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollSiktaPlatser" value="?{Sikta på&amp;#124;Huvudet&amp;#44; huvudet&amp;#124;Vänster arm&amp;#44; Vänster arm&amp;#124;Höger arm&amp;#44; Höger arm&amp;#124;Bröstkorg&amp;#44; Bröstkorg&amp;#124;Mage&amp;#44; Mage&amp;#124;Vänster ben&amp;#44; Vänster ben&amp;#124;Höger ben&amp;#44; Höger ben&amp;#125;"/>
                     <input  class="sheet-fardighetstabell"   type="hidden" name="attr_vapenRollParrera"      value="{{typ=Parrera&amp;#125;&amp;#125; {{slag=[[1d20+@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#124;0&amp;#125; ]]&amp;#125;&amp;#125; {{vad=Vapen&amp;#125;&amp;#125; {{perfektslag=[[1t[perfectRoll]]]&amp;#125;&amp;#125; {{fummelslag=[[1t[fumbleRoll]]]&amp;#125;&amp;#125; {{minmax=yes&amp;#125;&amp;#125; {{perfekt=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+20]]&amp;#125;&amp;#125; {{fummel=[[@{vapenSkill}+@{vapenFv}+@{vapenFvMod}+?{Modifikation&amp;#125;+1]]&amp;#125;&amp;#125"/>
-                    <button class="sheet-button-full-hidden" type="roll"   name="roll_vapen"                 value="&{Dcombined} {{name=@{vapenNamn}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"></button>
+                    <button class="sheet-button-full-hidden" type="roll"   name="roll_vapen"                 value="&{template:combined} {{name=@{vapenNamn}}} ?{Handling|Attack, @{vapenRollAttack}|Sikta, @{vapenRollSikta}|Parrera, @{vapenRollParrera}}"></button>
                   </div>
                 </div>
               </fieldset>
@@ -2408,10 +2408,126 @@
           </li>
         </ul>
       </li>
+      <li name="Utrustning2">
+        <input type="checkbox" class="sheet-testing sheet-firstLevelTab" checked/>
+        <h1>Utrustning</h1>
+        <div class="sheet-section sheet-grid sheet-equiptment-grid">
+          <h2 class="sheet-grid-section-header">Utrustning</h2>
+          <div class="sheet-equiptment-grid-list">
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-allt"            value="Allt" checked/>
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"   />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-djur"            value="Djur"   />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-all"                 value="Allt" checked/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-backpack"            value="Packning"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-bank"                value="Bank"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-character"           value="Karaktär"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-house"               value="Hus"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-horse"               value="Häst"/>
+            <div class="sheet-equiptment sheet-table sheet-header sheet-row sheet-show-while-edit">
+              <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-name">Föremål</div>
+              <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-left sheet-desc">Beskrivning</div>
+              <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-amount">Antal</div>
+              <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-weight">Vikt (kg)</div>
+              <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-what" name="attr_equiptment_type">
+                <option>Allt</option>
+                <option>Kläder</option>
+                <option>Drycker</option>
+                <option>Magiska föremål</option>
+                <option>Egendom</option>
+                <option>Djur</option>
+                <option>Övrigt</option>
+              </select>
+              <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-where" name="attr_equiptment_place">
+                <option>Allt</option>
+                <option>Bank</option>
+                <option>Hus</option>
+                <option>Häst</option>
+                <option>Karaktär</option>
+                <option>Packning</option>
+              </select>
+            </div>
+            <div class="sheet-equiptment sheet-table sheet-header sheet-row sheet-hide-while-edit">
+              <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-name">Föremål</div>
+              <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-left sheet-desc">Beskrivning</div>
+              <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-amount">Antal</div>
+              <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-weight">Vikt (kg)</div>
+              <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-what" name="attr_equiptment_type">
+                <option>Allt</option>
+                <option>Kläder</option>
+                <option>Drycker</option>
+                <option>Magiska föremål</option>
+                <option>Egendom</option>
+                <option>Djur</option>
+                <option>Övrigt</option>
+              </select>
+              <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-where" name="attr_equiptment_place">
+                <option>Allt</option>
+                <option>Bank</option>
+                <option>Hus</option>
+                <option>Häst</option>
+                <option>Karaktär</option>
+                <option>Packning</option>
+              </select>
+            </div>
+            <fieldset class="repeating_equiptment">
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-allt"           value="Allt" checked/>
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-klader"         value="Kläder"   />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-drycker"        value="Drycker"         />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-magiska"        value="Magiska föremål"  />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-egendom"        value="Egendom"         />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-djur"           value="Djur"   />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-ovrigt"         value="Övrigt"     />
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-all"                 value="Allt" checked/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-backpack"            value="Packning"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-bank"                value="Bank"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-character"           value="Karaktär"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-house"               value="Hus"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-horse"               value="Häst"/>
+              <div class="sheet-equiptment-pair">
+                <div class="sheet-equiptment sheet-table sheet-data sheet-row sheet-show-while-edit">
+                  <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-name" type="text" name="attr_equiptment_item" value=""/>
+                  <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-left sheet-desc" type="text" name="attr_equiptment_desc" value=""/>
+                  <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-amount" type="number" step="any" name="attr_equiptment_amount" value=""/>
+                  <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-weight" type="number" step="any" name="attr_equiptment_weight" value=""/>
+                  <select class="sheet-equiptment sheet-table sheet-data sheet-field sheet-select" name="attr_equiptment_filter">
+                    <option>Allt</option>
+                    <option>Kläder</option>
+                    <option>Drycker</option>
+                    <option>Magiska föremål</option>
+                    <option>Egendom</option>
+                    <option>Djur</option>
+                    <option>Övrigt</option>
+                  </select>
+                  <select class="sheet-equiptment sheet-table sheet-data sheet-field sheet-select" name="attr_equiptment_filter_place">
+                    <option>Allt</option>
+                    <option>Bank</option>
+                    <option>Hus</option>
+                    <option>Häst</option>
+                    <option>Karaktär</option>
+                    <option>Packning</option>
+                  </select>
+                </div>
+                <div class="sheet-equiptment sheet-table sheet-data sheet-row sheet-hide-while-edit">
+                  <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-name" name="attr_equiptment_item"></span>
+                  <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-left sheet-desc" name="attr_equiptment_desc"></span>
+                  <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-amount" name="attr_equiptment_amount"></span>
+                  <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-weight" name="attr_equiptment_weight"></span>
+                  <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-left" name="attr_equiptment_filter"></span>
+                  <span class="sheet-equiptment sheet-table sheet-data sheet-field sheet-left" name="attr_equiptment_filter_place"></span>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </li>
     </ul>
 
-    <div class="sheet-row">
-      <div class="sheet-col sheet-dod-min">Version 0.1</div>
+    <div class="sheet-version-row">
+      <span>Version 0.4.1</span>
     </div>
   </div>
 
@@ -3858,6 +3974,18 @@ var TAS = TAS || (function(){
       setAttrs({
         repeating_vapen_vapenSkadaBonusDisplay: display
       })
+    });
+  });
+
+  on("change:repeating_utrustning:utrustning_filter", function(eventinfo) {
+    getAttrs(["repeating_utrustning_utrustning_filter"], function(values) {
+      console.log("Previous value: " + eventinfo.previousValue + ". New value: " + eventinfo.newValue);
+    });
+  });
+  
+  on("change:equiptment_type", function(eventinfo) {
+    getAttrs(["equiptment_type"], function(values) {
+      console.log("Previous value: " + eventinfo.previousValue + ". New value: " + eventinfo.newValue);
     });
   });
 
