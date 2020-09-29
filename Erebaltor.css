@@ -898,6 +898,12 @@ input.sheet-utrustning-djur:checked~input.sheet-place-bank:checked~fieldset.repe
 input.sheet-utrustning-djur:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
 input.sheet-utrustning-djur:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
 input.sheet-utrustning-djur:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
 input.sheet-utrustning-ovrigt:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~.sheet-equiptment-pair,
 input.sheet-utrustning-ovrigt:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
 input.sheet-utrustning-ovrigt:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
@@ -1738,4 +1744,10 @@ input[type=number].sheet-field::-webkit-outer-spin-button {
   margin-bottom: 0px;
   background-color: var(--background-input);
   color: var(--color-text);
+  padding: 0px
+}
+
+
+.sheet-data.sheet-select-value {
+  padding-left: 5px;
 }
