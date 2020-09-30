@@ -1246,9 +1246,18 @@
                 <div class="sheet-spell sheet-table sheet-data sheet-row sheet-show-while-edit">
                   <input class="sheet-spell sheet-table sheet-data sheet-field sheet-name"     type="text"     name="attr_spell_name"     value=""/>
                   <input class="sheet-spell sheet-table sheet-data sheet-field sheet-desc"     type="text"     name="attr_spell_desc"     value=""/>
-                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-quick"    type="checkbox" name="attr_spell_quick"    value="on"/>
-                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-still"    type="checkbox" name="attr_spell_still"    value="on"/>
-                  <input class="sheet-spell sheet-table sheet-data sheet-field sheet-silent"   type="checkbox" name="attr_spell_silent"   value="on"/>
+                  <label class="sheet-spell-checkbox-area">
+                    <input class="sheet-spell-checkbox" type="checkbox" name="attr_spell_quick"/>
+                    <span class="sheet-spell-checkmark"></span>
+                  </label>
+                  <label class="sheet-spell-checkbox-area">
+                    <input class="sheet-spell-checkbox" type="checkbox" name="attr_spell_still"/>
+                    <span class="sheet-spell-checkmark"></span>
+                  </label>
+                  <label class="sheet-spell-checkbox-area">
+                    <input class="sheet-spell-checkbox" type="checkbox" name="attr_spell_silent"/>
+                    <span class="sheet-spell-checkmark"></span>
+                  </label>
                   <input class="sheet-spell sheet-table sheet-data sheet-field sheet-cost"     type="number"   name="attr_spell_cost"     value="0"/>
                   <input class="sheet-spell sheet-table sheet-data sheet-field sheet-perfects" type="number"   name="attr_spell_perfects" value="0"/>
                   <input class="sheet-spell sheet-table sheet-data sheet-field sheet-fv-mod"   type="number"   name="attr_spell_fv_mod"   value="0"/>
