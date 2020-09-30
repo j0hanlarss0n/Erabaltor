@@ -1087,7 +1087,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 .sheet-row.sheet-spell {
   position: relative;
   display: grid;
-  grid-template-columns: auto 14em 4em 4em 4em 4em 3em 3em 3em;
+  grid-template-columns: auto 14em 4em 3em 3em 3em 3em 3em 3em;
   align-items: center;
   justify-items: center;
   margin-bottom: 3px;
@@ -1268,7 +1268,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 .sheet-vapen {
   position: relative;
   display: grid;
-  grid-template-columns: auto 8em 3em 3em 3em 4em 3em 5em 3em 6em;
+  grid-template-columns: auto 9em 3em 3em 3em 4em 3em 5em 3em 6em;
   align-items: center;
   justify-items: center;
   margin-bottom: 3px;
@@ -1337,7 +1337,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen {
-  grid-template-columns: auto 8em 5em 3em;
+  grid-template-columns: auto 9em 5em 3em;
 }
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
@@ -1357,7 +1357,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 }
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-spell {
-  grid-template-columns: auto 14em 4em 4em 4em 3em;
+  grid-template-columns: auto 14em 3em 3em 3em 3em;
 }
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health,
@@ -1384,7 +1384,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 }
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-spell {
-  grid-template-columns: auto 14em 4em 4em 4em 3em 3em;
+  grid-template-columns: auto 14em 3em 3em 3em 3em 3em;
 }
 
 .charsheet .sheet-wrapper button.sheet-button-full-hidden {
@@ -1592,6 +1592,7 @@ input.sheet-health-bodypart,
 .sheet-table-header-field.sheet-vapen-skill,
 .sheet-table-row-field.sheet-vapen-skill {
   justify-self: left;
+  padding: 0px;
 }
 
 .charsheet .sheet-vapen-grid input[type=text].sheet-vapen-namn,
