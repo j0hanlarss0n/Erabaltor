@@ -2107,6 +2107,14 @@
               </div>
             </fieldset>
             <div class="sheet-armor sheet-table-summary sheet-hide-while-edit">
+              <input hidden class="sheet-table-summary-field sheet-armor-weight"   name="attr_armor_weight_sum"   />
+              <input hidden class="sheet-table-summary-field sheet-armor-head"     name="attr_armor_head_sum"     />
+              <input hidden class="sheet-table-summary-field sheet-armor-rightArm" name="attr_armor_rightarm_sum" />
+              <input hidden class="sheet-table-summary-field sheet-armor-leftArm"  name="attr_armor_leftarm_sum"  />
+              <input hidden class="sheet-table-summary-field sheet-armor-torso"    name="attr_armor_torso_sum"    />
+              <input hidden class="sheet-table-summary-field sheet-armor-stomach"  name="attr_armor_stomach_sum"  />
+              <input hidden class="sheet-table-summary-field sheet-armor-rightLeg" name="attr_armor_rightleg_sum" />
+              <input hidden class="sheet-table-summary-field sheet-armor-leftLeg"  name="attr_armor_leftleg_sum"  />
               <span class="sheet-table-summary-field sheet-armor-sum sheet-first"                         >Totalt:</span>
               <span class="sheet-table-summary-field sheet-armor-details"                                 ></span>
               <span class="sheet-table-summary-field sheet-armor-weight"   name="attr_armor_weight_sum"   >0</span>
@@ -2173,12 +2181,12 @@
                     <input class="sheet-table-row-field sheet-vapen-fv"           type="number" name="attr_vapenFv"         value="0"/>
                     <input class="sheet-table-row-field sheet-vapen-fv-mod"       type="number" name="attr_vapenFvMod"      value="0"/>
                     <input class="sheet-table-row-field sheet-vapen-bv"           type="number" name="attr_vapenBv"         value="0"/>
-                    <input class="sheet-table-row-field sheet-vapen-vikt"         type="number" name="attr_vapenVikt"       value="0"/>
-                    <input class="sheet-table-row-field sheet-vapen-rv"           type="number" name="attr_vapenRackvidd"   value="0"/>
+                    <input class="sheet-table-row-field sheet-vapen-vikt"         type="number" name="attr_vapenVikt"       step="any" value="0"/>
+                    <input class="sheet-table-row-field sheet-vapen-rv"           type="number" name="attr_vapenRackvidd"   step="any" value="0"/>
                     <input class="sheet-table-row-field sheet-vapen-skada"        type="text"   name="attr_vapenSkada"      value="0"/>
                     <input class="sheet-table-row-field sheet-vapen-skada-mod"    type="number" name="attr_vapenSkadaMod"   value="0"/>
                     <select class="sheet-table-row-field sheet-vapen-skada-bonus"               name="attr_vapenSkadaBonus">
-                      <option value="0">Ingen</option>
+                      <option value="@{skadeBonusNone}">Ingen</option>
                       <option value="@{skadeBonusTot}">Normal</option>
                       <option value="@{skadeBonusTvaHandTot}">2-hands</option>
                     </select>
@@ -3714,10 +3722,11 @@ var TAS = TAS || (function(){
   });
 
   on("change:stytot change:stotot change:skadebonusmod sheet:opened", function() {
-    getAttrs(["styTot", "stoTot", "skadeBonusMod"], function(values) {
+    getAttrs(["styTot", "stoTot", "skadeBonusMod", "skadeBonusNone"], function(values) {
         const styTot = parseInt(values["styTot"],10)||0;
         const stoTot = parseInt(values["stoTot"],10)||0;
         const damagebonusMod = values.skadeBonusMod;
+        const None = 0;
         const sum = styTot+stoTot;
         let damagebonus = "";
         let damagebonusTwoHanded = "";
@@ -3769,6 +3778,7 @@ var TAS = TAS || (function(){
         }
         setAttrs({
             skadeBonus: damagebonus,
+            skadeBonusNone: None,
             skadeBonusTot: damagebonusTotal,
             skadeBonusTvaHand: damagebonusTwoHanded,
             skadeBonusTvaHandTot: damagebonusTwoHandedTotal
@@ -4100,6 +4110,8 @@ var TAS = TAS || (function(){
         display = "Normal"
       } else if (type == "skadeBonusTvaHandTot") {
           display = "2-hand"
+      } else if (type == "skadeBonusNone") {
+        display = "Ingen"
       }
       setAttrs({
         repeating_vapen_vapenSkadaBonusDisplay: display
