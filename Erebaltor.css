@@ -9,6 +9,14 @@
   --height-row: 2.2em;
 }
 
+
+/*========================================/
+/                                         /
+/               Functional                /
+/                                         /
+/========================================*/
+/*#region*/
+
 /* When not using simple rolls, hide the button that uses simple rolls */
 .charsheet .sheet-wrapper input[name=attr_simple_roll_type_toggle][value="0"] ~ * .sheet-simple-roll {
   display: none;
@@ -34,7 +42,7 @@
   display: none;
 }
 
-
+/* When showing details, hide these columns */
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-skill-totFv,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-attribute-totFv,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value=on] ~ * .sheet-derived-totValue,
@@ -42,12 +50,7 @@
   display: none;
 }
 
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-totFv,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-attribute-totFv,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived-totValue,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-fv-total {
-  display: none;
-}
+/* When not showing details, hide these columns */
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-fv,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-fv-mod,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen-bv,
@@ -71,6 +74,15 @@
   display: none;
 }
 
+/* When editing but not showing details, hide these columns */
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-totFv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-attribute-totFv,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived-totValue,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-fv-total {
+  display: none;
+}
+
+/* When editing but not showing details, show these columns */
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-fv,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-mod,
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-attribute-fv,
@@ -82,9 +94,474 @@
   display: block;
 }
 
+.sheet-equiptment-pair {
+  display: none;
+}
+
+.repitem input.sheet-place-all:checked~.sheet-equiptment-pair,
+.repitem input.sheet-utrustning-allt:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-allt:checked~input.sheet-place-all:checked~.repcontainer .sheet-equiptment-pair,
+input.sheet-utrustning-allt:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-backpack:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-allt:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-bank:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-allt:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-character:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-allt:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-house:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-allt:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-horse:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-klader:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-klader:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-klader:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-klader:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-klader:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-klader:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-drycker:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-drycker:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-drycker:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-drycker:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-drycker:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-drycker:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-magiska:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-magiska:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-magiska:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-magiska:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-magiska:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-magiska:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-egendom:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-egendom:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-egendom:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-egendom:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-egendom:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-egendom:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-djur:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-djur:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-djur:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-djur:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-djur:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-djur:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-pengar:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-ovrigt:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-ovrigt:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-ovrigt:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-ovrigt:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-ovrigt:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
+input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair {
+  display: block;
+}
+/*#endregion*/
+
+/*========================================/
+/                                         /
+/             Row appearance              /
+/                                         /
+/========================================*/
+/*#region*/
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen {
+  grid-template-columns: auto 9em 5em 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
+  grid-template-columns: auto 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-attribute {
+  grid-template-columns: auto 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-derived {
+  grid-template-columns: auto 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor {
+  grid-template-columns: auto 4em 4em 4em 4em 4em 4em 4em 4em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-spell {
+  grid-template-columns: auto 14em 3em 3em 3em 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health.sheet-row {
+  grid-template-columns: auto 4em 4em 4em 4em;
+}
+
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-health,
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-health.sheet-row {
+  grid-template-columns: auto 4em 4em 4em 4em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill {
+  grid-template-columns: auto 3em 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-attribute {
+  grid-template-columns: auto 3em 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived {
+  grid-template-columns: auto 3em 3em;
+}
+
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-spell {
+  grid-template-columns: auto 14em 3em 3em 3em 3em 3em;
+}
+/*#endregion*/
+
+
+/*========================================/
+/                                         /
+/                  Grids                  /
+/                                         /
+/========================================*/
+/*#region*/
+
+/*DEFAULT*//*#region*/
+/*#endregion*/
+
+/*TOGGLE*//*#region*/
+.sheet-toggle {
+  position: sticky;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 0.5rem;
+  padding: 1rem;
+  background-color: #262626;
+  box-shadow: 0 5px 5px black;
+  padding: 5px;
+}
+
+.sheet-toggle label {
+  margin: 0;
+}
+.sheet-toggle span {
+  top: 50%;
+  left: 50%;
+  height: 25px;
+  transform: translate(-25%, -25%);
+  background: #262626;
+  color: #444444;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 25px;
+  font-family: Verdana;
+  transition: .2s;
+}
+
+.sheet-toggle input {
+  opacity: 0;
+}
+
+.sheet-toggle input:hover + span {
+  color: #555555;
+}
+
+.sheet-toggle input:checked + span {
+  color: #14a11c;
+  text-shadow: 0 0 2px 00fff5;
+}
+/*#endregion*/
+
+/*MAGIC*//*#region*/
+.sheet-magic-grid {
+  display: grid;
+  grid-template-areas: 
+    'mana extra'
+    'spells spells';
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.sheet-magic-grid-spells {
+  grid-area: spells;
+}
+
+.sheet-row.sheet-spell {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 14em 4em 3em 3em 3em 3em 3em 3em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-magic-grid-mana {
+  grid-area: mana;
+}
+
+.sheet-row.sheet-mana {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-mana.sheet-extra.sheet-textarea {
+  height: 4.75em;
+  grid-auto-columns: 1fr;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.sheet-magic-grid-extra {
+  grid-area: extra;
+}
+
+.sheet-row.sheet-extra {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-row.sheet-equiptment {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 5em 5em 9em 8em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+/*#endregion*/
+
+/*CHARACTER*//*#region*/
+.sheet-characterdata-grid {
+  display: grid;
+  grid-template-areas: 
+    'general attribute'
+    'general derived'
+    'experience ability'
+    'extra extra';
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.sheet-characterdata-grid-general {
+  grid-area: general;
+}
+
+.sheet-general {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 12em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-characterdata-grid-attribute {
+  grid-area: attribute;
+}
+
+.sheet-attribute {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 3em 3em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-characterdata-grid-derived {
+  grid-area: derived;
+}
+
+.sheet-derived {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 3em 3em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+
+.sheet-characterdata-grid-experience {
+  grid-area: experience;
+}
+
+.sheet-experience {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 4em 4em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-characterdata-grid-ability {
+  grid-area: ability;
+}
+
+.sheet-ability {
+  position: relative;
+  display: grid;
+  grid-template-columns: 12em auto;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-extra {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-characterdata-grid-extra {
+  grid-area: extra;
+}
+.sheet-characterdata-grid-extra textarea {
+  height: 7.5em;
+  grid-auto-columns: 1fr;
+  box-sizing: border-box;
+  resize: none;
+}
+/*#endregion*/
+
+/*COMBAT*//*#region*/
+.sheet-combat-grid {
+  display: grid;
+  grid-template-areas: 
+    'health'
+    'armor'
+    'weapon';
+  grid-template-columns: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.sheet-combat-grid-health {
+  grid-area: health;
+}
+
+.sheet-health {
+  position: relative;
+  display: grid;
+  grid-template-columns: 8em auto 4em 4em 4em 4em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-health.sheet-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 8em auto 4em 4em 4em 4em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-combat-grid-armor {
+  grid-area: armor;
+}
+
+.sheet-armor {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 15em 4em 4em 4em 4em 4em 4em 4em 4em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-combat-grid-weapon {
+  grid-area: weapon;
+}
+
+.sheet-vapen-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.sheet-vapen {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 9em 3em 3em 3em 4em 3em 5em 3em 6em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+/*#endregion*/
+
+/*SKILL*/ /*#region*/
+.sheet-skill-grid {
+  display: grid;
+  grid-template-areas: 
+    'primary profession'
+    'primary secondary'
+    'primary language';
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.sheet-skill-grid-primary {
+  grid-area: primary;
+}
+
+.sheet-skill-grid-profession {
+  grid-area: profession;
+}
+
+.sheet-skill-grid-secondary {
+  grid-area: secondary;
+}
+
+.sheet-skill-grid-language {
+  grid-area: language;
+}
+
+.sheet-skill {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 3em 3em 3em 3em;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 3px;
+}
+
+.sheet-testing:checked ~ .sheet-grid {
+  max-height: 0;
+  margin-bottom: 200;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+/*#endregion*/
+/*#endregion*/
+
+
+/*========================================/
+/                                         /
+/                  Other                  /
+/                                         /
+/========================================*/
+
+
+
+
 .charsheet {
   background-color: white;
 }
+
 
 .charsheet .sheet-wrapper h1 {
   margin: 0;
@@ -131,7 +608,6 @@
   background: none;
 }
 
-/* Cols */
 
 .charsheet .sheet-wrapper .sheet-saves .sheet-col {
   width: 150px;
@@ -437,7 +913,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   width: 50%;
 }
 
-/* Input fields */
+
 
 .sheet-textarea_wide {
   width: 50%;
@@ -445,7 +921,7 @@ input[type="number"].sheet-fardighetstabell_number_wide {
   border: 1px solid black;
 }
 
-/* roll template */
+
 .sheet-rolltemplate-combined .sheet-container .sheet-container,
 .sheet-rolltemplate-dropdownTest .sheet-container .sheet-container,
 .sheet-rolltemplate-DoDSummaEllerMotstandGrundegenskap
@@ -783,7 +1259,7 @@ ul li .sheet-testing:checked .sheet-firstLevelTab .sheet-secondLevelTabs {
   width: auto;
   background-color: #eee;
   border: 0px solid #666666;
-  border-spacing: 0px; /* cellspacing:poor IE support for  this */
+  border-spacing: 0px; 
   width: 100%;
 }
 
@@ -797,7 +1273,7 @@ ul li .sheet-testing:checked .sheet-firstLevelTab .sheet-secondLevelTabs {
 }
 
 .sheet-skills-table-cell {
-  float: left; /* fix for  buggy browsers */
+  float: left; 
   display: table-cell;
   width: auto;
   background-color: #ccc;
@@ -832,91 +1308,8 @@ ul li .sheet-testing:checked .sheet-firstLevelTab .sheet-secondLevelTabs {
   display: none;
 }
 
-/* Decide which specific repitems to display.  */
-input.sheet-utrustning-alla-kategorier:checked~table .sheet-filtrerad_utrustning,      /* Always display items marked alla  */
-.sheet-utrustning-klader~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-klader:checked~table .sheet-filtrerad_utrustning,
-.sheet-utrustning-drycker~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~table .sheet-filtrerad_utrustning,
-.sheet-utrustning-magiska~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~table .sheet-filtrerad_utrustning,
-.sheet-utrustning-egendom~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~table .sheet-filtrerad_utrustning,
-.sheet-utrustning-riddjur~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-riddjur:checked~table .sheet-filtrerad_utrustning,
-.sheet-utrustning-ovrigt~.sheet-body fieldset.repeating_utrustning+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~table .sheet-filtrerad_utrustning {
-  display: block;
-}
 
-.sheet-equiptment-pair {
-  display: none;
-}
 
-/*
-input.sheet-utrustning-allt:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-allt:checked~.repcontainer .sheet-equiptment-pair,
-input.sheet-utrustning-klader:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-drycker:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-magiska:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-egendom:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-djur:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-ovrigt:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~.sheet-equiptment-pair,
-input.sheet-place-all:checked~.sheet-equiptment-pair,
-input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-backpack:checked~.sheet-equiptment-pair,
-input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-bank:checked~.sheet-equiptment-pair,
-input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-character:checked~.sheet-equiptment-pair,
-input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-house:checked~.sheet-equiptment-pair,
-input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-horse:checked~.sheet-equiptment-pair {
-  display: block;
-}
-*/
-.repitem input.sheet-place-all:checked~.sheet-equiptment-pair,
-.repitem input.sheet-utrustning-allt:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-allt:checked~input.sheet-place-all:checked~.repcontainer .sheet-equiptment-pair,
-input.sheet-utrustning-allt:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-backpack:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-allt:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-bank:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-allt:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-character:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-allt:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-house:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-allt:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-place-horse:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-klader:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-klader:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-klader:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-klader:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-klader:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-klader:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-klader:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-drycker:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-drycker:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-drycker:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-drycker:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-drycker:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-drycker:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-drycker:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-magiska:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-magiska:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-magiska:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-magiska:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-magiska:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-magiska:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-magiska:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-egendom:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-egendom:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-egendom:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-egendom:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-egendom:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-egendom:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-egendom:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-djur:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-djur:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-djur:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-djur:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-djur:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-djur:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-djur:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-pengar:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-pengar:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-pengar:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-pengar:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-pengar:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-pengar:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-pengar:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-ovrigt:checked~input.sheet-place-all:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-ovrigt:checked~input.sheet-place-backpack:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-backpack:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-ovrigt:checked~input.sheet-place-bank:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-bank:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-ovrigt:checked~input.sheet-place-character:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-character:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-ovrigt:checked~input.sheet-place-house:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-house:checked~.sheet-equiptment-pair,
-input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.repeating_equiptment+.repcontainer>.repitem input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~.sheet-equiptment-pair {
-  display: block;
-}
 
 .sheet-table-header-select-normal {
   border: 1px solid black;
@@ -997,318 +1390,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 
 
 
-.sheet-toggle {
-  position: sticky;
-  right: 0;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-  grid-gap: 0.5rem;
-  padding: 1rem;
-  background-color: #262626;
-  box-shadow: 0 5px 5px black;
-  padding: 5px;
-}
 
-.sheet-toggle label {
-  margin: 0;
-}
-.sheet-toggle span {
-  top: 50%;
-  left: 50%;
-  height: 25px;
-  transform: translate(-25%, -25%);
-  background: #262626;
-  color: #444444;
-  text-align: center;
-  line-height: 25px;
-  border-radius: 25px;
-  font-family: Verdana;
-  transition: .2s;
-}
-
-.sheet-toggle input {
-  opacity: 0;
-}
-
-.sheet-toggle input:hover + span {
-  color: #555555;
-}
-
-.sheet-toggle input:checked + span {
-  color: #14a11c;
-  text-shadow: 0 0 2px 00fff5;
-}
-
-.sheet-magic-grid {
-  display: grid;
-  grid-template-areas: 
-    'mana extra'
-    'spells spells';
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-
-.sheet-magic-grid-spells {
-  grid-area: spells;
-}
-
-.sheet-magic-grid-mana {
-  grid-area: mana;
-}
-
-.sheet-magic-grid-extra {
-  grid-area: extra;
-}
-
-.sheet-row.sheet-mana {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-row.sheet-extra {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-row.sheet-spell {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 14em 4em 3em 3em 3em 3em 3em 3em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-row.sheet-equiptment {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 5em 5em 9em 8em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-characterdata-grid {
-  display: grid;
-  grid-template-areas: 
-    'general attribute'
-    'general derived'
-    'experience ability'
-    'extra extra';
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-
-.sheet-characterdata-grid-general {
-  grid-area: general;
-}
-
-.sheet-characterdata-grid-attribute {
-  grid-area: attribute;
-}
-
-.sheet-characterdata-grid-derived {
-  grid-area: derived;
-}
-
-.sheet-characterdata-grid-experience {
-  grid-area: experience;
-}
-
-.sheet-characterdata-grid-ability {
-  grid-area: ability;
-}
-
-.sheet-characterdata-grid-extra {
-  grid-area: extra;
-}
-.sheet-characterdata-grid-extra textarea {
-  height: 7.5em;
-  grid-auto-columns: 1fr;
-  box-sizing: border-box;
-  resize: none;
-}
-
-.sheet-mana.sheet-extra.sheet-textarea {
-  height: 4.75em;
-  grid-auto-columns: 1fr;
-  box-sizing: border-box;
-  resize: none;
-}
-
-.sheet-general {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 12em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-attribute {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 3em 3em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-derived {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 3em 3em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-experience {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 4em 4em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-ability {
-  position: relative;
-  display: grid;
-  grid-template-columns: 12em auto;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-extra {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-combat-grid {
-  display: grid;
-  grid-template-areas: 
-    'health'
-    'armor'
-    'weapon';
-  grid-template-columns: 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-.sheet-combat-grid-health {
-  grid-area: health;
-}
-.sheet-combat-grid-armor {
-  grid-area: armor;
-}
-.sheet-combat-grid-weapon {
-  grid-area: weapon;
-}
-
-.sheet-skill-grid {
-  display: grid;
-  grid-template-areas: 
-    'primary profession'
-    'primary secondary'
-    'primary language';
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-
-.sheet-vapen-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.sheet-skill-grid-primary {
-  grid-area: primary;
-}
-
-.sheet-skill-grid-profession {
-  grid-area: profession;
-}
-
-.sheet-skill-grid-secondary {
-  grid-area: secondary;
-}
-
-.sheet-skill-grid-language {
-  grid-area: language;
-}
-
-
-.sheet-testing:checked ~ .sheet-grid {
-  max-height: 0;
-  margin-bottom: 200;
-  opacity: 0;
-  transform: translate(0, 50%);
-}
-
-.sheet-vapen {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 9em 3em 3em 3em 4em 3em 5em 3em 6em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-skill {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 3em 3em 3em 3em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-armor {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 15em 4em 4em 4em 4em 4em 4em 4em 4em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-health {
-  position: relative;
-  display: grid;
-  grid-template-columns: 8em auto 4em 4em 4em 4em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
-.sheet-health.sheet-row {
-  position: relative;
-  display: grid;
-  grid-template-columns: 8em auto 4em 4em 4em 4em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
 
 .sheet-vapen.sheet-table-row:hover,
 .sheet-skill.sheet-table-row:hover,
@@ -1333,58 +1415,6 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 .sheet-table-row:hover select {
   background-color: #b0b0b0;
   border: none;
-}
-
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-vapen {
-  grid-template-columns: auto 9em 5em 3em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
-  grid-template-columns: auto 3em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-attribute {
-  grid-template-columns: auto 3em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-derived {
-  grid-template-columns: auto 3em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor {
-  grid-template-columns: auto 4em 4em 4em 4em 4em 4em 4em 4em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-spell {
-  grid-template-columns: auto 14em 3em 3em 3em 3em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-health.sheet-row {
-  grid-template-columns: auto 4em 4em 4em 4em;
-}
-
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-health,
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-health.sheet-row {
-  grid-template-columns: auto 4em 4em 4em 4em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-skill {
-  grid-template-columns: auto 3em 3em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-attribute {
-  grid-template-columns: auto 3em 3em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-derived {
-  grid-template-columns: auto 3em 3em;
-}
-
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] + input[name=attr_edit_toggle][value=on] ~ * .sheet-spell {
-  grid-template-columns: auto 14em 3em 3em 3em 3em 3em;
 }
 
 .charsheet .sheet-wrapper button.sheet-button-full-hidden {
@@ -1435,10 +1465,6 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   background-color: #cccccc;
   border: 1px solid #635b14;
   min-height: 28px;
-}
-
-.sheet-table-row .sheet-table-row-field {
-  /*background-color: green;*/
 }
 
 .sheet-table-summary {
@@ -1665,6 +1691,7 @@ h2.sheet-grid-section-header:before {
   left: -10000px;
 }
 */
+
 
 /*========================================/
 /                                         /
