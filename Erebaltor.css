@@ -1,3 +1,10 @@
+/*========================================/
+/                                         /
+/                Variables                /
+/                                         /
+/========================================*/
+/*#region*/
+
 .charsheet {
   --background-row: #cccccc;
   --background-header: #999999;
@@ -8,6 +15,7 @@
   --height-header: 1.38em;
   --height-row: 2.2em;
 }
+/*#endregion*/
 
 
 /*========================================/
@@ -554,8 +562,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 /                  Other                  /
 /                                         /
 /========================================*/
-
-
+/*#region*/
 
 
 .charsheet {
@@ -909,15 +916,34 @@ input.sheet-list-header:hover ~ h1 {
 }
 
 input.sheet-list-header:checked ~ .sheet-grid {
-  max-height: 0;
-  opacity: 0;
+  display: none;
 }
+
+/*
+input.sheet-list-header:not(:checked) ~ .sheet-grid {
+  margin-bottom: 10px;
+}
+*/
 
 .sheet-hidden {
   display: none;
 }
 
-
+.charsheet .sheet-wrapper button.sheet-button-full-hidden {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding:0px;
+  opacity: 0;
+  /*
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+  */
+}
 
 
 
@@ -950,20 +976,6 @@ input.sheet-list-header:checked ~ .sheet-grid {
 .sheet-table-row:hover select {
   background-color: #b0b0b0;
   border: none;
-}
-
-.charsheet .sheet-wrapper button.sheet-button-full-hidden {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  margin: 0px;
-  padding:0px;
-  cursor: pointer;
-  opacity: 0;
 }
 
 
@@ -1174,7 +1186,7 @@ h2.sheet-grid-section-header:before {
   position: sticky;
   z-index: 50;
 }
-
+/*#endregion*/
 
 
 /*========================================/
