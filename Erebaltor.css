@@ -831,15 +831,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 }
 
 
-.sheet-firstLevelTab {
-}
 
-.sheet-testtab {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 50;
-  z-index: 2;
-}
 
 .sheet-section {
   position: relative;
@@ -899,52 +891,18 @@ ul li .sheet-testing.sheet-firstLevelTab {
   margin-bottom: 100px;
 }
 
-ul li .sheet-testing.sheet-firstLevelTab .sheet-secondLevelTabs {
-  margin-bottom: 10px;
-}
-
-ul li .sheet-testing:checked .sheet-firstLevelTab .sheet-secondLevelTabs {
-  margin-bottom: 100px;
-}
-
-.sheet-secondLevelTabs li:last-child {
-  padding-bottom: 15px;
-}
-
 .sheet-firstLevelTab:hover ~ h1 {
   background-color: rgb(40, 56, 8);
   color: rgb(194, 175, 175);
 }
 
 
-.sheet-table-header-select {
-  border: 1px solid black;
-  background-color: gray;
-  font-weight: bold;
-  font-size: 16px;
-  text-align: left;
-  padding: 0px;
-  margin: 0px;
-}
 
-.sheet-select-width-normal {
-  width: 116px;
-}
 
-.sheet-table-header-number {
-  border: 1px solid black;
-  background-color: gray;
-  font-weight: bold;
-  color: white;
-  font-size: 16px;
-  text-align: left;
-  padding: 0px;
-  margin: 0px;
-}
 
-.sheet-number-width-normal {
-  width: 46px;
-}
+
+
+
 
 .sheet-hidden {
   display: none;
