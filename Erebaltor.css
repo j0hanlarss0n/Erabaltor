@@ -822,24 +822,30 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 
 
 .sheet-section {
-  position: relative;
   overflow: hidden;
-  margin-bottom: 50;
+  position: relative;
   z-index: 2;
 }
 
 ul {
   list-style: none;
+  margin: 0;
+  /*
   perspective: 900;
   padding: 0;
-  margin: 0;
+  */
+
 }
 ul li {
   position: relative;
+  /*
   padding: 0;
   padding-bottom: px;
   padding-top: px;
+  */
 }
+
+/*
 ul li .sheet-testing {
   margin-bottom: 10px;
   position: absolute;
@@ -871,25 +877,31 @@ ul li .sheet-testing.sheet-firstLevelTab {
   margin-bottom: 100px;
 }
 
+*/
+
 input.sheet-list-header {
-  margin-bottom: 10px;
   position: absolute;
-  cursor: pointer;
   width: 100%;
   height: 100%;
   z-index: 1;
   opacity: 0;
+  /*
+  cursor: pointer;
+  margin-bottom: 10px;
+  */
 }
 
 input.sheet-list-header ~ h1 {
-  margin: 0;
-  margin-top: 0px;
-  margin-bottom: 0px;
   border: 2px solid black;
   background-color: rgb(58, 82, 10);
   text-align: center;
   color: rgb(231, 203, 76);
   font-size: 20pt;
+  /*
+  margin: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  */
 }
 
 input.sheet-list-header:hover ~ h1 {
@@ -898,11 +910,8 @@ input.sheet-list-header:hover ~ h1 {
 
 input.sheet-list-header:checked ~ .sheet-grid {
   max-height: 0;
-  margin-bottom: 10;
   opacity: 0;
-  transform: translate(0, 50%);
 }
-
 
 .sheet-hidden {
   display: none;
