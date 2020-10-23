@@ -438,7 +438,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-area: extra;
 }
 .sheet-characterdata-grid-extra textarea {
-  height: 7.5em;
+  height: 17em;
   grid-auto-columns: 1fr;
   box-sizing: border-box;
   resize: none;
