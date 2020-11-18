@@ -939,7 +939,7 @@ input.sheet-list-header:not(:checked) ~ .sheet-grid {
 
 
 
-
+/* Maybe hidden now as well
 .sheet-vapen.sheet-table-row:hover,
 .sheet-skill.sheet-table-row:hover,
 .sheet-armor.sheet-table-row:hover,
@@ -950,6 +950,7 @@ input.sheet-list-header:not(:checked) ~ .sheet-grid {
 .sheet-health.sheet-table-row:hover > input.sheet-table-row-field {
   background-color: #b0b0b0;
 }
+*/
 
 /*
 .sheet-health.sheet-table-row:hover > input[type=number]::-webkit-inner-spin-button,
@@ -960,6 +961,7 @@ input.sheet-list-header:not(:checked) ~ .sheet-grid {
 }
 */
 
+/* ok to be hidden now*?
 .sheet-table-row:hover select {
   background-color: #b0b0b0;
   border: none;
@@ -980,7 +982,9 @@ input.sheet-list-header:not(:checked) ~ .sheet-grid {
   border: 1px solid #635b14;
   min-height: 28px;
 }
+*/
 
+/* maybe three
 .sheet-table-summary {
   background-color: #aaaaaa;
   border: 1px solid #635b14;
@@ -1009,6 +1013,7 @@ input.sheet-health-bodypart,
   padding-left: 5px;
   font-weight: bold;
 }
+*/
 
 .sheet-vapen-grid input[type=number],
 .sheet-skill-grid input[type=number],
@@ -1064,6 +1069,7 @@ input.sheet-health-bodypart,
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+/*
 .sheet-combat-grid .sheet-table-summary input[type=number], 
 .sheet-combat-grid .sheet-table-summary input[type=text] {
   font-weight: bold;
@@ -1085,6 +1091,7 @@ input.sheet-health-bodypart,
   border-radius: unset;
   padding: 4px;
 }
+*/
 
 .sheet-vapen-grid input[type=number],
 .sheet-vapen-grid input[type=text],
@@ -1290,3 +1297,7 @@ input[type=number].sheet-field::-webkit-outer-spin-button {
   border: 1px solid var(--background-input);
 }
 
+.sheet-summary {
+  background-color: #aaaaaa;
+  min-height: 28px;
+}
