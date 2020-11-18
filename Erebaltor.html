@@ -1311,7 +1311,7 @@
                 <div class="sheet-vapen-pair">
                   <div class="sheet-vapen sheet-table sheet-data sheet-row sheet-show-while-edit">
                     <input class="sheet-table sheet-data sheet-field sheet-name" type="text"   name="attr_vapenNamn"/>
-                    <select class="sheet-table sheet-data sheet-field sheet-vapen-skill" type="text"   name="attr_vapenSkill"/>
+                    <select class="sheet-table sheet-data sheet-field sheet-select sheet-vapen-skill" type="text"   name="attr_vapenSkill"/>
                       <option value="">Inget</option>
                       <option value="@{Armborst}">Armborst</option>
                       <option value="@{Båge}">Båge</option>
@@ -1343,7 +1343,7 @@
                     <input class="sheet-table sheet-data sheet-field sheet-vapen-rv"           type="number" name="attr_vapenRackvidd"   step="any" value="0"/>
                     <input class="sheet-table sheet-data sheet-field sheet-vapen-skada"        type="text"   name="attr_vapenSkada"      value="0"/>
                     <input class="sheet-table sheet-data sheet-field sheet-vapen-skada-mod"    type="number" name="attr_vapenSkadaMod"   value="0"/>
-                    <select class="sheet-table sheet-data sheet-field sheet-vapen-skada-bonus"               name="attr_vapenSkadaBonus">
+                    <select class="sheet-table sheet-data sheet-field sheet-select sheet-vapen-skada-bonus"               name="attr_vapenSkadaBonus">
                       <option value="@{skadeBonusNone}">Ingen</option>
                       <option value="@{skadeBonusTot}">Normal</option>
                       <option value="@{skadeBonusTvaHandTot}">2-hands</option>
@@ -1378,8 +1378,8 @@
         <input type="checkbox" class="sheet-list-header sheet-equipment-tab" checked/>
         <h1>Utrustning</h1>
         <div class="sheet-section sheet-grid sheet-equiptment-grid">
-          <h2 class="sheet-grid-section-header">Utrustning</h2>
           <div class="sheet-equiptment-grid-list">
+            <h2 class="sheet-grid-section-header">Utrustning</h2>
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-allt"            value="Alla typer" checked/>
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-djur"            value="Djur"   />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
