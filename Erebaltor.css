@@ -36,16 +36,12 @@
 }
 
 /* When not editing the sheet, the sections that are shown while editing should be hidden */
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-vapen-edit-show,
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-skill-edit-show,
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .sheet-show-while-edit,
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value="0"] ~ * .repcontrol {
   display: none;
 }
 
 /* When editing the sheet, the sections that are shown when not editing should be hidden */
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-vapen-edit-hide,
-.charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-skill-edit-hide,
 .charsheet .sheet-wrapper input[name=attr_edit_toggle][value=on] ~ * .sheet-hide-while-edit {
   display: none;
 }
@@ -1115,13 +1111,6 @@ input.sheet-health-bodypart,
   text-align: center;
   height: auto;
   padding: 0;
-}
-.sheet-vapen-edit-hide select,
-.sheet-skill-edit-hide select,
-.sheet-combat-edit-hide select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: #cccccc;
 }
 
 .sheet-table-header-field.sheet-vapen-skill,
