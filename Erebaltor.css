@@ -167,7 +167,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-template-columns: auto 9em 5em 3em;
 }
 
-.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill {
+.charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-skill.sheet-row {
   grid-template-columns: auto 3em;
 }
 
@@ -359,7 +359,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-area: general;
 }
 
-.sheet-general {
+.sheet-general.sheet-row {
   position: relative;
   display: grid;
   grid-template-columns: auto 12em;
@@ -372,7 +372,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-area: attribute;
 }
 
-.sheet-attribute {
+.sheet-attribute.sheet-row {
   position: relative;
   display: grid;
   grid-template-columns: auto 3em 3em;
@@ -385,7 +385,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-area: derived;
 }
 
-.sheet-derived {
+.sheet-derived.sheet-row {
   position: relative;
   display: grid;
   grid-template-columns: auto 3em 3em;
@@ -399,7 +399,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-area: experience;
 }
 
-.sheet-experience {
+.sheet-experience.sheet-row {
   position: relative;
   display: grid;
   grid-template-columns: auto 4em 4em;
@@ -412,7 +412,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-area: ability;
 }
 
-.sheet-ability {
+.sheet-ability.sheet-row {
   position: relative;
   display: grid;
   grid-template-columns: 12em auto;
@@ -456,15 +456,6 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-area: health;
 }
 
-.sheet-health {
-  position: relative;
-  display: grid;
-  grid-template-columns: 8em auto 4em 4em 4em 4em;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 3px;
-}
-
 .sheet-health.sheet-row {
   position: relative;
   display: grid;
@@ -478,7 +469,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-area: armor;
 }
 
-.sheet-armor {
+.sheet-armor.sheet-row {
   position: relative;
   display: grid;
   grid-template-columns: auto 15em 4em 4em 4em 4em 4em 4em 4em 4em;
@@ -496,7 +487,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-template-columns: 1fr;
 }
 
-.sheet-vapen {
+.sheet-vapen.sheet-row {
   position: relative;
   display: grid;
   grid-template-columns: auto 9em 3em 3em 3em 4em 3em 5em 3em 6em;
@@ -534,7 +525,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
   grid-area: language;
 }
 
-.sheet-skill {
+.sheet-skill.sheet-row {
   position: relative;
   display: grid;
   grid-template-columns: auto 3em 3em 3em 3em;
