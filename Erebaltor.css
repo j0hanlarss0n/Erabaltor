@@ -1249,6 +1249,7 @@ input[type=number].sheet-field::-webkit-outer-spin-button {
 .sheet-header.sheet-row {
   background-color: var(--background-header);
   height: var(--height-header);
+  line-height: var(--height-header);
   font-weight: bold;
 }
 
