@@ -3015,7 +3015,7 @@ const repeatingSumEquiptment = (destinations, section, fields) => {
     repeatingSum("armour_weight", "armour",["armour_piece","armour_worn"]);
   });
 */
-  on('change:repeating_equiptment:equiptment_weight change:repeating_equiptment:equiptment_amount remove:repeating_equiptment', function(eventinfo) {
+  on('change:repeating_equiptment:equiptment_weight change:repeating_equiptment:equiptment_amount change:repeating_equiptment:equiptment_filter_place remove:repeating_equiptment', function(eventinfo) {
     console.log('Inside repeatingSumEquiptment Sheetworker');
     getAttrs(["repeating_equiptment_equiptment_weight"], function(values) {
       console.log("Previous value: " + eventinfo.previousValue + ". New value: " + eventinfo.newValue);
