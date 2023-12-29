@@ -1387,6 +1387,8 @@
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"   />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-pengar"          value="Pengar"   />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-rustning"        value="Rustning"   />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-vapen"           value="Vapen"   />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-quest"           value="Quest"/>        
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
             <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-all"                 value="Alla platser" checked/>
@@ -1408,6 +1410,8 @@
                 <option>Kläder</option>
                 <option>Magiska föremål</option>
                 <option>Pengar</option>
+                <option>Rustning</option>
+                <option>Vapen</option>
                 <option>Quest</option>
                 <option>Övrigt</option>
               </select>
@@ -1433,6 +1437,8 @@
                 <option>Kläder</option>
                 <option>Magiska föremål</option>
                 <option>Pengar</option>
+                <option>Rustning</option>
+                <option>Vapen</option>
                 <option>Quest</option>
                 <option>Övrigt</option>
               </select>
@@ -1453,7 +1459,9 @@
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-klader"         value="Kläder"   />
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-magiska"        value="Magiska föremål"  />
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-pengar"         value="Pengar"         />
-              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-quest"         value="Quest"         />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-rustning"       value="Rustning"         />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-vapen"          value="Vapen"         />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-quest"          value="Quest"         />
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-ovrigt"         value="Övrigt"     />
               <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-all"                 value="Alla platser" checked/>
               <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-backpack"            value="Packning"/>
@@ -1475,6 +1483,8 @@
                     <option>Kläder</option>
                     <option>Magiska föremål</option>
                     <option>Pengar</option>
+                    <option>Rustning</option>
+                    <option>Vapen</option>
                     <option>Quest</option>
                     <option>Övrigt</option>
                   </select>
@@ -1501,13 +1511,13 @@
               <input hidden class="sheet-table sheet-summary sheet-field sheet-name" name="attr_equiptment_item"   />
               <input hidden class="sheet-table sheet-summary sheet-field sheet-left sheet-desc" name="attr_equiptment_desc"   />
               <input hidden class="sheet-table sheet-summary sheet-field sheet-amount" name="attr_equiptment_amount"   />
-              <input hidden class="sheet-table sheet-summary sheet-field sheet-weight" name="attr_equiptment_weightsum"   />
+              <input hidden class="sheet-table sheet-summary sheet-field sheet-weight" name="attr_equiptment_weight_sum"   />
               <input hidden class="sheet-table sheet-summary sheet-field sheet-select-value sheet-left" name="attr_equiptment_filter"   />
               <input hidden class="sheet-table sheet-summary sheet-field sheet-select-value sheet-left" name="attr_equiptment_filter_place"   />
               <span class="sheet-table sheet-summary sheet-field sheet-name" name="attr_equiptment_item">Totalt:</span>
               <span class="sheet-table sheet-summary sheet-field sheet-left sheet-desc" name="attr_equiptment_desc"></span>
               <span class="sheet-table sheet-summary sheet-field sheet-amount" name="attr_equiptment_amount"></span>
-              <span class="sheet-table sheet-summary sheet-field sheet-weight" name="attr_equiptment_weightsum"></span>
+              <span class="sheet-table sheet-summary sheet-field sheet-weight" name="attr_equiptment_weight_sum"></span>
               <span class="sheet-table sheet-summary sheet-field sheet-select-value sheet-left" name="attr_equiptment_filter"></span>
               <span class="sheet-table sheet-summary sheet-field sheet-select-value sheet-left" name="attr_equiptment_filter_place"></span>
             </div>
@@ -3015,13 +3025,13 @@ const repeatingSumEquiptment = (destinations, section, fields) => {
     repeatingSum("armour_weight", "armour",["armour_piece","armour_worn"]);
   });
 */
-  on('change:repeating_equiptment:equiptment_weight change:repeating_equiptment:equiptment_amount change:repeating_equiptment:equiptment_filter_place remove:repeating_equiptment', function(eventinfo) {
+  on('change:repeating_equiptment:equiptment_weight change:repeating_equiptment:equiptment_amount change:repeating_equiptment:equiptment_filter_place remove:repeating_equiptment sheet:opened', function(eventinfo) {
     console.log('Inside repeatingSumEquiptment Sheetworker');
     getAttrs(["repeating_equiptment_equiptment_weight"], function(values) {
       console.log("Previous value: " + eventinfo.previousValue + ". New value: " + eventinfo.newValue);
     });
-    repeatingSumEquiptment("equiptment_weightsum","equiptment",["equiptment_weight", "equiptment_amount", "equiptment_filter_place"]);
-    console.log('I repeatingSumEquiptment: ' + equiptment_weightsum);
+    repeatingSumEquiptment("equiptment_weight_sum","equiptment",["equiptment_weight", "equiptment_amount", "equiptment_filter_place"]);
+    console.log('I repeatingSumEquiptment: ' + equiptment_weight_sum);
   });
 
 </script>
