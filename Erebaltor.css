@@ -191,11 +191,11 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 }
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-attribute {
-  grid-template-columns: auto 3em;
+  grid-template-columns: auto 5em;
 }
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-derived {
-  grid-template-columns: auto 3em;
+  grid-template-columns: auto 5em;
 }
 
 .charsheet .sheet-wrapper input[name=attr_details_toggle][value="0"] ~ * .sheet-armor {
@@ -403,7 +403,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 .sheet-attribute.sheet-row {
   position: relative;
   display: grid;
-  grid-template-columns: auto 3em 3em;
+  grid-template-columns: auto 3em 5em;
   align-items: center;
   justify-items: center;
   margin-bottom: 3px;
@@ -416,7 +416,7 @@ input.sheet-utrustning-ovrigt:checked~input.sheet-place-horse:checked~fieldset.r
 .sheet-derived.sheet-row {
   position: relative;
   display: grid;
-  grid-template-columns: auto 3em 3em;
+  grid-template-columns: auto 3em 5em;
   align-items: center;
   justify-items: center;
   margin-bottom: 3px;
@@ -1242,6 +1242,7 @@ div.charctersheet.charsheet {
 .sheet-field.sheet-name,
 .sheet-field.sheet-first,
 .sheet-armor-sum.sheet-first,
+.sheet-equiptment-sum.sheet-first,
 input[type=text].sheet-field.sheet-name,
 input[type=number].sheet-field.sheet-name {
   justify-self: left;
