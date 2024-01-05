@@ -2592,6 +2592,16 @@ const repeatingSumEquiptment = (destinations, section, fields) => {
     });
   });
 
+  on("change:speed change:speedmod sheet:opened", function() {
+    getAttrs(["speed", "speedMod"], function(values) {
+        var number = parseInt(values["speed"],10)||0;
+        var modifier = parseInt(values["speedMod"],10)||0;
+        setAttrs({
+            SpeedTot: modifier+number
+        });
+    });
+  });
+
   on("change:stytot change:stotot change:skadebonusmod sheet:opened", function() {
     getAttrs(["styTot", "stoTot", "skadeBonusMod", "skadeBonusNone"], function(values) {
         const styTot = parseInt(values["styTot"],10)||0;
