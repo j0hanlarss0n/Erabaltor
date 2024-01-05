@@ -3041,13 +3041,13 @@ const repeatingSumEquiptment = (destinations, section, fields) => {
     });
   });
 
-  on("change:equiptment_weight_sum change:burdenmod sheet:opened", function() {
-    getAttrs(["equiptment_weight_sum", "burden", "burdenTot", "burdenMod", "sty"], function(values) {
+  on("change:equiptment_weight_sum change:burdenmod change:styTot sheet:opened", function() {
+    getAttrs(["equiptment_weight_sum", "burden", "burdenTot", "burdenMod", "styTot"], function(values) {
         var fixed_weight_sum = +parseFloat(values["equiptment_weight_sum"]).toFixed(2)||0;
         var burdenMod = parseInt(values["burdenMod"],10)||0;
-        var sty = parseInt(values["sty"],10)||0;
-        var burden = fixed_weight_sum + "/" + sty;
-        var burdenTot = (fixed_weight_sum + burdenMod) + "/" + sty;
+        var styTot = parseInt(values["styTot"],10)||0;
+        var burden = fixed_weight_sum + "/" + styTot;
+        var burdenTot = (fixed_weight_sum + burdenMod) + "/" + styTot;
         setAttrs({
           burden: burden,
           burdenTot: burdenTot
