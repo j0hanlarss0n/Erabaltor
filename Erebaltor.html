@@ -1395,22 +1395,18 @@
           <div class="sheet-equiptment-grid-list">
             <h2 class="sheet-grid-section-header">Utrustning</h2>
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-allt"            value="Alla typer" checked/>
-            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-djur"            value="Djur"   />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-drycker"         value="Drycker"         />
-            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-egendom"         value="Egendom"         />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-klader"          value="Kläder"   />
-            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-magiska"         value="Magiska föremål"  />
-            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-pengar"          value="Pengar"   />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-rustning"        value="Rustning"   />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-vapen"           value="Vapen"   />
+            <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-vardesaker"      value="Värdesaker"   />
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-quest"           value="Quest"/>        
             <input type="radio" name="attr_equiptment_type" class="sheet-hidden sheet-utrustning-ovrigt"          value="Övrigt"/>
             <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-all"                 value="Alla platser" checked/>
-            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-backpack"            value="Packning"/>
-            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-bank"                value="Bank"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-forvar"              value="Förvar"/>
             <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-character"           value="Karaktär"/>
-            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-house"               value="Hus"/>
-            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-horse"               value="Häst"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-riddjur"             value="Riddjur"/>
+            <input type="radio" name="attr_equiptment_place" class="sheet-hidden sheet-place-ryggsack"            value="Ryggsäck"/>
             <div class="sheet-equiptment sheet-table sheet-header sheet-row sheet-show-while-edit">
               <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-name">Föremål</div>
               <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-left sheet-desc">Beskrivning</div>
@@ -1418,24 +1414,20 @@
               <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-weight">Vikt (kg)</div>
               <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-what" name="attr_equiptment_type">
                 <option>Alla typer</option>
-                <option>Djur</option>
                 <option>Drycker</option>
-                <option>Egendom</option>
                 <option>Kläder</option>
-                <option>Magiska föremål</option>
-                <option>Pengar</option>
                 <option>Rustning</option>
                 <option>Vapen</option>
+                <option>Värdesaker</option>
                 <option>Quest</option>
                 <option>Övrigt</option>
               </select>
               <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-where" name="attr_equiptment_place">
                 <option>Alla platser</option>
-                <option>Bank</option>
-                <option>Hus</option>
-                <option>Häst</option>
+                <option>Förvar</option>
                 <option>Karaktär</option>
-                <option>Packning</option>
+                <option>Riddjur</option>
+                <option>Ryggsäck</option>
               </select>
             </div>
             <div class="sheet-equiptment sheet-table sheet-header sheet-row sheet-hide-while-edit">
@@ -1445,44 +1437,36 @@
               <div class="sheet-equiptment sheet-table sheet-header sheet-field sheet-weight">Vikt (kg)</div>
               <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-what" name="attr_equiptment_type">
                 <option>Alla typer</option>
-                <option>Djur</option>
                 <option>Drycker</option>
-                <option>Egendom</option>
                 <option>Kläder</option>
-                <option>Magiska föremål</option>
-                <option>Pengar</option>
                 <option>Rustning</option>
                 <option>Vapen</option>
+                <option>Värdesaker</option>
                 <option>Quest</option>
                 <option>Övrigt</option>
               </select>
               <select class="sheet-equiptment sheet-table sheet-header sheet-field sheet-select sheet-where" name="attr_equiptment_place">
                 <option>Alla platser</option>
-                <option>Bank</option>
-                <option>Hus</option>
-                <option>Häst</option>
+                <option>Förvar</option>
                 <option>Karaktär</option>
-                <option>Packning</option>
+                <option>Riddjur</option>
+                <option>Ryggsäck</option>
               </select>
             </div>
             <fieldset class="repeating_equiptment">
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-allt"           value="Alla typer" checked/>
-              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-djur"           value="Djur"   />
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-drycker"        value="Drycker"         />
-              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-egendom"        value="Egendom"         />
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-klader"         value="Kläder"   />
-              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-magiska"        value="Magiska föremål"  />
-              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-pengar"         value="Pengar"         />
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-rustning"       value="Rustning"         />
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-vapen"          value="Vapen"         />
+              <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-vardesaker"     value="Värdesaker"         />
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-quest"          value="Quest"         />
               <input type="radio" name="attr_equiptment_filter"       class="sheet-hidden sheet-utrustning-ovrigt"         value="Övrigt"     />
               <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-all"                 value="Alla platser" checked/>
-              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-backpack"            value="Packning"/>
-              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-bank"                value="Bank"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-forvar"              value="Förvar"/>
               <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-character"           value="Karaktär"/>
-              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-house"               value="Hus"/>
-              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-horse"               value="Häst"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-riddjur"             value="Riddjur"/>
+              <input type="radio" name="attr_equiptment_filter_place" class="sheet-hidden sheet-place-ryggsack"            value="Ryggsäck"/>
               <div class="sheet-equiptment-pair">
                 <div class="sheet-equiptment sheet-table sheet-data sheet-row sheet-show-while-edit">
                   <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-name" type="text" name="attr_equiptment_item" value=""/>
@@ -1491,24 +1475,20 @@
                   <input class="sheet-equiptment sheet-table sheet-data sheet-field sheet-weight" type="number" step="any" name="attr_equiptment_weight" value=""/>
                   <select class="sheet-equiptment sheet-table sheet-data sheet-field sheet-select" name="attr_equiptment_filter">
                     <option>Alla typer</option>
-                    <option>Djur</option>
                     <option>Drycker</option>
-                    <option>Egendom</option>
                     <option>Kläder</option>
-                    <option>Magiska föremål</option>
-                    <option>Pengar</option>
                     <option>Rustning</option>
                     <option>Vapen</option>
+                    <option>Värdesaker</option>
                     <option>Quest</option>
                     <option>Övrigt</option>
                   </select>
                   <select class="sheet-equiptment sheet-table sheet-data sheet-field sheet-select" name="attr_equiptment_filter_place">
                     <option>Alla platser</option>
-                    <option>Bank</option>
-                    <option>Hus</option>
-                    <option>Häst</option>
+                    <option>Förvar</option>
                     <option>Karaktär</option>
-                    <option>Packning</option>
+                    <option>Riddjur</option>
+                    <option>Ryggsäck</option>
                   </select>
                 </div>
                 <div class="sheet-equiptment sheet-table sheet-data sheet-row sheet-hide-while-edit">
