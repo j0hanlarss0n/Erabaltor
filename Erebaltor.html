@@ -2592,12 +2592,43 @@ const repeatingSumEquiptment = (destinations, section, fields) => {
     });
   });
 
-  on("change:speed change:speedmod sheet:opened", function() {
+  on("change:speedmod sheet:opened", function() {
     getAttrs(["speed", "speedMod"], function(values) {
         var number = parseInt(values["speed"],10)||0;
         var modifier = parseInt(values["speedMod"],10)||0;
         setAttrs({
             SpeedTot: modifier+number
+        });
+    });
+  });
+
+  on("change:stytot change:stotot change:smitot change:burdenTot sheet:opened", function() {
+    getAttrs(["styTot", "stoTot", "smiTot", "equiptment_weight_sum", "Speed", "SpeedMod"], function(values) {
+        const styTot = parseInt(values["styTot"],10)||0;
+        const stoTot = parseInt(values["stoTot"],10)||0;
+        const smiTot = parseInt(values["smiTot"],10)||0;
+        const SpeedMod = parseInt(values["SpeedMod"],10)||0;
+        const fixed_weight_sum = parseFloat(values["equiptment_weight_sum"]).toFixed(2)||0;
+        const calculatedSpeed = Math.floor((styTot+stoTot+smiTot)/3);
+        let SpeedBurdenMod = 0;
+        if (fixed_weight_sum <= styTot) {
+          SpeedBurdenMod = 0;
+          console.log('Movement: Burden Mod = ' + SpeedBurdenMod + '.')
+        } else if (fixed_weight_sum <= (styTot*2)) {
+          SpeedBurdenMod = 3;
+          console.log('Movement: Burden Mod = ' + SpeedBurdenMod + '.')
+        } else if (fixed_weight_sum <= (styTot*3)) {
+          SpeedBurdenMod = 5;
+          console.log('Movement: Burden Mod = ' + SpeedBurdenMod + '.')
+        } else {
+          SpeedBurdenMod = calculatedSpeed
+          console.log('Movement: Burden Mod = ' + SpeedBurdenMod + '.')
+        }
+        const adjustedSpeed = calculatedSpeed - SpeedBurdenMod
+        console.log('Movement: Calculated Speed = ' + calculatedSpeed + '. Burden Mod = ' + SpeedBurdenMod + '. Adjusted Speed = ' + adjustedSpeed + '.');
+        setAttrs({
+            Speed: adjustedSpeed,
+            SpeedTot: adjustedSpeed + SpeedMod
         });
     });
   });
