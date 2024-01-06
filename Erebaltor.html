@@ -1349,6 +1349,7 @@
                       <option value="@{Stridskonst Yxa}">Stridskonst Yxa</option>
                       <option value="@{Stridskonst Sköld}">Stridskonst Sköld</option>
                       <option value="@{Strid till häst}">Strid till häst</option>
+                      <option value="@{Värja}">Värja</option>
                     </select>
                     <input class="sheet-table sheet-data sheet-field sheet-vapen-fv"           type="number" name="attr_vapenFv"         value="0"/>
                     <input class="sheet-table sheet-data sheet-field sheet-vapen-fv-mod"       type="number" name="attr_vapenFvMod"      value="0"/>
@@ -2608,8 +2609,8 @@ const repeatingSumEquiptment = (destinations, section, fields) => {
         const stoTot = parseInt(values["stoTot"],10)||0;
         const smiTot = parseInt(values["smiTot"],10)||0;
         const SpeedMod = parseInt(values["SpeedMod"],10)||0;
-        const fixed_weight_sum = parseFloat(values["equiptment_weight_sum"]).toFixed(2)||0;
-        const calculatedSpeed = Math.floor((styTot+stoTot+smiTot)/3);
+        const fixed_weight_sum = parseFloat(values["equiptment_weight_sum"]).toFixed(1)||0;
+        const calculatedSpeed = Math.ceil((styTot+stoTot+smiTot)/3);
         let SpeedBurdenMod = 0;
         if (fixed_weight_sum <= styTot) {
           SpeedBurdenMod = 0;
@@ -3055,18 +3056,15 @@ const repeatingSumEquiptment = (destinations, section, fields) => {
     TAS.repeatingSimpleSum('armor','armor_rightleg','armor_rightleg_sum');
     TAS.repeatingSimpleSum('armor','armor_leftleg','armor_leftleg_sum');
   });
-/*
-  on('change:repeating_armour remove:repeating_armour', function() {
-    repeatingSum("armour_weight", "armour",["armour_piece","armour_worn"]);
-  });
-*/
+
   on('change:repeating_equiptment:equiptment_weight change:repeating_equiptment:equiptment_amount change:repeating_equiptment:equiptment_filter_place remove:repeating_equiptment sheet:opened', function(eventinfo) {
     console.log('Inside repeatingSumEquiptment Sheetworker');
-    getAttrs(["repeating_equiptment_equiptment_weight", ""], function(values) {
+    getAttrs(["repeating_equiptment_equiptment_weight", "equiptment_weight_sum"], function(values) {
       console.log("Previous value: " + eventinfo.previousValue + ". New value: " + eventinfo.newValue);
+      repeatingSumEquiptment("equiptment_weight_sum","equiptment",["equiptment_weight", "equiptment_amount", "equiptment_filter_place"]);
+      const rounded_weight_sum = +parseFloat(values["equiptment_weight_sum"]).toFixed(1)||0;
+      console.log('I repeatingSumEquiptment: rounded_weight_sum = ' + rounded_weight_sum + '. Equiptment Sum =  ' + values["equiptment_weight_sum"] + '.');
     });
-    repeatingSumEquiptment("equiptment_weight_sum","equiptment",["equiptment_weight", "equiptment_amount", "equiptment_filter_place"]);
-    console.log('I repeatingSumEquiptment: ' + equiptment_weight_sum);
   });
 
   on("change:repeating_vapen:vapenskill sheet:opened", function() {
@@ -3084,7 +3082,7 @@ const repeatingSumEquiptment = (destinations, section, fields) => {
 
   on("change:equiptment_weight_sum change:burdenmod change:styTot sheet:opened", function() {
     getAttrs(["equiptment_weight_sum", "burden", "burdenTot", "burdenMod", "styTot"], function(values) {
-        var fixed_weight_sum = +parseFloat(values["equiptment_weight_sum"]).toFixed(2)||0;
+        var fixed_weight_sum = +parseFloat(values["equiptment_weight_sum"]).toFixed(1)||0;
         var burdenMod = parseInt(values["burdenMod"],10)||0;
         var styTot = parseInt(values["styTot"],10)||0;
         var burden = fixed_weight_sum + "/" + styTot;
